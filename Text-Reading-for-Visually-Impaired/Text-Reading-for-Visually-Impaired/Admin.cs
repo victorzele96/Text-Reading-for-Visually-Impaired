@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Form1 : Form
+    public partial class Admin : Form
     {
-        public Form1()
+        public Admin()
         {
             InitializeComponent();
         }
