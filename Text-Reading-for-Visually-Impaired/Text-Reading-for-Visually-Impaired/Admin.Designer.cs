@@ -1,6 +1,6 @@
 ﻿namespace Text_Reading_for_Visually_Impaired
 {
-    partial class Form1
+    partial class Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -37,4 +37,3 @@
         #endregion
     }
 }
-
