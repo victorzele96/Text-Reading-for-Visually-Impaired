@@ -15,7 +15,8 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Registration : Form
     {
-        Color original_text_Color = Color.White ;
+        Color original_text_Color= Color.White ;
+        Color original_text_Color_Active = Color.White;
         String data_Base_Path = "";
         public Registration()
         {
@@ -44,7 +45,7 @@ namespace Text_Reading_for_Visually_Impaired
                 if (((TextBox)sender).ForeColor == original_text_Color)
                 {
                     ((TextBox)sender).Text = "";
-                    ((TextBox)sender).ForeColor = Color.Black;
+                    ((TextBox)sender).ForeColor = original_text_Color_Active;
                     String tempName = ((TextBox)sender).Name;
                     foreach (Control c in this.Controls)
                     {
@@ -180,7 +181,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (firstNameTB.ForeColor == original_text_Color)
                 {
-                    firstNameTB.ForeColor = Color.Black;
+                    firstNameTB.ForeColor = original_text_Color_Active;
                     firstNameTB.Text = "";
                 }
 
@@ -203,7 +204,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (lastNameTB.ForeColor == original_text_Color)
                 {
-                    lastNameTB.ForeColor = Color.Black;
+                    lastNameTB.ForeColor = original_text_Color_Active;
                     lastNameTB.Text = "";
                 }
 
@@ -226,7 +227,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (userNameTB.ForeColor == original_text_Color)
                 {
-                    userNameTB.ForeColor = Color.Black;
+                    userNameTB.ForeColor = original_text_Color_Active;
                     userNameTB.Text = "";
                 }
 
@@ -249,7 +250,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (passwordTB.ForeColor == original_text_Color)
                 {
-                    passwordTB.ForeColor = Color.Black;
+                    passwordTB.ForeColor = original_text_Color_Active;
                     passwordTB.Text = "";
                 }
 
@@ -259,14 +260,13 @@ namespace Text_Reading_for_Visually_Impaired
 
         public void DrawLinePointF(PaintEventArgs e)
         {
-
             foreach(Control t in this.Controls)
             {
                 if(t.GetType() == typeof(TextBox))
                 {
-                    Pen blackPen = new Pen(t.ForeColor, 3);
-                    PointF point1 = new PointF(t.Location.Y + t.Height, t.Location.X);
-                    PointF point2 = new PointF(t.Location.Y + t.Height, t.Location.X + t.Width);
+                    Pen blackPen = new Pen(original_text_Color_Active, 3);
+                    PointF point1 = new PointF(t.Location.X, t.Location.Y + t.Height);
+                    PointF point2 = new PointF( t.Location.X + t.Width, t.Location.Y + t.Height);
                     e.Graphics.DrawLine(blackPen, point1, point2);
                 }
             }
@@ -289,11 +289,16 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (EmailTB.ForeColor == original_text_Color)
                 {
-                    EmailTB.ForeColor = Color.Black;
+                    EmailTB.ForeColor = original_text_Color_Active;
                     EmailTB.Text = "";
                 }
 
             }
+        }
+
+        private void Registration_Paint(object sender, PaintEventArgs e)
+        {
+            DrawLinePointF(e);
         }
     }
 }

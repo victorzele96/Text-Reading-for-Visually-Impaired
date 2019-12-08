@@ -199,6 +199,7 @@
             this.ShowIcon = false;
             this.Text = "registration";
             this.Load += new System.EventHandler(this.Registration_Load_1);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Registration_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 
