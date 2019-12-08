@@ -81,6 +81,10 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
+                    this.Hide();
+                    Admin ss = new Admin();
+                    ss.ShowDialog();
+                    this.Close();
                 }
                 else if(dt1.Rows.Count > 0)
                 {
