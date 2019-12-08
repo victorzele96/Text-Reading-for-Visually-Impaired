@@ -40,17 +40,16 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            Registration reg = new Registration();
+            reg.ShowDialog();
+            this.Close();
         }
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-   
-
+        { 
             if (e.KeyChar == (char)13)
                 txtPassword.Focus();
-
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)

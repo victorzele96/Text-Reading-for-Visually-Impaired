@@ -98,11 +98,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(70, 352);
+            this.button3.Location = new System.Drawing.Point(68, 348);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(148, 28);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Teacher";
+            this.button3.Text = "Teacher registration";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
