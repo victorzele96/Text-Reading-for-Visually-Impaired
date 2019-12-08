@@ -15,6 +15,7 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Registration : Form
     {
+        Color original_text_Color = Color.White ;
         String data_Base_Path = "";
         public Registration()
         {
@@ -23,6 +24,7 @@ namespace Text_Reading_for_Visually_Impaired
             firstNameTB.SelectionStart = 0;
             maleRB.Checked = true;
             femaleRB.Checked = false;
+            original_text_Color = userNameTB.ForeColor;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace Text_Reading_for_Visually_Impaired
         {
             if (sender.GetType().Name == "TextBox")
             {
-                if (((TextBox)sender).ForeColor == Color.DarkGray)
+                if (((TextBox)sender).ForeColor == original_text_Color)
                 {
                     ((TextBox)sender).Text = "";
                     ((TextBox)sender).ForeColor = Color.Black;
@@ -48,7 +50,7 @@ namespace Text_Reading_for_Visually_Impaired
                     {
                         if (c.GetType() == typeof(TextBox) && ((TextBox)c).Text == "" && c.Name != tempName)
                         {
-                            c.ForeColor = Color.DarkGray;
+                            c.ForeColor = original_text_Color;
                             if (c.Name == "firstNameTB" && c.Name != tempName)
                             {
                                 c.Text = "first name";
@@ -90,25 +92,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void firstNameTB_KeyDown(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
-            {
-                lastNameTB.Focus();
-                textBox_clicked(sender, e);
-                if (firstNameTB.Text == "")
-                {
-                    firstNameTB.ForeColor = Color.DarkGray;
-                    firstNameTB.Text = "first name";
-                }
-            }
-            else
-            {
-                if (firstNameTB.ForeColor == Color.DarkGray)
-                {
-                    firstNameTB.ForeColor = Color.Black;
-                    firstNameTB.Text = "";
-                }
-
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -178,6 +162,138 @@ namespace Text_Reading_for_Visually_Impaired
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void firstNameTB_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                lastNameTB.Focus();
+                textBox_clicked(sender, e);
+                if (firstNameTB.Text == "")
+                {
+                    firstNameTB.ForeColor = original_text_Color;
+                    firstNameTB.Text = "first name";
+                }
+            }
+            else
+            {
+                if (firstNameTB.ForeColor == original_text_Color)
+                {
+                    firstNameTB.ForeColor = Color.Black;
+                    firstNameTB.Text = "";
+                }
+
+            }
+        }
+
+        private void lastNameTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                userNameTB.Focus();
+                textBox_clicked(sender, e);
+                if (lastNameTB.Text == "")
+                {
+                    lastNameTB.ForeColor = original_text_Color;
+                    lastNameTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (lastNameTB.ForeColor == original_text_Color)
+                {
+                    lastNameTB.ForeColor = Color.Black;
+                    lastNameTB.Text = "";
+                }
+
+            }
+        }
+
+        private void userNameTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                passwordTB.Focus();
+                textBox_clicked(sender, e);
+                if (userNameTB.Text == "")
+                {
+                    userNameTB.ForeColor = original_text_Color;
+                    userNameTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (userNameTB.ForeColor == original_text_Color)
+                {
+                    userNameTB.ForeColor = Color.Black;
+                    userNameTB.Text = "";
+                }
+
+            }
+        }
+
+        private void passwordTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                EmailTB.Focus();
+                textBox_clicked(sender, e);
+                if (passwordTB.Text == "")
+                {
+                    passwordTB.ForeColor = original_text_Color;
+                    passwordTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (passwordTB.ForeColor == original_text_Color)
+                {
+                    passwordTB.ForeColor = Color.Black;
+                    passwordTB.Text = "";
+                }
+
+            }
+        }
+
+
+        public void DrawLinePointF(PaintEventArgs e)
+        {
+
+            foreach(Control t in this.Controls)
+            {
+                if(t.GetType() == typeof(TextBox))
+                {
+                    Pen blackPen = new Pen(t.ForeColor, 3);
+                    PointF point1 = new PointF(t.Location.Y + t.Height, t.Location.X);
+                    PointF point2 = new PointF(t.Location.Y + t.Height, t.Location.X + t.Width);
+                    e.Graphics.DrawLine(blackPen, point1, point2);
+                }
+            }
+  
+        }
+
+        private void EmailTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                OKBT.Focus();
+                textBox_clicked(sender, e);
+                if (EmailTB.Text == "")
+                {
+                    EmailTB.ForeColor = original_text_Color;
+                    EmailTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (EmailTB.ForeColor == original_text_Color)
+                {
+                    EmailTB.ForeColor = Color.Black;
+                    EmailTB.Text = "";
+                }
+
+            }
         }
     }
 }
