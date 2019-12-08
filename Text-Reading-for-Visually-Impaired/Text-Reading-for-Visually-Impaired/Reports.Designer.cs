@@ -1,6 +1,6 @@
 ﻿namespace Text_Reading_for_Visually_Impaired
 {
-    partial class Admin
+    partial class Reports
     {
         /// <summary>
         /// Required designer variable.
@@ -34,34 +34,36 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(428, 233);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button1.Location = new System.Drawing.Point(392, 245);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 54);
+            this.button1.Size = new System.Drawing.Size(153, 48);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Reports";
+            this.button1.Text = "users details";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(604, 359);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button2.Location = new System.Drawing.Point(555, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 47);
+            this.button2.Size = new System.Drawing.Size(153, 50);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Logout";
+            this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Admin
+            // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Admin";
-            this.Text = "Admin";
+            this.Name = "Reports";
+            this.Text = "Reports";
+            this.Load += new System.EventHandler(this.Reports_Load);
             this.ResumeLayout(false);
 
         }

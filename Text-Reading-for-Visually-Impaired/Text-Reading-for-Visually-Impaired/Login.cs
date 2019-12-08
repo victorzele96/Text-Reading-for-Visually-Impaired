@@ -36,7 +36,8 @@ namespace Text_Reading_for_Visually_Impaired
         {
             this.Hide();
             Admin ss = new Admin();
-            ss.Show();
+            ss.ShowDialog();
+            this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
