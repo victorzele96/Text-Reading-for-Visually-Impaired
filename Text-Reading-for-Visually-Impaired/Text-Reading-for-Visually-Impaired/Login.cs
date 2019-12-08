@@ -45,8 +45,12 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+   
+
             if (e.KeyChar == (char)13)
                 txtPassword.Focus();
+
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -77,6 +81,10 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
+                    this.Hide();
+                    Admin ss = new Admin();
+                    ss.ShowDialog();
+                    this.Close();
                 }
                 else if(dt1.Rows.Count > 0)
                 {
