@@ -34,7 +34,7 @@ namespace Text_Reading_for_Visually_Impaired
             dataGridView1.DataSource = dt1;
 
             Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
-            Database11DataSet.ProfileDataTable dt2 = pr.GetData();//pr=profile
+            Database11DataSet.ProfileDataTable dt2 = pr.GetDataBy();//pr=profile
             dataGridView2.DataSource = dt2;
 
             label6.Text = "";
