@@ -16,18 +16,5 @@ namespace Text_Reading_for_Visually_Impaired
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Reports report = new Reports();
-            report.ShowDialog();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
