@@ -15,7 +15,7 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Registration : Form
     {
-        Color original_text_Color= Color.White ;
+        Color original_text_Color = Color.White;
         Color original_text_Color_Active = Color.White;
         String data_Base_Path = "";
         public Registration()
@@ -93,11 +93,13 @@ namespace Text_Reading_for_Visually_Impaired
         private void firstNameTB_KeyDown(object sender, KeyEventArgs e)
         {
 
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
 
         }
 
@@ -127,7 +129,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (c.GetType() == typeof(TextBox))
                 {
-                    if (((TextBox)c).ForeColor == this.original_text_Color)
+                    if (((TextBox)c).Text == "")
                     {
                         MessageBox.Show("please fill al fields", "error");
                     }
@@ -140,7 +142,7 @@ namespace Text_Reading_for_Visually_Impaired
             }
             string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source=|DataDirectory|\Database11.accdb";
-            string query = " INSERT INTO [Teacher] VALUES ( @id  , @user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
+            string query = " INSERT INTO [Teacher] ([ID],[User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES ( @id  , @user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -152,9 +154,11 @@ namespace Text_Reading_for_Visually_Impaired
                 cmd.Parameters.AddWithValue(@"lastName", lastNameTB.Text);
                 cmd.Parameters.AddWithValue(@"email", EmailTB.Text);
                 cmd.Parameters.AddWithValue(@"gender", gender);
-                OleDbDataReader reader = cmd.ExecuteReader();
-                reader.Read();
-                firstNameTB.Text = reader[0].ToString();
+                //OleDbDataReader reader = cmd.ExecuteReader();
+                //reader.Read();
+                //firstNameTB.Text = reader[0].ToString();
+                cmd.ExecuteNonQuery();
+                this.Close();
             }
         }
 
@@ -258,17 +262,17 @@ namespace Text_Reading_for_Visually_Impaired
 
         public void DrawLinePointF(PaintEventArgs e)
         {
-            foreach(Control t in this.Controls)
+            foreach (Control t in this.Controls)
             {
-                if(t.GetType() == typeof(TextBox))
+                if (t.GetType() == typeof(TextBox))
                 {
                     Pen blackPen = new Pen(original_text_Color_Active, 3);
                     PointF point1 = new PointF(t.Location.X, t.Location.Y + t.Height);
-                    PointF point2 = new PointF( t.Location.X + t.Width, t.Location.Y + t.Height);
+                    PointF point2 = new PointF(t.Location.X + t.Width, t.Location.Y + t.Height);
                     e.Graphics.DrawLine(blackPen, point1, point2);
                 }
             }
-  
+
         }
 
         private void EmailTB_KeyDown(object sender, KeyEventArgs e)
