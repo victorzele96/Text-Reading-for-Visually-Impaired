@@ -52,30 +52,28 @@ namespace Text_Reading_for_Visually_Impaired
         private void button2_Click(object sender, EventArgs e)
         {
             /*
+                                                             //th= means teacher
             Database11DataSetTableAdapters.TeacherTableAdapter th = new Database11DataSetTableAdapters.TeacherTableAdapter();
-            Database11DataSet.TeacherDataTable dt1 = th.GetData(); //th=teacher
-            
-            Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
-            Database11DataSet.ProfileDataTable dt2 = pr.GetData();//pr=profile
+            Database11DataSet.TeacherDataTable dt1 = th.GetDataByID(textBox6.Text);
 
-            if (textBox6.Text==dt1)
+            if (dt1.Rows.Count > 0)
             {
                 label6.Text = "";
                 label8.Text = "";
-                label9.Text = "";
+                label9.Text = dt1.Rows.Count.ToString();
                 label10.Text = "";
                 label11.Text = "";
             }
-            else
-                if(textBox6.Text == dt2.DataSet("ID"))
-                {
-                    label6.Text = "";
-                    label8.Text = "";
-                    label9.Text = "";
-                    label10.Text = "";
-                    label11.Text = "";
-                }
-               */ 
+            */
+            Database11DataSetTableAdapters.AdminTableAdapter ad = new Database11DataSetTableAdapters.AdminTableAdapter();
+            Database11DataSet.AdminDataTable dt1 = ad.GetDataByID(textBox6.Text);
+ 
+            if (dt1.Rows.Count > 0)
+            {
+                MessageBox.Show("You have been successfully find", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                label9.Text = dt1.IDColumn.ToString();
+            }
+
         }
     }
 }
