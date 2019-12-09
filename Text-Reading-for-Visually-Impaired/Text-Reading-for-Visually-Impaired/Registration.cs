@@ -99,8 +99,6 @@ namespace Text_Reading_for_Visually_Impaired
         private void button2_Click(object sender, EventArgs e)
         {
 
-            
-
         }
 
         private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
@@ -129,7 +127,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (c.GetType() == typeof(TextBox))
                 {
-                    if (((TextBox)c).Text == "")
+                    if (((TextBox)c).ForeColor == this.original_text_Color)
                     {
                         MessageBox.Show("please fill al fields", "error");
                     }
