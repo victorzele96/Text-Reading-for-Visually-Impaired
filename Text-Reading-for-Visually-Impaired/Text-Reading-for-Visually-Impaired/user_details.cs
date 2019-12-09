@@ -58,8 +58,7 @@ namespace Text_Reading_for_Visually_Impaired
             Database11DataSet.ProfileDataTable dt2 = pr.GetData();//pr=profile
             dataGridView2.DataSource = dt2;
 
-            if (dt1.Rows.Count > 0)
-            {
+            Boolean foundFlag = false;
                 if (dataGridView1.Rows.Count > 0)
                 {
                     foreach (DataGridViewRow r in dataGridView1.Rows)
@@ -68,6 +67,7 @@ namespace Text_Reading_for_Visually_Impaired
                         String y = textBox6.Text;
                         if (x == y)
                         {
+                            foundFlag = true;
                             label9.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
                             label6.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
                             label8.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
@@ -76,8 +76,8 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                     }
                 }
-            }
-            else
+                else
+            
                 if (dataGridView2.Rows.Count > 0)
                 {
                     foreach (DataGridViewRow r in dataGridView2.Rows)
@@ -86,6 +86,7 @@ namespace Text_Reading_for_Visually_Impaired
                         String y = textBox6.Text;
                         if (x == y)
                         {
+                            foundFlag = true;
                             label9.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
                             label6.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
                             label8.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
@@ -94,7 +95,9 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                     }
                 }
+            if(!foundFlag)
                 MessageBox.Show("The account does not exist in the system!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
+    }
 }
