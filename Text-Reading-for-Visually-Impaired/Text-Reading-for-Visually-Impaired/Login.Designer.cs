@@ -33,9 +33,9 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.EXIT = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.database11DataSet1 = new Text_Reading_for_Visually_Impaired.Database11DataSet();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.database11DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,16 +86,6 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // EXIT
-            // 
-            this.EXIT.Location = new System.Drawing.Point(326, 200);
-            this.EXIT.Name = "EXIT";
-            this.EXIT.Size = new System.Drawing.Size(75, 29);
-            this.EXIT.TabIndex = 5;
-            this.EXIT.Text = "Exit";
-            this.EXIT.UseVisualStyleBackColor = true;
-            this.EXIT.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(68, 348);
@@ -111,14 +101,24 @@
             this.database11DataSet1.DataSetName = "Database11DataSet";
             this.database11DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(291, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(580, 421);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.EXIT);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
@@ -140,8 +140,8 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button EXIT;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

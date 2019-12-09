@@ -40,6 +40,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Registration r = new Registration();
+            r.ShowDialog();
             this.Close();
         }
 
@@ -106,6 +109,11 @@ namespace Text_Reading_for_Visually_Impaired
         private void Exit(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
