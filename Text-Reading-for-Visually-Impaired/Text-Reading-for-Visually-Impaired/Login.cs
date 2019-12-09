@@ -40,9 +40,6 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Registration reg = new Registration();
-            reg.ShowDialog();
             this.Close();
         }
 
