@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Admin : Form
+    public partial class Feedback : Form
     {
-        public Admin()
+        public Feedback()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Reports report = new Reports();
-            report.ShowDialog();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+            Reports f = new Reports();
+            f.ShowDialog();
             this.Close();
         }
     }
