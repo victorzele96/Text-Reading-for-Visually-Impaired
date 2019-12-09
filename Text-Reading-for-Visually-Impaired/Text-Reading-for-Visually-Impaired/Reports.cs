@@ -37,5 +37,13 @@ namespace Text_Reading_for_Visually_Impaired
             f.ShowDialog();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Feedback f = new Feedback();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }
