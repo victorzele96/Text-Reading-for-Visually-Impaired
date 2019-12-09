@@ -70,9 +70,11 @@ namespace Text_Reading_for_Visually_Impaired
  
             if (dt1.Rows.Count > 0)
             {
-                MessageBox.Show("You have been successfully find", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 label9.Text = dt1.IDColumn.ToString();
             }
+            else
+                MessageBox.Show("The account does not exist in the system!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
         }
     }
