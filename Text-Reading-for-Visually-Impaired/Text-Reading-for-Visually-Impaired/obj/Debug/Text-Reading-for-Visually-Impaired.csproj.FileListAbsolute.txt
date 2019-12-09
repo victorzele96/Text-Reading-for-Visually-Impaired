@@ -9,3 +9,4 @@ C:\Users\pazaharon\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Read
 C:\Users\pazaharon\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.csproj.CoreCompileInputs.cache
 C:\Users\pazaharon\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.exe
 C:\Users\pazaharon\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.pdb
+C:\Users\pazaharon\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.csprojAssemblyReference.cache

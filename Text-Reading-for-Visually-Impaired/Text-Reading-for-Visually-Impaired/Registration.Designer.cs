@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.headlineLB = new System.Windows.Forms.Label();
             this.maleRB = new System.Windows.Forms.RadioButton();
             this.firstNameTB = new System.Windows.Forms.TextBox();
             this.OKBT = new System.Windows.Forms.Button();
@@ -40,17 +40,17 @@
             this.EmailTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label2
+            // headlineLB
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(584, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(268, 89);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "sign in";
+            this.headlineLB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.headlineLB.AutoSize = true;
+            this.headlineLB.Font = new System.Drawing.Font("Arial", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.headlineLB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.headlineLB.Location = new System.Drawing.Point(584, 35);
+            this.headlineLB.Name = "headlineLB";
+            this.headlineLB.Size = new System.Drawing.Size(630, 208);
+            this.headlineLB.TabIndex = 0;
+            this.headlineLB.Text = "sign in";
             // 
             // maleRB
             // 
@@ -86,9 +86,9 @@
             this.OKBT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OKBT.BackColor = System.Drawing.Color.LightSteelBlue;
             this.OKBT.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.OKBT.Location = new System.Drawing.Point(789, 625);
+            this.OKBT.Location = new System.Drawing.Point(789, 652);
             this.OKBT.Name = "OKBT";
-            this.OKBT.Size = new System.Drawing.Size(200, 102);
+            this.OKBT.Size = new System.Drawing.Size(290, 75);
             this.OKBT.TabIndex = 3;
             this.OKBT.Text = "OK";
             this.OKBT.UseVisualStyleBackColor = false;
@@ -144,9 +144,9 @@
             this.cancelBT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cancelBT.BackColor = System.Drawing.Color.LightSteelBlue;
             this.cancelBT.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.cancelBT.Location = new System.Drawing.Point(432, 624);
+            this.cancelBT.Location = new System.Drawing.Point(406, 652);
             this.cancelBT.Name = "cancelBT";
-            this.cancelBT.Size = new System.Drawing.Size(222, 105);
+            this.cancelBT.Size = new System.Drawing.Size(290, 75);
             this.cancelBT.TabIndex = 7;
             this.cancelBT.Text = "Cancel";
             this.cancelBT.UseVisualStyleBackColor = false;
@@ -194,7 +194,7 @@
             this.Controls.Add(this.OKBT);
             this.Controls.Add(this.firstNameTB);
             this.Controls.Add(this.maleRB);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.headlineLB);
             this.Name = "Registration";
             this.ShowIcon = false;
             this.Text = "registration";
@@ -208,7 +208,7 @@
         #endregion
 
         
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label headlineLB;
         private System.Windows.Forms.RadioButton maleRB;
         private System.Windows.Forms.TextBox firstNameTB;
         private System.Windows.Forms.Button OKBT;
