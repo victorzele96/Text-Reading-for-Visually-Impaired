@@ -34,15 +34,14 @@ namespace Text_Reading_for_Visually_Impaired
             dataGridView1.DataSource = dt1;
 
             Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
-            Database11DataSet.ProfileDataTable dt2 = pr.GetDataBy();//pr=profile
+            Database11DataSet.ProfileDataTable dt2 = pr.GetData();//pr=profile
             dataGridView2.DataSource = dt2;
 
             label6.Text = "";
             label8.Text = "";
             label9.Text = "";
             label10.Text = "";
-            label11.Text = "";
-            
+            label11.Text = "";            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,31 +50,54 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
-                                                             //th= means teacher
-            Database11DataSetTableAdapters.TeacherTableAdapter th = new Database11DataSetTableAdapters.TeacherTableAdapter();
-            Database11DataSet.TeacherDataTable dt1 = th.GetDataByID(textBox6.Text);
+            Database11DataSetTableAdapters.TeacherTableAdapter tr = new Database11DataSetTableAdapters.TeacherTableAdapter();
+            Database11DataSet.TeacherDataTable dt1 = tr.GetData();//tr=teacher
+            dataGridView1.DataSource = dt1;
 
-            if (dt1.Rows.Count > 0)
-            {
-                label6.Text = "";
-                label8.Text = "";
-                label9.Text = dt1.Rows.Count.ToString();
-                label10.Text = "";
-                label11.Text = "";
-            }
-            */
-            Database11DataSetTableAdapters.AdminTableAdapter ad = new Database11DataSetTableAdapters.AdminTableAdapter();
-            Database11DataSet.AdminDataTable dt1 = ad.GetDataByID(textBox6.Text);
- 
-            if (dt1.Rows.Count > 0)
-            {
-                label9.Text = dt1.IDColumn.ToString();
-            }
-            else
+            Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
+            Database11DataSet.ProfileDataTable dt2 = pr.GetData();//pr=profile
+            dataGridView2.DataSource = dt2;
+
+            Boolean foundFlag = false;
+                if (dataGridView1.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow r in dataGridView1.Rows)
+                    {
+                        String x = (String)r.Cells[0].Value;
+                        String y = textBox6.Text;
+                        if (x == y)
+                        {
+                            foundFlag = true;
+                            label9.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
+                            label6.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
+                            label8.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
+                            label10.Text = ((DataGridViewRow)r).Cells["Male / Female"].Value.ToString();
+                            label11.Text = ((DataGridViewRow)r).Cells["Email"].Value.ToString();
+                        }
+                    }
+                }
+                else
+            
+                if (dataGridView2.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow r in dataGridView2.Rows)
+                    {
+                        String x = (String)r.Cells[0].Value;
+                        String y = textBox6.Text;
+                        if (x == y)
+                        {
+                            foundFlag = true;
+                            label9.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
+                            label6.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
+                            label8.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
+                            label10.Text = ((DataGridViewRow)r).Cells["Male / Female"].Value.ToString();
+                            label11.Text = ((DataGridViewRow)r).Cells["Email"].Value.ToString();
+                        }
+                    }
+                }
+            if(!foundFlag)
                 MessageBox.Show("The account does not exist in the system!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+            
         }
     }
 }
