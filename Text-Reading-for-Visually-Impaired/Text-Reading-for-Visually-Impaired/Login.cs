@@ -115,6 +115,11 @@ namespace Text_Reading_for_Visually_Impaired
         {
             this.Close();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

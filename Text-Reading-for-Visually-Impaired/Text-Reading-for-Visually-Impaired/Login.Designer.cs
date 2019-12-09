@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -41,59 +42,53 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 147);
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Password :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(291, 147);
+            resources.ApplyResources(this.txtPassword, "txtPassword");
+            this.txtPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(191, 22);
-            this.txtPassword.TabIndex = 1;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(291, 113);
+            resources.ApplyResources(this.txtUsername, "txtUsername");
+            this.txtUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(191, 22);
-            this.txtUsername.TabIndex = 3;
             this.txtUsername.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 113);
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Username :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(407, 200);
+            resources.ApplyResources(this.btnLogin, "btnLogin");
+            this.btnLogin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 29);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(68, 348);
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 28);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Teacher registration";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // database11DataSet1
@@ -103,20 +98,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(291, 200);
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "exit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(580, 421);
+            this.CausesValidation = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnLogin);
@@ -124,9 +118,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MinimizeBox = false;
             this.Name = "Login";
-            this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database11DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
