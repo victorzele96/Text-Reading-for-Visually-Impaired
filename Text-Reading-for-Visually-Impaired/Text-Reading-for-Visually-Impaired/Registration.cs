@@ -17,7 +17,6 @@ namespace Text_Reading_for_Visually_Impaired
     {
         Color original_text_Color = Color.White;
         Color original_text_Color_Active = Color.White;
-        String data_Base_Path = "";
         public Registration()
         {
             InitializeComponent();
@@ -140,24 +139,31 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 gender = "Male";
             }
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;
-                    Data Source=|DataDirectory|\Database11.accdb";
-            string query = " INSERT INTO [Teacher] ([ID],[User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES ( @id  , @user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr =String.Format( @"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}",path2);
+            string query = " INSERT INTO [Teacher] ([User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES ( @id  , @user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
-                cmd.Parameters.AddWithValue(@"id", lastNameTB.Text);
                 cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
                 cmd.Parameters.AddWithValue(@"password", passwordTB.Text);
                 cmd.Parameters.AddWithValue(@"firstName", firstNameTB.Text);
                 cmd.Parameters.AddWithValue(@"lastName", lastNameTB.Text);
                 cmd.Parameters.AddWithValue(@"email", EmailTB.Text);
                 cmd.Parameters.AddWithValue(@"gender", gender);
-                //OleDbDataReader reader = cmd.ExecuteReader();
-                //reader.Read();
-                //firstNameTB.Text = reader[0].ToString();
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }catch(Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+                
                 this.Close();
             }
         }
