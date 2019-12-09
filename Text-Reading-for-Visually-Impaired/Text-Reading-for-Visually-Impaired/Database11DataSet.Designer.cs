@@ -34,22 +34,6 @@ namespace Text_Reading_for_Visually_Impaired {
         
         private TeacherDataTable tableTeacher;
         
-        private global::System.Data.DataRelation relationAdminProfile;
-        
-        private global::System.Data.DataRelation relationTeacherProfile;
-        
-        private global::System.Data.DataRelation relationAdminReports;
-        
-        private global::System.Data.DataRelation relationProfileReports;
-        
-        private global::System.Data.DataRelation relationTeacherReports;
-        
-        private global::System.Data.DataRelation relationAdminStories;
-        
-        private global::System.Data.DataRelation relationProfileStories;
-        
-        private global::System.Data.DataRelation relationAdminTeacher;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -306,14 +290,6 @@ namespace Text_Reading_for_Visually_Impaired {
                     this.tableTeacher.InitVars();
                 }
             }
-            this.relationAdminProfile = this.Relations["AdminProfile"];
-            this.relationTeacherProfile = this.Relations["TeacherProfile"];
-            this.relationAdminReports = this.Relations["AdminReports"];
-            this.relationProfileReports = this.Relations["ProfileReports"];
-            this.relationTeacherReports = this.Relations["TeacherReports"];
-            this.relationAdminStories = this.Relations["AdminStories"];
-            this.relationProfileStories = this.Relations["ProfileStories"];
-            this.relationAdminTeacher = this.Relations["AdminTeacher"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -334,41 +310,6 @@ namespace Text_Reading_for_Visually_Impaired {
             base.Tables.Add(this.tableStories);
             this.tableTeacher = new TeacherDataTable();
             base.Tables.Add(this.tableTeacher);
-<<<<<<< HEAD
-            this.relationAdminProfile = new global::System.Data.DataRelation("AdminProfile", new global::System.Data.DataColumn[] {
-                        this.tableAdmin.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableProfile.User_LoginColumn}, false);
-            this.Relations.Add(this.relationAdminProfile);
-            this.relationTeacherProfile = new global::System.Data.DataRelation("TeacherProfile", new global::System.Data.DataColumn[] {
-                        this.tableTeacher.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableProfile.User_LoginColumn}, false);
-            this.Relations.Add(this.relationTeacherProfile);
-            this.relationAdminReports = new global::System.Data.DataRelation("AdminReports", new global::System.Data.DataColumn[] {
-                        this.tableAdmin.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReports.ReportsColumn}, false);
-            this.Relations.Add(this.relationAdminReports);
-            this.relationProfileReports = new global::System.Data.DataRelation("ProfileReports", new global::System.Data.DataColumn[] {
-                        this.tableProfile.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReports.ReportsColumn}, false);
-            this.Relations.Add(this.relationProfileReports);
-            this.relationTeacherReports = new global::System.Data.DataRelation("TeacherReports", new global::System.Data.DataColumn[] {
-                        this.tableTeacher.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReports.ReportsColumn}, false);
-            this.Relations.Add(this.relationTeacherReports);
-            this.relationAdminStories = new global::System.Data.DataRelation("AdminStories", new global::System.Data.DataColumn[] {
-                        this.tableAdmin.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableStories.Story_NameColumn}, false);
-            this.Relations.Add(this.relationAdminStories);
-            this.relationProfileStories = new global::System.Data.DataRelation("ProfileStories", new global::System.Data.DataColumn[] {
-                        this.tableProfile.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableStories.Story_NameColumn}, false);
-            this.Relations.Add(this.relationProfileStories);
-            this.relationAdminTeacher = new global::System.Data.DataRelation("AdminTeacher", new global::System.Data.DataColumn[] {
-                        this.tableAdmin.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTeacher.User_LoginColumn}, false);
-            this.Relations.Add(this.relationAdminTeacher);
-=======
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -964,24 +905,17 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public ProfileRow AddProfileRow(string ID, AdminRow parentAdminRowByAdminProfile, string Password, string First_Name, string Last_Name, string Email, string _Male___Female, System.DateTime Date_register) {
-=======
             public ProfileRow AddProfileRow(string ID, string User_Login, string Password, string First_Name, string Last_Name, string Email, string _Male___Female, System.DateTime Date_register) {
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
                 ProfileRow rowProfileRow = ((ProfileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
-                        null,
+                        User_Login,
                         Password,
                         First_Name,
                         Last_Name,
                         Email,
                         _Male___Female,
                         Date_register};
-                if ((parentAdminRowByAdminProfile != null)) {
-                    columnValuesArray[1] = parentAdminRowByAdminProfile[0];
-                }
                 rowProfileRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProfileRow);
                 return rowProfileRow;
@@ -1316,22 +1250,15 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public ReportsRow AddReportsRow(System.DateTime Date_Report, AdminRow parentAdminRowByAdminReports, string General_Report, string Periodic_Report, int שדה1, int שדה2) {
-=======
             public ReportsRow AddReportsRow(System.DateTime Date_Report, string Reports, string General_Report, string Periodic_Report, int שדה1, int שדה2) {
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
                 ReportsRow rowReportsRow = ((ReportsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Date_Report,
-                        null,
+                        Reports,
                         General_Report,
                         Periodic_Report,
                         שדה1,
                         שדה2};
-                if ((parentAdminRowByAdminReports != null)) {
-                    columnValuesArray[1] = parentAdminRowByAdminReports[0];
-                }
                 rowReportsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReportsRow);
                 return rowReportsRow;
@@ -1634,20 +1561,13 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public StoriesRow AddStoriesRow(string Story_Number, AdminRow parentAdminRowByAdminStories, string Qustions, string story_file) {
-=======
             public StoriesRow AddStoriesRow(string Story_Number, string Story_Name, string Qustions, string story_file) {
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
                 StoriesRow rowStoriesRow = ((StoriesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Story_Number,
-                        null,
+                        Story_Name,
                         Qustions,
                         story_file};
-                if ((parentAdminRowByAdminStories != null)) {
-                    columnValuesArray[1] = parentAdminRowByAdminStories[0];
-                }
                 rowStoriesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStoriesRow);
                 return rowStoriesRow;
@@ -1975,23 +1895,16 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public TeacherRow AddTeacherRow(string ID, AdminRow parentAdminRowByAdminTeacher, string Password, string First_Name, string Last_Name, string Email, string _Male___Female) {
-=======
             public TeacherRow AddTeacherRow(string ID, string User_Login, string Password, string First_Name, string Last_Name, string Email, string _Male___Female) {
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
                 TeacherRow rowTeacherRow = ((TeacherRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
-                        null,
+                        User_Login,
                         Password,
                         First_Name,
                         Last_Name,
                         Email,
                         _Male___Female};
-                if ((parentAdminRowByAdminTeacher != null)) {
-                    columnValuesArray[1] = parentAdminRowByAdminTeacher[0];
-                }
                 rowTeacherRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTeacherRow);
                 return rowTeacherRow;
@@ -2350,50 +2263,6 @@ namespace Text_Reading_for_Visually_Impaired {
             public void Set_Male___FemaleNull() {
                 this[this.tableAdmin._Male___FemaleColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ProfileRow[] GetProfileRows() {
-                if ((this.Table.ChildRelations["AdminProfile"] == null)) {
-                    return new ProfileRow[0];
-                }
-                else {
-                    return ((ProfileRow[])(base.GetChildRows(this.Table.ChildRelations["AdminProfile"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ReportsRow[] GetReportsRows() {
-                if ((this.Table.ChildRelations["AdminReports"] == null)) {
-                    return new ReportsRow[0];
-                }
-                else {
-                    return ((ReportsRow[])(base.GetChildRows(this.Table.ChildRelations["AdminReports"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StoriesRow[] GetStoriesRows() {
-                if ((this.Table.ChildRelations["AdminStories"] == null)) {
-                    return new StoriesRow[0];
-                }
-                else {
-                    return ((StoriesRow[])(base.GetChildRows(this.Table.ChildRelations["AdminStories"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TeacherRow[] GetTeacherRows() {
-                if ((this.Table.ChildRelations["AdminTeacher"] == null)) {
-                    return new TeacherRow[0];
-                }
-                else {
-                    return ((TeacherRow[])(base.GetChildRows(this.Table.ChildRelations["AdminTeacher"])));
-                }
-            }
         }
         
         /// <summary>
@@ -2535,31 +2404,6 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public AdminRow AdminRow {
-                get {
-                    return ((AdminRow)(this.GetParentRow(this.Table.ParentRelations["AdminProfile"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["AdminProfile"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TeacherRow TeacherRow {
-                get {
-                    return ((TeacherRow)(this.GetParentRow(this.Table.ParentRelations["TeacherProfile"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["TeacherProfile"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-=======
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
             public bool IsUser_LoginNull() {
                 return this.IsNull(this.tableProfile.User_LoginColumn);
             }
@@ -2640,28 +2484,6 @@ namespace Text_Reading_for_Visually_Impaired {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDate_registerNull() {
                 this[this.tableProfile.Date_registerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ReportsRow[] GetReportsRows() {
-                if ((this.Table.ChildRelations["ProfileReports"] == null)) {
-                    return new ReportsRow[0];
-                }
-                else {
-                    return ((ReportsRow[])(base.GetChildRows(this.Table.ChildRelations["ProfileReports"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StoriesRow[] GetStoriesRows() {
-                if ((this.Table.ChildRelations["ProfileStories"] == null)) {
-                    return new StoriesRow[0];
-                }
-                else {
-                    return ((StoriesRow[])(base.GetChildRows(this.Table.ChildRelations["ProfileStories"])));
-                }
             }
         }
         
@@ -2772,42 +2594,6 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public AdminRow AdminRow {
-                get {
-                    return ((AdminRow)(this.GetParentRow(this.Table.ParentRelations["AdminReports"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["AdminReports"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ProfileRow ProfileRow {
-                get {
-                    return ((ProfileRow)(this.GetParentRow(this.Table.ParentRelations["ProfileReports"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ProfileReports"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TeacherRow TeacherRow {
-                get {
-                    return ((TeacherRow)(this.GetParentRow(this.Table.ParentRelations["TeacherReports"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["TeacherReports"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-=======
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
             public bool IsReportsNull() {
                 return this.IsNull(this.tableReports.ReportsColumn);
             }
@@ -2942,31 +2728,6 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public AdminRow AdminRow {
-                get {
-                    return ((AdminRow)(this.GetParentRow(this.Table.ParentRelations["AdminStories"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["AdminStories"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ProfileRow ProfileRow {
-                get {
-                    return ((ProfileRow)(this.GetParentRow(this.Table.ParentRelations["ProfileStories"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ProfileStories"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-=======
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
             public bool IsStory_NameNull() {
                 return this.IsNull(this.tableStories.Story_NameColumn);
             }
@@ -3125,20 +2886,6 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-            public AdminRow AdminRow {
-                get {
-                    return ((AdminRow)(this.GetParentRow(this.Table.ParentRelations["AdminTeacher"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["AdminTeacher"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-=======
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
             public bool IsUser_LoginNull() {
                 return this.IsNull(this.tableTeacher.User_LoginColumn);
             }
@@ -3207,28 +2954,6 @@ namespace Text_Reading_for_Visually_Impaired {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Set_Male___FemaleNull() {
                 this[this.tableTeacher._Male___FemaleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ProfileRow[] GetProfileRows() {
-                if ((this.Table.ChildRelations["TeacherProfile"] == null)) {
-                    return new ProfileRow[0];
-                }
-                else {
-                    return ((ProfileRow[])(base.GetChildRows(this.Table.ChildRelations["TeacherProfile"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ReportsRow[] GetReportsRows() {
-                if ((this.Table.ChildRelations["TeacherReports"] == null)) {
-                    return new ReportsRow[0];
-                }
-                else {
-                    return ((ReportsRow[])(base.GetChildRows(this.Table.ChildRelations["TeacherReports"])));
-                }
             }
         }
         
@@ -3593,12 +3318,23 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, [First Name], [Last Name], Email, [Password], [Male / Female] FROM Adm" +
                 "in";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT ID\r\nFROM     Admin WHERE [ID]=?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT ID, [Password] FROM Admin WHERE [ID]=? AND [Password]=?";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3627,8 +3363,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-=======
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByID(Database11DataSet.AdminDataTable dataTable, string ID) {
@@ -3688,7 +3422,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(Database11DataSet.AdminDataTable dataTable) {
             return this.Adapter.Update(dataTable);
@@ -4153,14 +3886,12 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, [User Login], [Password], [First Name], [Last Name], Email, [Male / Fe" +
                 "male], [Date register] FROM Profile";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-<<<<<<< HEAD
-=======
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT ID, [User Login], [Password], [First Name], [Last Name], Email, [Male / Fe" +
@@ -4168,12 +3899,11 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT  [User Login],[Password] FROM Profile WHERE ([ID] = ?) AND ([Password] = ?" +
-                ")";
+            this._commandCollection[2].CommandText = "SELECT  [User Login],[Password] FROM Profile WHERE ([User Login] = ?) AND ([Passw" +
+                "ord] = ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("User_Login", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Login", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4193,7 +3923,7 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Database11DataSet.ProfileDataTable GetData() {
+        public virtual Database11DataSet.ProfileDataTable GetDataByUsernamePassword() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             Database11DataSet.ProfileDataTable dataTable = new Database11DataSet.ProfileDataTable();
             this.Adapter.Fill(dataTable);
@@ -4202,8 +3932,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-=======
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBy(Database11DataSet.ProfileDataTable dataTable) {
@@ -4230,13 +3958,13 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Database11DataSet.ProfileDataTable GetDataByUsernamePasswordProfile(string ID, string Password) {
+        public virtual Database11DataSet.ProfileDataTable GetDataByUsernamePasswordProfile(string User_Login, string Password) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((ID == null)) {
-                throw new global::System.ArgumentNullException("ID");
+            if ((User_Login == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ID));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(User_Login));
             }
             if ((Password == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4251,7 +3979,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(Database11DataSet.ProfileDataTable dataTable) {
             return this.Adapter.Update(dataTable);
@@ -5640,14 +5367,12 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, [User Login], [Password], [First Name], [Last Name], Email, [Male / Fe" +
                 "male] FROM Teacher";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-<<<<<<< HEAD
-=======
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT ID, [ID]\r\nFROM     Teacher WHERE [ID]=?";
@@ -5655,11 +5380,11 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT ID, [User Login], [Password] FROM Teacher WHERE [ID]=? AND [Password]=?";
+            this._commandCollection[2].CommandText = "SELECT ID, [User Login], [Password] FROM Teacher WHERE [User Login]=? AND [Passwo" +
+                "rd]=?";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("User_Login", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Login", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5688,8 +5413,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-<<<<<<< HEAD
-=======
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByID(Database11DataSet.TeacherDataTable dataTable, string ID) {
@@ -5728,13 +5451,13 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Database11DataSet.TeacherDataTable GetDataByUsernamePasswordTeacher(string ID, string Password) {
+        public virtual Database11DataSet.TeacherDataTable GetDataByUsernamePasswordTeacher(string User_Login, string Password) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((ID == null)) {
-                throw new global::System.ArgumentNullException("ID");
+            if ((User_Login == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ID));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(User_Login));
             }
             if ((Password == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -5749,7 +5472,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
->>>>>>> parent of 614f559... Merge pull request #23 from victorzele96/victor
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(Database11DataSet.TeacherDataTable dataTable) {
             return this.Adapter.Update(dataTable);
@@ -6235,15 +5957,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._teacherTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Teacher.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._teacherTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._profileTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Profile.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -6271,6 +5984,15 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._teacherTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Teacher.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._teacherTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -6286,14 +6008,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._adminTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._teacherTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Teacher.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._teacherTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6321,6 +6035,14 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._teacherTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Teacher.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._teacherTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -6331,6 +6053,14 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(Database11DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._teacherTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Teacher.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._teacherTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._storiesTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Stories.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -6352,14 +6082,6 @@ namespace Text_Reading_for_Visually_Impaired.Database11DataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._profileTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._teacherTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Teacher.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._teacherTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
