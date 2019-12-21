@@ -32,3 +32,4 @@ C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.pdb
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Send_feedback.resources
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Update_details.resources
+C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Student.resources
