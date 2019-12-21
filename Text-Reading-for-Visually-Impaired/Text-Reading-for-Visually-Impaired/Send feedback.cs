@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Feedback : Form
+    public partial class Send_feedback : Form
     {
-        public Feedback()
+        public Send_feedback()
         {
             InitializeComponent();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Reports f = new Reports();
-            f.ShowDialog();
+            Teacher teacher = new Teacher();
+            teacher.ShowDialog();
             this.Close();
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

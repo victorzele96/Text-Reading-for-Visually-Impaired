@@ -48,7 +48,7 @@
             this.headlineLB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.headlineLB.Location = new System.Drawing.Point(584, 35);
             this.headlineLB.Name = "headlineLB";
-            this.headlineLB.Size = new System.Drawing.Size(630, 208);
+            this.headlineLB.Size = new System.Drawing.Size(394, 131);
             this.headlineLB.TabIndex = 0;
             this.headlineLB.Text = "sign in";
             // 
@@ -60,7 +60,7 @@
             this.maleRB.ForeColor = System.Drawing.Color.White;
             this.maleRB.Location = new System.Drawing.Point(921, 441);
             this.maleRB.Name = "maleRB";
-            this.maleRB.Size = new System.Drawing.Size(187, 70);
+            this.maleRB.Size = new System.Drawing.Size(117, 46);
             this.maleRB.TabIndex = 1;
             this.maleRB.TabStop = true;
             this.maleRB.Text = "male";
@@ -75,7 +75,7 @@
             this.firstNameTB.ForeColor = System.Drawing.Color.DarkGray;
             this.firstNameTB.Location = new System.Drawing.Point(231, 198);
             this.firstNameTB.Name = "firstNameTB";
-            this.firstNameTB.Size = new System.Drawing.Size(367, 68);
+            this.firstNameTB.Size = new System.Drawing.Size(367, 43);
             this.firstNameTB.TabIndex = 2;
             this.firstNameTB.Text = "first name";
             this.firstNameTB.Click += new System.EventHandler(this.textBox_clicked);
@@ -90,7 +90,7 @@
             this.OKBT.Name = "OKBT";
             this.OKBT.Size = new System.Drawing.Size(290, 75);
             this.OKBT.TabIndex = 3;
-            this.OKBT.Text = "OK";
+            this.OKBT.Text = "Registration";
             this.OKBT.UseVisualStyleBackColor = false;
             this.OKBT.Click += new System.EventHandler(this.OK_Click);
             // 
@@ -103,7 +103,7 @@
             this.lastNameTB.ForeColor = System.Drawing.Color.DarkGray;
             this.lastNameTB.Location = new System.Drawing.Point(851, 198);
             this.lastNameTB.Name = "lastNameTB";
-            this.lastNameTB.Size = new System.Drawing.Size(367, 68);
+            this.lastNameTB.Size = new System.Drawing.Size(367, 43);
             this.lastNameTB.TabIndex = 4;
             this.lastNameTB.Text = "last name";
             this.lastNameTB.Click += new System.EventHandler(this.textBox_clicked);
@@ -118,7 +118,7 @@
             this.userNameTB.ForeColor = System.Drawing.Color.DarkGray;
             this.userNameTB.Location = new System.Drawing.Point(231, 343);
             this.userNameTB.Name = "userNameTB";
-            this.userNameTB.Size = new System.Drawing.Size(367, 68);
+            this.userNameTB.Size = new System.Drawing.Size(367, 43);
             this.userNameTB.TabIndex = 5;
             this.userNameTB.Text = "user name";
             this.userNameTB.Click += new System.EventHandler(this.textBox_clicked);
@@ -133,7 +133,7 @@
             this.passwordTB.ForeColor = System.Drawing.Color.DarkGray;
             this.passwordTB.Location = new System.Drawing.Point(851, 343);
             this.passwordTB.Name = "passwordTB";
-            this.passwordTB.Size = new System.Drawing.Size(367, 68);
+            this.passwordTB.Size = new System.Drawing.Size(367, 43);
             this.passwordTB.TabIndex = 6;
             this.passwordTB.Text = "password";
             this.passwordTB.Click += new System.EventHandler(this.textBox_clicked);
@@ -148,7 +148,7 @@
             this.cancelBT.Name = "cancelBT";
             this.cancelBT.Size = new System.Drawing.Size(290, 75);
             this.cancelBT.TabIndex = 7;
-            this.cancelBT.Text = "Cancel";
+            this.cancelBT.Text = "Back";
             this.cancelBT.UseVisualStyleBackColor = false;
             this.cancelBT.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -160,7 +160,7 @@
             this.femaleRB.ForeColor = System.Drawing.Color.White;
             this.femaleRB.Location = new System.Drawing.Point(921, 509);
             this.femaleRB.Name = "femaleRB";
-            this.femaleRB.Size = new System.Drawing.Size(237, 70);
+            this.femaleRB.Size = new System.Drawing.Size(147, 46);
             this.femaleRB.TabIndex = 8;
             this.femaleRB.TabStop = true;
             this.femaleRB.Text = "female";
@@ -175,7 +175,7 @@
             this.EmailTB.ForeColor = System.Drawing.Color.DarkGray;
             this.EmailTB.Location = new System.Drawing.Point(231, 476);
             this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(367, 68);
+            this.EmailTB.Size = new System.Drawing.Size(367, 43);
             this.EmailTB.TabIndex = 9;
             this.EmailTB.Text = "E-mail";
             this.EmailTB.Click += new System.EventHandler(this.textBox_clicked);
