@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,6 +86,18 @@
     <Compile Include="Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Send feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Send feedback.Designer.cs">
+      <DependentUpon>Send feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update details.Designer.cs">
+      <DependentUpon>Update details.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +133,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Send feedback.resx">
+      <DependentUpon>Send feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.resx">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update details.resx">
+      <DependentUpon>Update details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_details.resx">
       <DependentUpon>user_details.cs</DependentUpon>

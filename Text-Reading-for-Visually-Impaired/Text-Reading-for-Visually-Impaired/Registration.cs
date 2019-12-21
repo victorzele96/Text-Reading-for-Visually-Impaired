@@ -182,6 +182,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Login back = new Login();
+            back.ShowDialog();
             this.Close();
         }
 

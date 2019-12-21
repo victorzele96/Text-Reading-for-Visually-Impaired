@@ -27,6 +27,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
             this.Close();
         }
     }

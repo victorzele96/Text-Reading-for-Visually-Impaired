@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 147);
+            this.label1.Location = new System.Drawing.Point(63, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(291, 147);
+            this.txtPassword.Location = new System.Drawing.Point(194, 152);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(191, 22);
             this.txtPassword.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(291, 113);
+            this.txtUsername.Location = new System.Drawing.Point(194, 115);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(191, 22);
             this.txtUsername.TabIndex = 3;
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 113);
+            this.label2.Location = new System.Drawing.Point(63, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 2;
@@ -78,9 +78,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(407, 200);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnLogin.Location = new System.Drawing.Point(194, 215);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 29);
+            this.btnLogin.Size = new System.Drawing.Size(191, 62);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -88,9 +89,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(68, 348);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button3.Location = new System.Drawing.Point(66, 338);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 28);
+            this.button3.Size = new System.Drawing.Size(181, 62);
             this.button3.TabIndex = 6;
             this.button3.Text = "Teacher registration";
             this.button3.UseVisualStyleBackColor = true;
@@ -103,11 +105,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(291, 200);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button1.Location = new System.Drawing.Point(348, 338);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.Size = new System.Drawing.Size(181, 62);
             this.button1.TabIndex = 7;
-            this.button1.Text = "exit";
+            this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -116,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(580, 421);
+            this.ClientSize = new System.Drawing.Size(580, 462);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnLogin);
@@ -127,6 +130,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Login";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database11DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
