@@ -97,7 +97,16 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             if(!foundFlag)
                 MessageBox.Show("The account does not exist in the system!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+            textBox6.Text = "";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label6.Text = "";
+            label8.Text = "";
+            label9.Text = "";
+            label10.Text = "";
+            label11.Text = "";
         }
     }
 }

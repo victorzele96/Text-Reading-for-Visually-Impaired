@@ -41,7 +41,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button1.Location = new System.Drawing.Point(120, 70);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 54);
+            this.button1.Size = new System.Drawing.Size(186, 62);
             this.button1.TabIndex = 1;
             this.button1.Text = "Creating a story";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button2.Location = new System.Drawing.Point(120, 184);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 54);
+            this.button2.Size = new System.Drawing.Size(186, 54);
             this.button2.TabIndex = 2;
             this.button2.Text = "Reports";
             this.button2.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(120, 309);
+            this.button3.Location = new System.Drawing.Point(120, 307);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 54);
+            this.button3.Size = new System.Drawing.Size(186, 54);
             this.button3.TabIndex = 3;
             this.button3.Text = "Send feedback";
             this.button3.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(475, 309);
+            this.button4.Location = new System.Drawing.Point(446, 307);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 54);
+            this.button4.Size = new System.Drawing.Size(186, 54);
             this.button4.TabIndex = 4;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = true;
@@ -81,19 +81,19 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button5.Location = new System.Drawing.Point(475, 70);
+            this.button5.Location = new System.Drawing.Point(446, 70);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(157, 62);
+            this.button5.Size = new System.Drawing.Size(186, 62);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Create new profile";
+            this.button5.Text = "Create new student";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button7.Location = new System.Drawing.Point(475, 184);
+            this.button7.Location = new System.Drawing.Point(446, 184);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(157, 54);
+            this.button7.Size = new System.Drawing.Size(186, 54);
             this.button7.TabIndex = 7;
             this.button7.Text = "Update details";
             this.button7.UseVisualStyleBackColor = true;

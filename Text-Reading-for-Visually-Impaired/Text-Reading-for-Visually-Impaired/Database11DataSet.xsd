@@ -210,7 +210,8 @@ FROM     Profile WHERE [ID]=?
               <DbSource ConnectionRef="Database11ConnectionString (Settings)" DbObjectName="Profile" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT ID, [First Name], [Last Name], Email, [Male / Female], [Date register] FROM Profile</CommandText>
+                    <CommandText>SELECT ID, [First Name], [Last Name], Email, [Male / Female], [User Login], [Password], [Date register]
+FROM     Profile</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
