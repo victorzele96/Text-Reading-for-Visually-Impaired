@@ -89,6 +89,11 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
+                    this.Hide();
+                    Teacher ts = new Teacher();
+                    ts.ShowDialog();
+                    this.Close();
+
                 }
                 else if(dt2.Rows.Count > 0)
                 {
@@ -114,6 +119,11 @@ namespace Text_Reading_for_Visually_Impaired
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
