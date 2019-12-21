@@ -220,9 +220,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(36, 491);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 17);
+            this.label13.Size = new System.Drawing.Size(64, 17);
             this.label13.TabIndex = 23;
-            this.label13.Text = "Profile";
+            this.label13.Text = "Student";
             // 
             // button3
             // 
