@@ -33,3 +33,9 @@ C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Send_feedback.resources
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Update_details.resources
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Student.resources
+C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Add.resources
+C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Remove.resources
+C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Requests.resources
+C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Create_new_student.resources
+C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Creating_a_story.resources
+C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Teacher_Reports.resources

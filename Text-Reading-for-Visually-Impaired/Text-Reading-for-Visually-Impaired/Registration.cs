@@ -323,5 +323,10 @@ namespace Text_Reading_for_Visually_Impaired
         {
             DrawLinePointF(e);
         }
+
+        private void userNameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
