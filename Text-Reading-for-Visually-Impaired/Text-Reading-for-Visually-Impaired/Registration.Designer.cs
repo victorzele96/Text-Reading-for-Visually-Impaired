@@ -122,6 +122,7 @@
             this.userNameTB.TabIndex = 5;
             this.userNameTB.Text = "user name";
             this.userNameTB.Click += new System.EventHandler(this.textBox_clicked);
+            this.userNameTB.TextChanged += new System.EventHandler(this.userNameTB_TextChanged);
             this.userNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyDown);
             // 
             // passwordTB

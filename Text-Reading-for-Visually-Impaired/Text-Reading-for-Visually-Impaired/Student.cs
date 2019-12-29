@@ -32,6 +32,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button1.BackColor = colorDialog2.Color;
                 button2.BackColor = colorDialog2.Color;
                 button3.BackColor = colorDialog2.Color;
+                button4.BackColor = colorDialog2.Color;
             }
         }
 
@@ -42,6 +43,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button1.ForeColor = colorDialog3.Color;
                 button2.ForeColor = colorDialog3.Color;
                 button3.ForeColor = colorDialog3.Color;
+                button4.ForeColor = colorDialog3.Color;
             }
         }
 
@@ -51,6 +53,15 @@ namespace Text_Reading_for_Visually_Impaired
             Login login = new Login();
             login.ShowDialog();
             this.Close();
+        }
+
+        private void Student_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
