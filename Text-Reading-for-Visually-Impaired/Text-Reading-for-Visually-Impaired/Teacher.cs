@@ -40,5 +40,29 @@ namespace Text_Reading_for_Visually_Impaired
             update.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Creating_a_story create = new Creating_a_story();
+            create.ShowDialog();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Create_new_student create = new Create_new_student();
+            create.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Teacher_Reports report = new Teacher_Reports();
+            report.ShowDialog();
+            this.Close();
+        }
     }
 }
