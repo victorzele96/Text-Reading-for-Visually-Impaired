@@ -86,8 +86,10 @@
             // 
             // thems
             // 
-            this.thems.FormattingEnabled = true;
+            this.thems.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thems.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.thems.IntegralHeight = false;
+            this.thems.ItemHeight = 51;
             this.thems.Items.AddRange(new object[] {
             "Default",
             "1",
@@ -97,7 +99,7 @@
             "5"});
             this.thems.Location = new System.Drawing.Point(30, 66);
             this.thems.Name = "thems";
-            this.thems.Size = new System.Drawing.Size(121, 24);
+            this.thems.Size = new System.Drawing.Size(271, 59);
             this.thems.TabIndex = 0;
             this.thems.Text = "Pick  Theme";
             this.thems.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
