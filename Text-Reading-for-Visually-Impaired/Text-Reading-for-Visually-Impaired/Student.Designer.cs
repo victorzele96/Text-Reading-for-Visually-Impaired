@@ -35,12 +35,15 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.colorDialog3 = new System.Windows.Forms.ColorDialog();
             this.button4 = new System.Windows.Forms.Button();
+            this.colorDialog4 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog5 = new System.Windows.Forms.ColorDialog();
+            this.thems = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(84, 66);
+            this.button1.Location = new System.Drawing.Point(563, 177);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(381, 85);
             this.button1.TabIndex = 0;
@@ -81,12 +84,31 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // thems
+            // 
+            this.thems.FormattingEnabled = true;
+            this.thems.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.thems.Items.AddRange(new object[] {
+            "Default",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.thems.Location = new System.Drawing.Point(30, 66);
+            this.thems.Name = "thems";
+            this.thems.Size = new System.Drawing.Size(121, 24);
+            this.thems.TabIndex = 0;
+            this.thems.Text = "Pick  Theme";
+            this.thems.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1557, 769);
+            this.Controls.Add(this.thems);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -107,5 +129,8 @@
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.ColorDialog colorDialog3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ColorDialog colorDialog4;
+        private System.Windows.Forms.ColorDialog colorDialog5;
+        private System.Windows.Forms.ComboBox thems;
     }
 }
