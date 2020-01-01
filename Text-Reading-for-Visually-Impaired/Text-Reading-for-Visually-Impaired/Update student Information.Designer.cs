@@ -204,6 +204,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Update_student_Information";
             this.Text = "Update_student_Information";
+            this.Load += new System.EventHandler(this.Update_student_Information_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
