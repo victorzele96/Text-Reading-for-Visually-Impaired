@@ -148,7 +148,7 @@ namespace Text_Reading_for_Visually_Impaired
             String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
             string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source={0}", path2);
-            string query = " INSERT INTO [Teacher] ([User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES (@user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
+            string query = " INSERT INTO [Teacher] ([ID],[User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES (@id,@user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
 
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
@@ -174,7 +174,7 @@ namespace Text_Reading_for_Visually_Impaired
                 //OleDbDataReader reader = cmd.ExecuteReader();
                 //reader.Read();
                 //firstNameTB.Text = reader[0].ToString();
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
 
                 this.Close();
             }
