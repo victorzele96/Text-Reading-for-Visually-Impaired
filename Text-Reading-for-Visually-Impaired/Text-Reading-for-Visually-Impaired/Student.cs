@@ -12,10 +12,13 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Student : Form
     {
-        public Student()
+        public Login main;
+        public Student(Login main)
         {
             InitializeComponent();
+            this.main = main;
         }
+       
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -114,17 +117,15 @@ namespace Text_Reading_for_Visually_Impaired
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Stories story = new Stories();
+            Choose_a_story story = new Choose_a_story(this);
             story.ShowDialog();
-            this.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Update_student_Information student_info = new Update_student_Information();
+            Update_student_Information student_info = new Update_student_Information(this);
             student_info.ShowDialog();
-            this.Close();
         }
     }
 }

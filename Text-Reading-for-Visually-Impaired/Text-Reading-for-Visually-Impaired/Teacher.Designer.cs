@@ -116,6 +116,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Teacher";
             this.Text = "Teacher";
+            this.Load += new System.EventHandler(this.Teacher_Load);
             this.ResumeLayout(false);
 
         }

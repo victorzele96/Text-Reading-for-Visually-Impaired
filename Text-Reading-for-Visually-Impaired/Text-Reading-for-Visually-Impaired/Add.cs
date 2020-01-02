@@ -12,17 +12,23 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Add : Form
     {
-        public Add()
+        public Admin Admin_main;
+        public Add(Admin main)
         {
             InitializeComponent();
+            this.Admin_main = main;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin f = new Admin();
-            f.ShowDialog();
-            this.Close();
+            Admin_main.Show();
+            //this.Close();
+        }
+
+        private void Add_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

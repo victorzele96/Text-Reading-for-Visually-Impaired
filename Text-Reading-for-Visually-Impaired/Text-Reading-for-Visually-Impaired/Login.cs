@@ -13,6 +13,9 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Login : Form
     {
+
+        public String userName;
+        public String password;
         public Login()
         {
             InitializeComponent();
@@ -76,12 +79,14 @@ namespace Text_Reading_for_Visually_Impaired
                 Database11DataSetTableAdapters.ProfileTableAdapter student = new Database11DataSetTableAdapters.ProfileTableAdapter();
                 Database11DataSet.ProfileDataTable dt2 = student.GetDataByUsernamePasswordProfile(txtUsername.Text, txtPassword.Text);
                 //Check row > 0
+                this.userName = txtUsername.Text;
+                this.password = txtPassword.Text;
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
                     this.Hide();
-                    Admin ad = new Admin();
+                    Admin ad = new Admin(this);
                     ad.ShowDialog();
                     this.Close();
                 }
@@ -90,7 +95,7 @@ namespace Text_Reading_for_Visually_Impaired
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
                     this.Hide();
-                    Teacher th = new Teacher();
+                    Teacher th = new Teacher(this);
                     th.ShowDialog();
                     this.Close();
 
@@ -100,7 +105,7 @@ namespace Text_Reading_for_Visually_Impaired
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
                     this.Hide();
-                    Student st = new Student();
+                    Student st = new Student(this);
                     st.ShowDialog();
                     this.Close();
                 }

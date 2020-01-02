@@ -113,11 +113,11 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.ColorDialog colorDialog3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ColorDialog colorDialog4;
         private System.Windows.Forms.ColorDialog colorDialog5;
-        private System.Windows.Forms.ComboBox thems;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.ComboBox thems;
     }
 }

@@ -12,9 +12,11 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Update_details : Form
     {
-        public Update_details()
+        public Teacher Teacher_main;
+        public Update_details(Teacher main)
         {
             InitializeComponent();
+            this.Teacher_main = main;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,9 +50,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Teacher ts = new Teacher();
-            ts.ShowDialog();
-            this.Close();
+            this.Teacher_main.Show();
         }
 
         private void Update_details_Load(object sender, EventArgs e)
