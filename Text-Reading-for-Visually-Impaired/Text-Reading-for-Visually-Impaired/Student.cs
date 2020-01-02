@@ -35,7 +35,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (thems.SelectedItem == "Default")
+            if (thems.SelectedIndex == 0)
             {
                 Student.ActiveForm.BackColor = Color.White;//change form color
 
@@ -48,7 +48,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Gainsboro;
             }
 
-            if (thems.SelectedItem == "1")
+            if (thems.SelectedIndex == 1)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
@@ -61,7 +61,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "2")
+            if (thems.SelectedIndex == 2)
             {
                 Student.ActiveForm.BackColor = Color.Gainsboro;//change form color
 
@@ -74,7 +74,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "3")
+            if (thems.SelectedIndex == 3)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
@@ -87,7 +87,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "4")
+            if (thems.SelectedIndex == 4)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
@@ -100,7 +100,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "5")
+            if (thems.SelectedIndex == 5)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
