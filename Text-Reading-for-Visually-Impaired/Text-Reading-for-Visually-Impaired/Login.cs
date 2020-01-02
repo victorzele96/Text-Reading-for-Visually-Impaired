@@ -41,7 +41,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Registration r = new Registration();
+            Registration r = new Registration(this);
             r.ShowDialog();
             this.Close();
         }

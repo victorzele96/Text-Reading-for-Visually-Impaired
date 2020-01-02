@@ -18,7 +18,8 @@ namespace Text_Reading_for_Visually_Impaired
         Color original_text_Color = Color.White;
         Color original_text_Color_Active = Color.White;
         String data_Base_Path = "";
-        public Registration()
+        Login main;
+        public Registration(Login main)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
@@ -27,6 +28,7 @@ namespace Text_Reading_for_Visually_Impaired
             femaleRB.Checked = false;
             original_text_Color = userNameTB.ForeColor;
             headlineLB.Location = new Point((this.Width - headlineLB.Width)/2 - 10, 10);
+            this.main = main;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -148,7 +150,7 @@ namespace Text_Reading_for_Visually_Impaired
             String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
             string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source={0}", path2);
-            string query = " INSERT INTO [Teacher] ([User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES (@user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
+            string query = " INSERT INTO [Teacher] ([ID],[User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES (@id,@user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
 
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
@@ -171,21 +173,20 @@ namespace Text_Reading_for_Visually_Impaired
                     MessageBox.Show("details error", "error");
                 }
 
-                //OleDbDataReader reader = cmd.ExecuteReader();
-                //reader.Read();
-                //firstNameTB.Text = reader[0].ToString();
-                cmd.ExecuteNonQuery();
 
+                //main.Show();
                 this.Close();
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login back = new Login();
-            back.ShowDialog();
-            this.Close();
+            ///
+            main.Show();
+            //this.Hide();
+            //Login back = new Login();
+            //back.ShowDialog();
+            //this.Close();
         }
 
         private void firstNameTB_KeyDown_1(object sender, KeyEventArgs e)
