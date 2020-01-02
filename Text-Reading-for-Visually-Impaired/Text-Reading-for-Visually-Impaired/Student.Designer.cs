@@ -44,7 +44,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button4.Location = new System.Drawing.Point(705, 462);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(314, 87);
+            this.button4.Size = new System.Drawing.Size(363, 87);
             this.button4.TabIndex = 3;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = true;
@@ -58,14 +58,14 @@
             this.thems.ItemHeight = 51;
             this.thems.Items.AddRange(new object[] {
             "Default",
-            "1",
-            "2",
+            "Black and Yellow",
+            "Black and Red",
             "3",
             "4",
             "5"});
             this.thems.Location = new System.Drawing.Point(162, 180);
             this.thems.Name = "thems";
-            this.thems.Size = new System.Drawing.Size(314, 59);
+            this.thems.Size = new System.Drawing.Size(363, 59);
             this.thems.TabIndex = 0;
             this.thems.Text = "Pick  Theme";
             this.thems.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
@@ -75,7 +75,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button5.Location = new System.Drawing.Point(162, 461);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(314, 87);
+            this.button5.Size = new System.Drawing.Size(363, 87);
             this.button5.TabIndex = 4;
             this.button5.Text = "Choose a story";
             this.button5.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button6.Location = new System.Drawing.Point(705, 172);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(314, 87);
+            this.button6.Size = new System.Drawing.Size(363, 87);
             this.button6.TabIndex = 5;
             this.button6.Text = "Update student Information";
             this.button6.UseVisualStyleBackColor = true;
