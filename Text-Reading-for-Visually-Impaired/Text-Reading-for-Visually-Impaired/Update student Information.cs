@@ -40,7 +40,7 @@ namespace Text_Reading_for_Visually_Impaired
                     String y = textBox6.Text;
                     if (x == y)
                     {
-                        textBox3.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
+                        label6.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
                         textBox1.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
                         textBox2.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
                         textBox4.Text = ((DataGridViewRow)r).Cells["Male / Female"].Value.ToString();
@@ -60,6 +60,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Update_student_Information_Load(object sender, EventArgs e)
         {
+            label6.Text = "";
             dataGridView1.Hide();
             this.ForeColor = Student_main.ForeColor;
             this.BackColor = Student_main.BackColor;
