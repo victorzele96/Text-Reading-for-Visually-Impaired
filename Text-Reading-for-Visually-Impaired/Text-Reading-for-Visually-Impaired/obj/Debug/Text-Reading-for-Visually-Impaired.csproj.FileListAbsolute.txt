@@ -66,3 +66,8 @@ C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-f
 C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.pdb
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Stories.resources
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Update_student_Information.resources
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Stories.resources
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Update_student_Information.resources
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\bin\Debug\Login.resx
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\bin\Debug\Login.cs
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\bin\Debug\Login.Designer.cs
