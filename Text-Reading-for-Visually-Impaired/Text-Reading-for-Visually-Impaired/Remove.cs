@@ -12,17 +12,18 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Remove : Form
     {
-        public Remove()
+        public Admin Admin_main;
+        public Remove(Admin main)
         {
             InitializeComponent();
+            this.Admin_main = main;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin f = new Admin();
-            f.ShowDialog();
-            this.Close();
+            Admin_main.Show();
+            //this.Close();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Text_Reading_for_Visually_Impaired
 {
-    partial class Stories
+    partial class Choose_a_story
     {
         /// <summary>
         /// Required designer variable.
@@ -97,7 +97,7 @@
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // Stories
+            // Choose_a_story
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,8 +108,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Stories";
-            this.Text = "Stories";
+            this.Name = "Choose_a_story";
+            this.Text = "Choose a story";
+            this.Load += new System.EventHandler(this.Choose_a_story_Load);
             this.ResumeLayout(false);
 
         }

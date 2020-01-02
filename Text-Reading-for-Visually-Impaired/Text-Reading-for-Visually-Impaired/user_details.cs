@@ -14,17 +14,17 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Report : Form
     {
-        public Report()
+        public Reports Reports_main;
+        public Report(Reports main)
         {
             InitializeComponent();
+            this.Reports_main = main;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Reports f = new Reports();
-            f.ShowDialog();
-            this.Close();
+            this.Reports_main.Show();
         }
 
         private void Report_Load(object sender, EventArgs e)

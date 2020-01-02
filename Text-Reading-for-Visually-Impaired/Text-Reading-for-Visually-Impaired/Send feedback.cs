@@ -12,17 +12,18 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Send_feedback : Form
     {
-        public Send_feedback()
+        public Teacher Teacher_main;
+        public Send_feedback(Teacher main)
         {
             InitializeComponent();
+            this.Teacher_main = main;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Teacher teacher = new Teacher();
-            teacher.ShowDialog();
-            this.Close();
+            this.Teacher_main.Show();
+            //this.Close();
         }
     }
 }

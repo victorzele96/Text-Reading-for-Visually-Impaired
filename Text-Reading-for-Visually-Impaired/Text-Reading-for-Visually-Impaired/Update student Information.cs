@@ -12,17 +12,18 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Update_student_Information : Form
     {
-        public Update_student_Information()
+        public Student Student_main;
+        public Update_student_Information(Student main)
         {
             InitializeComponent();
+            this.Student_main = main;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Student student = new Student();
-            student.ShowDialog();
-            this.Close();
+            this.Student_main.Show();
+            //this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,6 +61,18 @@ namespace Text_Reading_for_Visually_Impaired
         private void Update_student_Information_Load(object sender, EventArgs e)
         {
             dataGridView1.Hide();
+            this.ForeColor = Student_main.ForeColor;
+            this.BackColor = Student_main.BackColor;
+            foreach (Button butt in this.Controls.OfType<Button>())
+            {
+                butt.BackColor = Student_main.BackColor;
+                butt.ForeColor = Student_main.button4.ForeColor;
+            }
+            foreach (Label lab in this.Controls.OfType<Label>())
+            {
+                lab.ForeColor = Student_main.button4.ForeColor;
+            }
+
         }
     }
 }
