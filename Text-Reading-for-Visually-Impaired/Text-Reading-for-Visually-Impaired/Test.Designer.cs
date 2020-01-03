@@ -33,15 +33,15 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelDropDown = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.minusPicture = new System.Windows.Forms.PictureBox();
+            this.plusPicture = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panelDropDown.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minusPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,9 +52,9 @@
             // 
             // panelDropDown
             // 
+            this.panelDropDown.Controls.Add(this.minusPicture);
             this.panelDropDown.Controls.Add(this.button4);
-            this.panelDropDown.Controls.Add(this.pictureBox3);
-            this.panelDropDown.Controls.Add(this.pictureBox2);
+            this.panelDropDown.Controls.Add(this.plusPicture);
             this.panelDropDown.Controls.Add(this.button3);
             this.panelDropDown.Controls.Add(this.pictureBox1);
             this.panelDropDown.Controls.Add(this.button1);
@@ -75,27 +75,31 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
+            // minusPicture
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(85, 130);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.minusPicture.BackColor = System.Drawing.Color.White;
+            this.minusPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minusPicture.Image = ((System.Drawing.Image)(resources.GetObject("minusPicture.Image")));
+            this.minusPicture.Location = new System.Drawing.Point(87, 130);
+            this.minusPicture.Name = "minusPicture";
+            this.minusPicture.Size = new System.Drawing.Size(86, 50);
+            this.minusPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minusPicture.TabIndex = 2;
+            this.minusPicture.TabStop = false;
+            this.minusPicture.Click += new System.EventHandler(this.minusPicture_Click);
             // 
-            // pictureBox2
+            // plusPicture
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 130);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(86, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.plusPicture.BackColor = System.Drawing.Color.White;
+            this.plusPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.plusPicture.Image = ((System.Drawing.Image)(resources.GetObject("plusPicture.Image")));
+            this.plusPicture.Location = new System.Drawing.Point(0, 130);
+            this.plusPicture.Name = "plusPicture";
+            this.plusPicture.Size = new System.Drawing.Size(86, 50);
+            this.plusPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.plusPicture.TabIndex = 1;
+            this.plusPicture.TabStop = false;
+            this.plusPicture.Click += new System.EventHandler(this.plusPicture_Click);
             // 
             // button3
             // 
@@ -149,8 +153,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Test_Load);
             this.panelDropDown.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minusPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -164,7 +168,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox minusPicture;
+        private System.Windows.Forms.PictureBox plusPicture;
     }
 }
