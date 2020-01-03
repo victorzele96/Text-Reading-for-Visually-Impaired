@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelDropDown = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonD = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonC = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonB = new System.Windows.Forms.Button();
+            this.buttonA = new System.Windows.Forms.Button();
             this.panelDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,13 +52,13 @@
             // 
             // panelDropDown
             // 
-            this.panelDropDown.Controls.Add(this.button4);
+            this.panelDropDown.Controls.Add(this.buttonA);
+            this.panelDropDown.Controls.Add(this.buttonD);
             this.panelDropDown.Controls.Add(this.pictureBox3);
             this.panelDropDown.Controls.Add(this.pictureBox2);
-            this.panelDropDown.Controls.Add(this.button3);
+            this.panelDropDown.Controls.Add(this.buttonC);
             this.panelDropDown.Controls.Add(this.pictureBox1);
-            this.panelDropDown.Controls.Add(this.button1);
-            this.panelDropDown.Controls.Add(this.button2);
+            this.panelDropDown.Controls.Add(this.buttonB);
             this.panelDropDown.Location = new System.Drawing.Point(12, 12);
             this.panelDropDown.MaximumSize = new System.Drawing.Size(171, 378);
             this.panelDropDown.MinimumSize = new System.Drawing.Size(171, 131);
@@ -66,14 +66,15 @@
             this.panelDropDown.Size = new System.Drawing.Size(171, 131);
             this.panelDropDown.TabIndex = 0;
             // 
-            // button4
+            // buttonD
             // 
-            this.button4.Location = new System.Drawing.Point(0, 329);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(171, 50);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonD.Location = new System.Drawing.Point(0, 329);
+            this.buttonD.Name = "buttonD";
+            this.buttonD.Size = new System.Drawing.Size(171, 50);
+            this.buttonD.TabIndex = 6;
+            this.buttonD.Text = "buttonD";
+            this.buttonD.UseVisualStyleBackColor = true;
+            this.buttonD.Click += new System.EventHandler(this.buttonD_Click);
             // 
             // pictureBox3
             // 
@@ -97,14 +98,15 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // button3
+            // buttonC
             // 
-            this.button3.Location = new System.Drawing.Point(0, 279);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(171, 50);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonC.Location = new System.Drawing.Point(0, 279);
+            this.buttonC.Name = "buttonC";
+            this.buttonC.Size = new System.Drawing.Size(171, 50);
+            this.buttonC.TabIndex = 5;
+            this.buttonC.Text = "buttonC";
+            this.buttonC.UseVisualStyleBackColor = true;
+            this.buttonC.Click += new System.EventHandler(this.buttonC_Click);
             // 
             // pictureBox1
             // 
@@ -120,23 +122,25 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // button1
+            // buttonB
             // 
-            this.button1.Location = new System.Drawing.Point(0, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 50);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonB.Location = new System.Drawing.Point(0, 229);
+            this.buttonB.Name = "buttonB";
+            this.buttonB.Size = new System.Drawing.Size(171, 50);
+            this.buttonB.TabIndex = 4;
+            this.buttonB.Text = "buttonB";
+            this.buttonB.UseVisualStyleBackColor = true;
+            this.buttonB.Click += new System.EventHandler(this.buttonB_Click);
             // 
-            // button2
+            // buttonA
             // 
-            this.button2.Location = new System.Drawing.Point(0, 229);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 50);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonA.Location = new System.Drawing.Point(0, 179);
+            this.buttonA.Name = "buttonA";
+            this.buttonA.Size = new System.Drawing.Size(171, 50);
+            this.buttonA.TabIndex = 1;
+            this.buttonA.Text = "buttonA";
+            this.buttonA.UseVisualStyleBackColor = true;
+            this.buttonA.Click += new System.EventHandler(this.buttonA_Click);
             // 
             // Test
             // 
@@ -160,11 +164,11 @@
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Panel panelDropDown;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button buttonD;
+        public System.Windows.Forms.Button buttonC;
+        public System.Windows.Forms.Button buttonB;
         public System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonA;
     }
 }

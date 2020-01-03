@@ -23,11 +23,6 @@ namespace Text_Reading_for_Visually_Impaired
             timer1.Start();
         }
 
-        public void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void timer1_Tick(object sender, EventArgs e)
         {
             if (isCollapsed)
@@ -59,5 +54,27 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
+
+        private void buttonA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
