@@ -24,10 +24,25 @@ namespace Text_Reading_for_Visually_Impaired
         {
             InitializeComponent();
             synth = new SpeechSynthesizer();
+            this.WindowState = FormWindowState.Maximized;
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
             richTextBox1.DragEnter += RichTextBox1_DragEnter;
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.Teacher_main = main;
+        }
+
+
+
+        private void setObjectsLocation()
+        {
+            if(this.WindowState == FormWindowState.Maximized)
+            {
+                richTextBox1.Location = new Point((ClientSize.Width - richTextBox1.Width) / 2, richTextBox1.Location.Y);
+                buttonsPanel.Location = new Point(richTextBox1.Location.X + (richTextBox1.Width - buttonsPanel.Width) / 2, richTextBox1.Location.Y + richTextBox1.Height + 10);
+                insertTxtLb.Location = new Point(richTextBox1.Location.X, richTextBox1.Location.Y - insertTxtLb.Height - 3);
+                backBt.Location = new Point(ClientSize.Width - backBt.Width, 2);
+            }
+            
         }
 
         private void RichTextBox1_DragEnter(object sender, DragEventArgs e)
@@ -132,6 +147,16 @@ namespace Text_Reading_for_Visually_Impaired
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void second_Page_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void second_Page_ResizeEnd(object sender, EventArgs e)
+        {
+            setObjectsLocation();
         }
     }
 }
