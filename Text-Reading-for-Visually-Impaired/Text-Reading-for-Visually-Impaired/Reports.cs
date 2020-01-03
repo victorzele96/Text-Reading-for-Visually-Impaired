@@ -12,9 +12,11 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Reports : Form
     {
-        public Reports()
+        public Admin Admin_main;
+        public Reports(Admin main)
         {
             InitializeComponent();
+            this.Admin_main = main;
         }
 
         private void Reports_Load(object sender, EventArgs e)
@@ -25,17 +27,26 @@ namespace Text_Reading_for_Visually_Impaired
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Report report = new Report();
+            Report report = new Report(this);
             report.ShowDialog();
-            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin f = new Admin();
+            this.Admin_main.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Feedback f = new Feedback(this);
             f.ShowDialog();
-            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

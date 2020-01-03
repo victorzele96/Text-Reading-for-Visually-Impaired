@@ -15,10 +15,11 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Registration : Form
     {
-        Color original_text_Color= Color.White ;
+        Color original_text_Color = Color.White;
         Color original_text_Color_Active = Color.White;
         String data_Base_Path = "";
-        public Registration()
+        Login login_main;
+        public Registration(Login main)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
@@ -26,6 +27,8 @@ namespace Text_Reading_for_Visually_Impaired
             maleRB.Checked = true;
             femaleRB.Checked = false;
             original_text_Color = userNameTB.ForeColor;
+            headlineLB.Location = new Point((this.Width - headlineLB.Width)/2 - 10, 10);
+            this.login_main = main;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -93,13 +96,13 @@ namespace Text_Reading_for_Visually_Impaired
         private void firstNameTB_KeyDown(object sender, KeyEventArgs e)
         {
 
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            
+
 
         }
 
@@ -140,9 +143,15 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 gender = "Male";
             }
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;
-                    Data Source=|DataDirectory|\Database11.accdb";
-            string query = " INSERT INTO [Teacher] VALUES ( @id  , @user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
+
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+            string query = " INSERT INTO [Teacher] ([ID],[User Login], [Password], [First Name], [Last Name], [Email], [Male / Female]) VALUES (@id,@user_login , @password , @firstName ,@lastName ,  @email , @gender )  ";
+
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -154,15 +163,30 @@ namespace Text_Reading_for_Visually_Impaired
                 cmd.Parameters.AddWithValue(@"lastName", lastNameTB.Text);
                 cmd.Parameters.AddWithValue(@"email", EmailTB.Text);
                 cmd.Parameters.AddWithValue(@"gender", gender);
-                OleDbDataReader reader = cmd.ExecuteReader();
-                reader.Read();
-                firstNameTB.Text = reader[0].ToString();
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+
+
+                //main.Show();
+                this.Close();
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ///
+            login_main.Show();
+            //this.Hide();
+            //Login back = new Login();
+            //back.ShowDialog();
+            //this.Close();
         }
 
         private void firstNameTB_KeyDown_1(object sender, KeyEventArgs e)
@@ -260,17 +284,17 @@ namespace Text_Reading_for_Visually_Impaired
 
         public void DrawLinePointF(PaintEventArgs e)
         {
-            foreach(Control t in this.Controls)
+            foreach (Control t in this.Controls)
             {
-                if(t.GetType() == typeof(TextBox))
+                if (t.GetType() == typeof(TextBox))
                 {
                     Pen blackPen = new Pen(original_text_Color_Active, 3);
                     PointF point1 = new PointF(t.Location.X, t.Location.Y + t.Height);
-                    PointF point2 = new PointF( t.Location.X + t.Width, t.Location.Y + t.Height);
+                    PointF point2 = new PointF(t.Location.X + t.Width, t.Location.Y + t.Height);
                     e.Graphics.DrawLine(blackPen, point1, point2);
                 }
             }
-  
+
         }
 
         private void EmailTB_KeyDown(object sender, KeyEventArgs e)
@@ -299,6 +323,11 @@ namespace Text_Reading_for_Visually_Impaired
         private void Registration_Paint(object sender, PaintEventArgs e)
         {
             DrawLinePointF(e);
+        }
+
+        private void userNameTB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
