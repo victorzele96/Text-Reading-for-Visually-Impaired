@@ -13,19 +13,21 @@ using System.Threading;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class second_Page : Form
+    public partial class second_Page : Test
     {
         Boolean paused = false;
         Boolean stopped = false;
         SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
-        public second_Page()
+        public Teacher Teacher_main;
+        public second_Page(Teacher main)
         {
             InitializeComponent();
             synth = new SpeechSynthesizer();
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
             richTextBox1.DragEnter += RichTextBox1_DragEnter;
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+            this.Teacher_main = main;
         }
 
         private void RichTextBox1_DragEnter(object sender, DragEventArgs e)
@@ -119,6 +121,17 @@ namespace Text_Reading_for_Visually_Impaired
             //richTextBox1.Select(0,1);
             synth = new SpeechSynthesizer();
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Teacher_main.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
