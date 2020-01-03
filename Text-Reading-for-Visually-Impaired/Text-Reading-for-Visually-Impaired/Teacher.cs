@@ -16,6 +16,7 @@ namespace Text_Reading_for_Visually_Impaired
         public Teacher(Login main)
         {
             InitializeComponent();
+            this.login_main = main;//-------------
         }
         
 
