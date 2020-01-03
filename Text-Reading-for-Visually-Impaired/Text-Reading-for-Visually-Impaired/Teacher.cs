@@ -44,11 +44,11 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             //Creating_a_story create = new Creating_a_story(this);
             //create.ShowDialog();
-            second_Page newpage = new second_Page();
-            newpage.Show();
+            second_Page newpage = new second_Page(this);
+            newpage.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
