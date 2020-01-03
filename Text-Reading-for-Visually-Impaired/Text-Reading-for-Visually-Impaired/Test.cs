@@ -59,5 +59,62 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
+
+        private void plusPicture_Click(object sender, EventArgs e)
+        {
+            foreach (Control obj in this.Controls)
+            {
+                if (obj is Panel)
+                {
+                    foreach (Control obj2 in this.Controls)
+                    {
+                        if (obj is Label || obj is TextBox || obj is RichTextBox || obj is Button)
+                        {
+                            obj.Font = new Font(obj.Font.FontFamily, obj.Font.Size + 2f, obj.Font.Style);
+                        }
+                    }
+                }
+                else if (obj is Label || obj is TextBox || obj is RichTextBox || obj is Button)
+                {
+                    obj.Font = new Font(obj.Font.FontFamily, obj.Font.Size + 2f, obj.Font.Style);
+                }
+               
+
+
+            }
+        }
+
+        protected void locateControls()
+        {
+
+        }
+
+        private void minusPicture_Click(object sender, EventArgs e)
+        {
+            foreach (Control obj in this.Controls)
+            {
+                if (obj is Panel)
+                {
+                    foreach (Control obj2 in this.Controls)
+                    {
+                        if (obj is Label || obj is TextBox || obj is RichTextBox || obj is Button)
+                        {
+                            obj.Font = new Font(obj.Font.FontFamily, obj.Font.Size - 2f, obj.Font.Style);
+                        }
+                    }
+                }
+                else if(obj is Label || obj is TextBox || obj is RichTextBox || obj is Button)
+                {
+                    obj.Font = new Font(obj.Font.FontFamily, obj.Font.Size - 2f, obj.Font.Style);
+                }
+                /*else
+                {
+                    obj.Width = Convert.ToInt32(obj.Width * 0.9);
+                    obj.Height = Convert.ToInt32(obj.Height * 0.9);
+                }*/
+                
+
+            }
+        }
     }
 }

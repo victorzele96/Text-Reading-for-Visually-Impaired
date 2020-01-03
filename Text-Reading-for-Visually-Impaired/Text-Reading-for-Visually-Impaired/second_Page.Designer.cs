@@ -45,13 +45,13 @@
             this.insertTxtLb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.insertTxtLb.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.insertTxtLb.ForeColor = System.Drawing.Color.White;
-            this.insertTxtLb.Location = new System.Drawing.Point(213, 165);
+            this.insertTxtLb.Location = new System.Drawing.Point(347, 98);
             this.insertTxtLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.insertTxtLb.Name = "insertTxtLb";
-            this.insertTxtLb.Size = new System.Drawing.Size(250, 60);
+            this.insertTxtLb.Size = new System.Drawing.Size(500, 80);
             this.insertTxtLb.TabIndex = 9;
             this.insertTxtLb.Text = "insert text";
-            this.insertTxtLb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.insertTxtLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.insertTxtLb.Click += new System.EventHandler(this.label6_Click);
             // 
             // richTextBox1
@@ -61,10 +61,10 @@
             this.richTextBox1.EnableAutoDragDrop = true;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.richTextBox1.Location = new System.Drawing.Point(212, 229);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 180);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(800, 300);
+            this.richTextBox1.Size = new System.Drawing.Size(1200, 400);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = "";
             // 
@@ -151,7 +151,7 @@
             this.buttonsPanel.Controls.Add(this.button1);
             this.buttonsPanel.Controls.Add(this.button4);
             this.buttonsPanel.Controls.Add(this.button3);
-            this.buttonsPanel.Location = new System.Drawing.Point(332, 550);
+            this.buttonsPanel.Location = new System.Drawing.Point(342, 583);
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(520, 120);
             this.buttonsPanel.TabIndex = 31;
