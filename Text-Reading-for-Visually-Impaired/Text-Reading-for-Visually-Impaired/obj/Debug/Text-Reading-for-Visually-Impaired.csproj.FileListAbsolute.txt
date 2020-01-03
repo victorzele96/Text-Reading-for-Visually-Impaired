@@ -106,3 +106,4 @@ C:\Users\AsusZenBook\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Re
 C:\Users\AsusZenBook\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.exe
 C:\Users\AsusZenBook\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.pdb
 C:\Users\AsusZenBook\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Student_progression.resources
+C:\Users\AsusZenBook\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.Test.resources

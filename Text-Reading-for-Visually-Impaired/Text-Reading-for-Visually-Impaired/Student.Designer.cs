@@ -42,7 +42,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(705, 462);
+            this.button4.Location = new System.Drawing.Point(740, 462);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(363, 87);
             this.button4.TabIndex = 3;
@@ -55,7 +55,7 @@
             this.thems.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thems.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.thems.IntegralHeight = false;
-            this.thems.ItemHeight = 51;
+            this.thems.ItemHeight = 59;
             this.thems.Items.AddRange(new object[] {
             "Default",
             "Black and Yellow",
@@ -63,9 +63,9 @@
             "3",
             "4",
             "5"});
-            this.thems.Location = new System.Drawing.Point(162, 180);
+            this.thems.Location = new System.Drawing.Point(197, 180);
             this.thems.Name = "thems";
-            this.thems.Size = new System.Drawing.Size(363, 59);
+            this.thems.Size = new System.Drawing.Size(363, 67);
             this.thems.TabIndex = 0;
             this.thems.Text = "Pick  Theme";
             this.thems.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
@@ -73,7 +73,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button5.Location = new System.Drawing.Point(162, 461);
+            this.button5.Location = new System.Drawing.Point(197, 461);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(363, 87);
             this.button5.TabIndex = 4;
@@ -84,7 +84,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button6.Location = new System.Drawing.Point(705, 172);
+            this.button6.Location = new System.Drawing.Point(740, 172);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(363, 87);
             this.button6.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             // Student
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1204, 737);
@@ -105,6 +105,10 @@
             this.Name = "Student";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Student_Load);
+            this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.thems, 0);
+            this.Controls.SetChildIndex(this.button5, 0);
+            this.Controls.SetChildIndex(this.button6, 0);
             this.ResumeLayout(false);
 
         }

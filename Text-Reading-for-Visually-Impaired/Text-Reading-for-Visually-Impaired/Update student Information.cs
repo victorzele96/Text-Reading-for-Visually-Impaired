@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Update_student_Information : Form
+    public partial class Update_student_Information : Test
     {
         public Student Student_main;
         public Update_student_Information(Student main)
