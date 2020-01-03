@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Choose_a_story : Test
+    public partial class Choose_a_story : Form
     {
         public Student Student_main;
         public Choose_a_story(Student main)

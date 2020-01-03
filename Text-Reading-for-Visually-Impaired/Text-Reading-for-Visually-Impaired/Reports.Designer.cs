@@ -37,10 +37,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(624, 110);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(555, 88);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 60);
+            this.button1.Size = new System.Drawing.Size(153, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "users details";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,10 +48,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(624, 515);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(555, 412);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 62);
+            this.button2.Size = new System.Drawing.Size(153, 50);
             this.button2.TabIndex = 1;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -61,10 +59,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(624, 289);
+            this.button3.Location = new System.Drawing.Point(555, 231);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 60);
+            this.button3.Size = new System.Drawing.Size(153, 48);
             this.button3.TabIndex = 2;
             this.button3.Text = "Feedback";
             this.button3.UseVisualStyleBackColor = true;
@@ -73,26 +71,25 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(121, 110);
+            this.button4.Location = new System.Drawing.Point(174, 88);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(247, 60);
+            this.button4.Size = new System.Drawing.Size(153, 48);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Student progression";
+            this.button4.Text = "Student data";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(933, 701);
+            this.ClientSize = new System.Drawing.Size(829, 561);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
