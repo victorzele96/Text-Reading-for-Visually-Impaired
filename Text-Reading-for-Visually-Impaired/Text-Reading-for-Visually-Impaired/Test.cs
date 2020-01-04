@@ -60,6 +60,47 @@ namespace Text_Reading_for_Visually_Impaired
 
         }
 
+        public void Theme_color(Color fore_color, Color back_color, Color form_back_color)
+        {
+            Test.ActiveForm.BackColor = form_back_color;//change form color
+
+            foreach (Control c in this.panelDropDown.Controls)
+            {
+                if (c is Button)
+                {
+                    c.ForeColor = fore_color;
+                    c.BackColor = back_color;
+                }
+            }
+
+            foreach (Control c in this.Controls)
+            {
+                if (c is Panel && c.Name != "panelDropDown")
+                {
+                    c.BackColor = back_color;
+                    foreach (Control v in c.Controls)
+                    {
+
+                        if (v is Button || v is Label)
+                        {
+                            v.ForeColor = fore_color;
+                            v.BackColor = back_color;
+                        }
+                    }
+                }
+                if (c is Button || c is RichTextBox)
+                {
+                    c.ForeColor = fore_color;
+                    c.BackColor = back_color;
+                }
+                if (c is Label)
+                {
+                    c.ForeColor = fore_color;
+                    c.BackColor = form_back_color;
+                }
+            }
+        }
+
         private void plusPicture_Click(object sender, EventArgs e)
         {
             foreach (Control obj in this.Controls)
@@ -121,6 +162,26 @@ namespace Text_Reading_for_Visually_Impaired
                 
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {//Default
+            Theme_color(Color.Black, Color.Gainsboro, Color.Gainsboro);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {//Option 1
+            Theme_color(Color.Yellow, Color.Black, Color.Black);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {//Option 2
+            Theme_color(Color.Red, Color.Black, Color.Black);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {//Option 3
+            Theme_color(Color.Blue, Color.Yellow, Color.Yellow);
         }
     }
 }
