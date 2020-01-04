@@ -66,11 +66,11 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (obj is Panel)
                 {
-                    foreach (Control obj2 in this.Controls)
+                    foreach (Control obj2 in obj.Controls)
                     {
-                        if (obj is Label || obj is TextBox || obj is RichTextBox || obj is Button)
+                        if (obj2 is Label || obj2 is TextBox || obj2 is RichTextBox || obj2 is Button)
                         {
-                            obj.Font = new Font(obj.Font.FontFamily, obj.Font.Size + 2f, obj.Font.Style);
+                            obj2.Font = new Font(obj2.Font.FontFamily, obj2.Font.Size + 2f, obj2.Font.Style);
                         }
                     }
                 }
@@ -95,13 +95,13 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (obj is Panel)
                 {
-                    foreach (Control obj2 in this.Controls)
+                    foreach (Control obj2 in obj.Controls)
                     {
-                        if (obj is Label || obj is TextBox || obj is RichTextBox || obj is Button)
+                        if (obj2 is Label || obj2 is TextBox || obj2 is RichTextBox || obj2 is Button)
                         {
-                            if (obj.Font.Size > 16)
+                            if (obj2.Font.Size > 16)
                             {
-                                obj.Font = new Font(obj.Font.FontFamily, obj.Font.Size - 2f, obj.Font.Style);
+                                obj2.Font = new Font(obj2.Font.FontFamily, obj2.Font.Size - 2f, obj2.Font.Style);
                             }
                         }
                     }
