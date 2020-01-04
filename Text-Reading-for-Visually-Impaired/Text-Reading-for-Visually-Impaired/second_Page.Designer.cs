@@ -37,6 +37,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.backBt = new System.Windows.Forms.Button();
             this.buttonsPanel = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,7 +138,7 @@
             // 
             this.backBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.backBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backBt.Location = new System.Drawing.Point(959, 3);
+            this.backBt.Location = new System.Drawing.Point(951, 618);
             this.backBt.Name = "backBt";
             this.backBt.Size = new System.Drawing.Size(211, 99);
             this.backBt.TabIndex = 30;
@@ -156,12 +158,35 @@
             this.buttonsPanel.Size = new System.Drawing.Size(520, 120);
             this.buttonsPanel.TabIndex = 31;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(914, 54);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(260, 53);
+            this.comboBox1.TabIndex = 32;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(924, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 50);
+            this.label1.TabIndex = 33;
+            this.label1.Text = " טקסט קיים";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // second_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1174, 729);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonsPanel);
             this.Controls.Add(this.backBt);
             this.Controls.Add(this.richTextBox1);
@@ -176,6 +201,8 @@
             this.Controls.SetChildIndex(this.richTextBox1, 0);
             this.Controls.SetChildIndex(this.backBt, 0);
             this.Controls.SetChildIndex(this.buttonsPanel, 0);
+            this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.buttonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -191,5 +218,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button backBt;
         private System.Windows.Forms.Panel buttonsPanel;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
