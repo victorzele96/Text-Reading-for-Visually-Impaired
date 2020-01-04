@@ -12,18 +12,18 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Student : Test
     {
-        public Login main;
+        public Login login_main;
         public Student(Login main)
         {
             InitializeComponent();
-            this.main = main;
+            this.login_main = main;
         }
        
 
         private void button4_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            main.Show();
+            login_main.Show();
             
             this.Close();
         }

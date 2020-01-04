@@ -49,10 +49,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(402, 327);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(976, 634);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 58);
+            this.button1.Size = new System.Drawing.Size(444, 112);
             this.button1.TabIndex = 0;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,55 +60,55 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(139, 146);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Location = new System.Drawing.Point(338, 283);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(117, 23);
+            this.textBox5.Size = new System.Drawing.Size(278, 38);
             this.textBox5.TabIndex = 59;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(139, 107);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Location = new System.Drawing.Point(338, 207);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(117, 23);
+            this.textBox4.Size = new System.Drawing.Size(278, 38);
             this.textBox4.TabIndex = 58;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(376, 146);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Location = new System.Drawing.Point(913, 283);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(92, 23);
+            this.textBox2.Size = new System.Drawing.Size(218, 38);
             this.textBox2.TabIndex = 56;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(376, 104);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(913, 202);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 23);
+            this.textBox1.Size = new System.Drawing.Size(218, 38);
             this.textBox1.TabIndex = 55;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 327);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(112, 634);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(294, 58);
+            this.dataGridView1.Size = new System.Drawing.Size(714, 112);
             this.dataGridView1.TabIndex = 54;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(236, 249);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Location = new System.Drawing.Point(573, 482);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 41);
+            this.button2.Size = new System.Drawing.Size(228, 79);
             this.button2.TabIndex = 52;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
@@ -117,10 +117,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(491, 249);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button4.Location = new System.Drawing.Point(1192, 482);
+            this.button4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 41);
+            this.button4.Size = new System.Drawing.Size(228, 79);
             this.button4.TabIndex = 51;
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = true;
@@ -128,18 +128,18 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(376, 265);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Location = new System.Drawing.Point(913, 513);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(92, 23);
+            this.textBox6.Size = new System.Drawing.Size(218, 38);
             this.textBox6.TabIndex = 50;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label5.Location = new System.Drawing.Point(276, 137);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(670, 265);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 36);
             this.label5.TabIndex = 49;
@@ -149,19 +149,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.Location = new System.Drawing.Point(276, 101);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(670, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 36);
+            this.label4.Size = new System.Drawing.Size(155, 36);
             this.label4.TabIndex = 48;
-            this.label4.Text = "Gender";
+            this.label4.Text = "Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(488, 179);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(1185, 347);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 36);
             this.label3.TabIndex = 47;
@@ -171,8 +171,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(488, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(1185, 265);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 36);
             this.label2.TabIndex = 46;
@@ -182,8 +182,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(488, 95);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1185, 184);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 36);
             this.label1.TabIndex = 45;
@@ -193,8 +193,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.Location = new System.Drawing.Point(373, 179);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(906, 347);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(179, 36);
             this.label6.TabIndex = 60;
@@ -202,9 +202,9 @@
             // 
             // Update_student_Information
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 486);
+            this.ClientSize = new System.Drawing.Size(1664, 942);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -220,7 +220,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Update_student_Information";
             this.Text = "Update_student_Information";
             this.Load += new System.EventHandler(this.Update_student_Information_Load);
