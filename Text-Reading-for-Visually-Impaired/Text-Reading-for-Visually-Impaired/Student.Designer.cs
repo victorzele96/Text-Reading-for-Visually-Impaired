@@ -55,7 +55,7 @@
             this.thems.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thems.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.thems.IntegralHeight = false;
-            this.thems.ItemHeight = 51;
+            this.thems.ItemHeight = 79;
             this.thems.Items.AddRange(new object[] {
             "Default",
             "Black and Yellow",
@@ -65,7 +65,7 @@
             "5"});
             this.thems.Location = new System.Drawing.Point(227, 180);
             this.thems.Name = "thems";
-            this.thems.Size = new System.Drawing.Size(363, 59);
+            this.thems.Size = new System.Drawing.Size(363, 87);
             this.thems.TabIndex = 0;
             this.thems.Text = "Pick  Theme";
             this.thems.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
@@ -94,10 +94,10 @@
             // 
             // Student
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1204, 737);
+            this.ClientSize = new System.Drawing.Size(1174, 729);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.thems);
