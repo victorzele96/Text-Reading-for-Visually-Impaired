@@ -84,6 +84,8 @@ namespace Text_Reading_for_Visually_Impaired
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPassword.Text = "";
+                    txtUsername.Text = "";
                     //Process your login here
                     this.Hide();
                     Admin ad = new Admin(this);
@@ -93,10 +95,13 @@ namespace Text_Reading_for_Visually_Impaired
                 else if(dt1.Rows.Count > 0)
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPassword.Text = "";
+                    txtUsername.Text = "";
                     //Process your login here
                     this.Hide();
                     Teacher th = new Teacher(this);
                     th.ShowDialog();
+                    
                     this.Close();
 
                 }
@@ -104,10 +109,13 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
-                    this.Hide();
+                    //this.Hide();
+                    txtPassword.Text = "";
+                    txtUsername.Text = "";
                     Student st = new Student(this);
-                    st.ShowDialog();
-                    this.Close();
+                    st.Show();
+                    st.Theme_color(btnLogin.ForeColor, btnLogin.BackColor, Color.WhiteSmoke);
+                    //this.Close();
                 }
                 else
                 {
@@ -132,6 +140,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Login_Load(object sender, EventArgs e)
         {
+            
             //panel1.Location = new Point((ClientSize.Width - panel1.Width) / 2,(ClientSize.Height-panel1.Height)/2);
             ExitBT.Location = new Point((ClientSize.Width - ExitBT.Width), ClientSize.Height - ExitBT.Height);
         }
