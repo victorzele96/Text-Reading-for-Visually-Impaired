@@ -75,5 +75,62 @@ namespace Text_Reading_for_Visually_Impaired
                 lab.BackColor = Student_main.button4.BackColor;
             }
         }
+        /*
+        private void update_Teacher_By_ID(String id)
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+            string query = " UPDATE [Teacher] SET [First Name]=?, [Last Name]=?, [Email]=?, [Password]=? WHERE [ID] = ?  ";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                //cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
+                cmd.Parameters.AddWithValue(@"firstName", textBox1.Text);
+                cmd.Parameters.AddWithValue(@"lastName", textBox2.Text);
+                cmd.Parameters.AddWithValue(@"email", textBox5.Text);
+                cmd.Parameters.AddWithValue(@"password", textBox4.Text);
+                cmd.Parameters.AddWithValue(@"id", id);
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+            }
+        }
+        */
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                {
+                    if (((TextBox)c).Text == "" && ((TextBox)c).Name != textBox6.Name)
+                    {
+                        MessageBox.Show("please fill al fields", "error");
+                    }
+                }
+            }
+            //update_Teacher_By_ID(textBox3.Text);
+
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                {
+                    c.Text = "";
+                }
+            }
+        }
     }
 }
