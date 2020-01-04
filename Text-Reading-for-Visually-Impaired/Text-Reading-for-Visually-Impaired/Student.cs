@@ -22,9 +22,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login login = new Login();
-            login.ShowDialog();
+            //this.Hide();
+            main.Show();
+            
             this.Close();
         }
 
@@ -116,16 +116,18 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Choose_a_story story = new Choose_a_story(this);
-            story.ShowDialog();
+            story.Show();
+            story.Theme_color(button6.ForeColor, button6.BackColor, this.BackColor);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Update_student_Information student_info = new Update_student_Information(this);
-            student_info.ShowDialog();
+            student_info.Show();
+            student_info.Theme_color(button6.ForeColor, button6.BackColor, this.BackColor);
         }
     }
 }
