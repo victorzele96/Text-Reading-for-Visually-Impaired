@@ -105,6 +105,7 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 else if(obj is Label || obj is TextBox || obj is RichTextBox || obj is Button)
                 {
+                    
                     obj.Font = new Font(obj.Font.FontFamily, obj.Font.Size - 2f, obj.Font.Style);
                 }
                 /*else
