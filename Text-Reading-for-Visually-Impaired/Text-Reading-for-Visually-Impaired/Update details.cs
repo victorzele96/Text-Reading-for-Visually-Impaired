@@ -35,7 +35,7 @@ namespace Text_Reading_for_Visually_Impaired
                         if (x == y)
                         {
                             foundflag = true;
-                            textBox3.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
+                            label6.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
                             textBox1.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
                             textBox2.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
                             textBox4.Text = ((DataGridViewRow)r).Cells["Password"].Value.ToString();
@@ -103,7 +103,7 @@ namespace Text_Reading_for_Visually_Impaired
                 //this.Close();
             }
         
-    }
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -126,7 +126,7 @@ namespace Text_Reading_for_Visually_Impaired
                     }
                 }
             }
-            update_Teacher_By_ID(textBox3.Text);
+            update_Teacher_By_ID(textBox6.Text);
 
             foreach (Control c in this.Controls)
             {
@@ -135,6 +135,11 @@ namespace Text_Reading_for_Visually_Impaired
                     c.Text = "";
                 }
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
