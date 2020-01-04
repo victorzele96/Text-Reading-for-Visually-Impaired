@@ -94,7 +94,7 @@ namespace Text_Reading_for_Visually_Impaired
             String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
             string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source={0}", path2);
-            string query = " UPDATE [Teacher] SET [First Name]=?, [Last Name]=?, [Email]=?, [Password]=? WHERE [ID] = ?  ";
+            string query = " UPDATE [Profile] SET [First Name]=?, [Last Name]=?, [Email]=?, [Password]=? WHERE [ID] = ?  ";
             //[User Login]=?, [Password]=?,
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
@@ -137,7 +137,7 @@ namespace Text_Reading_for_Visually_Impaired
                     }
                 }
             }
-            update_Student_By_ID(textBox6.Text);
+            update_Student_By_ID(label6.Text);
 
             foreach (Control c in this.Controls)
             {

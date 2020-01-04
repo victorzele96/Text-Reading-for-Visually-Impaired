@@ -63,7 +63,7 @@ namespace Text_Reading_for_Visually_Impaired
             Database11DataSetTableAdapters.TeacherTableAdapter tr = new Database11DataSetTableAdapters.TeacherTableAdapter();
             Database11DataSet.TeacherDataTable dt1 = tr.GetData();//tr=teacher
             dataGridView1.DataSource = dt1;
-
+            label6.Text = "";
             dataGridView1.Hide();
         }
 
@@ -126,7 +126,7 @@ namespace Text_Reading_for_Visually_Impaired
                     }
                 }
             }
-            update_Teacher_By_ID(textBox6.Text);
+            update_Teacher_By_ID(label6.Text);
 
             foreach (Control c in this.Controls)
             {
@@ -135,6 +135,7 @@ namespace Text_Reading_for_Visually_Impaired
                     c.Text = "";
                 }
             }
+            label6.Text = "";
         }
 
         private void label6_Click(object sender, EventArgs e)
