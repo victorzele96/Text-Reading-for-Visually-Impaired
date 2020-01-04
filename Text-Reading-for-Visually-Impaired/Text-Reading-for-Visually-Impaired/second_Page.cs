@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Threading;
-
+using System.IO;
 
 namespace Text_Reading_for_Visually_Impaired
 {
     public partial class second_Page : Test
     {
+        List<String> textFiles_List;
         Boolean paused = false;
         Boolean stopped = false;
         SpeechSynthesizer synth = new SpeechSynthesizer();
@@ -31,7 +32,24 @@ namespace Text_Reading_for_Visually_Impaired
             this.Teacher_main = main;
             richTextBox1.Width = ClientSize.Width;
         }
+        public second_Page()
+        {
+            InitializeComponent();
+            
+        }
 
+
+        public void get_text_files_to_list()
+        {
+            textFiles_List = new List<string>();
+            DirectoryInfo d = new DirectoryInfo(Application.StartupPath +@"\\text_files");//Assuming Test is your Folder
+            FileInfo[] Files = d.GetFiles("*.txt"); //Getting Text files
+            foreach (FileInfo file in Files)
+            {
+                textFiles_List.Add(file.Name.Substring(0,file.Name.Length - 4));
+                comboBox1.Items.Add(file.Name.Substring(0, file.Name.Length - 4));
+            }
+        }
 
 
         private void setObjectsLocation()
@@ -117,6 +135,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void second_Page_Load(object sender, EventArgs e)
         {
+            get_text_files_to_list();
 
         }
 
@@ -159,6 +178,13 @@ namespace Text_Reading_for_Visually_Impaired
         {
             setObjectsLocation();
             richTextBox1.Width = this.Width;
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "";
+            String path = Application.StartupPath + "\\text_files\\" + comboBox1.SelectedItem.ToString() + ".txt";
+            richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
         }
     }
 }
