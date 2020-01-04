@@ -61,28 +61,28 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(238, 219);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(197, 23);
+            this.textBox5.Size = new System.Drawing.Size(197, 32);
             this.textBox5.TabIndex = 59;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(238, 161);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(197, 23);
+            this.textBox4.Size = new System.Drawing.Size(197, 32);
             this.textBox4.TabIndex = 58;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(645, 219);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(155, 23);
+            this.textBox2.Size = new System.Drawing.Size(155, 32);
             this.textBox2.TabIndex = 56;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(645, 156);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 23);
+            this.textBox1.Size = new System.Drawing.Size(155, 32);
             this.textBox1.TabIndex = 55;
             // 
             // dataGridView1
@@ -90,6 +90,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(79, 491);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(504, 87);
             this.dataGridView1.TabIndex = 54;
@@ -122,7 +123,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(645, 398);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(155, 23);
+            this.textBox6.Size = new System.Drawing.Size(155, 32);
             this.textBox6.TabIndex = 50;
             // 
             // label5
@@ -131,7 +132,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label5.Location = new System.Drawing.Point(473, 206);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 36);
+            this.label5.Size = new System.Drawing.Size(148, 55);
             this.label5.TabIndex = 49;
             this.label5.Text = "Email";
             // 
@@ -141,7 +142,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label4.Location = new System.Drawing.Point(473, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 36);
+            this.label4.Size = new System.Drawing.Size(191, 55);
             this.label4.TabIndex = 48;
             this.label4.Text = "Gender";
             // 
@@ -151,7 +152,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label3.Location = new System.Drawing.Point(836, 269);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 36);
+            this.label3.Size = new System.Drawing.Size(74, 55);
             this.label3.TabIndex = 47;
             this.label3.Text = "ID";
             // 
@@ -161,7 +162,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label2.Location = new System.Drawing.Point(836, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 36);
+            this.label2.Size = new System.Drawing.Size(266, 55);
             this.label2.TabIndex = 46;
             this.label2.Text = "Last Name";
             // 
@@ -171,7 +172,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.Location = new System.Drawing.Point(836, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 36);
+            this.label1.Size = new System.Drawing.Size(268, 55);
             this.label1.TabIndex = 45;
             this.label1.Text = "First Name";
             // 
@@ -181,15 +182,15 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label6.Location = new System.Drawing.Point(639, 269);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 36);
+            this.label6.Size = new System.Drawing.Size(281, 55);
             this.label6.TabIndex = 60;
             this.label6.Text = "user details";
             // 
             // Update_student_Information
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 767);
+            this.ClientSize = new System.Drawing.Size(1174, 729);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);

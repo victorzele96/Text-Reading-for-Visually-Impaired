@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelDropDown = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.minusPicture = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.plusPicture = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -66,15 +66,6 @@
             this.panelDropDown.Size = new System.Drawing.Size(171, 131);
             this.panelDropDown.TabIndex = 0;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 329);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(171, 50);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // minusPicture
             // 
             this.minusPicture.BackColor = System.Drawing.Color.White;
@@ -87,6 +78,15 @@
             this.minusPicture.TabIndex = 2;
             this.minusPicture.TabStop = false;
             this.minusPicture.Click += new System.EventHandler(this.minusPicture_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 329);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(171, 50);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // plusPicture
             // 
@@ -144,8 +144,8 @@
             // 
             // Test
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1178, 664);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(1623, 959);
             this.Controls.Add(this.panelDropDown);
             this.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Test";

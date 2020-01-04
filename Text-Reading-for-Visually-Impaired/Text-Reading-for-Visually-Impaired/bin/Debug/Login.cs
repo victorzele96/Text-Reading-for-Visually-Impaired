@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Login : Form
+    public partial class Login :Test
     {
 
         public String userName;
@@ -132,7 +132,8 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            //panel1.Location = new Point((ClientSize.Width - panel1.Width) / 2,(ClientSize.Height-panel1.Height)/2);
+            ExitBT.Location = new Point((ClientSize.Width - ExitBT.Width), ClientSize.Height - ExitBT.Height);
         }
     }
 }
