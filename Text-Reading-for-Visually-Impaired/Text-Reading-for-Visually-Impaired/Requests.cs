@@ -12,17 +12,18 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Requests : Form
     {
-        public Requests()
+        public Admin Admin_main;
+        public Requests(Admin main)
         {
             InitializeComponent();
+            this.Admin_main = main;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin f = new Admin();
-            f.ShowDialog();
-            this.Close();
+            this.Admin_main.Show();
+            //this.Close();
         }
     }
 }

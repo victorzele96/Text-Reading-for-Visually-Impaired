@@ -38,9 +38,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(126, 227);
+            this.button1.Location = new System.Drawing.Point(189, 355);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 54);
+            this.button1.Size = new System.Drawing.Size(236, 84);
             this.button1.TabIndex = 0;
             this.button1.Text = "Reports";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(515, 409);
+            this.button2.Location = new System.Drawing.Point(772, 639);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 54);
+            this.button2.Size = new System.Drawing.Size(236, 84);
             this.button2.TabIndex = 1;
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(126, 112);
+            this.button3.Location = new System.Drawing.Point(189, 175);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 54);
+            this.button3.Size = new System.Drawing.Size(236, 84);
             this.button3.TabIndex = 2;
             this.button3.Text = "Requests";
             this.button3.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(515, 112);
+            this.button4.Location = new System.Drawing.Point(772, 175);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 54);
+            this.button4.Size = new System.Drawing.Size(236, 84);
             this.button4.TabIndex = 3;
             this.button4.Text = "Add";
             this.button4.UseVisualStyleBackColor = true;
@@ -82,9 +86,10 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button5.Location = new System.Drawing.Point(515, 227);
+            this.button5.Location = new System.Drawing.Point(772, 355);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(157, 54);
+            this.button5.Size = new System.Drawing.Size(236, 84);
             this.button5.TabIndex = 4;
             this.button5.Text = "Remove";
             this.button5.UseVisualStyleBackColor = true;
@@ -92,17 +97,20 @@
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(774, 562);
+            this.ClientSize = new System.Drawing.Size(1174, 729);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Admin";
             this.Text = "Admin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.ResumeLayout(false);
 
         }

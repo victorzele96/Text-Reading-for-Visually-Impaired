@@ -40,9 +40,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +81,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label4.Location = new System.Drawing.Point(272, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 25);
+            this.label4.Size = new System.Drawing.Size(106, 25);
             this.label4.TabIndex = 24;
-            this.label4.Text = "Gender";
+            this.label4.Text = "Password";
             // 
             // label3
             // 
@@ -125,6 +125,7 @@
             this.button1.TabIndex = 36;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -143,6 +144,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(64, 486);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(494, 55);
             this.dataGridView1.TabIndex = 39;
@@ -162,14 +164,6 @@
             this.textBox2.Size = new System.Drawing.Size(155, 22);
             this.textBox2.TabIndex = 41;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(403, 235);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(155, 22);
-            this.textBox3.TabIndex = 42;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(12, 109);
@@ -184,15 +178,26 @@
             this.textBox5.Size = new System.Drawing.Size(197, 22);
             this.textBox5.TabIndex = 44;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.Location = new System.Drawing.Point(432, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 25);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "User details";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Update_details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(888, 629);
+            this.ClientSize = new System.Drawing.Size(935, 613);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
@@ -207,6 +212,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Update_details";
             this.Text = "Update_details";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Update_details_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -227,8 +233,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label6;
     }
 }

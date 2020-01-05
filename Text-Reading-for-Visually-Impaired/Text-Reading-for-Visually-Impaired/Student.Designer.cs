@@ -42,9 +42,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(705, 462);
+            this.button4.Location = new System.Drawing.Point(770, 462);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(314, 87);
+            this.button4.Size = new System.Drawing.Size(363, 87);
             this.button4.TabIndex = 3;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = true;
@@ -55,17 +55,17 @@
             this.thems.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thems.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.thems.IntegralHeight = false;
-            this.thems.ItemHeight = 51;
+            this.thems.ItemHeight = 79;
             this.thems.Items.AddRange(new object[] {
             "Default",
-            "1",
-            "2",
+            "Black and Yellow",
+            "Black and Red",
             "3",
             "4",
             "5"});
-            this.thems.Location = new System.Drawing.Point(162, 180);
+            this.thems.Location = new System.Drawing.Point(227, 180);
             this.thems.Name = "thems";
-            this.thems.Size = new System.Drawing.Size(314, 59);
+            this.thems.Size = new System.Drawing.Size(363, 87);
             this.thems.TabIndex = 0;
             this.thems.Text = "Pick  Theme";
             this.thems.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
@@ -73,9 +73,9 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button5.Location = new System.Drawing.Point(162, 461);
+            this.button5.Location = new System.Drawing.Point(227, 461);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(314, 87);
+            this.button5.Size = new System.Drawing.Size(363, 87);
             this.button5.TabIndex = 4;
             this.button5.Text = "Choose a story";
             this.button5.UseVisualStyleBackColor = true;
@@ -84,9 +84,9 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button6.Location = new System.Drawing.Point(705, 172);
+            this.button6.Location = new System.Drawing.Point(770, 172);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(314, 87);
+            this.button6.Size = new System.Drawing.Size(363, 87);
             this.button6.TabIndex = 5;
             this.button6.Text = "Update student Information";
             this.button6.UseVisualStyleBackColor = true;
@@ -94,10 +94,10 @@
             // 
             // Student
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1204, 737);
+            this.ClientSize = new System.Drawing.Size(1174, 729);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.thems);
@@ -105,6 +105,10 @@
             this.Name = "Student";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Student_Load);
+            this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.thems, 0);
+            this.Controls.SetChildIndex(this.button5, 0);
+            this.Controls.SetChildIndex(this.button6, 0);
             this.ResumeLayout(false);
 
         }
@@ -113,11 +117,11 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.ColorDialog colorDialog3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ColorDialog colorDialog4;
         private System.Windows.Forms.ColorDialog colorDialog5;
-        private System.Windows.Forms.ComboBox thems;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.ComboBox thems;
     }
 }

@@ -18,7 +18,7 @@ namespace Text_Reading_for_Visually_Impaired
         Color original_text_Color = Color.White;
         Color original_text_Color_Active = Color.White;
         String data_Base_Path = "";
-        Login main;
+        Login login_main;
         public Registration(Login main)
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Text_Reading_for_Visually_Impaired
             femaleRB.Checked = false;
             original_text_Color = userNameTB.ForeColor;
             headlineLB.Location = new Point((this.Width - headlineLB.Width)/2 - 10, 10);
-            this.main = main;
+            this.login_main = main;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -182,7 +182,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void button3_Click(object sender, EventArgs e)
         {
             ///
-            main.Show();
+            login_main.Show();
             //this.Hide();
             //Login back = new Login();
             //back.ShowDialog();

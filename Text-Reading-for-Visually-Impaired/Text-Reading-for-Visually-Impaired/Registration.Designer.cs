@@ -46,9 +46,9 @@
             this.headlineLB.AutoSize = true;
             this.headlineLB.Font = new System.Drawing.Font("Arial", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.headlineLB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.headlineLB.Location = new System.Drawing.Point(584, 35);
+            this.headlineLB.Location = new System.Drawing.Point(608, 91);
             this.headlineLB.Name = "headlineLB";
-            this.headlineLB.Size = new System.Drawing.Size(394, 131);
+            this.headlineLB.Size = new System.Drawing.Size(630, 208);
             this.headlineLB.TabIndex = 0;
             this.headlineLB.Text = "sign in";
             // 
@@ -58,10 +58,10 @@
             this.maleRB.AutoSize = true;
             this.maleRB.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.maleRB.ForeColor = System.Drawing.Color.White;
-            this.maleRB.Location = new System.Drawing.Point(921, 441);
+            this.maleRB.Location = new System.Drawing.Point(945, 497);
             this.maleRB.Name = "maleRB";
-            this.maleRB.Size = new System.Drawing.Size(117, 46);
-            this.maleRB.TabIndex = 1;
+            this.maleRB.Size = new System.Drawing.Size(187, 70);
+            this.maleRB.TabIndex = 10;
             this.maleRB.TabStop = true;
             this.maleRB.Text = "male";
             this.maleRB.UseVisualStyleBackColor = true;
@@ -69,14 +69,14 @@
             // firstNameTB
             // 
             this.firstNameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.firstNameTB.BackColor = System.Drawing.Color.MidnightBlue;
+            this.firstNameTB.BackColor = System.Drawing.SystemColors.Highlight;
             this.firstNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstNameTB.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.firstNameTB.ForeColor = System.Drawing.Color.DarkGray;
-            this.firstNameTB.Location = new System.Drawing.Point(231, 198);
+            this.firstNameTB.ForeColor = System.Drawing.Color.White;
+            this.firstNameTB.Location = new System.Drawing.Point(255, 254);
             this.firstNameTB.Name = "firstNameTB";
-            this.firstNameTB.Size = new System.Drawing.Size(367, 43);
-            this.firstNameTB.TabIndex = 2;
+            this.firstNameTB.Size = new System.Drawing.Size(367, 68);
+            this.firstNameTB.TabIndex = 0;
             this.firstNameTB.Text = "first name";
             this.firstNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.firstNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.firstNameTB_KeyDown_1);
@@ -86,10 +86,10 @@
             this.OKBT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OKBT.BackColor = System.Drawing.Color.LightSteelBlue;
             this.OKBT.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.OKBT.Location = new System.Drawing.Point(789, 652);
+            this.OKBT.Location = new System.Drawing.Point(813, 708);
             this.OKBT.Name = "OKBT";
             this.OKBT.Size = new System.Drawing.Size(290, 75);
-            this.OKBT.TabIndex = 3;
+            this.OKBT.TabIndex = 5;
             this.OKBT.Text = "Registration";
             this.OKBT.UseVisualStyleBackColor = false;
             this.OKBT.Click += new System.EventHandler(this.OK_Click);
@@ -97,14 +97,14 @@
             // lastNameTB
             // 
             this.lastNameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lastNameTB.BackColor = System.Drawing.Color.MidnightBlue;
+            this.lastNameTB.BackColor = System.Drawing.SystemColors.Highlight;
             this.lastNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastNameTB.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lastNameTB.ForeColor = System.Drawing.Color.DarkGray;
-            this.lastNameTB.Location = new System.Drawing.Point(851, 198);
+            this.lastNameTB.ForeColor = System.Drawing.Color.White;
+            this.lastNameTB.Location = new System.Drawing.Point(875, 254);
             this.lastNameTB.Name = "lastNameTB";
-            this.lastNameTB.Size = new System.Drawing.Size(367, 43);
-            this.lastNameTB.TabIndex = 4;
+            this.lastNameTB.Size = new System.Drawing.Size(367, 68);
+            this.lastNameTB.TabIndex = 1;
             this.lastNameTB.Text = "last name";
             this.lastNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.lastNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyDown);
@@ -112,14 +112,14 @@
             // userNameTB
             // 
             this.userNameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.userNameTB.BackColor = System.Drawing.Color.MidnightBlue;
+            this.userNameTB.BackColor = System.Drawing.SystemColors.Highlight;
             this.userNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userNameTB.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.userNameTB.ForeColor = System.Drawing.Color.DarkGray;
-            this.userNameTB.Location = new System.Drawing.Point(231, 343);
+            this.userNameTB.ForeColor = System.Drawing.Color.White;
+            this.userNameTB.Location = new System.Drawing.Point(255, 399);
             this.userNameTB.Name = "userNameTB";
-            this.userNameTB.Size = new System.Drawing.Size(367, 43);
-            this.userNameTB.TabIndex = 5;
+            this.userNameTB.Size = new System.Drawing.Size(367, 68);
+            this.userNameTB.TabIndex = 2;
             this.userNameTB.Text = "user name";
             this.userNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.userNameTB.TextChanged += new System.EventHandler(this.userNameTB_TextChanged);
@@ -128,14 +128,14 @@
             // passwordTB
             // 
             this.passwordTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.passwordTB.BackColor = System.Drawing.Color.MidnightBlue;
+            this.passwordTB.BackColor = System.Drawing.SystemColors.Highlight;
             this.passwordTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTB.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.passwordTB.ForeColor = System.Drawing.Color.DarkGray;
-            this.passwordTB.Location = new System.Drawing.Point(851, 343);
+            this.passwordTB.ForeColor = System.Drawing.Color.White;
+            this.passwordTB.Location = new System.Drawing.Point(875, 399);
             this.passwordTB.Name = "passwordTB";
-            this.passwordTB.Size = new System.Drawing.Size(367, 43);
-            this.passwordTB.TabIndex = 6;
+            this.passwordTB.Size = new System.Drawing.Size(367, 68);
+            this.passwordTB.TabIndex = 3;
             this.passwordTB.Text = "password";
             this.passwordTB.Click += new System.EventHandler(this.textBox_clicked);
             this.passwordTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordTB_KeyDown);
@@ -145,7 +145,7 @@
             this.cancelBT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cancelBT.BackColor = System.Drawing.Color.LightSteelBlue;
             this.cancelBT.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.cancelBT.Location = new System.Drawing.Point(406, 652);
+            this.cancelBT.Location = new System.Drawing.Point(430, 708);
             this.cancelBT.Name = "cancelBT";
             this.cancelBT.Size = new System.Drawing.Size(290, 75);
             this.cancelBT.TabIndex = 7;
@@ -159,9 +159,9 @@
             this.femaleRB.AutoSize = true;
             this.femaleRB.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.femaleRB.ForeColor = System.Drawing.Color.White;
-            this.femaleRB.Location = new System.Drawing.Point(921, 509);
+            this.femaleRB.Location = new System.Drawing.Point(945, 565);
             this.femaleRB.Name = "femaleRB";
-            this.femaleRB.Size = new System.Drawing.Size(147, 46);
+            this.femaleRB.Size = new System.Drawing.Size(237, 70);
             this.femaleRB.TabIndex = 8;
             this.femaleRB.TabStop = true;
             this.femaleRB.Text = "female";
@@ -170,22 +170,22 @@
             // EmailTB
             // 
             this.EmailTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EmailTB.BackColor = System.Drawing.Color.MidnightBlue;
+            this.EmailTB.BackColor = System.Drawing.SystemColors.Highlight;
             this.EmailTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailTB.Font = new System.Drawing.Font("Arial", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.EmailTB.ForeColor = System.Drawing.Color.DarkGray;
-            this.EmailTB.Location = new System.Drawing.Point(231, 476);
+            this.EmailTB.ForeColor = System.Drawing.Color.White;
+            this.EmailTB.Location = new System.Drawing.Point(255, 532);
             this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(367, 43);
-            this.EmailTB.TabIndex = 9;
+            this.EmailTB.Size = new System.Drawing.Size(367, 68);
+            this.EmailTB.TabIndex = 4;
             this.EmailTB.Text = "E-mail";
             this.EmailTB.Click += new System.EventHandler(this.textBox_clicked);
             this.EmailTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EmailTB_KeyDown);
             // 
             // Registration
             // 
-            this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(1557, 769);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(1604, 881);
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.femaleRB);
             this.Controls.Add(this.cancelBT);
@@ -199,6 +199,7 @@
             this.Name = "Registration";
             this.ShowIcon = false;
             this.Text = "registration";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Registration_Load_1);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Registration_Paint);
             this.ResumeLayout(false);

@@ -11,8 +11,11 @@ using System.Data.SqlClient;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Login : Form
+    public partial class Login :Test
     {
+
+        public String userName;
+        public String password;
         public Login()
         {
             InitializeComponent();
@@ -76,22 +79,29 @@ namespace Text_Reading_for_Visually_Impaired
                 Database11DataSetTableAdapters.ProfileTableAdapter student = new Database11DataSetTableAdapters.ProfileTableAdapter();
                 Database11DataSet.ProfileDataTable dt2 = student.GetDataByUsernamePasswordProfile(txtUsername.Text, txtPassword.Text);
                 //Check row > 0
+                this.userName = txtUsername.Text;
+                this.password = txtPassword.Text;
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPassword.Text = "";
+                    txtUsername.Text = "";
                     //Process your login here
                     this.Hide();
-                    Admin ad = new Admin();
+                    Admin ad = new Admin(this);
                     ad.ShowDialog();
                     this.Close();
                 }
                 else if(dt1.Rows.Count > 0)
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPassword.Text = "";
+                    txtUsername.Text = "";
                     //Process your login here
                     this.Hide();
-                    Teacher th = new Teacher();
+                    Teacher th = new Teacher(this);
                     th.ShowDialog();
+                    
                     this.Close();
 
                 }
@@ -99,10 +109,13 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
-                    this.Hide();
-                    Student st = new Student();
-                    st.ShowDialog();
-                    this.Close();
+                    //this.Hide();
+                    txtPassword.Text = "";
+                    txtUsername.Text = "";
+                    Student st = new Student(this);
+                    st.Show();
+                    st.Theme_color(btnLogin.ForeColor, btnLogin.BackColor, Color.WhiteSmoke);
+                    //this.Close();
                 }
                 else
                 {
@@ -127,7 +140,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            
+            //panel1.Location = new Point((ClientSize.Width - panel1.Width) / 2,(ClientSize.Height-panel1.Height)/2);
+            ExitBT.Location = new Point((ClientSize.Width - ExitBT.Width), ClientSize.Height - ExitBT.Height);
         }
     }
 }

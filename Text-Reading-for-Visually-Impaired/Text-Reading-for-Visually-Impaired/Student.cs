@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Student : Form
+    public partial class Student : Test
     {
-        public Student()
+        public Login login_main;
+        public Student(Login main)
         {
             InitializeComponent();
+            this.login_main = main;
         }
+       
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login login = new Login();
-            login.ShowDialog();
+            //this.Hide();
+            login_main.Show();
+            
             this.Close();
         }
 
@@ -32,7 +35,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (thems.SelectedItem == "Default")
+            if (thems.SelectedIndex == 0)
             {
                 Student.ActiveForm.BackColor = Color.White;//change form color
 
@@ -45,7 +48,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Gainsboro;
             }
 
-            if (thems.SelectedItem == "1")
+            if (thems.SelectedIndex == 1)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
@@ -58,7 +61,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "2")
+            if (thems.SelectedIndex == 2)
             {
                 Student.ActiveForm.BackColor = Color.Gainsboro;//change form color
 
@@ -71,7 +74,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "3")
+            if (thems.SelectedIndex == 3)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
@@ -84,7 +87,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "4")
+            if (thems.SelectedIndex == 4)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
@@ -97,7 +100,7 @@ namespace Text_Reading_for_Visually_Impaired
                 button6.BackColor = Color.Black;
             }
 
-            if (thems.SelectedItem == "5")
+            if (thems.SelectedIndex == 5)
             {
                 Student.ActiveForm.BackColor = Color.Black;//change form color
 
@@ -113,18 +116,18 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Stories story = new Stories();
-            story.ShowDialog();
-            this.Close();
+            //this.Hide();
+            Choose_a_story story = new Choose_a_story(this);
+            story.Show();
+            story.Theme_color(button6.ForeColor, button6.BackColor, this.BackColor);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Update_student_Information student_info = new Update_student_Information();
-            student_info.ShowDialog();
-            this.Close();
+            //this.Hide();
+            Update_student_Information student_info = new Update_student_Information(this);
+            student_info.Show();
+            student_info.Theme_color(button6.ForeColor, button6.BackColor, this.BackColor);
         }
     }
 }
