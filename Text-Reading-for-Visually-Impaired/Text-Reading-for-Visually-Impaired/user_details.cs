@@ -59,7 +59,7 @@ namespace Text_Reading_for_Visually_Impaired
             dataGridView2.DataSource = dt2;
 
             Boolean foundFlag = false;
-                if (dataGridView1.Rows.Count > 0)
+                if (dataGridView1.Rows.Count > 0 && foundFlag == false)
                 {
                     foreach (DataGridViewRow r in dataGridView1.Rows)
                     {
@@ -76,9 +76,8 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                     }
                 }
-                else
             
-                if (dataGridView2.Rows.Count > 0)
+                if (dataGridView2.Rows.Count > 0 && foundFlag == false)
                 {
                     foreach (DataGridViewRow r in dataGridView2.Rows)
                     {
