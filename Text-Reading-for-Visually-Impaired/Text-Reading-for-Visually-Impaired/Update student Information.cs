@@ -19,6 +19,27 @@ namespace Text_Reading_for_Visually_Impaired
         {
             InitializeComponent();
             this.Student_main = main;
+
+
+            Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
+            Database11DataSet.ProfileDataTable dt1 = pr.GetData();//pr=profile
+            dataGridView1.DataSource = dt1;
+
+            if (dataGridView1.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    if(((DataGridViewRow)r).Cells["ID"].Value.ToString() == this.Student_main.login_main.userName)
+                    {
+                        label6.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
+                        textBox1.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
+                        textBox2.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
+                        textBox4.Text = ((DataGridViewRow)r).Cells["Password"].Value.ToString();
+                        textBox5.Text = ((DataGridViewRow)r).Cells["Email"].Value.ToString();
+                        break;
+                    }
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,35 +51,36 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
-            Database11DataSet.ProfileDataTable dt1 = pr.GetData();//pr=profile
-            dataGridView1.DataSource = dt1;
-            String y = textBox6.Text;
 
-            if (y == Student_main.login_main.userName)
-            {//find only the one that login
+            //Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
+            //Database11DataSet.ProfileDataTable dt1 = pr.GetData();//pr=profile
+            //dataGridView1.DataSource = dt1;
+            //String y = textBox6.Text;
 
-                if (dataGridView1.Rows.Count > 0)
-                {
-                    foreach (DataGridViewRow r in dataGridView1.Rows)
-                    {
-                        String x = (String)r.Cells[0].Value;
-                        if (x == y)
-                        {
-                            label6.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
-                            textBox1.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
-                            textBox2.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
-                            textBox4.Text = ((DataGridViewRow)r).Cells["Password"].Value.ToString();
-                            textBox5.Text = ((DataGridViewRow)r).Cells["Email"].Value.ToString();
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("The account does not exist in the system!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox6.Text = "";
-            }
+            //if (y == Student_main.login_main.userName)
+            //{//find only the one that login
+
+            //    if (dataGridView1.Rows.Count > 0)
+            //    {
+            //        foreach (DataGridViewRow r in dataGridView1.Rows)
+            //        {
+            //            String x = (String)r.Cells[0].Value;
+            //            if (x == y)
+            //            {
+            //                label6.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
+            //                textBox1.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
+            //                textBox2.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
+            //                textBox4.Text = ((DataGridViewRow)r).Cells["Password"].Value.ToString();
+            //                textBox5.Text = ((DataGridViewRow)r).Cells["Email"].Value.ToString();
+            //            }
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("The account does not exist in the system!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    textBox6.Text = "";
+            //}
         }
     
 
@@ -131,9 +153,10 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (c.GetType() == typeof(TextBox))
                 {
-                    if (((TextBox)c).Text == "" && ((TextBox)c).Name != textBox6.Name)
+                    if (((TextBox)c).Text == "") //&& ((TextBox)c).Name != textBox6.Name)
                     {
                         MessageBox.Show("please fill al fields", "error");
+                        break;
                     }
                 }
             }
@@ -147,6 +170,11 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
             label6.Text = "";
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
