@@ -96,7 +96,7 @@
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnLogin.Location = new System.Drawing.Point(45, 227);
+            this.btnLogin.Location = new System.Drawing.Point(60, 227);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(200, 65);
@@ -109,7 +109,7 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(312, 227);
+            this.button3.Location = new System.Drawing.Point(327, 227);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 65);
@@ -127,7 +127,7 @@
             // 
             this.ExitBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ExitBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ExitBT.Location = new System.Drawing.Point(680, 487);
+            this.ExitBT.Location = new System.Drawing.Point(1378, 548);
             this.ExitBT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExitBT.Name = "ExitBT";
             this.ExitBT.Size = new System.Drawing.Size(187, 82);
@@ -146,7 +146,7 @@
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(203, 111);
+            this.panel1.Location = new System.Drawing.Point(502, 177);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 320);
             this.panel1.TabIndex = 8;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(880, 583);
+            this.ClientSize = new System.Drawing.Size(1578, 644);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitBT);
             this.ForeColor = System.Drawing.Color.Black;
