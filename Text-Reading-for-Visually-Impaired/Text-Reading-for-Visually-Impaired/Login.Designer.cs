@@ -46,7 +46,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 197);
+            this.label1.Location = new System.Drawing.Point(8, 103);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 62);
@@ -59,10 +59,10 @@
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(267, 213);
+            this.txtPassword.Location = new System.Drawing.Point(279, 111);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(500, 48);
+            this.txtPassword.Size = new System.Drawing.Size(250, 48);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
@@ -70,10 +70,10 @@
             // 
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(267, 94);
+            this.txtUsername.Location = new System.Drawing.Point(279, 31);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(500, 48);
+            this.txtUsername.Size = new System.Drawing.Size(250, 48);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
@@ -83,7 +83,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 73);
+            this.label2.Location = new System.Drawing.Point(8, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(230, 62);
@@ -96,10 +96,10 @@
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnLogin.Location = new System.Drawing.Point(13, 311);
+            this.btnLogin.Location = new System.Drawing.Point(45, 227);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(300, 75);
+            this.btnLogin.Size = new System.Drawing.Size(200, 65);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(487, 311);
+            this.button3.Location = new System.Drawing.Point(312, 227);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(300, 75);
+            this.button3.Size = new System.Drawing.Size(200, 65);
             this.button3.TabIndex = 6;
             this.button3.Text = "register";
             this.button3.UseVisualStyleBackColor = true;
@@ -125,12 +125,12 @@
             // 
             // ExitBT
             // 
-            this.ExitBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ExitBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ExitBT.Location = new System.Drawing.Point(1305, 661);
+            this.ExitBT.Location = new System.Drawing.Point(680, 487);
             this.ExitBT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExitBT.Name = "ExitBT";
-            this.ExitBT.Size = new System.Drawing.Size(261, 149);
+            this.ExitBT.Size = new System.Drawing.Size(187, 82);
             this.ExitBT.TabIndex = 7;
             this.ExitBT.Text = "Exit";
             this.ExitBT.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(361, 184);
+            this.panel1.Location = new System.Drawing.Point(203, 111);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 430);
+            this.panel1.Size = new System.Drawing.Size(600, 320);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(880, 583);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitBT);
             this.ForeColor = System.Drawing.Color.Black;
