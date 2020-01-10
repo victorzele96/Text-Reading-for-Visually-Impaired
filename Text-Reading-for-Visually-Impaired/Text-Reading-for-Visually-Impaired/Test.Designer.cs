@@ -52,11 +52,11 @@
             // 
             // panelDropDown
             // 
+            this.panelDropDown.Controls.Add(this.pictureBox1);
             this.panelDropDown.Controls.Add(this.minusPicture);
             this.panelDropDown.Controls.Add(this.button4);
             this.panelDropDown.Controls.Add(this.plusPicture);
             this.panelDropDown.Controls.Add(this.button3);
-            this.panelDropDown.Controls.Add(this.pictureBox1);
             this.panelDropDown.Controls.Add(this.button1);
             this.panelDropDown.Controls.Add(this.button2);
             this.panelDropDown.Location = new System.Drawing.Point(12, 12);
