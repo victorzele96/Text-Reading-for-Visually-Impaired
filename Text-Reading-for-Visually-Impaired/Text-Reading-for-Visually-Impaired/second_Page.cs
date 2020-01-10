@@ -42,12 +42,12 @@ namespace Text_Reading_for_Visually_Impaired
         public void get_text_files_to_list()
         {
             textFiles_List = new List<string>();
-            DirectoryInfo d = new DirectoryInfo(Application.StartupPath +@"\\text_files");//Assuming Test is your Folder
+            DirectoryInfo d = new DirectoryInfo(Application.StartupPath +@"\\text_files");
             FileInfo[] Files = d.GetFiles("*.txt"); //Getting Text files
             foreach (FileInfo file in Files)
             {
                 textFiles_List.Add(file.Name.Substring(0,file.Name.Length - 4));
-                comboBox1.Items.Add(file.Name.Substring(0, file.Name.Length - 4));
+                //comboBox1.Items.Add(file.Name.Substring(0, file.Name.Length - 4));
             }
         }
 
@@ -183,7 +183,20 @@ namespace Text_Reading_for_Visually_Impaired
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
-            String path = Application.StartupPath + "\\text_files\\" + comboBox1.SelectedItem.ToString() + ".txt";
+            //String path = Application.StartupPath + "\\text_files\\" + comboBox1.SelectedItem.ToString() + ".txt";
+           // richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
+        }
+
+        private void Button5_Click_1(object sender, EventArgs e)
+        {
+            story_choices nePage = new story_choices(this,textFiles_List);
+            nePage.Show();
+        }
+
+        public void fillRichTextBox(string name)
+        {
+            richTextBox1.Text = "";
+            String path = Application.StartupPath + "\\text_files\\" + name + ".txt";
             richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
         }
     }

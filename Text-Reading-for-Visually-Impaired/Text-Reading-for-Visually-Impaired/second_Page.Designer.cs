@@ -37,8 +37,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.backBt = new System.Windows.Forms.Button();
             this.buttonsPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.buttonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,11 +45,11 @@
             // 
             this.insertTxtLb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.insertTxtLb.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.insertTxtLb.ForeColor = System.Drawing.Color.White;
-            this.insertTxtLb.Location = new System.Drawing.Point(347, 98);
+            this.insertTxtLb.ForeColor = System.Drawing.Color.Black;
+            this.insertTxtLb.Location = new System.Drawing.Point(663, 122);
             this.insertTxtLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.insertTxtLb.Name = "insertTxtLb";
-            this.insertTxtLb.Size = new System.Drawing.Size(500, 80);
+            this.insertTxtLb.Size = new System.Drawing.Size(200, 87);
             this.insertTxtLb.TabIndex = 9;
             this.insertTxtLb.Text = "insert text";
             this.insertTxtLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,14 +58,14 @@
             // richTextBox1
             // 
             this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox1.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.EnableAutoDragDrop = true;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 180);
+            this.richTextBox1.Location = new System.Drawing.Point(231, 211);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1200, 400);
+            this.richTextBox1.Size = new System.Drawing.Size(850, 250);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = "";
             // 
@@ -78,10 +77,10 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(279, 31);
+            this.button1.Location = new System.Drawing.Point(325, 34);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 78);
+            this.button1.Size = new System.Drawing.Size(105, 85);
             this.button1.TabIndex = 26;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -94,10 +93,10 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(412, 31);
+            this.button2.Location = new System.Drawing.Point(481, 34);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 78);
+            this.button2.Size = new System.Drawing.Size(108, 85);
             this.button2.TabIndex = 27;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -110,10 +109,10 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(27, 31);
+            this.button3.Location = new System.Drawing.Point(31, 34);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 78);
+            this.button3.Size = new System.Drawing.Size(105, 85);
             this.button3.TabIndex = 28;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
@@ -126,10 +125,10 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(146, 31);
+            this.button4.Location = new System.Drawing.Point(170, 34);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 78);
+            this.button4.Size = new System.Drawing.Size(108, 85);
             this.button4.TabIndex = 29;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
@@ -138,9 +137,9 @@
             // 
             this.backBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.backBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backBt.Location = new System.Drawing.Point(951, 618);
+            this.backBt.Location = new System.Drawing.Point(1109, 670);
             this.backBt.Name = "backBt";
-            this.backBt.Size = new System.Drawing.Size(211, 99);
+            this.backBt.Size = new System.Drawing.Size(246, 107);
             this.backBt.TabIndex = 30;
             this.backBt.Text = "Back";
             this.backBt.UseVisualStyleBackColor = true;
@@ -153,40 +152,29 @@
             this.buttonsPanel.Controls.Add(this.button1);
             this.buttonsPanel.Controls.Add(this.button4);
             this.buttonsPanel.Controls.Add(this.button3);
-            this.buttonsPanel.Location = new System.Drawing.Point(342, 583);
+            this.buttonsPanel.Location = new System.Drawing.Point(399, 483);
             this.buttonsPanel.Name = "buttonsPanel";
-            this.buttonsPanel.Size = new System.Drawing.Size(520, 120);
+            this.buttonsPanel.Size = new System.Drawing.Size(607, 130);
             this.buttonsPanel.TabIndex = 31;
             // 
-            // comboBox1
+            // button5
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(914, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(260, 53);
-            this.comboBox1.TabIndex = 32;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(924, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 50);
-            this.label1.TabIndex = 33;
-            this.label1.Text = " טקסט קיים";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button5.Location = new System.Drawing.Point(1187, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 100);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "famous stories";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click_1);
             // 
             // second_Page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(1174, 729);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(1370, 661);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.buttonsPanel);
             this.Controls.Add(this.backBt);
             this.Controls.Add(this.richTextBox1);
@@ -201,24 +189,21 @@
             this.Controls.SetChildIndex(this.richTextBox1, 0);
             this.Controls.SetChildIndex(this.backBt, 0);
             this.Controls.SetChildIndex(this.buttonsPanel, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.button5, 0);
             this.buttonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label insertTxtLb;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button backBt;
         private System.Windows.Forms.Panel buttonsPanel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Label insertTxtLb;
+        public System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
