@@ -69,5 +69,20 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Teacher_Reports r = new Teacher_Reports(this);
+            r.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            this.Close();
+        }
     }
 }
