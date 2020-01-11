@@ -135,6 +135,7 @@ namespace Text_Reading_for_Visually_Impaired
                     if (((TextBox)c).Text == "")
                     {
                         MessageBox.Show("please fill al fields", "error");
+                        break;
                     }
                 }
             }
@@ -323,6 +324,41 @@ namespace Text_Reading_for_Visually_Impaired
         }
 
         private void userNameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void femaleRB_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastNameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameTB_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maleRB_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void headlineLB_Click(object sender, EventArgs e)
         {
 
         }

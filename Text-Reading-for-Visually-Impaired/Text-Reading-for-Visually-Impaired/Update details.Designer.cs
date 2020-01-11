@@ -161,6 +161,7 @@
             this.label6.Size = new System.Drawing.Size(213, 40);
             this.label6.TabIndex = 66;
             this.label6.Text = "user details";
+            this.label6.Click += new System.EventHandler(this.label6_Click_1);
             // 
             // dataGridView1
             // 
