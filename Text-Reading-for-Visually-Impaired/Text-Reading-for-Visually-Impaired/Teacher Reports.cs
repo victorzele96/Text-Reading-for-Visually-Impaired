@@ -25,5 +25,10 @@ namespace Text_Reading_for_Visually_Impaired
             this.Teacher_main.Show();
             //this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

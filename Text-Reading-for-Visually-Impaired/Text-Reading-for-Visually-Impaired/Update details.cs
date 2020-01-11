@@ -163,20 +163,13 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     if (((TextBox)c).Text == "")
                     {
-                        MessageBox.Show("please fill al fields", "error");
+                        MessageBox.Show("please fill all fields", "error");
                     }
                 }
             }
             update_Teacher_By_ID(label6.Text);
 
-            foreach (Control c in this.Controls)
-            {
-                if (c.GetType() == typeof(TextBox))
-                {
-                    c.Text = "";
-                }
-            }
-            label6.Text = "";
+            MessageBox.Show("Details were updated");
         }
 
         private void label6_Click_1(object sender, EventArgs e)

@@ -95,7 +95,7 @@ namespace Text_Reading_for_Visually_Impaired
             this.BackColor = Student_main.BackColor;
             foreach (Button butt in this.Controls.OfType<Button>())
             {
-                butt.BackColor = Student_main.button5.BackColor;
+                butt.BackColor = Student_main.chooseAstory.BackColor;
                 butt.ForeColor = Student_main.button4.ForeColor;
             }
             foreach (Label lab in this.Controls.OfType<Label>())
@@ -159,14 +159,7 @@ namespace Text_Reading_for_Visually_Impaired
             }
             update_Student_By_ID(label6.Text);
 
-            foreach (Control c in this.Controls)
-            {
-                if (c.GetType() == typeof(TextBox))
-                {
-                    c.Text = "";
-                }
-            }
-            label6.Text = "";
+            MessageBox.Show("Details were updated");
         }
 
         private void label6_Click(object sender, EventArgs e)
