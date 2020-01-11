@@ -29,108 +29,108 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.reports = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
+            this.requests = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
+            this.remove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // reports
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(179, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(400, 255);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Reports";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.reports.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.reports.BackColor = System.Drawing.Color.Transparent;
+            this.reports.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reports.BackgroundImage")));
+            this.reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.reports.ForeColor = System.Drawing.Color.White;
+            this.reports.Location = new System.Drawing.Point(179, 21);
+            this.reports.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reports.Name = "reports";
+            this.reports.Size = new System.Drawing.Size(400, 255);
+            this.reports.TabIndex = 0;
+            this.reports.Text = "Reports";
+            this.reports.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.reports.UseVisualStyleBackColor = false;
+            this.reports.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // logout
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1081, 367);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(400, 255);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Logout";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.logout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.logout.ForeColor = System.Drawing.Color.White;
+            this.logout.Location = new System.Drawing.Point(1081, 367);
+            this.logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(400, 255);
+            this.logout.TabIndex = 1;
+            this.logout.Text = "Logout";
+            this.logout.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // requests
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(179, 367);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(400, 255);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Requests";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.requests.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.requests.BackColor = System.Drawing.Color.Transparent;
+            this.requests.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("requests.BackgroundImage")));
+            this.requests.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.requests.ForeColor = System.Drawing.Color.White;
+            this.requests.Location = new System.Drawing.Point(179, 367);
+            this.requests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.requests.Name = "requests";
+            this.requests.Size = new System.Drawing.Size(400, 255);
+            this.requests.TabIndex = 2;
+            this.requests.Text = "Requests";
+            this.requests.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.requests.UseVisualStyleBackColor = false;
+            this.requests.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // add
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(626, 21);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(400, 255);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Add";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.add.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.add.BackColor = System.Drawing.Color.Transparent;
+            this.add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add.BackgroundImage")));
+            this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.add.ForeColor = System.Drawing.Color.White;
+            this.add.Location = new System.Drawing.Point(626, 21);
+            this.add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(400, 255);
+            this.add.TabIndex = 3;
+            this.add.Text = "Add";
+            this.add.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // remove
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(626, 367);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(400, 255);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Remove";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.remove.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.remove.BackColor = System.Drawing.Color.Black;
+            this.remove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("remove.BackgroundImage")));
+            this.remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.remove.ForeColor = System.Drawing.SystemColors.Control;
+            this.remove.Location = new System.Drawing.Point(626, 367);
+            this.remove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.remove.Name = "remove";
+            this.remove.Size = new System.Drawing.Size(400, 255);
+            this.remove.TabIndex = 4;
+            this.remove.Text = "Remove";
+            this.remove.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.remove.UseVisualStyleBackColor = false;
+            this.remove.Click += new System.EventHandler(this.button5_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1578, 644);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.remove);
+            this.Controls.Add(this.add);
+            this.Controls.Add(this.requests);
+            this.Controls.Add(this.logout);
+            this.Controls.Add(this.reports);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Admin";
             this.Text = "Admin";
@@ -142,10 +142,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button reports;
+        private System.Windows.Forms.Button logout;
+        private System.Windows.Forms.Button requests;
+        private System.Windows.Forms.Button add;
+        private System.Windows.Forms.Button remove;
     }
 }

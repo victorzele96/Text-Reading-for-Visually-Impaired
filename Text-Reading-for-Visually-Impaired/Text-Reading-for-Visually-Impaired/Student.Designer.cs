@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.colorDialog3 = new System.Windows.Forms.ColorDialog();
             this.button4 = new System.Windows.Forms.Button();
             this.colorDialog4 = new System.Windows.Forms.ColorDialog();
             this.colorDialog5 = new System.Windows.Forms.ColorDialog();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.chooseAstory = new System.Windows.Forms.Button();
+            this.updateStudentInformation = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button4
@@ -51,61 +52,73 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // chooseAstory
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button5.Location = new System.Drawing.Point(346, 84);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(500, 134);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Choose a story";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.chooseAstory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chooseAstory.BackColor = System.Drawing.Color.Transparent;
+            this.chooseAstory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chooseAstory.BackgroundImage")));
+            this.chooseAstory.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.chooseAstory.ForeColor = System.Drawing.Color.White;
+            this.chooseAstory.Location = new System.Drawing.Point(346, 49);
+            this.chooseAstory.Margin = new System.Windows.Forms.Padding(5);
+            this.chooseAstory.Name = "chooseAstory";
+            this.chooseAstory.Size = new System.Drawing.Size(400, 255);
+            this.chooseAstory.TabIndex = 4;
+            this.chooseAstory.Text = "Choose a Story";
+            this.chooseAstory.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.chooseAstory.UseVisualStyleBackColor = false;
+            this.chooseAstory.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // updateStudentInformation
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button6.Location = new System.Drawing.Point(1021, 84);
-            this.button6.Margin = new System.Windows.Forms.Padding(5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(500, 134);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Update student Information";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.updateStudentInformation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.updateStudentInformation.BackColor = System.Drawing.Color.Transparent;
+            this.updateStudentInformation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateStudentInformation.BackgroundImage")));
+            this.updateStudentInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.updateStudentInformation.ForeColor = System.Drawing.Color.White;
+            this.updateStudentInformation.Location = new System.Drawing.Point(1021, 49);
+            this.updateStudentInformation.Margin = new System.Windows.Forms.Padding(5);
+            this.updateStudentInformation.Name = "updateStudentInformation";
+            this.updateStudentInformation.Size = new System.Drawing.Size(400, 255);
+            this.updateStudentInformation.TabIndex = 5;
+            this.updateStudentInformation.Text = "Update Student Information";
+            this.updateStudentInformation.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.updateStudentInformation.UseVisualStyleBackColor = false;
+            this.updateStudentInformation.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // logout
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button7.Location = new System.Drawing.Point(1021, 432);
-            this.button7.Margin = new System.Windows.Forms.Padding(5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(500, 134);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Logout";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.logout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.logout.ForeColor = System.Drawing.Color.White;
+            this.logout.Location = new System.Drawing.Point(1031, 375);
+            this.logout.Margin = new System.Windows.Forms.Padding(5);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(400, 255);
+            this.logout.TabIndex = 6;
+            this.logout.Text = "Logout";
+            this.logout.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.logout.UseVisualStyleBackColor = false;
+            this.logout.Click += new System.EventHandler(this.button7_Click);
             // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1578, 644);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.logout);
+            this.Controls.Add(this.updateStudentInformation);
+            this.Controls.Add(this.chooseAstory);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Student";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Student_Load);
-            this.Controls.SetChildIndex(this.button5, 0);
-            this.Controls.SetChildIndex(this.button6, 0);
-            this.Controls.SetChildIndex(this.button7, 0);
+            this.Controls.SetChildIndex(this.chooseAstory, 0);
+            this.Controls.SetChildIndex(this.updateStudentInformation, 0);
+            this.Controls.SetChildIndex(this.logout, 0);
             this.ResumeLayout(false);
 
         }
@@ -117,8 +130,8 @@
         private System.Windows.Forms.ColorDialog colorDialog4;
         private System.Windows.Forms.ColorDialog colorDialog5;
         public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button6;
-        public System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Button chooseAstory;
+        public System.Windows.Forms.Button updateStudentInformation;
+        public System.Windows.Forms.Button logout;
     }
 }

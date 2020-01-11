@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teacher_Reports));
             this.button1 = new System.Windows.Forms.Button();
+            this.studentProgression = new System.Windows.Forms.Button();
+            this.Updates = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -45,12 +48,47 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // studentProgression
+            // 
+            this.studentProgression.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.studentProgression.BackColor = System.Drawing.Color.Transparent;
+            this.studentProgression.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("studentProgression.BackgroundImage")));
+            this.studentProgression.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.studentProgression.ForeColor = System.Drawing.Color.White;
+            this.studentProgression.Location = new System.Drawing.Point(287, 66);
+            this.studentProgression.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.studentProgression.Name = "studentProgression";
+            this.studentProgression.Size = new System.Drawing.Size(400, 255);
+            this.studentProgression.TabIndex = 4;
+            this.studentProgression.Text = "Student Progression";
+            this.studentProgression.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.studentProgression.UseVisualStyleBackColor = false;
+            this.studentProgression.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // Updates
+            // 
+            this.Updates.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Updates.BackColor = System.Drawing.Color.Transparent;
+            this.Updates.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Updates.BackgroundImage")));
+            this.Updates.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Updates.ForeColor = System.Drawing.Color.White;
+            this.Updates.Location = new System.Drawing.Point(818, 66);
+            this.Updates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Updates.Name = "Updates";
+            this.Updates.Size = new System.Drawing.Size(400, 255);
+            this.Updates.TabIndex = 5;
+            this.Updates.Text = "Updates";
+            this.Updates.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.Updates.UseVisualStyleBackColor = false;
+            // 
             // Teacher_Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1578, 644);
+            this.Controls.Add(this.Updates);
+            this.Controls.Add(this.studentProgression);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Teacher_Reports";
@@ -63,5 +101,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button studentProgression;
+        private System.Windows.Forms.Button Updates;
     }
 }
