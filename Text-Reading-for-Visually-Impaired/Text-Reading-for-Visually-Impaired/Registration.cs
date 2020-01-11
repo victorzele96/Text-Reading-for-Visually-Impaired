@@ -181,12 +181,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ///
-            login_main.Show();
-            //this.Hide();
-            //Login back = new Login();
-            //back.ShowDialog();
-            //this.Close();
+            this.Hide();
+            Login back = new Login();
+            back.ShowDialog();
         }
 
         private void firstNameTB_KeyDown_1(object sender, KeyEventArgs e)
