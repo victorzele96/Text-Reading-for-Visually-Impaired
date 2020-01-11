@@ -44,13 +44,14 @@
             // 
             this.headlineLB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.headlineLB.AutoSize = true;
-            this.headlineLB.Font = new System.Drawing.Font("Arial", 56F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.headlineLB.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.headlineLB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.headlineLB.Location = new System.Drawing.Point(474, 67);
+            this.headlineLB.Location = new System.Drawing.Point(561, 43);
             this.headlineLB.Name = "headlineLB";
-            this.headlineLB.Size = new System.Drawing.Size(376, 125);
+            this.headlineLB.Size = new System.Drawing.Size(221, 67);
             this.headlineLB.TabIndex = 0;
-            this.headlineLB.Text = "sign in";
+            this.headlineLB.Text = "sign up";
+            this.headlineLB.Click += new System.EventHandler(this.headlineLB_Click);
             // 
             // maleRB
             // 
@@ -65,6 +66,7 @@
             this.maleRB.TabStop = true;
             this.maleRB.Text = "male";
             this.maleRB.UseVisualStyleBackColor = true;
+            this.maleRB.CheckedChanged += new System.EventHandler(this.maleRB_CheckedChanged);
             // 
             // firstNameTB
             // 
@@ -79,6 +81,7 @@
             this.firstNameTB.TabIndex = 0;
             this.firstNameTB.Text = "first name";
             this.firstNameTB.Click += new System.EventHandler(this.textBox_clicked);
+            this.firstNameTB.TextChanged += new System.EventHandler(this.firstNameTB_TextChanged_1);
             this.firstNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.firstNameTB_KeyDown_1);
             // 
             // OKBT
@@ -90,7 +93,7 @@
             this.OKBT.Name = "OKBT";
             this.OKBT.Size = new System.Drawing.Size(290, 75);
             this.OKBT.TabIndex = 5;
-            this.OKBT.Text = "Registration";
+            this.OKBT.Text = "Confirm";
             this.OKBT.UseVisualStyleBackColor = false;
             this.OKBT.Click += new System.EventHandler(this.OK_Click);
             // 
@@ -107,6 +110,7 @@
             this.lastNameTB.TabIndex = 1;
             this.lastNameTB.Text = "last name";
             this.lastNameTB.Click += new System.EventHandler(this.textBox_clicked);
+            this.lastNameTB.TextChanged += new System.EventHandler(this.lastNameTB_TextChanged);
             this.lastNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyDown);
             // 
             // userNameTB
@@ -120,7 +124,7 @@
             this.userNameTB.Name = "userNameTB";
             this.userNameTB.Size = new System.Drawing.Size(367, 51);
             this.userNameTB.TabIndex = 2;
-            this.userNameTB.Text = "user name";
+            this.userNameTB.Text = "user name (id)";
             this.userNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.userNameTB.TextChanged += new System.EventHandler(this.userNameTB_TextChanged);
             this.userNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyDown);
@@ -138,6 +142,7 @@
             this.passwordTB.TabIndex = 3;
             this.passwordTB.Text = "password";
             this.passwordTB.Click += new System.EventHandler(this.textBox_clicked);
+            this.passwordTB.TextChanged += new System.EventHandler(this.passwordTB_TextChanged);
             this.passwordTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordTB_KeyDown);
             // 
             // cancelBT
@@ -166,6 +171,7 @@
             this.femaleRB.TabStop = true;
             this.femaleRB.Text = "female";
             this.femaleRB.UseVisualStyleBackColor = true;
+            this.femaleRB.CheckedChanged += new System.EventHandler(this.femaleRB_CheckedChanged_1);
             // 
             // EmailTB
             // 
@@ -178,8 +184,9 @@
             this.EmailTB.Name = "EmailTB";
             this.EmailTB.Size = new System.Drawing.Size(367, 51);
             this.EmailTB.TabIndex = 4;
-            this.EmailTB.Text = "E-mail";
+            this.EmailTB.Text = "E - mail";
             this.EmailTB.Click += new System.EventHandler(this.textBox_clicked);
+            this.EmailTB.TextChanged += new System.EventHandler(this.EmailTB_TextChanged);
             this.EmailTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EmailTB_KeyDown);
             // 
             // Registration
