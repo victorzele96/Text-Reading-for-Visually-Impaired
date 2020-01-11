@@ -75,8 +75,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Teacher_main.Show();
+            
         }
 
         private void Update_details_Load(object sender, EventArgs e)
@@ -134,8 +133,30 @@ namespace Text_Reading_for_Visually_Impaired
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {//update button 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Teacher_main.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            //update button 
             foreach (Control c in this.Controls)
             {
                 if (c.GetType() == typeof(TextBox))
@@ -156,21 +177,6 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
             label6.Text = "";
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
