@@ -16,6 +16,7 @@ namespace Text_Reading_for_Visually_Impaired
             this.BackColor = main.BackColor;
             this.ForeColor = main.insertTxtLb.ForeColor;
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Story_choices_Load(object sender, EventArgs e)
@@ -54,6 +55,11 @@ namespace Text_Reading_for_Visually_Impaired
                     }
                 }
             }
+            this.Hide();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
             this.Hide();
         }
     }

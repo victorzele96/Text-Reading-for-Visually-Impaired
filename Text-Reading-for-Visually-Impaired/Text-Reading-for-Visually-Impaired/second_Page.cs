@@ -38,6 +38,20 @@ namespace Text_Reading_for_Visually_Impaired
             
         }
 
+        private void set_buttons_font(String color)
+        {
+            String resources_path = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\resources\\";
+            foreach(Control b in buttonsPanel.Controls)
+            {
+                if(b is PictureBox)
+                {
+                    String mypath = resources_path + ((PictureBox)b).Name + color + ".bmp";
+                    ((PictureBox)b).Image = System.Drawing.Image.FromFile(resources_path + ((PictureBox)b).Name + color + ".bmp");
+                }
+            }
+        }
+
+
 
         public void get_text_files_to_list()
         {
@@ -47,6 +61,7 @@ namespace Text_Reading_for_Visually_Impaired
             foreach (FileInfo file in Files)
             {
                 textFiles_List.Add(file.Name.Substring(0,file.Name.Length - 4));
+                
                 //comboBox1.Items.Add(file.Name.Substring(0, file.Name.Length - 4));
             }
         }
@@ -136,6 +151,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void second_Page_Load(object sender, EventArgs e)
         {
             get_text_files_to_list();
+            this.backBt.Location = new Point(this.Width-this.backBt.Width, this.Height-backBt.Height);
 
         }
 
@@ -198,6 +214,98 @@ namespace Text_Reading_for_Visually_Impaired
             richTextBox1.Text = "";
             String path = Application.StartupPath + "\\text_files\\" + name + ".txt";
             richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
+        }
+
+        private void Second_Page_BackColorChanged(object sender, EventArgs e)
+        {
+           if(this.BackColor == Color.Gainsboro)
+           {
+                set_buttons_font("gray");
+                return;
+           }
+           if(this.BackColor == Color.Black)
+           {
+              if(this.insertTxtLb.ForeColor==Color.Red)
+              {
+                    set_buttons_font("red");
+
+              }
+              else
+              {
+                    set_buttons_font("yellow");
+              }
+           }
+           else
+           {
+                set_buttons_font("blue");
+           }
+
+        }
+
+        private void RewindBT_Click(object sender, EventArgs e)
+        {
+            synth.SpeakAsyncCancelAll();
+            //speak();
+            synth.SpeakAsync(Text_To_Read);
+
+            paused = false;
+        }
+
+        private void StopBT_Click(object sender, EventArgs e)
+        {
+            synth.Dispose();
+            stopped = true;
+            paused = false;
+            //richTextBox1.Select(0,1);
+            synth = new SpeechSynthesizer();
+            synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+        }
+
+        private void PauseBT_Click(object sender, EventArgs e)
+        {
+            this.paused = true;
+            synth.Pause();
+        }
+
+        private void PlayBT_Click(object sender, EventArgs e)
+        {
+            stopped = false;
+            Text_To_Read = richTextBox1.Text;
+            if (paused)
+            {
+                synth.Resume();
+                paused = false;
+            }
+            else
+            {
+                speak();
+            }
+        }
+
+        private void InsertTxtLb_ForeColorChanged(object sender, EventArgs e)
+        {
+            if(this.insertTxtLb.ForeColor == Color.Yellow)
+            {
+                set_buttons_font("yellow");
+            }
+            if (this.insertTxtLb.ForeColor == Color.Red)
+            {
+                set_buttons_font("red");
+            }
+            if (this.insertTxtLb.ForeColor == Color.Black)
+            {
+                set_buttons_font("gray");
+            }
+            if (this.insertTxtLb.ForeColor == Color.Blue)
+            {
+                set_buttons_font("blue");
+            }
+        }
+
+        private void Button6_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Teacher_main.Show();
         }
     }
 }
