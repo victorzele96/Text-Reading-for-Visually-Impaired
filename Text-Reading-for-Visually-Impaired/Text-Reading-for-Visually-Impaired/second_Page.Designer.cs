@@ -50,7 +50,7 @@
             this.insertTxtLb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.insertTxtLb.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.insertTxtLb.ForeColor = System.Drawing.Color.Black;
-            this.insertTxtLb.Location = new System.Drawing.Point(414, 108);
+            this.insertTxtLb.Location = new System.Drawing.Point(597, 129);
             this.insertTxtLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.insertTxtLb.Name = "insertTxtLb";
             this.insertTxtLb.Size = new System.Drawing.Size(200, 87);
@@ -67,7 +67,7 @@
             this.richTextBox1.EnableAutoDragDrop = true;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.richTextBox1.Location = new System.Drawing.Point(51, 197);
+            this.richTextBox1.Location = new System.Drawing.Point(234, 218);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(850, 250);
@@ -81,15 +81,15 @@
             this.buttonsPanel.Controls.Add(this.pauseBT);
             this.buttonsPanel.Controls.Add(this.rewindBT);
             this.buttonsPanel.Controls.Add(this.playBT);
-            this.buttonsPanel.Location = new System.Drawing.Point(197, 462);
+            this.buttonsPanel.Location = new System.Drawing.Point(380, 483);
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(607, 130);
             this.buttonsPanel.TabIndex = 31;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button5.Location = new System.Drawing.Point(1219, 2);
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.Location = new System.Drawing.Point(1053, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 100);
             this.button5.TabIndex = 34;
@@ -151,10 +151,11 @@
             // 
             // backBt
             // 
+            this.backBt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backBt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.backBt.Location = new System.Drawing.Point(824, 538);
+            this.backBt.Location = new System.Drawing.Point(1209, 12);
             this.backBt.Name = "backBt";
-            this.backBt.Size = new System.Drawing.Size(180, 80);
+            this.backBt.Size = new System.Drawing.Size(150, 100);
             this.backBt.TabIndex = 35;
             this.backBt.Text = "back";
             this.backBt.UseVisualStyleBackColor = false;
@@ -165,7 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1005, 619);
+            this.ClientSize = new System.Drawing.Size(1370, 661);
             this.Controls.Add(this.backBt);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.buttonsPanel);

@@ -21,6 +21,8 @@ namespace Text_Reading_for_Visually_Impaired
         SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public Teacher Teacher_main;
+        Color backBColor;
+        Color storyBtColor;
         public second_Page(Teacher main)
         {
             InitializeComponent();
@@ -32,6 +34,8 @@ namespace Text_Reading_for_Visually_Impaired
             this.Teacher_main = main;
             richTextBox1.Width = ClientSize.Width;
         }
+
+        
         public second_Page()
         {
             InitializeComponent();
@@ -151,7 +155,10 @@ namespace Text_Reading_for_Visually_Impaired
         private void second_Page_Load(object sender, EventArgs e)
         {
             get_text_files_to_list();
-            this.backBt.Location = new Point(this.Width-this.backBt.Width, this.Height-backBt.Height);
+            this.backBColor = backBt.BackColor;
+            this.storyBtColor = button5.BackColor;
+            // this.backBt.Location = new Point(this.Width-this.backBt.Width, this.Height-backBt.Height);
+            this.backBt.Location = new Point(this.button5.Location.X+button5.Width+3, this.button5.Location.Y);
 
         }
 
@@ -295,11 +302,14 @@ namespace Text_Reading_for_Visually_Impaired
             if (this.insertTxtLb.ForeColor == Color.Black)
             {
                 set_buttons_font("gray");
+                this.backBt.BackColor = this.backBColor;
+                this.button5.BackColor = this.storyBtColor;
             }
             if (this.insertTxtLb.ForeColor == Color.Blue)
             {
                 set_buttons_font("blue");
             }
+           
         }
 
         private void Button6_Click_1(object sender, EventArgs e)
