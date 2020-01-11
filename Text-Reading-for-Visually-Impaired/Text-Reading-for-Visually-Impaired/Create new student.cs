@@ -283,6 +283,7 @@ namespace Text_Reading_for_Visually_Impaired
                 cmd.Parameters.AddWithValue(@"lastName", lastNameTB.Text);
                 cmd.Parameters.AddWithValue(@"email", EmailTB.Text);
                 cmd.Parameters.AddWithValue(@"gender", gender);
+                cmd.Parameters.AddWithValue(@"teacherid", Teacher_main.login_main.userName);
 
                 try
                 {
