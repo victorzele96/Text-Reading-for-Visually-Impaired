@@ -14,13 +14,11 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class Update_student_Information : Test
     {
-        public Student Student_main;
+        public Student Student_main;     
         public Update_student_Information(Student main)
         {
             InitializeComponent();
             this.Student_main = main;
-
-
             Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
             Database11DataSet.ProfileDataTable dt1 = pr.GetData();//pr=profile
             dataGridView1.DataSource = dt1;
@@ -31,11 +29,11 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     if(((DataGridViewRow)r).Cells["ID"].Value.ToString() == this.Student_main.login_main.userName)
                     {
-                        label6.Text = ((DataGridViewRow)r).Cells["ID"].Value.ToString();
                         textBox1.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
                         textBox2.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
                         textBox4.Text = ((DataGridViewRow)r).Cells["Password"].Value.ToString();
                         textBox5.Text = ((DataGridViewRow)r).Cells["Email"].Value.ToString();
+                        label6.Text = this.Student_main.login_main.userName;
                         break;
                     }
                 }
@@ -92,7 +90,6 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Update_student_Information_Load(object sender, EventArgs e)
         {
-            label6.Text = "";
             dataGridView1.Hide();
             this.ForeColor = Student_main.ForeColor;
             this.BackColor = Student_main.BackColor;
@@ -173,6 +170,11 @@ namespace Text_Reading_for_Visually_Impaired
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

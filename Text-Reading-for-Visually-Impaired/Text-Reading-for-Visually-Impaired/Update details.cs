@@ -19,10 +19,30 @@ namespace Text_Reading_for_Visually_Impaired
         {
             InitializeComponent();
             this.Teacher_main = main;
+            Database11DataSetTableAdapters.TeacherTableAdapter tr = new Database11DataSetTableAdapters.TeacherTableAdapter();
+            Database11DataSet.TeacherDataTable dt1 = tr.GetData();//tr=teacher
+            dataGridView1.DataSource = dt1;
+
+            if (dataGridView1.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    if (((DataGridViewRow)r).Cells["ID"].Value.ToString() == this.Teacher_main.login_main.userName)
+                    {
+                        textBox1.Text = ((DataGridViewRow)r).Cells["First Name"].Value.ToString();
+                        textBox2.Text = ((DataGridViewRow)r).Cells["Last Name"].Value.ToString();
+                        textBox4.Text = ((DataGridViewRow)r).Cells["Password"].Value.ToString();
+                        textBox5.Text = ((DataGridViewRow)r).Cells["Email"].Value.ToString();
+                        label6.Text = this.Teacher_main.login_main.userName;
+                        break;
+                    }
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {//-----------------
+            /*
             bool foundflag = false;
             String y = textBox6.Text;
             if (y == Teacher_main.login_main.userName)
@@ -50,6 +70,7 @@ namespace Text_Reading_for_Visually_Impaired
                 textBox6.Text = "";
                 MessageBox.Show("The account does not exist in the system!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            */
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,7 +84,6 @@ namespace Text_Reading_for_Visually_Impaired
             Database11DataSetTableAdapters.TeacherTableAdapter tr = new Database11DataSetTableAdapters.TeacherTableAdapter();
             Database11DataSet.TeacherDataTable dt1 = tr.GetData();//tr=teacher
             dataGridView1.DataSource = dt1;
-            label6.Text = "";
             dataGridView1.Hide();
         }
 
@@ -120,7 +140,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (c.GetType() == typeof(TextBox))
                 {
-                    if (((TextBox)c).Text == "" && ((TextBox)c).Name != textBox6.Name)
+                    if (((TextBox)c).Text == "")
                     {
                         MessageBox.Show("please fill al fields", "error");
                     }
