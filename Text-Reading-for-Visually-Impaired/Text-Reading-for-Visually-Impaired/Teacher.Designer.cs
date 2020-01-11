@@ -51,7 +51,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(400, 255);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Create a story";
+            this.button1.Text = "Create a Story";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -69,7 +69,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(400, 255);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Send feedback";
+            this.button3.Text = "Send Feedback";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -101,7 +101,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(400, 255);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Create new student";
+            this.button5.Text = "Create New Student";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -119,7 +119,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(400, 255);
             this.button7.TabIndex = 7;
-            this.button7.Text = "Update details";
+            this.button7.Text = "Update Details";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1578, 644);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button6);
