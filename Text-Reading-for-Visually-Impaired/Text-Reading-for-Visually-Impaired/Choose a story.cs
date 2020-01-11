@@ -31,7 +31,7 @@ namespace Text_Reading_for_Visually_Impaired
             this.BackColor = Student_main.BackColor;
             foreach (Button butt in this.Controls.OfType<Button>())
             {
-                butt.BackColor = Student_main.button5.BackColor;
+                butt.BackColor = Student_main.chooseAstory.BackColor;
                 butt.ForeColor = Student_main.button4.ForeColor;
             }
             foreach (Label lab in this.Controls.OfType<Label>())
