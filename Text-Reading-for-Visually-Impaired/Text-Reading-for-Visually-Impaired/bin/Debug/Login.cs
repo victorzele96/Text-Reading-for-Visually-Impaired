@@ -81,9 +81,10 @@ namespace Text_Reading_for_Visually_Impaired
                 //Check row > 0
                 this.userName = txtUsername.Text;
                 this.password = txtPassword.Text;
+                
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtPassword.Text = "";
                     txtUsername.Text = "";
                     //Process your login here
@@ -94,7 +95,7 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 else if(dt1.Rows.Count > 0)
                 {
-                    MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtPassword.Text = "";
                     txtUsername.Text = "";
                     //Process your login here
@@ -107,7 +108,7 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 else if(dt2.Rows.Count > 0)
                 {
-                    MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Process your login here
                     //this.Hide();
                     txtPassword.Text = "";
