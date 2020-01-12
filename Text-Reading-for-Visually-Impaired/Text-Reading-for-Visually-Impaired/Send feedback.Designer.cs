@@ -116,6 +116,7 @@
             this.Name = "Send_feedback";
             this.Text = "Send_feedback";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Send_feedback_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

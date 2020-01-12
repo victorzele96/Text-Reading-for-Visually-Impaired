@@ -56,13 +56,19 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("details error", "error");
+                    MessageBox.Show("Already sent to admin !");
                 }
+
 
                 MessageBox.Show("Feedback was sent successfully !");
                 richTextBox1.Text = "";
                 textBox1.Text = "";
             }
+        }
+
+        private void Send_feedback_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
