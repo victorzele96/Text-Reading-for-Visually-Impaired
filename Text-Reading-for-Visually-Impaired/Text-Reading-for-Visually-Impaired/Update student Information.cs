@@ -44,6 +44,7 @@ namespace Text_Reading_for_Visually_Impaired
         {
             this.Hide();
             this.Student_main.Show();
+            Student_main.Theme_color(button1.ForeColor, button1.BackColor, this.BackColor);
             //this.Close();
         }
 
