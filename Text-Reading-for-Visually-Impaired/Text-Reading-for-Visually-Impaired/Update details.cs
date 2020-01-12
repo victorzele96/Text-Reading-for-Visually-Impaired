@@ -176,5 +176,10 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
