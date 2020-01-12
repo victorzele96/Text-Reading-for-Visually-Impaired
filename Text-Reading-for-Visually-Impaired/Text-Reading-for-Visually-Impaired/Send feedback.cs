@@ -36,7 +36,7 @@ namespace Text_Reading_for_Visually_Impaired
             String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
             string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source={0}", path2);
-            string query = " INSERT INTO [Reports] ([Report Title], [Reports], [General Report], [Periodic Report]) VALUES (@report_title,@reports,@genaral_report,@periodic_report)  ";
+            string query = " INSERT INTO [Reports] ([Report Title], [Reports], [General Report], [Periodic Report], [SenderID]) VALUES (@report_title,@reports,@genaral_report,@periodic_report,@senderid)  ";
 
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
@@ -48,6 +48,7 @@ namespace Text_Reading_for_Visually_Impaired
                 textBox1.Text = "";
                 cmd.Parameters.AddWithValue(@"genaral_report", textBox1.Text);
                 cmd.Parameters.AddWithValue(@"periodic_report", textBox1.Text);
+                cmd.Parameters.AddWithValue(@"senderid", Teacher_main.login_main.userName);
 
                 try
                 {
@@ -55,13 +56,19 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("details error", "error");
+                    MessageBox.Show("Already sent to admin !");
                 }
+
 
                 MessageBox.Show("Feedback was sent successfully !");
                 richTextBox1.Text = "";
                 textBox1.Text = "";
             }
+        }
+
+        private void Send_feedback_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
