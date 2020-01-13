@@ -403,7 +403,7 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                         else
                         {
-                            if (reader[1].ToString() == this.student_main.login_main.userName || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
+                            if (reader[1].ToString() == get_student_teacher( this.student_main.login_main.userName) || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
                             {
                                 story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
@@ -462,9 +462,40 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
         }*/
-        public void get_student_teacher(String student_id)
+        public String get_student_teacher(String student_id)
         {
-
+           
+            String user_Name = this.student_main.login_main.userName;
+            String query = " SELECT * FROM Profile";
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                //cmd.Parameters.AddWithValue("@user_Name", user_Name);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        String s = reader[1].ToString();
+                        if (reader[0].ToString() == user_Name)
+                        {
+                            return reader[8].ToString();
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+                return null;
+            }
         }
        
     }
