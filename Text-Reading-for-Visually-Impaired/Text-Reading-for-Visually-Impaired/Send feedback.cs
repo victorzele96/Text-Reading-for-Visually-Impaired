@@ -18,6 +18,8 @@ namespace Text_Reading_for_Visually_Impaired
         public Send_feedback(Teacher main)
         {
             InitializeComponent();
+            feedback.Checked = true;
+            story_requests.Checked = false;
             this.Teacher_main = main;
         }
 
@@ -30,42 +32,81 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string fileName = "Database11.accdb";
-            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
-            string workingDirectory = Environment.CurrentDirectory;
-            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
-            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
-                    Data Source={0}", path2);
-            string query = " INSERT INTO [Reports] ([Report Title], [Reports], [General Report], [Periodic Report], [SenderID]) VALUES (@report_title,@reports,@genaral_report,@periodic_report,@senderid)  ";
-
-            using (OleDbConnection conn = new OleDbConnection(connStr))
+            
+            if (feedback.Checked == true)
             {
-                conn.Open();
-                OleDbCommand cmd = new OleDbCommand(query, conn);
+                string fileName = "Database11.accdb";
+                string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+                string workingDirectory = Environment.CurrentDirectory;
+                String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+                string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+                string query = " INSERT INTO [Reports] ([Report Title], [Reports], [SenderID],[Asks]) VALUES (@report_title,@reports,@senderid,@asks)  ";
 
-                cmd.Parameters.AddWithValue(@"report_title", textBox1.Text);
-                cmd.Parameters.AddWithValue(@"reports", richTextBox1.Text);
+                using (OleDbConnection conn = new OleDbConnection(connStr))
+                {
+
+
+                    conn.Open();
+                    OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue(@"report_title", textBox1.Text);
+                    cmd.Parameters.AddWithValue(@"reports", richTextBox1.Text);
+                    cmd.Parameters.AddWithValue(@"senderid", Teacher_main.login_main.userName);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Already sent to admin !");
+                    }
+
+                }
+
+                MessageBox.Show("Feedback was sent successfully !");
+                richTextBox1.Text = "";
                 textBox1.Text = "";
-                cmd.Parameters.AddWithValue(@"genaral_report", textBox1.Text);
-                cmd.Parameters.AddWithValue(@"periodic_report", textBox1.Text);
-                cmd.Parameters.AddWithValue(@"senderid", Teacher_main.login_main.userName);
+            }
+        
+            if (story_requests.Checked == true)
+            {
+                string fileName = "Database11.accdb";
+                string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+                string workingDirectory = Environment.CurrentDirectory;
+                String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+                string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+                string query = " INSERT INTO [Requests] ([Requests Title], [Request], [SenderID]) VALUES (@requset_title,@request,@senderid)  ";
 
-                try
+                using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Already sent to admin !");
-                }
 
+
+                    conn.Open();
+                    OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue(@"requset_title", textBox1.Text);
+                    cmd.Parameters.AddWithValue(@"request", richTextBox1.Text);
+                    cmd.Parameters.AddWithValue(@"senderid", Teacher_main.login_main.userName);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Already sent to admin !");
+                    }
+
+                }
 
                 MessageBox.Show("Feedback was sent successfully !");
                 richTextBox1.Text = "";
                 textBox1.Text = "";
             }
         }
-
         private void Send_feedback_Load(object sender, EventArgs e)
         {
 

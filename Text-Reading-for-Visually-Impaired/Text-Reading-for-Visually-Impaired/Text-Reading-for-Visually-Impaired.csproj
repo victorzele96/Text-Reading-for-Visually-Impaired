@@ -97,6 +97,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database11DataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Database11DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database11DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database11DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database11DataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Feedback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +358,28 @@
     </None>
     <None Include="Database11DataSet3.xss">
       <DependentUpon>Database11DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Database11DataSet4.xsc">
+      <DependentUpon>Database11DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Database11DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database11DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database11DataSet4.xss">
+      <DependentUpon>Database11DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Database11DataSet5.xsc">
+      <DependentUpon>Database11DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Database11DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database11DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database11DataSet5.xss">
+      <DependentUpon>Database11DataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
