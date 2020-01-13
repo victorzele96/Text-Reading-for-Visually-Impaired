@@ -55,7 +55,7 @@ namespace Text_Reading_for_Visually_Impaired
                 c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16F, GraphicsUnit.Pixel);
         }
 
-            private void label6_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

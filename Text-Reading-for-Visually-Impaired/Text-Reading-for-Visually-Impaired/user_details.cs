@@ -23,6 +23,8 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            this.Reports_main.Show();
         }
 
         private void Report_Load(object sender, EventArgs e)
