@@ -22,6 +22,7 @@ namespace Text_Reading_for_Visually_Impaired
         Boolean is_Teacher;
         SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
+        String user_ID;
         public Teacher Teacher_main;
         public Student student_main;
         List<story> stories_List = new List<story>();
@@ -362,7 +363,7 @@ namespace Text_Reading_for_Visually_Impaired
         {
             if(is_Teacher)
             {
-                fileNamePopUp fnp = new fileNamePopUp();
+                fileNamePopUp fnp = new fileNamePopUp(this);
                 fnp.Show();
             }
             else
@@ -394,6 +395,51 @@ namespace Text_Reading_for_Visually_Impaired
                     {
                         story s = new story(reader[3].ToString(),reader[0].ToString(),reader[2].ToString(),reader[1].ToString(),new List<question>());
                         stories_List.Add(s);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+            }
+        }
+
+        public void set_user_ID()
+        {
+            String user_Name;
+            String query;
+            if(is_Teacher)
+            {
+                user_Name = this.Teacher_main.login_main.userName;
+                query = " SELECT * FROM Teacher WHERE [User Login]=@user_Name";
+            }
+            else
+            {
+                user_Name = this.student_main.login_main.userName;
+                query = " SELECT * FROM Profile WHERE [User Login]=@user_Name";
+            }
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+
+            
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                cmd.Parameters.AddWithValue("@user_Name", user_Name);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        if(reader[1].ToString()==user_Name)
+                        {
+                            this.user_ID = reader[0].ToString();
+                        }
                     }
                 }
                 catch (Exception)
