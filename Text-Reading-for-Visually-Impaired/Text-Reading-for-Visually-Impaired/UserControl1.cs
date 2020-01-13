@@ -14,12 +14,17 @@ namespace Text_Reading_for_Visually_Impaired
     {
         public question question;
         public int correctAnsIndex;
-        Dictionary<RadioButton, int> RBDict;
+        Dictionary<int,RadioButton> RBDict;
+
         public questioPanel(question q)
         {
             InitializeComponent();
             question = q;
-            RBDict = new Dictionary<RadioButton, int>();
+            this.ans1RB.Hide();
+            this.ans2RB.Hide();
+            this.ans3RB.Hide();
+            this.ans4RB.Hide();
+            RBDict = new Dictionary<int,RadioButton>() { { 1,this.ans1RB}, {2, this.ans2RB}, {3, this.ans3RB}, {4, this.ans4RB} };
 
         }
 
@@ -32,8 +37,21 @@ namespace Text_Reading_for_Visually_Impaired
         {
             Random r = new Random();
             int rInt = r.Next(1, 4);
+            int indexCounter = 1;
+            for(int i=0; i<4;i++)
+            {
+                if(question.answers[rInt] != null)
+                {
+                    this.RBDict[indexCounter].Text = question.answers[rInt];
+                    indexCounter++;
+                    rInt = (rInt + 1) % 4;
+                }
+            }
+        }
 
-            
+        private void questioPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

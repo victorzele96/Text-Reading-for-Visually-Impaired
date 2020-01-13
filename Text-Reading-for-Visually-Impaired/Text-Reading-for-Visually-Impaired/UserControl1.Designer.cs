@@ -110,6 +110,7 @@
             this.Controls.Add(this.label1);
             this.Name = "questioPanel";
             this.Size = new System.Drawing.Size(1153, 500);
+            this.Load += new System.EventHandler(this.questioPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
