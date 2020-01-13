@@ -31,190 +31,199 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(second_Page));
             this.insertTxtLb = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.backBt = new System.Windows.Forms.Button();
             this.buttonsPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.stopBT = new System.Windows.Forms.PictureBox();
+            this.pauseBT = new System.Windows.Forms.PictureBox();
+            this.rewindBT = new System.Windows.Forms.PictureBox();
+            this.playBT = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.backBt = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.buttonsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stopBT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseBT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rewindBT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playBT)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // insertTxtLb
             // 
-            this.insertTxtLb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.insertTxtLb.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.insertTxtLb.ForeColor = System.Drawing.Color.White;
-            this.insertTxtLb.Location = new System.Drawing.Point(455, 98);
+            this.insertTxtLb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.insertTxtLb.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.insertTxtLb.ForeColor = System.Drawing.Color.Black;
+            this.insertTxtLb.Location = new System.Drawing.Point(675, 31);
             this.insertTxtLb.Name = "insertTxtLb";
-            this.insertTxtLb.Size = new System.Drawing.Size(833, 123);
+            this.insertTxtLb.Size = new System.Drawing.Size(250, 100);
             this.insertTxtLb.TabIndex = 9;
             this.insertTxtLb.Text = "insert text";
             this.insertTxtLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.insertTxtLb.ForeColorChanged += new System.EventHandler(this.InsertTxtLb_ForeColorChanged);
             this.insertTxtLb.Click += new System.EventHandler(this.label6_Click);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.DetectUrls = false;
             this.richTextBox1.EnableAutoDragDrop = true;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.richTextBox1.Location = new System.Drawing.Point(398, 241);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 15);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1000, 400);
+            this.richTextBox1.Size = new System.Drawing.Size(1190, 325);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(465, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 120);
-            this.button1.TabIndex = 26;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(687, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 120);
-            this.button2.TabIndex = 27;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(45, 48);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 120);
-            this.button3.TabIndex = 28;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(243, 48);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 120);
-            this.button4.TabIndex = 29;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
-            // backBt
-            // 
-            this.backBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.backBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backBt.Location = new System.Drawing.Point(1224, 692);
-            this.backBt.Margin = new System.Windows.Forms.Padding(5);
-            this.backBt.Name = "backBt";
-            this.backBt.Size = new System.Drawing.Size(352, 153);
-            this.backBt.TabIndex = 30;
-            this.backBt.Text = "Back";
-            this.backBt.UseVisualStyleBackColor = true;
-            this.backBt.Click += new System.EventHandler(this.button5_Click);
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // buttonsPanel
             // 
             this.buttonsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonsPanel.Controls.Add(this.button2);
-            this.buttonsPanel.Controls.Add(this.button1);
-            this.buttonsPanel.Controls.Add(this.button4);
-            this.buttonsPanel.Controls.Add(this.button3);
-            this.buttonsPanel.Location = new System.Drawing.Point(288, 661);
-            this.buttonsPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonsPanel.Controls.Add(this.stopBT);
+            this.buttonsPanel.Controls.Add(this.pauseBT);
+            this.buttonsPanel.Controls.Add(this.rewindBT);
+            this.buttonsPanel.Controls.Add(this.playBT);
+            this.buttonsPanel.Location = new System.Drawing.Point(365, 460);
+            this.buttonsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(867, 185);
             this.buttonsPanel.TabIndex = 31;
             // 
-            // comboBox1
+            // stopBT
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1191, 84);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(431, 43);
-            this.comboBox1.TabIndex = 32;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            this.stopBT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stopBT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stopBT.Image = ((System.Drawing.Image)(resources.GetObject("stopBT.Image")));
+            this.stopBT.Location = new System.Drawing.Point(689, 41);
+            this.stopBT.Margin = new System.Windows.Forms.Padding(4);
+            this.stopBT.Name = "stopBT";
+            this.stopBT.Size = new System.Drawing.Size(153, 120);
+            this.stopBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.stopBT.TabIndex = 36;
+            this.stopBT.TabStop = false;
+            this.stopBT.Click += new System.EventHandler(this.StopBT_Click);
             // 
-            // label1
+            // pauseBT
             // 
-            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1205, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 77);
-            this.label1.TabIndex = 33;
-            this.label1.Text = " טקסט קיים";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pauseBT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pauseBT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pauseBT.Image = ((System.Drawing.Image)(resources.GetObject("pauseBT.Image")));
+            this.pauseBT.Location = new System.Drawing.Point(490, 41);
+            this.pauseBT.Margin = new System.Windows.Forms.Padding(4);
+            this.pauseBT.Name = "pauseBT";
+            this.pauseBT.Size = new System.Drawing.Size(153, 120);
+            this.pauseBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pauseBT.TabIndex = 37;
+            this.pauseBT.TabStop = false;
+            this.pauseBT.Click += new System.EventHandler(this.PauseBT_Click);
+            // 
+            // rewindBT
+            // 
+            this.rewindBT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rewindBT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rewindBT.Image = ((System.Drawing.Image)(resources.GetObject("rewindBT.Image")));
+            this.rewindBT.Location = new System.Drawing.Point(51, 41);
+            this.rewindBT.Margin = new System.Windows.Forms.Padding(4);
+            this.rewindBT.Name = "rewindBT";
+            this.rewindBT.Size = new System.Drawing.Size(153, 120);
+            this.rewindBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rewindBT.TabIndex = 38;
+            this.rewindBT.TabStop = false;
+            this.rewindBT.Click += new System.EventHandler(this.RewindBT_Click);
+            // 
+            // playBT
+            // 
+            this.playBT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.playBT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.playBT.Image = ((System.Drawing.Image)(resources.GetObject("playBT.Image")));
+            this.playBT.Location = new System.Drawing.Point(270, 41);
+            this.playBT.Margin = new System.Windows.Forms.Padding(4);
+            this.playBT.Name = "playBT";
+            this.playBT.Size = new System.Drawing.Size(153, 120);
+            this.playBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playBT.TabIndex = 35;
+            this.playBT.TabStop = false;
+            this.playBT.Click += new System.EventHandler(this.PlayBT_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.Location = new System.Drawing.Point(1385, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(194, 112);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "famous stories";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click_1);
+            // 
+            // backBt
+            // 
+            this.backBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.backBt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.backBt.Location = new System.Drawing.Point(1371, 501);
+            this.backBt.Margin = new System.Windows.Forms.Padding(4);
+            this.backBt.Name = "backBt";
+            this.backBt.Size = new System.Drawing.Size(194, 122);
+            this.backBt.TabIndex = 35;
+            this.backBt.Text = "back";
+            this.backBt.UseVisualStyleBackColor = false;
+            this.backBt.Click += new System.EventHandler(this.Button6_Click_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Location = new System.Drawing.Point(188, 113);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1200, 350);
+            this.panel1.TabIndex = 36;
             // 
             // second_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(1678, 944);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.buttonsPanel);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(1578, 644);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.backBt);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonsPanel);
             this.Controls.Add(this.insertTxtLb);
             this.Name = "second_Page";
             this.Text = "second_Page";
             this.Load += new System.EventHandler(this.second_Page_Load);
             this.ResizeEnd += new System.EventHandler(this.second_Page_ResizeEnd);
+            this.BackColorChanged += new System.EventHandler(this.Second_Page_BackColorChanged);
             this.Resize += new System.EventHandler(this.second_Page_Resize);
             this.Controls.SetChildIndex(this.insertTxtLb, 0);
-            this.Controls.SetChildIndex(this.richTextBox1, 0);
-            this.Controls.SetChildIndex(this.backBt, 0);
             this.Controls.SetChildIndex(this.buttonsPanel, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.button5, 0);
+            this.Controls.SetChildIndex(this.backBt, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.buttonsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.stopBT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseBT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rewindBT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playBT)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label insertTxtLb;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Label insertTxtLb;
+        public System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.Panel buttonsPanel;
+        private System.Windows.Forms.PictureBox playBT;
+        private System.Windows.Forms.PictureBox stopBT;
+        private System.Windows.Forms.PictureBox pauseBT;
+        private System.Windows.Forms.PictureBox rewindBT;
         private System.Windows.Forms.Button backBt;
-        private System.Windows.Forms.Panel buttonsPanel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
