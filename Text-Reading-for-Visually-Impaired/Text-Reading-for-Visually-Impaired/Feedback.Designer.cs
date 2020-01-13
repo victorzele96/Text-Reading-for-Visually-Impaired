@@ -31,38 +31,38 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.database11DataSet1 = new Text_Reading_for_Visually_Impaired.Database11DataSet1();
-            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.profileTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet1TableAdapters.ProfileTableAdapter();
-            this.database11DataSet2 = new Text_Reading_for_Visually_Impaired.Database11DataSet2();
-            this.reportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reportsTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet2TableAdapters.ReportsTableAdapter();
             this.reportTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generalReportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.periodicReportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database11DataSet2 = new Text_Reading_for_Visually_Impaired.Database11DataSet2();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.database11DataSet1 = new Text_Reading_for_Visually_Impaired.Database11DataSet1();
+            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.profileTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet1TableAdapters.ProfileTableAdapter();
+            this.reportsTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet2TableAdapters.ReportsTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.database11DataSet3 = new Text_Reading_for_Visually_Impaired.Database11DataSet3();
             this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teacherTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet3TableAdapters.TeacherTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.database11DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportsBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database11DataSet3)).BeginInit();
@@ -88,6 +88,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.reportTitleDataGridViewTextBoxColumn,
@@ -105,6 +106,46 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
+            // reportTitleDataGridViewTextBoxColumn
+            // 
+            this.reportTitleDataGridViewTextBoxColumn.DataPropertyName = "Report Title";
+            this.reportTitleDataGridViewTextBoxColumn.HeaderText = "Report Title";
+            this.reportTitleDataGridViewTextBoxColumn.Name = "reportTitleDataGridViewTextBoxColumn";
+            // 
+            // reportsDataGridViewTextBoxColumn
+            // 
+            this.reportsDataGridViewTextBoxColumn.DataPropertyName = "Reports";
+            this.reportsDataGridViewTextBoxColumn.HeaderText = "Reports";
+            this.reportsDataGridViewTextBoxColumn.Name = "reportsDataGridViewTextBoxColumn";
+            // 
+            // generalReportDataGridViewTextBoxColumn
+            // 
+            this.generalReportDataGridViewTextBoxColumn.DataPropertyName = "General Report";
+            this.generalReportDataGridViewTextBoxColumn.HeaderText = "General Report";
+            this.generalReportDataGridViewTextBoxColumn.Name = "generalReportDataGridViewTextBoxColumn";
+            // 
+            // periodicReportDataGridViewTextBoxColumn
+            // 
+            this.periodicReportDataGridViewTextBoxColumn.DataPropertyName = "Periodic Report";
+            this.periodicReportDataGridViewTextBoxColumn.HeaderText = "Periodic Report";
+            this.periodicReportDataGridViewTextBoxColumn.Name = "periodicReportDataGridViewTextBoxColumn";
+            // 
+            // senderIDDataGridViewTextBoxColumn
+            // 
+            this.senderIDDataGridViewTextBoxColumn.DataPropertyName = "SenderID";
+            this.senderIDDataGridViewTextBoxColumn.HeaderText = "SenderID";
+            this.senderIDDataGridViewTextBoxColumn.Name = "senderIDDataGridViewTextBoxColumn";
+            // 
+            // reportsBindingSource
+            // 
+            this.reportsBindingSource.DataMember = "Reports";
+            this.reportsBindingSource.DataSource = this.database11DataSet2;
+            // 
+            // database11DataSet2
+            // 
+            this.database11DataSet2.DataSetName = "Database11DataSet2";
+            this.database11DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
@@ -121,6 +162,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1129, 378);
             this.panel1.TabIndex = 68;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.Location = new System.Drawing.Point(726, 209);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(179, 36);
+            this.label8.TabIndex = 64;
+            this.label8.Text = "user details";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.Location = new System.Drawing.Point(726, 93);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 36);
+            this.label7.TabIndex = 63;
+            this.label7.Text = "user details";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(289, 212);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 36);
+            this.label3.TabIndex = 62;
+            this.label3.Text = "user details";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.Location = new System.Drawing.Point(289, 93);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(179, 36);
+            this.label6.TabIndex = 61;
+            this.label6.Text = "user details";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -181,55 +271,6 @@
             this.richTextBox1.Text = "";
             this.richTextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.richTextBox1_MouseClick);
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.Location = new System.Drawing.Point(289, 93);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 36);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "user details";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(289, 212);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 36);
-            this.label3.TabIndex = 62;
-            this.label3.Text = "user details";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label7.Location = new System.Drawing.Point(726, 93);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 36);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "user details";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.Location = new System.Drawing.Point(726, 209);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(179, 36);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "user details";
-            // 
             // database11DataSet1
             // 
             this.database11DataSet1.DataSetName = "Database11DataSet1";
@@ -244,49 +285,9 @@
             // 
             this.profileTableAdapter.ClearBeforeFill = true;
             // 
-            // database11DataSet2
-            // 
-            this.database11DataSet2.DataSetName = "Database11DataSet2";
-            this.database11DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // reportsBindingSource
-            // 
-            this.reportsBindingSource.DataMember = "Reports";
-            this.reportsBindingSource.DataSource = this.database11DataSet2;
-            // 
             // reportsTableAdapter
             // 
             this.reportsTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportTitleDataGridViewTextBoxColumn
-            // 
-            this.reportTitleDataGridViewTextBoxColumn.DataPropertyName = "Report Title";
-            this.reportTitleDataGridViewTextBoxColumn.HeaderText = "Report Title";
-            this.reportTitleDataGridViewTextBoxColumn.Name = "reportTitleDataGridViewTextBoxColumn";
-            // 
-            // reportsDataGridViewTextBoxColumn
-            // 
-            this.reportsDataGridViewTextBoxColumn.DataPropertyName = "Reports";
-            this.reportsDataGridViewTextBoxColumn.HeaderText = "Reports";
-            this.reportsDataGridViewTextBoxColumn.Name = "reportsDataGridViewTextBoxColumn";
-            // 
-            // generalReportDataGridViewTextBoxColumn
-            // 
-            this.generalReportDataGridViewTextBoxColumn.DataPropertyName = "General Report";
-            this.generalReportDataGridViewTextBoxColumn.HeaderText = "General Report";
-            this.generalReportDataGridViewTextBoxColumn.Name = "generalReportDataGridViewTextBoxColumn";
-            // 
-            // periodicReportDataGridViewTextBoxColumn
-            // 
-            this.periodicReportDataGridViewTextBoxColumn.DataPropertyName = "Periodic Report";
-            this.periodicReportDataGridViewTextBoxColumn.HeaderText = "Periodic Report";
-            this.periodicReportDataGridViewTextBoxColumn.Name = "periodicReportDataGridViewTextBoxColumn";
-            // 
-            // senderIDDataGridViewTextBoxColumn
-            // 
-            this.senderIDDataGridViewTextBoxColumn.DataPropertyName = "SenderID";
-            this.senderIDDataGridViewTextBoxColumn.HeaderText = "SenderID";
-            this.senderIDDataGridViewTextBoxColumn.Name = "senderIDDataGridViewTextBoxColumn";
             // 
             // panel2
             // 
@@ -336,12 +337,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Feedback_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.database11DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportsBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database11DataSet3)).EndInit();
