@@ -65,22 +65,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-
+            maleRB.Checked = !femaleRB.Checked;
         }
-        public void DrawLinePointF(PaintEventArgs e)
-        {
-            foreach (Control t in this.Controls)
-            {
-                if (t.GetType() == typeof(TextBox))
-                {
-                    Pen blackPen = new Pen(original_text_Color_Active, 3);
-                    PointF point1 = new PointF(t.Location.X, t.Location.Y + t.Height);
-                    PointF point2 = new PointF(t.Location.X + t.Width, t.Location.Y + t.Height);
-                    e.Graphics.DrawLine(blackPen, point1, point2);
-                }
-            }
 
-        }
         private void textBox_clicked(object sender, EventArgs e)
         {
             if (sender.GetType().Name == "TextBox")
@@ -124,25 +111,7 @@ namespace Text_Reading_for_Visually_Impaired
         }
         private void EmailTB_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
-            {
-                OKBT.Focus();
-                textBox_clicked(sender, e);
-                if (EmailTB.Text == "")
-                {
-                    EmailTB.ForeColor = original_text_Color;
-                    EmailTB.Text = "last name";
-                }
-            }
-            else
-            {
-                if (EmailTB.ForeColor == original_text_Color)
-                {
-                    EmailTB.ForeColor = original_text_Color_Active;
-                    EmailTB.Text = "";
-                }
-
-            }
+            
         }
         private void firstNameTB_KeyDown_1(object sender, KeyEventArgs e)
         {
@@ -169,71 +138,17 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void lastNameTB_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
-            {
-                userNameTB.Focus();
-                textBox_clicked(sender, e);
-                if (lastNameTB.Text == "")
-                {
-                    lastNameTB.ForeColor = original_text_Color;
-                    lastNameTB.Text = "last name";
-                }
-            }
-            else
-            {
-                if (lastNameTB.ForeColor == original_text_Color)
-                {
-                    lastNameTB.ForeColor = original_text_Color_Active;
-                    lastNameTB.Text = "";
-                }
-
-            }
+            
         }
 
         private void userNameTB_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
-            {
-                passwordTB.Focus();
-                textBox_clicked(sender, e);
-                if (userNameTB.Text == "")
-                {
-                    userNameTB.ForeColor = original_text_Color;
-                    userNameTB.Text = "last name";
-                }
-            }
-            else
-            {
-                if (userNameTB.ForeColor == original_text_Color)
-                {
-                    userNameTB.ForeColor = original_text_Color_Active;
-                    userNameTB.Text = "";
-                }
-
-            }
+            
         }
 
         private void passwordTB_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
-            {
-                EmailTB.Focus();
-                textBox_clicked(sender, e);
-                if (passwordTB.Text == "")
-                {
-                    passwordTB.ForeColor = original_text_Color;
-                    passwordTB.Text = "last name";
-                }
-            }
-            else
-            {
-                if (passwordTB.ForeColor == original_text_Color)
-                {
-                    passwordTB.ForeColor = original_text_Color_Active;
-                    passwordTB.Text = "";
-                }
-
-            }
+            
         }
         private void maleRB_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -276,7 +191,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
-                cmd.Parameters.AddWithValue(@"id", lastNameTB.Text);
+                cmd.Parameters.AddWithValue(@"id", userNameTB.Text);
                 cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
                 cmd.Parameters.AddWithValue(@"password", passwordTB.Text);
                 cmd.Parameters.AddWithValue(@"firstName", firstNameTB.Text);
@@ -298,6 +213,165 @@ namespace Text_Reading_for_Visually_Impaired
                 //main.Show();
                 this.Close();
                 this.Teacher_main.Show();
+
+            }
+        }
+
+        private void Create_new_student_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameTB_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void firstNameTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                lastNameTB.Focus();
+                textBox_clicked(sender, e);
+                if (firstNameTB.Text == "")
+                {
+                    firstNameTB.ForeColor = original_text_Color;
+                    firstNameTB.Text = "first name";
+                }
+            }
+            else
+            {
+                if (firstNameTB.ForeColor == original_text_Color)
+                {
+                    firstNameTB.ForeColor = original_text_Color_Active;
+                    firstNameTB.Text = "";
+                }
+
+            }
+        }
+
+        private void Create_new_student_Paint(object sender, PaintEventArgs e)
+        {
+            DrawLinePointF(e);
+        }
+        public void DrawLinePointF(PaintEventArgs e)
+        {
+            foreach (Control t in this.Controls)
+            {
+                if (t.GetType() == typeof(TextBox))
+                {
+                    Pen blackPen = new Pen(original_text_Color_Active, 3);
+                    PointF point1 = new PointF(t.Location.X, t.Location.Y + t.Height);
+                    PointF point2 = new PointF(t.Location.X + t.Width, t.Location.Y + t.Height);
+                    e.Graphics.DrawLine(blackPen, point1, point2);
+                }
+            }
+
+        }
+
+        private void userNameTB_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                passwordTB.Focus();
+                textBox_clicked(sender, e);
+                if (userNameTB.Text == "")
+                {
+                    userNameTB.ForeColor = original_text_Color;
+                    userNameTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (userNameTB.ForeColor == original_text_Color)
+                {
+                    userNameTB.ForeColor = original_text_Color_Active;
+                    userNameTB.Text = "";
+                }
+
+            }
+        }
+
+        private void maleRB_CheckedChanged(object sender, EventArgs e)
+        {
+            femaleRB.Checked = !maleRB.Checked;
+        }
+
+        private void EmailTB_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                OKBT.Focus();
+                textBox_clicked(sender, e);
+                if (EmailTB.Text == "")
+                {
+                    EmailTB.ForeColor = original_text_Color;
+                    EmailTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (EmailTB.ForeColor == original_text_Color)
+                {
+                    EmailTB.ForeColor = original_text_Color_Active;
+                    EmailTB.Text = "";
+                }
+
+            }
+        }
+
+        private void passwordTB_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                EmailTB.Focus();
+                textBox_clicked(sender, e);
+                if (passwordTB.Text == "")
+                {
+                    passwordTB.ForeColor = original_text_Color;
+                    passwordTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (passwordTB.ForeColor == original_text_Color)
+                {
+                    passwordTB.ForeColor = original_text_Color_Active;
+                    passwordTB.Text = "";
+                }
+
+            }
+        }
+
+        private void lastNameTB_KeyUp(object sender, KeyEventArgs e)
+        {
+          
+        }
+
+        private void userNameTB_KeyUp(object sender, KeyEventArgs e)
+        {
+          
+        }
+
+        private void lastNameTB_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                userNameTB.Focus();
+                textBox_clicked(sender, e);
+                if (lastNameTB.Text == "")
+                {
+                    lastNameTB.ForeColor = original_text_Color;
+                    lastNameTB.Text = "last name";
+                }
+            }
+            else
+            {
+                if (lastNameTB.ForeColor == original_text_Color)
+                {
+                    lastNameTB.ForeColor = original_text_Color_Active;
+                    lastNameTB.Text = "";
+                }
 
             }
         }

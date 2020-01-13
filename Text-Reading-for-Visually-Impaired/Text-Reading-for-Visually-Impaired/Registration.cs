@@ -134,7 +134,7 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     if (((TextBox)c).Text == "")
                     {
-                        MessageBox.Show("please fill al fields", "error");
+                        MessageBox.Show("please fill all fields", "error");
                         break;
                     }
                 }
@@ -359,6 +359,11 @@ namespace Text_Reading_for_Visually_Impaired
         }
 
         private void headlineLB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameTB_MouseClick(object sender, MouseEventArgs e)
         {
 
         }
