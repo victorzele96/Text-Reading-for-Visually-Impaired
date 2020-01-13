@@ -140,6 +140,12 @@
     <Compile Include="Choose a story.Designer.cs">
       <DependentUpon>Choose a story.cs</DependentUpon>
     </Compile>
+    <Compile Include="story_choices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="story_choices.Designer.cs">
+      <DependentUpon>story_choices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <SubType>Form</SubType>
     </Compile>
