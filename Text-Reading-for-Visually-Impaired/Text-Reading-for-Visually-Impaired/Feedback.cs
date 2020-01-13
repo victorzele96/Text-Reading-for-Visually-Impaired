@@ -80,7 +80,7 @@ namespace Text_Reading_for_Visually_Impaired
 
             if (dataGridView1.Rows.Count > 0)
             {
-                label7.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                label7.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 
                 if (dataGridView2.Rows.Count > 0)
@@ -96,7 +96,10 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                     }
                 }
-                
+            }
+            else
+            {
+                MessageBox.Show("Empty"); 
             }
         }
     }

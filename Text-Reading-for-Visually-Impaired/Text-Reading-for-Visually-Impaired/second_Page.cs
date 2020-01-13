@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Threading;
 using System.IO;
+using System.Data.OleDb;
 
 namespace Text_Reading_for_Visually_Impaired
 {
@@ -18,9 +19,14 @@ namespace Text_Reading_for_Visually_Impaired
         List<String> textFiles_List;
         Boolean paused = false;
         Boolean stopped = false;
+        Boolean is_Teacher;
         SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
+        public String user_ID;
         public Teacher Teacher_main;
+        public Student student_main;
+        List<story> stories_List = new List<story>();
+        String teacherID;
         Color backSColor; //famous stories button backcolor
         Color storyBtColor; //famous stories button forecolor
         Color questionBtColor; //questions button backcolor
@@ -34,10 +40,29 @@ namespace Text_Reading_for_Visually_Impaired
             richTextBox1.DragEnter += RichTextBox1_DragEnter;
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.Teacher_main = main;
+            this.is_Teacher = true;
+            this.button5.Text = "my stories";
+            this.button6.Text = "save story";
+            build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
 
-        
+        public second_Page(Student main)
+        {
+            InitializeComponent();
+            synth = new SpeechSynthesizer();
+            this.WindowState = FormWindowState.Maximized;
+            richTextBox1.DragDrop += RichTextBox1_DragDrop;
+            richTextBox1.DragEnter += RichTextBox1_DragEnter;
+            synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+            this.student_main = main;
+            this.is_Teacher = false;
+            this.button6.Text = "questions";
+            build_Stories_List();
+            richTextBox1.Width = ClientSize.Width;
+        }
+
+
         public second_Page()
         {
             InitializeComponent();
@@ -169,7 +194,6 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakAsyncCancelAll();
             //speak();
             synth.SpeakAsync(Text_To_Read);
-
             paused = false;
         }
 
@@ -214,7 +238,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Button5_Click_1(object sender, EventArgs e)
         {
-            story_choices nePage = new story_choices(this,textFiles_List);
+            story_choices nePage = new story_choices(this,stories_List);
             nePage.Show();
         }
 
@@ -319,7 +343,15 @@ namespace Text_Reading_for_Visually_Impaired
         private void Button6_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Teacher_main.Show();
+            if(is_Teacher)
+            {
+                Teacher_main.Show();
+            }
+            else
+            {
+                student_main.Show();
+            }
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -329,8 +361,142 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button6_Click_2(object sender, EventArgs e)
         {
-            question_choices nePage = new question_choices(this, textFiles_List);
-            nePage.Show();
+            if(is_Teacher)
+            {
+                fileNamePopUp fnp = new fileNamePopUp(this);
+                fnp.Show();
+            }
+            else
+            {
+                question_choices nePage = new question_choices(this, stories_List);
+                nePage.Show();
+            }
+            
         }
+
+
+        public void build_Stories_List()
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            string query = " SELECT * FROM stories";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while(reader.Read())
+                    {
+                        if(is_Teacher)
+                        {
+                            if (reader[1].ToString() == this.Teacher_main.login_main.userName)
+                            {
+                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                stories_List.Add(s);
+                            }
+                        }
+                        else
+                        {
+                            if (reader[1].ToString() == get_student_teacher( this.student_main.login_main.userName) || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
+                            {
+                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                stories_List.Add(s);
+                            }
+                        }
+                       
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+            }
+        }
+
+        /*public void set_user_ID()
+        {
+            String user_Name;
+            String query;
+            if(is_Teacher)
+            {
+                user_Name = this.Teacher_main.login_main.userName;
+                query = " SELECT * FROM Teacher";
+            }
+            else
+            {
+                user_Name = this.student_main.login_main.userName;
+                query = " SELECT * FROM Profile";
+            }
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                //cmd.Parameters.AddWithValue("@user_Name", user_Name);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        String s = reader[1].ToString();
+                        if(reader[0].ToString()==user_Name)
+                        {
+                            this.user_ID = reader[0].ToString();
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+            }
+        }*/
+        public String get_student_teacher(String student_id)
+        {
+           
+            String user_Name = this.student_main.login_main.userName;
+            String query = " SELECT * FROM Profile";
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                //cmd.Parameters.AddWithValue("@user_Name", user_Name);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        String s = reader[1].ToString();
+                        if (reader[0].ToString() == user_Name)
+                        {
+                            return reader[8].ToString();
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+                return null;
+            }
+        }
+       
     }
 }

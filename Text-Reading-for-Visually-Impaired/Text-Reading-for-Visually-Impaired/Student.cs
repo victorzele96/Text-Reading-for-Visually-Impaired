@@ -34,7 +34,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void button5_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            Choose_a_story story = new Choose_a_story(this);
+            second_Page story = new second_Page(this);
             story.Show();
             story.Theme_color(updateStudentInformation.ForeColor, updateStudentInformation.BackColor, this.BackColor);
         }

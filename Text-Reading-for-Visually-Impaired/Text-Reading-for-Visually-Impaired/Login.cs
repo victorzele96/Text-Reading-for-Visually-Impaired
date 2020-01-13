@@ -143,7 +143,6 @@ namespace Text_Reading_for_Visually_Impaired
             //panel1.Location = new Point((ClientSize.Width - panel1.Width) / 2,(ClientSize.Height-panel1.Height)/2);
             ExitBT.Location = new Point((ClientSize.Width - ExitBT.Width), ClientSize.Height - ExitBT.Height);
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

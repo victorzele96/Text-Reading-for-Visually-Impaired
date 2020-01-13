@@ -107,5 +107,10 @@ namespace Text_Reading_for_Visually_Impaired
             label10.Text = "";
             label11.Text = "";
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
