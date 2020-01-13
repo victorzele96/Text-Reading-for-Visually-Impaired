@@ -31,7 +31,11 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void question_choices_Load(object sender, EventArgs e)
         {
-
+            this.panel1.Controls.Add(new questioPanel( new question("q", "how long this night is gonna be?", new List<String> { "1 hour", "2 hour", "3 hour", "4 hour" }, 1)));
+        }
+        public void set_Question_Panels()
+        {
+           //this.panel1.Controls.Add(new questioPanel())
         }
     }
 }

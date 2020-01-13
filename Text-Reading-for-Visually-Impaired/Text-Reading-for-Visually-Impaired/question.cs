@@ -19,7 +19,6 @@ namespace Text_Reading_for_Visually_Impaired
             this.questionString = question;
             this.answers = answers;
             this.CorrectAnsIndex = correctAns;
-
         }
     }
 

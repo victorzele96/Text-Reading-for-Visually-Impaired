@@ -19,10 +19,13 @@ namespace Text_Reading_for_Visually_Impaired
         List<String> textFiles_List;
         Boolean paused = false;
         Boolean stopped = false;
+        Boolean is_Teacher;
         SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public Teacher Teacher_main;
+        public Student student_main;
         List<story> stories_List = new List<story>();
+        String teacherID;
         Color backSColor; //famous stories button backcolor
         Color storyBtColor; //famous stories button forecolor
         Color questionBtColor; //questions button backcolor
@@ -36,11 +39,28 @@ namespace Text_Reading_for_Visually_Impaired
             richTextBox1.DragEnter += RichTextBox1_DragEnter;
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.Teacher_main = main;
+            this.is_Teacher = true;
+            this.button6.Text = "save story";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
 
-        
+        public second_Page(Student main)
+        {
+            InitializeComponent();
+            synth = new SpeechSynthesizer();
+            this.WindowState = FormWindowState.Maximized;
+            richTextBox1.DragDrop += RichTextBox1_DragDrop;
+            richTextBox1.DragEnter += RichTextBox1_DragEnter;
+            synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+            this.student_main = main;
+            this.is_Teacher = false;
+            this.button6.Text = "questions";
+            build_Stories_List();
+            richTextBox1.Width = ClientSize.Width;
+        }
+
+
         public second_Page()
         {
             InitializeComponent();
@@ -322,7 +342,15 @@ namespace Text_Reading_for_Visually_Impaired
         private void Button6_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Teacher_main.Show();
+            if(is_Teacher)
+            {
+                Teacher_main.Show();
+            }
+            else
+            {
+                student_main.Show();
+            }
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -332,8 +360,17 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button6_Click_2(object sender, EventArgs e)
         {
-            question_choices nePage = new question_choices(this, textFiles_List);
-            nePage.Show();
+            if(is_Teacher)
+            {
+                fileNamePopUp fnp = new fileNamePopUp();
+                fnp.Show();
+            }
+            else
+            {
+                question_choices nePage = new question_choices(this, stories_List);
+                nePage.Show();
+            }
+            
         }
 
 

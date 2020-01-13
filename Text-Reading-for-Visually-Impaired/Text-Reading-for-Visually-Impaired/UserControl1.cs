@@ -25,7 +25,8 @@ namespace Text_Reading_for_Visually_Impaired
             this.ans3RB.Hide();
             this.ans4RB.Hide();
             RBDict = new Dictionary<int,RadioButton>() { { 1,this.ans1RB}, {2, this.ans2RB}, {3, this.ans3RB}, {4, this.ans4RB} };
-
+            initialRadioButtons();
+            this.label1.Text = question.questionString;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,9 +41,10 @@ namespace Text_Reading_for_Visually_Impaired
             int indexCounter = 1;
             for(int i=0; i<4;i++)
             {
-                if(question.answers[rInt] != null)
+                if(question.answers[rInt] != null && question.answers[rInt]!="" && question.answers[rInt] != " ")
                 {
                     this.RBDict[indexCounter].Text = question.answers[rInt];
+                    this.RBDict[indexCounter].Show();
                     indexCounter++;
                     rInt = (rInt + 1) % 4;
                 }
