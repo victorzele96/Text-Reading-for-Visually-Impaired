@@ -62,5 +62,10 @@ namespace Text_Reading_for_Visually_Impaired
         {
             this.Hide();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
