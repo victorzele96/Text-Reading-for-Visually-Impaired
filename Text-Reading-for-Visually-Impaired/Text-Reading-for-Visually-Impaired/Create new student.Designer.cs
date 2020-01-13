@@ -58,11 +58,13 @@
             this.firstNameTB.BackColor = System.Drawing.Color.Gainsboro;
             this.firstNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameTB.Location = new System.Drawing.Point(199, 143);
+            this.firstNameTB.Location = new System.Drawing.Point(242, 254);
             this.firstNameTB.Name = "firstNameTB";
             this.firstNameTB.Size = new System.Drawing.Size(367, 51);
             this.firstNameTB.TabIndex = 2;
             this.firstNameTB.Text = "first name";
+            this.firstNameTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstNameTB_MouseClick);
+            this.firstNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.firstNameTB_KeyDown);
             // 
             // lastNameTB
             // 
@@ -70,11 +72,13 @@
             this.lastNameTB.BackColor = System.Drawing.Color.Gainsboro;
             this.lastNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameTB.Location = new System.Drawing.Point(965, 143);
+            this.lastNameTB.Location = new System.Drawing.Point(862, 254);
             this.lastNameTB.Name = "lastNameTB";
             this.lastNameTB.Size = new System.Drawing.Size(367, 51);
             this.lastNameTB.TabIndex = 3;
             this.lastNameTB.Text = "last name";
+            this.lastNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyDown_1);
+            this.lastNameTB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyUp);
             // 
             // userNameTB
             // 
@@ -82,11 +86,13 @@
             this.userNameTB.BackColor = System.Drawing.Color.Gainsboro;
             this.userNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameTB.Location = new System.Drawing.Point(199, 255);
+            this.userNameTB.Location = new System.Drawing.Point(242, 399);
             this.userNameTB.Name = "userNameTB";
             this.userNameTB.Size = new System.Drawing.Size(367, 51);
             this.userNameTB.TabIndex = 4;
             this.userNameTB.Text = "user name (id)";
+            this.userNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyDown_1);
+            this.userNameTB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyUp);
             // 
             // passwordTB
             // 
@@ -94,12 +100,13 @@
             this.passwordTB.BackColor = System.Drawing.Color.Gainsboro;
             this.passwordTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTB.Location = new System.Drawing.Point(965, 255);
+            this.passwordTB.Location = new System.Drawing.Point(862, 399);
             this.passwordTB.Name = "passwordTB";
             this.passwordTB.Size = new System.Drawing.Size(367, 51);
             this.passwordTB.TabIndex = 5;
             this.passwordTB.Text = "password";
             this.passwordTB.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.passwordTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordTB_KeyDown_1);
             // 
             // EmailTB
             // 
@@ -107,17 +114,18 @@
             this.EmailTB.BackColor = System.Drawing.Color.Gainsboro;
             this.EmailTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTB.Location = new System.Drawing.Point(199, 357);
+            this.EmailTB.Location = new System.Drawing.Point(242, 532);
             this.EmailTB.Name = "EmailTB";
             this.EmailTB.Size = new System.Drawing.Size(367, 51);
             this.EmailTB.TabIndex = 6;
             this.EmailTB.Text = "E - mail";
+            this.EmailTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EmailTB_KeyDown_1);
             // 
             // OKBT
             // 
             this.OKBT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OKBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OKBT.Location = new System.Drawing.Point(327, 534);
+            this.OKBT.Location = new System.Drawing.Point(386, 660);
             this.OKBT.Name = "OKBT";
             this.OKBT.Size = new System.Drawing.Size(290, 75);
             this.OKBT.TabIndex = 7;
@@ -129,7 +137,7 @@
             // 
             this.cancelBT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cancelBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBT.Location = new System.Drawing.Point(747, 534);
+            this.cancelBT.Location = new System.Drawing.Point(745, 660);
             this.cancelBT.Name = "cancelBT";
             this.cancelBT.Size = new System.Drawing.Size(290, 75);
             this.cancelBT.TabIndex = 8;
@@ -142,20 +150,21 @@
             this.maleRB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.maleRB.AutoSize = true;
             this.maleRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maleRB.Location = new System.Drawing.Point(1031, 341);
+            this.maleRB.Location = new System.Drawing.Point(932, 497);
             this.maleRB.Name = "maleRB";
             this.maleRB.Size = new System.Drawing.Size(145, 56);
             this.maleRB.TabIndex = 9;
             this.maleRB.TabStop = true;
             this.maleRB.Text = "male";
             this.maleRB.UseVisualStyleBackColor = true;
+            this.maleRB.CheckedChanged += new System.EventHandler(this.maleRB_CheckedChanged);
             // 
             // femaleRB
             // 
             this.femaleRB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.femaleRB.AutoSize = true;
             this.femaleRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.femaleRB.Location = new System.Drawing.Point(1031, 426);
+            this.femaleRB.Location = new System.Drawing.Point(932, 565);
             this.femaleRB.Name = "femaleRB";
             this.femaleRB.Size = new System.Drawing.Size(183, 56);
             this.femaleRB.TabIndex = 10;
@@ -169,7 +178,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1578, 644);
+            this.ClientSize = new System.Drawing.Size(1578, 881);
             this.Controls.Add(this.femaleRB);
             this.Controls.Add(this.maleRB);
             this.Controls.Add(this.cancelBT);
@@ -184,6 +193,8 @@
             this.Name = "Create_new_student";
             this.Text = "Create_new_student";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Create_new_student_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Create_new_student_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -81,6 +81,7 @@
             this.firstNameTB.TabIndex = 0;
             this.firstNameTB.Text = "first name";
             this.firstNameTB.Click += new System.EventHandler(this.textBox_clicked);
+            this.firstNameTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstNameTB_MouseClick);
             this.firstNameTB.TextChanged += new System.EventHandler(this.firstNameTB_TextChanged_1);
             this.firstNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.firstNameTB_KeyDown_1);
             // 
