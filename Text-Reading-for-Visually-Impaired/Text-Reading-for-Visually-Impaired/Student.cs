@@ -27,7 +27,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Student_Load(object sender, EventArgs e)
         {
-
+            Student.ActiveForm.BackColor = login_main.BackColor;
         }
 
 
@@ -50,6 +50,9 @@ namespace Text_Reading_for_Visually_Impaired
         private void button7_Click(object sender, EventArgs e)
         {
             login_main.Show();
+            login_main.Theme_color(Color.Black,Color.Gainsboro,Color.Gainsboro);
+            //Login l = new Login();
+            //l.ShowDialog();
             this.Close();
         }
     }
