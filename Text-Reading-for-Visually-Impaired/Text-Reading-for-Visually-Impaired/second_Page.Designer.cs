@@ -84,8 +84,8 @@
             this.buttonsPanel.Controls.Add(this.pauseBT);
             this.buttonsPanel.Controls.Add(this.rewindBT);
             this.buttonsPanel.Controls.Add(this.playBT);
-            this.buttonsPanel.Location = new System.Drawing.Point(342, 460);
-            this.buttonsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonsPanel.Location = new System.Drawing.Point(365, 460);
+            this.buttonsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(867, 185);
             this.buttonsPanel.TabIndex = 31;
@@ -96,7 +96,7 @@
             this.stopBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stopBT.Image = ((System.Drawing.Image)(resources.GetObject("stopBT.Image")));
             this.stopBT.Location = new System.Drawing.Point(689, 41);
-            this.stopBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stopBT.Margin = new System.Windows.Forms.Padding(4);
             this.stopBT.Name = "stopBT";
             this.stopBT.Size = new System.Drawing.Size(153, 120);
             this.stopBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             this.pauseBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pauseBT.Image = ((System.Drawing.Image)(resources.GetObject("pauseBT.Image")));
             this.pauseBT.Location = new System.Drawing.Point(490, 41);
-            this.pauseBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pauseBT.Margin = new System.Windows.Forms.Padding(4);
             this.pauseBT.Name = "pauseBT";
             this.pauseBT.Size = new System.Drawing.Size(153, 120);
             this.pauseBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +124,7 @@
             this.rewindBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rewindBT.Image = ((System.Drawing.Image)(resources.GetObject("rewindBT.Image")));
             this.rewindBT.Location = new System.Drawing.Point(51, 41);
-            this.rewindBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rewindBT.Margin = new System.Windows.Forms.Padding(4);
             this.rewindBT.Name = "rewindBT";
             this.rewindBT.Size = new System.Drawing.Size(153, 120);
             this.rewindBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,7 +138,7 @@
             this.playBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playBT.Image = ((System.Drawing.Image)(resources.GetObject("playBT.Image")));
             this.playBT.Location = new System.Drawing.Point(270, 41);
-            this.playBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playBT.Margin = new System.Windows.Forms.Padding(4);
             this.playBT.Name = "playBT";
             this.playBT.Size = new System.Drawing.Size(153, 120);
             this.playBT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,8 +150,8 @@
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.Color.IndianRed;
-            this.button5.Location = new System.Drawing.Point(1381, 9);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Location = new System.Drawing.Point(1385, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(194, 112);
             this.button5.TabIndex = 34;
@@ -164,7 +164,7 @@
             this.backBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.backBt.BackColor = System.Drawing.Color.RoyalBlue;
             this.backBt.Location = new System.Drawing.Point(1371, 501);
-            this.backBt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backBt.Margin = new System.Windows.Forms.Padding(4);
             this.backBt.Name = "backBt";
             this.backBt.Size = new System.Drawing.Size(194, 122);
             this.backBt.TabIndex = 35;
@@ -175,8 +175,9 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Location = new System.Drawing.Point(273, 113);
+            this.panel1.Location = new System.Drawing.Point(188, 113);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 350);
             this.panel1.TabIndex = 36;
