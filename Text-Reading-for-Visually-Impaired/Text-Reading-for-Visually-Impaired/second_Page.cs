@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Threading;
 using System.IO;
+using System.Data.OleDb;
 
 namespace Text_Reading_for_Visually_Impaired
 {
@@ -21,6 +22,7 @@ namespace Text_Reading_for_Visually_Impaired
         SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public Teacher Teacher_main;
+        List<story> stories_List = new List<story>();
         Color backSColor; //famous stories button backcolor
         Color storyBtColor; //famous stories button forecolor
         Color questionBtColor; //questions button backcolor
@@ -34,6 +36,7 @@ namespace Text_Reading_for_Visually_Impaired
             richTextBox1.DragEnter += RichTextBox1_DragEnter;
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.Teacher_main = main;
+            build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
 
@@ -332,5 +335,37 @@ namespace Text_Reading_for_Visually_Impaired
             question_choices nePage = new question_choices(this, textFiles_List);
             nePage.Show();
         }
+
+
+        public void build_Stories_List()
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            string query = " SELECT * FROM stories";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while(reader.Read())
+                    {
+                        story s = new story(reader[3].ToString(),reader[0].ToString(),reader[2].ToString(),reader[1].ToString(),new List<question>());
+                        stories_List.Add(s);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+            }
+        }
+
+       
     }
 }
