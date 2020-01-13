@@ -41,6 +41,7 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.Teacher_main = main;
             this.is_Teacher = true;
+            this.button5.Text = "my stories";
             this.button6.Text = "save story";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
@@ -193,7 +194,6 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakAsyncCancelAll();
             //speak();
             synth.SpeakAsync(Text_To_Read);
-
             paused = false;
         }
 
@@ -238,7 +238,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Button5_Click_1(object sender, EventArgs e)
         {
-            story_choices nePage = new story_choices(this,textFiles_List);
+            story_choices nePage = new story_choices(this,stories_List);
             nePage.Show();
         }
 
@@ -393,8 +393,23 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     while(reader.Read())
                     {
-                        story s = new story(reader[3].ToString(),reader[0].ToString(),reader[2].ToString(),reader[1].ToString(),new List<question>());
-                        stories_List.Add(s);
+                        if(is_Teacher)
+                        {
+                            if (reader[1].ToString() == this.Teacher_main.login_main.userName)
+                            {
+                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                stories_List.Add(s);
+                            }
+                        }
+                        else
+                        {
+                            if (reader[1].ToString() == this.student_main.login_main.userName || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
+                            {
+                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                stories_List.Add(s);
+                            }
+                        }
+                       
                     }
                 }
                 catch (Exception)
@@ -447,7 +462,10 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
         }*/
+        public void get_student_teacher(String student_id)
+        {
 
+        }
        
     }
 }

@@ -8,8 +8,8 @@ namespace Text_Reading_for_Visually_Impaired
     public partial class story_choices : Form
     {
         second_Page main;
-        List<String> myList;
-        public story_choices(second_Page sp, List <String> list)
+        List<story> myList;
+        public story_choices(second_Page sp, List <story> list)
         {
             main = sp;
             myList = list;
@@ -27,10 +27,10 @@ namespace Text_Reading_for_Visually_Impaired
             panel1.HorizontalScroll.Maximum = 0;
             panel1.AutoScroll = true;
             int lastLocation = 3;
-            foreach (String name in myList)
+            foreach (story s in myList)
             {
                 RadioButton newButton = new RadioButton();
-                newButton.Text = name;
+                newButton.Text = s.name;
                 newButton.Width = panel1.Width;
                 newButton.Height = 102;
                 newButton.BackColor = this.BackColor;
