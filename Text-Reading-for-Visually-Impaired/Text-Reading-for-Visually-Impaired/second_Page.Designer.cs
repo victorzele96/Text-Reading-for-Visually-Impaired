@@ -39,6 +39,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.backBt = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.buttonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stopBT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseBT)).BeginInit();
@@ -150,19 +151,22 @@
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(1385, 0);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(194, 112);
             this.button5.TabIndex = 34;
-            this.button5.Text = "famous stories";
+            this.button5.Text = "Famous Stories";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.Button5_Click_1);
             // 
             // backBt
             // 
             this.backBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.backBt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.backBt.BackColor = System.Drawing.SystemColors.Control;
+            this.backBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.backBt.Location = new System.Drawing.Point(1371, 501);
             this.backBt.Margin = new System.Windows.Forms.Padding(4);
             this.backBt.Name = "backBt";
@@ -177,10 +181,25 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Location = new System.Drawing.Point(188, 113);
+            this.panel1.Location = new System.Drawing.Point(184, 113);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 350);
             this.panel1.TabIndex = 36;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(1190, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(194, 112);
+            this.button6.TabIndex = 37;
+            this.button6.Text = "Questions";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_2);
             // 
             // second_Page
             // 
@@ -188,6 +207,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1578, 644);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backBt);
             this.Controls.Add(this.button5);
@@ -204,6 +224,7 @@
             this.Controls.SetChildIndex(this.button5, 0);
             this.Controls.SetChildIndex(this.backBt, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.button6, 0);
             this.buttonsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stopBT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseBT)).EndInit();
@@ -225,5 +246,6 @@
         private System.Windows.Forms.PictureBox rewindBT;
         private System.Windows.Forms.Button backBt;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button6;
     }
 }
