@@ -112,7 +112,8 @@ namespace Text_Reading_for_Visually_Impaired
                     txtUsername.Text = "";
                     Student st = new Student(this);
                     st.Show();
-                    st.Theme_color(btnLogin.ForeColor, btnLogin.BackColor, Color.WhiteSmoke);
+                    st.Theme_color(ExitBT.ForeColor, ExitBT.BackColor, Login.ActiveForm.BackColor);
+                    this.Hide();
                     //this.Close();
                 }
                 else
