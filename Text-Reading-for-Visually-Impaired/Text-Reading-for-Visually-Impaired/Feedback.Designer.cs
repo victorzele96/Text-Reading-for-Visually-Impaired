@@ -33,8 +33,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.reportTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generalReportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.periodicReportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database11DataSet2 = new Text_Reading_for_Visually_Impaired.Database11DataSet2();
@@ -93,15 +91,14 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.reportTitleDataGridViewTextBoxColumn,
             this.reportsDataGridViewTextBoxColumn,
-            this.generalReportDataGridViewTextBoxColumn,
-            this.periodicReportDataGridViewTextBoxColumn,
             this.senderIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.reportsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(816, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(962, 59);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(726, 543);
+            this.dataGridView1.Size = new System.Drawing.Size(580, 543);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
@@ -111,30 +108,21 @@
             this.reportTitleDataGridViewTextBoxColumn.DataPropertyName = "Report Title";
             this.reportTitleDataGridViewTextBoxColumn.HeaderText = "Report Title";
             this.reportTitleDataGridViewTextBoxColumn.Name = "reportTitleDataGridViewTextBoxColumn";
+            this.reportTitleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // reportsDataGridViewTextBoxColumn
             // 
             this.reportsDataGridViewTextBoxColumn.DataPropertyName = "Reports";
             this.reportsDataGridViewTextBoxColumn.HeaderText = "Reports";
             this.reportsDataGridViewTextBoxColumn.Name = "reportsDataGridViewTextBoxColumn";
-            // 
-            // generalReportDataGridViewTextBoxColumn
-            // 
-            this.generalReportDataGridViewTextBoxColumn.DataPropertyName = "General Report";
-            this.generalReportDataGridViewTextBoxColumn.HeaderText = "General Report";
-            this.generalReportDataGridViewTextBoxColumn.Name = "generalReportDataGridViewTextBoxColumn";
-            // 
-            // periodicReportDataGridViewTextBoxColumn
-            // 
-            this.periodicReportDataGridViewTextBoxColumn.DataPropertyName = "Periodic Report";
-            this.periodicReportDataGridViewTextBoxColumn.HeaderText = "Periodic Report";
-            this.periodicReportDataGridViewTextBoxColumn.Name = "periodicReportDataGridViewTextBoxColumn";
+            this.reportsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // senderIDDataGridViewTextBoxColumn
             // 
             this.senderIDDataGridViewTextBoxColumn.DataPropertyName = "SenderID";
             this.senderIDDataGridViewTextBoxColumn.HeaderText = "SenderID";
             this.senderIDDataGridViewTextBoxColumn.Name = "senderIDDataGridViewTextBoxColumn";
+            this.senderIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // reportsBindingSource
             // 
@@ -371,15 +359,13 @@
         private Database11DataSet2 database11DataSet2;
         private System.Windows.Forms.BindingSource reportsBindingSource;
         private Database11DataSet2TableAdapters.ReportsTableAdapter reportsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reportTitleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reportsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn generalReportDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn periodicReportDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senderIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private Database11DataSet3 database11DataSet3;
         private System.Windows.Forms.BindingSource teacherBindingSource;
         private Database11DataSet3TableAdapters.TeacherTableAdapter teacherTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reportTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reportsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderIDDataGridViewTextBoxColumn;
     }
 }

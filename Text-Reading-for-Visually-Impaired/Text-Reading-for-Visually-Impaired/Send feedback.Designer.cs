@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.feedback = new System.Windows.Forms.RadioButton();
+            this.story_requests = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // button1
@@ -101,12 +103,40 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Subject";
             // 
+            // feedback
+            // 
+            this.feedback.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.feedback.AutoSize = true;
+            this.feedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.feedback.Location = new System.Drawing.Point(892, 236);
+            this.feedback.Name = "feedback";
+            this.feedback.Size = new System.Drawing.Size(166, 35);
+            this.feedback.TabIndex = 7;
+            this.feedback.TabStop = true;
+            this.feedback.Text = "FeedBack";
+            this.feedback.UseVisualStyleBackColor = true;
+            // 
+            // story_requests
+            // 
+            this.story_requests.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.story_requests.AutoSize = true;
+            this.story_requests.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.story_requests.Location = new System.Drawing.Point(892, 327);
+            this.story_requests.Name = "story_requests";
+            this.story_requests.Size = new System.Drawing.Size(236, 35);
+            this.story_requests.TabIndex = 8;
+            this.story_requests.TabStop = true;
+            this.story_requests.Text = "Story Requests";
+            this.story_requests.UseVisualStyleBackColor = true;
+            // 
             // Send_feedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1403, 631);
+            this.Controls.Add(this.story_requests);
+            this.Controls.Add(this.feedback);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -130,5 +160,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton feedback;
+        private System.Windows.Forms.RadioButton story_requests;
     }
 }
