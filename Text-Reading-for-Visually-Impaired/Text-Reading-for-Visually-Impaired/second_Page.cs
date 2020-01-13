@@ -21,8 +21,10 @@ namespace Text_Reading_for_Visually_Impaired
         SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public Teacher Teacher_main;
-        Color backBColor;
-        Color storyBtColor;
+        Color backSColor; //famous stories button backcolor
+        Color storyBtColor; //famous stories button forecolor
+        Color questionBtColor; //questions button backcolor
+        Color backQColor; //questions button forecolor
         public second_Page(Teacher main)
         {
             InitializeComponent();
@@ -155,8 +157,10 @@ namespace Text_Reading_for_Visually_Impaired
         private void second_Page_Load(object sender, EventArgs e)
         {
             get_text_files_to_list();
-            this.backBColor = backBt.BackColor;
-            this.storyBtColor = button5.BackColor;
+            this.backSColor = button5.BackColor;
+            this.storyBtColor = button5.ForeColor;
+            this.questionBtColor = button6.ForeColor;
+            this.backQColor = button6.BackColor;
             // this.backBt.Location = new Point(this.Width-this.backBt.Width, this.Height-backBt.Height);
         }
 
@@ -300,8 +304,10 @@ namespace Text_Reading_for_Visually_Impaired
             if (this.insertTxtLb.ForeColor == Color.Black)
             {
                 set_buttons_font("gray");
-                this.backBt.BackColor = this.backBColor;
-                this.button5.BackColor = this.storyBtColor;
+                button5.BackColor = this.backSColor;
+                button5.ForeColor = this.storyBtColor;
+                button6.ForeColor = this.questionBtColor;
+                button6.BackColor = this.backQColor;
             }
             if (this.insertTxtLb.ForeColor == Color.Blue)
             {
@@ -319,6 +325,12 @@ namespace Text_Reading_for_Visually_Impaired
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+            question_choices nePage = new question_choices(this, textFiles_List);
+            nePage.Show();
         }
     }
 }

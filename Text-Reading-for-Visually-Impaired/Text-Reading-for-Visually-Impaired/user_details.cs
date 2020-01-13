@@ -41,23 +41,8 @@ namespace Text_Reading_for_Visually_Impaired
             label8.Text = "";
             label9.Text = "";
             label10.Text = "";
-            label11.Text = "";
-
-            UpdateFont();
-
+            label11.Text = "";            
         }
-
-        private void UpdateFont()
-        {
-            //Change cell font
-            foreach (DataGridViewColumn c in dataGridView1.Columns)
-                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16F, GraphicsUnit.Pixel);
-
-
-            foreach (DataGridViewColumn c in dataGridView2.Columns)
-                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16F, GraphicsUnit.Pixel);
-        }
-
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -121,12 +106,6 @@ namespace Text_Reading_for_Visually_Impaired
             label9.Text = "";
             label10.Text = "";
             label11.Text = "";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Reports_main.Show();
         }
     }
 }
