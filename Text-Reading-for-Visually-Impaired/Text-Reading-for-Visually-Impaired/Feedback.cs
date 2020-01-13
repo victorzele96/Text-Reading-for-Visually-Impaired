@@ -44,9 +44,18 @@ namespace Text_Reading_for_Visually_Impaired
             label6.Text = ""; //first name
             label3.Text = ""; //last name
             label8.Text = ""; //email
+
+            UpdateFont();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void UpdateFont()
+        {
+            //Change cell font
+            foreach (DataGridViewColumn c in dataGridView1.Columns)
+                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16F, GraphicsUnit.Pixel);
+        }
+
+            private void label6_Click(object sender, EventArgs e)
         {
 
         }
