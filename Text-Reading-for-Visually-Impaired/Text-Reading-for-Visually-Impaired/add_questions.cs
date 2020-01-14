@@ -14,15 +14,30 @@ namespace Text_Reading_for_Visually_Impaired
 {
     public partial class add_questions : Form
     {
+        public Add admin_main;
+        public second_Page teacher_main;
         public List<story> stories_List;
-        public Add add_main;
+        bool isAdmin;
         public add_questions(Add main)
 
         {
             InitializeComponent();
-            this.add_main = main;
+            this.admin_main = main;
             this.CenterToScreen();
             stories_List = new List<story>();
+            isAdmin = true;
+
+        }
+
+        public add_questions(second_Page main)
+
+        {
+            InitializeComponent();
+            this.teacher_main = main;
+            this.CenterToScreen();
+            stories_List = new List<story>();
+            isAdmin = false;
+
         }
 
         private void add_questions_Load(object sender, EventArgs e)
@@ -43,11 +58,11 @@ namespace Text_Reading_for_Visually_Impaired
         {
             List<string> answers = new List<string>();
 
-            if(QuestionRTB.Text != "" && RightAnswerTB.Text != "" && (Answer1TB.Text != "" || Answer2TB.Text != "" || Answer3TB.Text != ""))
+            if (QuestionRTB.Text != "" && RightAnswerTB.Text != "" && (Answer1TB.Text != "" || Answer2TB.Text != "" || Answer3TB.Text != ""))
             {
                 answers.Add(RightAnswerTB.Text);    //add the correct answer into the list
 
-                if(Answer1TB.Text != "")    //check if the first answer isn`t empty
+                if (Answer1TB.Text != "")    //check if the first answer isn`t empty
                 {
                     answers.Add(Answer1TB.Text);
                 }
@@ -61,38 +76,79 @@ namespace Text_Reading_for_Visually_Impaired
                 }
 
                 question Qst = new question(QuestionRTB.Text, answers);
-/*
-                string fileName = "Database11.accdb";
-                string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
-                string workingDirectory = Environment.CurrentDirectory;
-                String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
-                string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
-                    Data Source={0}", path2);
-                string query = " INSERT INTO questions (question, answer1, answer2, answer3, answer4) VALUES (@question, @answer1 , @answer2, @answer3, @answer4)  ";
 
-                using (OleDbConnection conn = new OleDbConnection(connStr))
+                if (!isAdmin)
                 {
-                    conn.Open();
-                    OleDbCommand cmd = new OleDbCommand(query, conn);
-                    cmd.Parameters.AddWithValue(@"question", Qst.ID);
-                    cmd.Parameters.AddWithValue(@"question", Qst.questionString);
-                    cmd.Parameters.AddWithValue(@"story_name", Qst.answers[0]);
-                    cmd.Parameters.AddWithValue(@"story_name", Qst.name);
-                    cmd.Parameters.AddWithValue(@"story_name", Qst.name);
+                    string fileName = "Database11.accdb";
+                    string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+                    string workingDirectory = Environment.CurrentDirectory;
+                    String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+                    string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+                    string query = " INSERT INTO questions (teacher_ID, story_ID, question, answer1, answer2, answer3, answer4) VALUES (@teacher_ID, @story_ID, @question, @answer1 , @answer2, @answer3, @answer4)  ";
 
-                    try
+                    using (OleDbConnection conn = new OleDbConnection(connStr))
                     {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("details error", "error");
-                    }
+                        conn.Open();
+                        OleDbCommand cmd = new OleDbCommand(query, conn);
+                        cmd.Parameters.AddWithValue(@"teacher_ID", teacher_main.Teacher_main.login_main.userName);
+                        cmd.Parameters.AddWithValue(@"story_ID", Qst.ID);
+                        cmd.Parameters.AddWithValue(@"question", Qst.questionString);
+                        cmd.Parameters.AddWithValue(@"answer1", Qst.answers[0]);
+                        cmd.Parameters.AddWithValue(@"answer2", Qst.answers[1]);
+                        cmd.Parameters.AddWithValue(@"answer3", Qst.answers[2]);
+                        cmd.Parameters.AddWithValue(@"answer4", Qst.answers[3]);
+
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("details error", "error");
+                        }
 
 
-                    MessageBox.Show("Data was saved!");
-*/
+                        MessageBox.Show("Data was saved!");
+
+                    }
                 }
+                else
+                {
+                    string fileName = "Database11.accdb";
+                    string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+                    string workingDirectory = Environment.CurrentDirectory;
+                    String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+                    string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+                    string query = " INSERT INTO questions (teacher_ID, story_ID, question, answer1, answer2, answer3, answer4) VALUES (@teacher_ID, @story_ID, @question, @answer1 , @answer2, @answer3, @answer4)  ";
+
+                    using (OleDbConnection conn = new OleDbConnection(connStr))
+                    {
+                        conn.Open();
+                        OleDbCommand cmd = new OleDbCommand(query, conn);
+                        cmd.Parameters.AddWithValue(@"teacher_ID", "Admin");
+                        cmd.Parameters.AddWithValue(@"story_ID", Qst.ID);
+                        cmd.Parameters.AddWithValue(@"question", Qst.questionString);
+                        cmd.Parameters.AddWithValue(@"answer1", Qst.answers[0]);
+                        cmd.Parameters.AddWithValue(@"answer2", Qst.answers[1]);
+                        cmd.Parameters.AddWithValue(@"answer3", Qst.answers[2]);
+                        cmd.Parameters.AddWithValue(@"answer4", Qst.answers[3]);
+
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("details error", "error");
+                        }
+
+
+                        MessageBox.Show("Data was saved!");
+                    }
+                }
+            }
             else
             {
                 MessageBox.Show("Please fill all fields!", "Error!");
