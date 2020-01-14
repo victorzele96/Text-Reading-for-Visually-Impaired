@@ -15,20 +15,10 @@ namespace Text_Reading_for_Visually_Impaired
     public partial class Add : Form
     {
         public Admin Admin_main;
-        public Teacher Teacher_main;
-        public bool isAdmin;
         public Add(Admin main)
         {
             InitializeComponent();
             this.Admin_main = main;
-            isAdmin = true;
-        }
-
-        public Add(Teacher main)
-        {
-            InitializeComponent();
-            this.Teacher_main = main;
-            isAdmin = false;
         }
 
         public Add()
@@ -76,15 +66,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 story new_story;
 
-                
-                if (isAdmin)
-                {
                     new_story = new story(story_nameTB.Text, StoryRTB.Text, "Admin", null);
-                }
-                else
-                {
-                    new_story = new story(story_nameTB.Text, StoryRTB.Text, Teacher_main.login_main.userName, null);
-                }
 
                 string fileName = "Database11.accdb";
                 string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
