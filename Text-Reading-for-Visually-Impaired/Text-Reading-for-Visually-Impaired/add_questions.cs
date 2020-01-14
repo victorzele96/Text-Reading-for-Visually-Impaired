@@ -18,6 +18,7 @@ namespace Text_Reading_for_Visually_Impaired
         public second_Page teacher_main;
         public List<story> stories_List;
         bool isAdmin;
+        public story chosenStory;
         public add_questions(Add main)
 
         {
@@ -128,7 +129,7 @@ namespace Text_Reading_for_Visually_Impaired
                         conn.Open();
                         OleDbCommand cmd = new OleDbCommand(query, conn);
                         cmd.Parameters.AddWithValue(@"teacher_ID", "Admin");
-                        cmd.Parameters.AddWithValue(@"story_ID", Qst.ID);
+                        cmd.Parameters.AddWithValue(@"story_ID", chosenStory.ID);
                         cmd.Parameters.AddWithValue(@"question", Qst.questionString);
                         cmd.Parameters.AddWithValue(@"answer1", Qst.answers[0]);
                         cmd.Parameters.AddWithValue(@"answer2", Qst.answers[1]);
@@ -189,6 +190,22 @@ namespace Text_Reading_for_Visually_Impaired
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void story_selectionCB_SelectedValueChanged(object sender, EventArgs e)
+        {
+            foreach (story s in stories_List)
+            {
+                if (s.name == (String)story_selectionCB.SelectedItem)
+                {
+                    chosenStory = s;
+                }
+            }
+        }
+
+        private void story_selectionCB_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+           
         }
     }
 }
