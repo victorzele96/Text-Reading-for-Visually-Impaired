@@ -15,10 +15,23 @@ namespace Text_Reading_for_Visually_Impaired
     public partial class Add : Form
     {
         public Admin Admin_main;
+        public Teacher Teacher_main;
+        public bool isAdmin;
         public Add(Admin main)
         {
             InitializeComponent();
             this.Admin_main = main;
+        }
+
+        public Add(Teacher main)
+        {
+            InitializeComponent();
+            this.Teacher_main = main;
+        }
+
+        public Add()
+        {
+            InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,7 +83,8 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Add_questionBTN_Click(object sender, EventArgs e)
         {
-            
+            add_questions add_Questions = new add_questions(this);
+            add_Questions.ShowDialog();
         }
 
         private void UpdatesRTB_TextChanged(object sender, EventArgs e)

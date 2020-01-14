@@ -34,8 +34,8 @@ namespace Text_Reading_for_Visually_Impaired
             dataGridView2.Hide();
 
             label7.Text = ""; //ID
-            label6.Text = ""; //first name
-            label3.Text = ""; //last name
+            label6.Text = ""; //first ID
+            label3.Text = ""; //last ID
             label8.Text = ""; //email
 
             UpdateFont();

@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param ID="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bacBTN = new System.Windows.Forms.Button();
+            this.backBTN = new System.Windows.Forms.Button();
             this.BrowseSTR = new System.Windows.Forms.Button();
             this.story_nameTB = new System.Windows.Forms.TextBox();
             this.story_nameLBL = new System.Windows.Forms.Label();
@@ -39,18 +39,18 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bacBTN
+            // backBTN
             // 
-            this.bacBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bacBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.bacBTN.Location = new System.Drawing.Point(1367, 542);
-            this.bacBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bacBTN.Name = "bacBTN";
-            this.bacBTN.Size = new System.Drawing.Size(196, 85);
-            this.bacBTN.TabIndex = 0;
-            this.bacBTN.Text = "Back";
-            this.bacBTN.UseVisualStyleBackColor = true;
-            this.bacBTN.Click += new System.EventHandler(this.button1_Click);
+            this.backBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.backBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.backBTN.Location = new System.Drawing.Point(1367, 542);
+            this.backBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.backBTN.Name = "backBTN";
+            this.backBTN.Size = new System.Drawing.Size(196, 85);
+            this.backBTN.TabIndex = 0;
+            this.backBTN.Text = "Back";
+            this.backBTN.UseVisualStyleBackColor = true;
+            this.backBTN.Click += new System.EventHandler(this.button1_Click);
             // 
             // BrowseSTR
             // 
@@ -108,7 +108,7 @@
             this.panel1.Controls.Add(this.story_nameTB);
             this.panel1.Controls.Add(this.story_nameLBL);
             this.panel1.Controls.Add(this.Save_Story);
-            this.panel1.Controls.Add(this.bacBTN);
+            this.panel1.Controls.Add(this.backBTN);
             this.panel1.Controls.Add(this.BrowseSTR);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
@@ -158,7 +158,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button bacBTN;
+        private System.Windows.Forms.Button backBTN;
         private System.Windows.Forms.Button BrowseSTR;
         private System.Windows.Forms.TextBox story_nameTB;
         private System.Windows.Forms.Label story_nameLBL;

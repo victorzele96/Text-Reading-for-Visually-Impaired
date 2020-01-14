@@ -68,11 +68,11 @@ namespace Text_Reading_for_Visually_Impaired
             Boolean b = check_Story_Name_Existence(textBox1.Text);
             if(textBox1.TextLength==0)
             {
-                MessageBox.Show("please fill the name field", "error");
+                MessageBox.Show("please fill the ID field", "error");
             }
             if(check_Story_Name_Existence(textBox1.Text))
             {
-                MessageBox.Show("file name already exist, pleae choose a different one", "error");
+                MessageBox.Show("file ID already exist, pleae choose a different one", "error");
             }
             else
             {

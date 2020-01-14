@@ -84,16 +84,16 @@ namespace Text_Reading_for_Visually_Impaired
                             c.ForeColor = original_text_Color;
                             if (c.Name == "firstNameTB" && c.Name != tempName)
                             {
-                                c.Text = "first name";
+                                c.Text = "first ID";
                             }
                             else if (c.Name == "lastNameTB" && c.Name != tempName)
                             {
-                                c.Text = "last name";
+                                c.Text = "last ID";
 
                             }
                             else if (c.Name == "userNameTB" && c.Name != tempName)
                             {
-                                c.Text = "user name";
+                                c.Text = "user ID";
                             }
                             else if (c.Name == "passwordTB" && c.Name != tempName)
                             {
@@ -122,7 +122,7 @@ namespace Text_Reading_for_Visually_Impaired
                 if (firstNameTB.Text == "")
                 {
                     firstNameTB.ForeColor = original_text_Color;
-                    firstNameTB.Text = "first name";
+                    firstNameTB.Text = "first ID";
                 }
             }
             else
@@ -236,7 +236,7 @@ namespace Text_Reading_for_Visually_Impaired
                 if (firstNameTB.Text == "")
                 {
                     firstNameTB.ForeColor = original_text_Color;
-                    firstNameTB.Text = "first name";
+                    firstNameTB.Text = "first ID";
                 }
             }
             else
@@ -278,7 +278,7 @@ namespace Text_Reading_for_Visually_Impaired
                 if (userNameTB.Text == "")
                 {
                     userNameTB.ForeColor = original_text_Color;
-                    userNameTB.Text = "last name";
+                    userNameTB.Text = "last ID";
                 }
             }
             else
@@ -306,7 +306,7 @@ namespace Text_Reading_for_Visually_Impaired
                 if (EmailTB.Text == "")
                 {
                     EmailTB.ForeColor = original_text_Color;
-                    EmailTB.Text = "last name";
+                    EmailTB.Text = "last ID";
                 }
             }
             else
@@ -329,7 +329,7 @@ namespace Text_Reading_for_Visually_Impaired
                 if (passwordTB.Text == "")
                 {
                     passwordTB.ForeColor = original_text_Color;
-                    passwordTB.Text = "last name";
+                    passwordTB.Text = "last ID";
                 }
             }
             else
@@ -362,7 +362,7 @@ namespace Text_Reading_for_Visually_Impaired
                 if (lastNameTB.Text == "")
                 {
                     lastNameTB.ForeColor = original_text_Color;
-                    lastNameTB.Text = "last name";
+                    lastNameTB.Text = "last ID";
                 }
             }
             else
