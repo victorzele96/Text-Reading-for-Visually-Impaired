@@ -56,7 +56,7 @@ namespace Text_Reading_for_Visually_Impaired
                         if (reader[2].ToString() == this.ID)
                         {
                             List<String> answers = new List<string> { reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() };
-                            this.questions.Add(new question(reader[0].ToString(), reader[3].ToString(), answers, 0));
+                            this.questions.Add(new question(reader[0].ToString(), reader[3].ToString(), answers));
                         }
                     }
                 }

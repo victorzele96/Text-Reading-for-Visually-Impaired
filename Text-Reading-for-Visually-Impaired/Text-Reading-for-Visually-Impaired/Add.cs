@@ -66,12 +66,13 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void ok_Click(object sender, EventArgs e)
         {
-            if (StoryRTB.Text == "" && story_nameTB.Text == "")
+            if (StoryRTB.Text == "" || story_nameTB.Text == "")
             {
                 MessageBox.Show("Please fill all fields", "Error!");
             }
             else
             {
+                story new_story = new story(story_nameTB.Text, StoryRTB.Text, "Admin", null);
                 /*if()
                 {
                     MessageBox.Show("Data was saved!");

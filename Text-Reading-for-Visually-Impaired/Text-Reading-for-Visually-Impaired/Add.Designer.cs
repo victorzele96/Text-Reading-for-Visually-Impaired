@@ -58,7 +58,7 @@
             this.BrowseSTR.BackColor = System.Drawing.SystemColors.Control;
             this.BrowseSTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrowseSTR.ForeColor = System.Drawing.Color.Black;
-            this.BrowseSTR.Location = new System.Drawing.Point(970, 407);
+            this.BrowseSTR.Location = new System.Drawing.Point(857, 510);
             this.BrowseSTR.Name = "BrowseSTR";
             this.BrowseSTR.Size = new System.Drawing.Size(196, 85);
             this.BrowseSTR.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             this.story_nameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.story_nameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.story_nameTB.Location = new System.Drawing.Point(857, 47);
+            this.story_nameTB.Location = new System.Drawing.Point(842, 65);
             this.story_nameTB.Name = "story_nameTB";
             this.story_nameTB.Size = new System.Drawing.Size(309, 35);
             this.story_nameTB.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.story_nameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.story_nameLBL.AutoSize = true;
             this.story_nameLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.story_nameLBL.Location = new System.Drawing.Point(518, 36);
+            this.story_nameLBL.Location = new System.Drawing.Point(503, 54);
             this.story_nameLBL.Name = "story_nameLBL";
             this.story_nameLBL.Size = new System.Drawing.Size(290, 53);
             this.story_nameLBL.TabIndex = 3;
@@ -90,7 +90,7 @@
             // 
             this.Save_Story.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Save_Story.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save_Story.Location = new System.Drawing.Point(625, 407);
+            this.Save_Story.Location = new System.Drawing.Point(512, 510);
             this.Save_Story.Name = "Save_Story";
             this.Save_Story.Size = new System.Drawing.Size(196, 85);
             this.Save_Story.TabIndex = 4;
@@ -131,7 +131,7 @@
             // StoryRTB
             // 
             this.StoryRTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.StoryRTB.Location = new System.Drawing.Point(625, 132);
+            this.StoryRTB.Location = new System.Drawing.Point(512, 185);
             this.StoryRTB.Name = "StoryRTB";
             this.StoryRTB.Size = new System.Drawing.Size(541, 247);
             this.StoryRTB.TabIndex = 5;
