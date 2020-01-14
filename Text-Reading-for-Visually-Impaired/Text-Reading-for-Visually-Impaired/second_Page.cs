@@ -26,7 +26,7 @@ namespace Text_Reading_for_Visually_Impaired
         public Teacher Teacher_main;
         public Student student_main;
         List<story> stories_List = new List<story>();
-        String teacherID;
+       // String teacherID;
         public story chosen_story;
         Color backSColor; //famous stories button backcolor
         Color storyBtColor; //famous stories button forecolor
@@ -372,7 +372,6 @@ namespace Text_Reading_for_Visually_Impaired
                 question_choices nePage = new question_choices(this, chosen_story);
                 nePage.Show();
             }
-            
         }
 
 
