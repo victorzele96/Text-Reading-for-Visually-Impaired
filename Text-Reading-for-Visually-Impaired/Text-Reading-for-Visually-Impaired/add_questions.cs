@@ -22,6 +22,7 @@ namespace Text_Reading_for_Visually_Impaired
             InitializeComponent();
             this.add_main = main;
             this.CenterToScreen();
+            stories_List = new List<story>();
         }
 
         private void add_questions_Load(object sender, EventArgs e)
