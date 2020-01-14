@@ -27,6 +27,7 @@ namespace Text_Reading_for_Visually_Impaired
         public Student student_main;
         List<story> stories_List = new List<story>();
         String teacherID;
+        public story chosen_story;
         Color backSColor; //famous stories button backcolor
         Color storyBtColor; //famous stories button forecolor
         Color questionBtColor; //questions button backcolor
@@ -41,8 +42,8 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.Teacher_main = main;
             this.is_Teacher = true;
-            this.button5.Text = "my stories";
-            this.button6.Text = "save story";
+            this.button5000.Text = "my stories";
+            this.button6000.Text = "save story";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
@@ -57,7 +58,7 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.student_main = main;
             this.is_Teacher = false;
-            this.button6.Text = "questions";
+            this.button6000.Text = "questions";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
@@ -182,10 +183,10 @@ namespace Text_Reading_for_Visually_Impaired
         private void second_Page_Load(object sender, EventArgs e)
         {
             get_text_files_to_list();
-            this.backSColor = button5.BackColor;
-            this.storyBtColor = button5.ForeColor;
-            this.questionBtColor = button6.ForeColor;
-            this.backQColor = button6.BackColor;
+            this.backSColor = button5000.BackColor;
+            this.storyBtColor = button5000.ForeColor;
+            this.questionBtColor = button6000.ForeColor;
+            this.backQColor = button6000.BackColor;
             // this.backBt.Location = new Point(this.Width-this.backBt.Width, this.Height-backBt.Height);
         }
 
@@ -280,7 +281,6 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakAsyncCancelAll();
             //speak();
             synth.SpeakAsync(Text_To_Read);
-
             paused = false;
         }
 
@@ -328,10 +328,10 @@ namespace Text_Reading_for_Visually_Impaired
             if (this.insertTxtLb.ForeColor == Color.Black)
             {
                 set_buttons_font("gray");
-                button5.BackColor = this.backSColor;
-                button5.ForeColor = this.storyBtColor;
-                button6.ForeColor = this.questionBtColor;
-                button6.BackColor = this.backQColor;
+                button5000.BackColor = this.backSColor;
+                button5000.ForeColor = this.storyBtColor;
+                button6000.ForeColor = this.questionBtColor;
+                button6000.BackColor = this.backQColor;
             }
             if (this.insertTxtLb.ForeColor == Color.Blue)
             {
@@ -368,7 +368,7 @@ namespace Text_Reading_for_Visually_Impaired
             }
             else
             {
-                question_choices nePage = new question_choices(this, stories_List);
+                question_choices nePage = new question_choices(this, chosen_story);
                 nePage.Show();
             }
             
@@ -418,6 +418,8 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
         }
+
+        
 
         /*public void set_user_ID()
         {
@@ -497,6 +499,64 @@ namespace Text_Reading_for_Visually_Impaired
                 return null;
             }
         }
-       
+
+
+        public List<question> get_story_questions(String story_id)
+        {
+
+            List<question> q = new List<question>();
+            String query = " SELECT * FROM questions";
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                //cmd.Parameters.AddWithValue("@user_Name", user_Name);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        String s = reader[1].ToString();
+                        if (reader[0].ToString() == story_id)
+                        {
+                            List<String> list = new List<String>();
+                            if(reader[4] != null && reader[4].ToString() != null && reader[4].ToString()!="")
+                            {
+                                list.Add(reader[4].ToString());
+                            }
+                            if (reader[5] != null && reader[5].ToString() != null && reader[5].ToString() != "")
+                            {
+                                list.Add(reader[5].ToString());
+                            }
+                            if (reader[6] != null && reader[6].ToString() != null && reader[6].ToString() != "")
+                            {
+                                list.Add(reader[6].ToString());
+                            }
+                            if (reader[7] != null && reader[7].ToString() != null && reader[7].ToString() != "")
+                            {
+                                list.Add(reader[7].ToString());
+                            }
+                            String s1 = reader[4].ToString();
+                            String s2 = reader[5].ToString();
+                            String s3 = reader[6].ToString();
+                            String s4 = reader[7].ToString();
+                            q.Add(new question(reader[0].ToString(), reader[3].ToString(), list));
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+                return null;
+            }
+        }
+
     }
 }
