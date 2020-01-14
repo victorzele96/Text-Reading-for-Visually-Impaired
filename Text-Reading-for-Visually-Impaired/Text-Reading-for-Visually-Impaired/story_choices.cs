@@ -64,6 +64,7 @@ namespace Text_Reading_for_Visually_Impaired
                     {
                         main.fillRichTextBox(((RadioButton)rb).Text);
                         main.chosen_story = get_story_by_name(((RadioButton)rb).Text);
+                        main.chosen_story.questions = main.get_story_questions(main.chosen_story.ID);
                         break;
                     }
                 }

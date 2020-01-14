@@ -37,7 +37,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 questioPanel p = new questioPanel(new question(q.ID, q.questionString, q.answers));
                 this.panel1.Controls.Add(p);
-                p.Location = new Point(0, p.Height * questionsCounter);
+                p.Location = new Point(0, p.Height * questionsCounter + 5);
                 questionsCounter++;
             }
         }

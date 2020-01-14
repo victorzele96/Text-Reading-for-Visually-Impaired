@@ -368,6 +368,7 @@ namespace Text_Reading_for_Visually_Impaired
             }
             else
             {
+                this.chosen_story.questions = get_story_questions(chosen_story.ID);
                 question_choices nePage = new question_choices(this, chosen_story);
                 nePage.Show();
             }
@@ -522,8 +523,8 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     while (reader.Read())
                     {
-                        String s = reader[1].ToString();
-                        if (reader[0].ToString() == story_id)
+                        String s = reader[2].ToString();
+                        if (s == story_id)
                         {
                             List<String> list = new List<String>();
                             if(reader[4] != null && reader[4].ToString() != null && reader[4].ToString()!="")
@@ -554,7 +555,7 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     return null;
                 }
-                return null;
+                return q;
             }
         }
 
