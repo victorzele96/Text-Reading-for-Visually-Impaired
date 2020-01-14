@@ -113,6 +113,12 @@
     <Compile Include="Feedback.Designer.cs">
       <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="fileNamePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fileNamePopUp.Designer.cs">
+      <DependentUpon>fileNamePopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -123,6 +129,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="question.cs" />
     <Compile Include="question_choices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +178,7 @@
     <Compile Include="Choose a story.Designer.cs">
       <DependentUpon>Choose a story.cs</DependentUpon>
     </Compile>
+    <Compile Include="story.cs" />
     <Compile Include="story_choices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +215,12 @@
     <Compile Include="Update student Information.Designer.cs">
       <DependentUpon>Update student Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fileNamePopUp.resx">
+      <DependentUpon>fileNamePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -291,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update student Information.resx">
       <DependentUpon>Update student Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_details.resx">
       <DependentUpon>user_details.cs</DependentUpon>

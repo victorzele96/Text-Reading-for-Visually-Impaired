@@ -13,11 +13,11 @@ namespace Text_Reading_for_Visually_Impaired
     public partial class question_choices : Form
     {
         second_Page main;
-        List<String> myList;
-        public question_choices(second_Page sp, List<String> list)
+        List<story> storyList;
+        public question_choices(second_Page sp, List<story> list)
         {
             main = sp;
-            myList = list;
+            storyList = list;
             this.BackColor = main.BackColor;
             this.ForeColor = main.insertTxtLb.ForeColor;
             InitializeComponent();
@@ -31,7 +31,11 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void question_choices_Load(object sender, EventArgs e)
         {
-
+            this.panel1.Controls.Add(new questioPanel( new question("q", "how long this night is gonna be?", new List<String> { "1 hour", "2 hour", "3 hour", "4 hour" }, 1)));
+        }
+        public void set_Question_Panels()
+        {
+           //this.panel1.Controls.Add(new questioPanel())
         }
     }
 }
