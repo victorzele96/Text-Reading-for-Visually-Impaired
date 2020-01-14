@@ -70,7 +70,7 @@
             // 
             this.story_nameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.story_nameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.story_nameTB.Location = new System.Drawing.Point(842, 65);
+            this.story_nameTB.Location = new System.Drawing.Point(744, 62);
             this.story_nameTB.Name = "story_nameTB";
             this.story_nameTB.Size = new System.Drawing.Size(309, 35);
             this.story_nameTB.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.story_nameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.story_nameLBL.AutoSize = true;
             this.story_nameLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.story_nameLBL.Location = new System.Drawing.Point(503, 54);
+            this.story_nameLBL.Location = new System.Drawing.Point(405, 51);
             this.story_nameLBL.Name = "story_nameLBL";
             this.story_nameLBL.Size = new System.Drawing.Size(290, 53);
             this.story_nameLBL.TabIndex = 3;
@@ -103,6 +103,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.Add_questionBTN);
             this.panel1.Controls.Add(this.StoryRTB);
             this.panel1.Controls.Add(this.story_nameTB);

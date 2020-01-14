@@ -16,7 +16,7 @@ namespace Text_Reading_for_Visually_Impaired
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Add());
+            Application.Run(new Login());
         }
     }
 }

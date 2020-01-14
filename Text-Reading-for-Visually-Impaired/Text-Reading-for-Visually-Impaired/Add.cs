@@ -21,12 +21,14 @@ namespace Text_Reading_for_Visually_Impaired
         {
             InitializeComponent();
             this.Admin_main = main;
+            isAdmin = true;
         }
 
         public Add(Teacher main)
         {
             InitializeComponent();
             this.Teacher_main = main;
+            isAdmin = false;
         }
 
         public Add()
@@ -52,7 +54,7 @@ namespace Text_Reading_for_Visually_Impaired
             if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string str_file_path = openFileDialog1.FileName;
-                //MessageBox.Show(str_file_path);  //prints the file path
+                MessageBox.Show(str_file_path);  //prints the file path
 
                 string readText = File.ReadAllText(str_file_path);
                 StoryRTB.Text = readText;
@@ -72,13 +74,48 @@ namespace Text_Reading_for_Visually_Impaired
             }
             else
             {
-                story new_story = new story(story_nameTB.Text, StoryRTB.Text, "Admin", null);
-                /*if()
+                story new_story;
+
+                
+                if (isAdmin)
                 {
-                    MessageBox.Show("Data was saved!");
+                    new_story = new story(story_nameTB.Text, StoryRTB.Text, "Admin", null);
                 }
-                StoryRTB.Text = "";
-                story_nameTB.Text = "";*/
+                else
+                {
+                    new_story = new story(story_nameTB.Text, StoryRTB.Text, Teacher_main.login_main.userName, null);
+                }
+
+                string fileName = "Database11.accdb";
+                string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+                string workingDirectory = Environment.CurrentDirectory;
+                String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+                string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+                string query = " INSERT INTO stories (Teacher_ID, story, story_Name) VALUES (@teacherID, @story , @story_name)  ";
+
+                using (OleDbConnection conn = new OleDbConnection(connStr))
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new OleDbCommand(query, conn);
+                    cmd.Parameters.AddWithValue(@"teacherID", new_story.teacherID);
+                    cmd.Parameters.AddWithValue(@"story", new_story.text);
+                    cmd.Parameters.AddWithValue(@"story_name", new_story.name);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("details error", "error");
+                    }
+                    
+
+                    MessageBox.Show("Data was saved!");
+                    StoryRTB.Text = "";
+                    story_nameTB.Text = "";
+                }
             }
         }
 

@@ -101,5 +101,10 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
         }
+
+        private void fileNamePopUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
