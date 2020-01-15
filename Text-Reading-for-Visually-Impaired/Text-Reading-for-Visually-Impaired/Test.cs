@@ -81,7 +81,7 @@ namespace Text_Reading_for_Visually_Impaired
                     foreach (Control v in c.Controls)
                     {
 
-                        if (v is Button || v is Label)
+                        if (v is Button || v is Label || v is RichTextBox)
                         {
                             v.ForeColor = fore_color;
                             v.BackColor = back_color;

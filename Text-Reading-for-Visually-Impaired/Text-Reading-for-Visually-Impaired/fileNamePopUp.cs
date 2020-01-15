@@ -81,7 +81,7 @@ namespace Text_Reading_for_Visually_Impaired
                 string workingDirectory = Environment.CurrentDirectory;
                 String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
                 string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
-                string query = " INSERT INTO stories (teacher_ID,story,strory_Name) VALUES(@ID,@story,@story_name)";
+                string query = " INSERT INTO stories (teacher_ID,story,story_Name) VALUES(@ID,@story,@story_name)";
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
                     conn.Open();

@@ -245,9 +245,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         public void fillRichTextBox(string name)
         {
-            richTextBox1.Text = "";
-            String path = Application.StartupPath + "\\text_files\\" + name + ".txt";
-            richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
+            //richTextBox1.Text = "";
+            //String path = Application.StartupPath + "\\text_files\\" + name + ".txt";
+            //richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
         }
 
         private void Second_Page_BackColorChanged(object sender, EventArgs e)
@@ -361,17 +361,25 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button6_Click_2(object sender, EventArgs e)
         {
-            if(is_Teacher)
+            if(chosen_story==null && !is_Teacher)
             {
-                fileNamePopUp fnp = new fileNamePopUp(this);
-                fnp.Show();
+                MessageBox.Show("please choose a story", "error");
             }
             else
             {
-                this.chosen_story.questions = get_story_questions(chosen_story.ID);
-                question_choices nePage = new question_choices(this, chosen_story);
-                nePage.Show();
+                if (is_Teacher)
+                {
+                    fileNamePopUp fnp = new fileNamePopUp(this);
+                    fnp.Show();
+                }
+                else
+                {
+                    this.chosen_story.questions = get_story_questions(chosen_story.ID);
+                    question_choices nePage = new question_choices(this, chosen_story);
+                    nePage.Show();
+                }
             }
+           
         }
 
 
@@ -397,7 +405,7 @@ namespace Text_Reading_for_Visually_Impaired
                         {
                             if (reader[1].ToString() == this.Teacher_main.login_main.userName)
                             {
-                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
                             }
                         }
@@ -405,7 +413,7 @@ namespace Text_Reading_for_Visually_Impaired
                         {
                             if (reader[1].ToString() == get_student_teacher( this.student_main.login_main.userName) || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
                             {
-                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
                             }
                         }
