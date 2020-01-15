@@ -27,6 +27,14 @@ namespace Text_Reading_for_Visually_Impaired
             //add_Questions_To_Story();
         }
 
+        public story(String id, String text, String teacher_ID, List<question> q)
+        {
+            this.text = text;
+            this.questions = q;
+            this.ID = id;
+            this.teacherID = teacher_ID;
+        }
+
         /*public void add_Questions_To_Story()
         {
             string fileName = "Database11.accdb";

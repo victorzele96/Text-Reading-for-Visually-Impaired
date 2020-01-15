@@ -21,6 +21,12 @@ namespace Text_Reading_for_Visually_Impaired
             this.questionString = question;
             this.answers = answers;
         }
+
+        public question(String question, List<String> answers)
+        {
+            this.questionString = question;
+            this.answers = answers;
+        }
     }
 
 
