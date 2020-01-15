@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace Text_Reading_for_Visually_Impaired
 {
@@ -18,6 +19,8 @@ namespace Text_Reading_for_Visually_Impaired
         public String rightAns;
         public Boolean isAnswered;
         public Boolean correctlyAnswered;
+        SpeechSynthesizer synth = new SpeechSynthesizer();
+
 
         public questioPanel(question q)
         {
@@ -33,6 +36,9 @@ namespace Text_Reading_for_Visually_Impaired
             RBDict = new List<RadioButton>() {this.ans1RB , this.ans2RB,this.ans3RB,this.ans4RB};
             initialRadioButtons();
             this.label1.Text = question.questionString;
+            synth = new SpeechSynthesizer();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -110,6 +116,12 @@ namespace Text_Reading_for_Visually_Impaired
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Text_To_Read = label1.Text + "." + ans1RB.Text+ "."  + ans2RB.Text + "." + ans3RB.Text + "." + ans4RB.Text;
+            synth.SpeakAsync(Text_To_Read);
         }
     }
 

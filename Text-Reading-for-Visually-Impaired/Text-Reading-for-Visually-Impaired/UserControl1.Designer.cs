@@ -34,6 +34,7 @@
             this.ans3RB = new System.Windows.Forms.RadioButton();
             this.ans4RB = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +106,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.ans3RB);
             this.panel1.Controls.Add(this.ans4RB);
@@ -115,6 +117,16 @@
             this.panel1.Size = new System.Drawing.Size(1463, 338);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(14, 207);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 109);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // questioPanel
             // 
@@ -139,5 +151,6 @@
         private System.Windows.Forms.RadioButton ans3RB;
         private System.Windows.Forms.RadioButton ans4RB;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
