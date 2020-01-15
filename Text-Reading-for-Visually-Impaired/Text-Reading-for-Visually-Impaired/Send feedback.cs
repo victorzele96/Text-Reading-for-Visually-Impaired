@@ -101,7 +101,6 @@ namespace Text_Reading_for_Visually_Impaired
                     }
 
                 }
-
                 MessageBox.Show("Feedback was sent successfully !");
                 richTextBox1.Text = "";
                 textBox1.Text = "";
