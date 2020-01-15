@@ -58,6 +58,7 @@
             this.ans1RB.TabStop = true;
             this.ans1RB.Text = "radioButton1";
             this.ans1RB.UseVisualStyleBackColor = true;
+            this.ans1RB.CheckedChanged += new System.EventHandler(this.ans1RB_CheckedChanged);
             // 
             // ans2RB
             // 
@@ -71,6 +72,7 @@
             this.ans2RB.TabStop = true;
             this.ans2RB.Text = "radioButton2";
             this.ans2RB.UseVisualStyleBackColor = true;
+            this.ans2RB.CheckedChanged += new System.EventHandler(this.ans1RB_CheckedChanged);
             // 
             // ans3RB
             // 
@@ -84,6 +86,7 @@
             this.ans3RB.TabStop = true;
             this.ans3RB.Text = "radioButton3";
             this.ans3RB.UseVisualStyleBackColor = true;
+            this.ans3RB.CheckedChanged += new System.EventHandler(this.ans1RB_CheckedChanged);
             // 
             // ans4RB
             // 
@@ -97,6 +100,7 @@
             this.ans4RB.TabStop = true;
             this.ans4RB.Text = "radioButton4";
             this.ans4RB.UseVisualStyleBackColor = true;
+            this.ans4RB.CheckedChanged += new System.EventHandler(this.ans1RB_CheckedChanged);
             // 
             // requestsTableAdapter1
             // 

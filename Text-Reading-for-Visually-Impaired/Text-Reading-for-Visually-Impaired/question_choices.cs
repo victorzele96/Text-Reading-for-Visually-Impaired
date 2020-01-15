@@ -56,7 +56,10 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            foreach(questioPanel qp in panel1.Controls)
+            {
+                
+            }
         }
     }
 }
