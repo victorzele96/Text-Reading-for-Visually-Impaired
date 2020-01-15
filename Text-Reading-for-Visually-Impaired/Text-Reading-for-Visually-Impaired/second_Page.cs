@@ -397,7 +397,7 @@ namespace Text_Reading_for_Visually_Impaired
                         {
                             if (reader[1].ToString() == this.Teacher_main.login_main.userName)
                             {
-                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
                             }
                         }
