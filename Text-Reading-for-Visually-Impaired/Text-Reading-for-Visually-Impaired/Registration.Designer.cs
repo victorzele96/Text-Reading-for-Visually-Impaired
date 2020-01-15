@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param ID="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -79,7 +79,7 @@
             this.firstNameTB.Name = "firstNameTB";
             this.firstNameTB.Size = new System.Drawing.Size(367, 51);
             this.firstNameTB.TabIndex = 0;
-            this.firstNameTB.Text = "first name";
+            this.firstNameTB.Text = "first ID";
             this.firstNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.firstNameTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstNameTB_MouseClick);
             this.firstNameTB.TextChanged += new System.EventHandler(this.firstNameTB_TextChanged_1);
@@ -109,7 +109,7 @@
             this.lastNameTB.Name = "lastNameTB";
             this.lastNameTB.Size = new System.Drawing.Size(367, 51);
             this.lastNameTB.TabIndex = 1;
-            this.lastNameTB.Text = "last name";
+            this.lastNameTB.Text = "last ID";
             this.lastNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.lastNameTB.TextChanged += new System.EventHandler(this.lastNameTB_TextChanged);
             this.lastNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyDown);
@@ -125,7 +125,7 @@
             this.userNameTB.Name = "userNameTB";
             this.userNameTB.Size = new System.Drawing.Size(367, 51);
             this.userNameTB.TabIndex = 2;
-            this.userNameTB.Text = "user name (id)";
+            this.userNameTB.Text = "user ID (id)";
             this.userNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.userNameTB.TextChanged += new System.EventHandler(this.userNameTB_TextChanged);
             this.userNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyDown);

@@ -13,6 +13,7 @@ namespace Text_Reading_for_Visually_Impaired
     public partial class Test : Form
     {
         private bool isCollapsed;
+        public Boolean dontchangecolorflag =false;
         public Test()
         {
             InitializeComponent();
@@ -63,7 +64,6 @@ namespace Text_Reading_for_Visually_Impaired
         public void Theme_color(Color fore_color, Color back_color, Color form_back_color)
         {
             Test.ActiveForm.BackColor = form_back_color;//change form color
-
             foreach (Control c in this.panelDropDown.Controls)
             {
                 if (c is Button)
@@ -88,7 +88,7 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                     }
                 }
-                if (c is Button || c is RichTextBox)
+                if (c is Button && !dontchangecolorflag && !c.Name.Contains("000") || c is RichTextBox)
                 {
                     c.ForeColor = fore_color;
                     c.BackColor = back_color;

@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param ID="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -62,7 +62,7 @@
             this.firstNameTB.Name = "firstNameTB";
             this.firstNameTB.Size = new System.Drawing.Size(367, 51);
             this.firstNameTB.TabIndex = 2;
-            this.firstNameTB.Text = "first name";
+            this.firstNameTB.Text = "first ID";
             this.firstNameTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstNameTB_MouseClick);
             this.firstNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.firstNameTB_KeyDown);
             // 
@@ -76,7 +76,7 @@
             this.lastNameTB.Name = "lastNameTB";
             this.lastNameTB.Size = new System.Drawing.Size(367, 51);
             this.lastNameTB.TabIndex = 3;
-            this.lastNameTB.Text = "last name";
+            this.lastNameTB.Text = "last ID";
             this.lastNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyDown_1);
             this.lastNameTB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyUp);
             // 
@@ -90,7 +90,7 @@
             this.userNameTB.Name = "userNameTB";
             this.userNameTB.Size = new System.Drawing.Size(367, 51);
             this.userNameTB.TabIndex = 4;
-            this.userNameTB.Text = "user name (id)";
+            this.userNameTB.Text = "user ID (id)";
             this.userNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyDown_1);
             this.userNameTB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyUp);
             // 

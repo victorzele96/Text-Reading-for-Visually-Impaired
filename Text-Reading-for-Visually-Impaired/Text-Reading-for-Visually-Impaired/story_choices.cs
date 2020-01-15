@@ -42,6 +42,18 @@ namespace Text_Reading_for_Visually_Impaired
             }
         }
 
+        private story get_story_by_name(String name)
+        {
+            foreach(story s in myList)
+            {
+                if(s.name==name)
+                {
+                    return s;
+                }
+            }
+            return null;
+        }
+
         private void Button1_Click(object sender, EventArgs e)
         {
             foreach(Control rb in panel1.Controls)
@@ -51,6 +63,8 @@ namespace Text_Reading_for_Visually_Impaired
                     if(((RadioButton)rb).Checked)
                     {
                         main.fillRichTextBox(((RadioButton)rb).Text);
+                        main.chosen_story = get_story_by_name(((RadioButton)rb).Text);
+                        main.chosen_story.questions = main.get_story_questions(main.chosen_story.ID);
                         break;
                     }
                 }
