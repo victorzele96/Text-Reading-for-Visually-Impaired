@@ -14,7 +14,7 @@ namespace Text_Reading_for_Visually_Impaired
     {
         public question question;
         public int correctAnsIndex;
-        public Dictionary<int, RadioButton> RBDict;
+        public List<RadioButton> RBDict;
         public String rightAns;
         public Boolean isAnswered;
         public Boolean correctlyAnswered;
@@ -30,7 +30,7 @@ namespace Text_Reading_for_Visually_Impaired
             this.rightAns = q.answers[0];
             correctlyAnswered = false;
             isAnswered = false;
-            RBDict = new Dictionary<int, RadioButton>() { { 1, this.ans1RB }, { 2, this.ans2RB }, { 3, this.ans3RB }, { 4, this.ans4RB } };
+            RBDict = new List<RadioButton>() {this.ans1RB , this.ans2RB,this.ans3RB,this.ans4RB};
             initialRadioButtons();
             this.label1.Text = question.questionString;
         }
@@ -44,15 +44,17 @@ namespace Text_Reading_for_Visually_Impaired
         {
             Random r = new Random();
             int rInt = r.Next(0, 3);
-            int indexCounter = 1;
+            int indexCounter = 0;
             for (int i = 0; i < 4; i++)
             {
+                //rInt = r.Next(0,3);
                 if (question.answers[rInt] != null && question.answers[rInt] != "" && question.answers[rInt] != " ")
                 {
                     this.RBDict[indexCounter].Text = question.answers[rInt];
                     this.RBDict[indexCounter].Show();
                     indexCounter++;
-                    rInt = (rInt + 1) % 3;
+                    rInt = (rInt + 1) % 4;
+                    
                 }
             }
         }
@@ -103,6 +105,11 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

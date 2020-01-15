@@ -96,7 +96,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (qp.correctlyAnswered)
                 {
-                    return counter++ ;
+                    counter++ ;
                 }
             }
             return counter;
@@ -109,7 +109,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (qp.isAnswered)
                 {
-                    return counter++;
+                    counter++;
                 }
             }
             return counter;
