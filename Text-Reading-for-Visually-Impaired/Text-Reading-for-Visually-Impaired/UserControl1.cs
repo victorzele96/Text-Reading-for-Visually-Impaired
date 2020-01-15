@@ -55,5 +55,10 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
+
+        private void questioPanel_SizeChanged(object sender, EventArgs e)
+        {
+            this.label1.Width = this.Width;
+        }
     }
 }
