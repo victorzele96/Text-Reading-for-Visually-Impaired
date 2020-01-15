@@ -14,7 +14,10 @@ namespace Text_Reading_for_Visually_Impaired
     {
         public question question;
         public int correctAnsIndex;
-        Dictionary<int,RadioButton> RBDict;
+        public Dictionary<int, RadioButton> RBDict;
+        public String rightAns;
+        public Boolean isAnswered;
+        public Boolean correctlyAnswered;
 
         public questioPanel(question q)
         {
@@ -24,7 +27,8 @@ namespace Text_Reading_for_Visually_Impaired
             this.ans2RB.Hide();
             this.ans3RB.Hide();
             this.ans4RB.Hide();
-            RBDict = new Dictionary<int,RadioButton>() { { 1,this.ans1RB}, {2, this.ans2RB}, {3, this.ans3RB}, {4, this.ans4RB} };
+            this.rightAns = q.answers[0];
+            RBDict = new Dictionary<int, RadioButton>() { { 1, this.ans1RB }, { 2, this.ans2RB }, { 3, this.ans3RB }, { 4, this.ans4RB } };
             initialRadioButtons();
             this.label1.Text = question.questionString;
         }
@@ -39,9 +43,9 @@ namespace Text_Reading_for_Visually_Impaired
             Random r = new Random();
             int rInt = r.Next(0, 3);
             int indexCounter = 1;
-            for(int i=0; i<4;i++)
+            for (int i = 0; i < 4; i++)
             {
-                if(question.answers[rInt] != null && question.answers[rInt]!="" && question.answers[rInt] != " ")
+                if (question.answers[rInt] != null && question.answers[rInt] != "" && question.answers[rInt] != " ")
                 {
                     this.RBDict[indexCounter].Text = question.answers[rInt];
                     this.RBDict[indexCounter].Show();
@@ -55,5 +59,30 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
+
+        private void questioPanel_SizeChanged(object sender, EventArgs e)
+        {
+            this.label1.Width = this.Width;
+        }
+
+        private void ans1RB_CheckedChanged(object sender, EventArgs e)
+        {
+            isAnswered = true;
+            foreach (RadioButton rb in Controls)
+            {
+                if (rb.Checked)
+                {
+                    if (rb.Text == rightAns)
+                    {
+                        correctlyAnswered = true;
+                    }
+                    else
+                    {
+                        correctlyAnswered = false;
+                    }
+                }
+            }
+        }
     }
+
 }
