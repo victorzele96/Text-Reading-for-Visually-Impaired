@@ -24,19 +24,18 @@ namespace Text_Reading_for_Visually_Impaired
             this.questions = q;
             this.ID = id;
             this.teacherID = teacher_ID;
-            add_Questions_To_Story();
+            //add_Questions_To_Story();
         }
 
-        public story(String name, String text, String teacher_ID, List<question> q)
+        public story(String id, String text, String teacher_ID, List<question> q)
         {
-            this.name = name;
             this.text = text;
             this.questions = q;
+            this.ID = id;
             this.teacherID = teacher_ID;
-            add_Questions_To_Story();
         }
 
-        public void add_Questions_To_Story()
+        /*public void add_Questions_To_Story()
         {
             string fileName = "Database11.accdb";
             string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
@@ -55,6 +54,10 @@ namespace Text_Reading_for_Visually_Impaired
                     {
                         if (reader[2].ToString() == this.ID)
                         {
+                            String a1 = reader[4].ToString();
+                            String a1 = reader[5].ToString();
+                            String a1 = reader[6].ToString();
+                            String a1 = reader[7].ToString();
                             List<String> answers = new List<string> { reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() };
                             this.questions.Add(new question(reader[0].ToString(), reader[3].ToString(), answers));
                         }
@@ -65,6 +68,6 @@ namespace Text_Reading_for_Visually_Impaired
 
                 }
             }
-        }
+        }*/
     }
 }

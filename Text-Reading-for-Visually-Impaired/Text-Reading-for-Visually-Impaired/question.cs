@@ -11,9 +11,9 @@ namespace Text_Reading_for_Visually_Impaired
         public String ID;
         public String questionString;
         public List<String> answers;
+        public int CorrectAnsIndex;
         public Boolean answered = false;
         public Boolean rightAnswered = false;
-
 
         public question(String name, String question,List<String> answers)
         {

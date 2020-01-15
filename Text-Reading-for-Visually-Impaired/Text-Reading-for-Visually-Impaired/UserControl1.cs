@@ -37,7 +37,7 @@ namespace Text_Reading_for_Visually_Impaired
         public void initialRadioButtons()
         {
             Random r = new Random();
-            int rInt = r.Next(1, 4);
+            int rInt = r.Next(0, 3);
             int indexCounter = 1;
             for(int i=0; i<4;i++)
             {
@@ -46,7 +46,7 @@ namespace Text_Reading_for_Visually_Impaired
                     this.RBDict[indexCounter].Text = question.answers[rInt];
                     this.RBDict[indexCounter].Show();
                     indexCounter++;
-                    rInt = (rInt + 1) % 4;
+                    rInt = (rInt + 1) % 3;
                 }
             }
         }

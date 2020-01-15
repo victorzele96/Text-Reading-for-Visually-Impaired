@@ -40,7 +40,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.Location = new System.Drawing.Point(19, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1109, 309);
+            this.label1.Size = new System.Drawing.Size(1109, 210);
             this.label1.TabIndex = 0;
             this.label1.Text = "question";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -51,7 +51,7 @@
             this.ans1RB.AutoSize = true;
             this.ans1RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans1RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans1RB.Location = new System.Drawing.Point(132, 335);
+            this.ans1RB.Location = new System.Drawing.Point(126, 240);
             this.ans1RB.Name = "ans1RB";
             this.ans1RB.Size = new System.Drawing.Size(296, 49);
             this.ans1RB.TabIndex = 1;
@@ -64,7 +64,7 @@
             this.ans2RB.AutoSize = true;
             this.ans2RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans2RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans2RB.Location = new System.Drawing.Point(697, 335);
+            this.ans2RB.Location = new System.Drawing.Point(691, 240);
             this.ans2RB.Name = "ans2RB";
             this.ans2RB.Size = new System.Drawing.Size(296, 49);
             this.ans2RB.TabIndex = 2;
@@ -77,7 +77,7 @@
             this.ans3RB.AutoSize = true;
             this.ans3RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans3RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans3RB.Location = new System.Drawing.Point(132, 411);
+            this.ans3RB.Location = new System.Drawing.Point(126, 316);
             this.ans3RB.Name = "ans3RB";
             this.ans3RB.Size = new System.Drawing.Size(296, 49);
             this.ans3RB.TabIndex = 3;
@@ -90,7 +90,7 @@
             this.ans4RB.AutoSize = true;
             this.ans4RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans4RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans4RB.Location = new System.Drawing.Point(697, 411);
+            this.ans4RB.Location = new System.Drawing.Point(691, 316);
             this.ans4RB.Name = "ans4RB";
             this.ans4RB.Size = new System.Drawing.Size(296, 49);
             this.ans4RB.TabIndex = 4;
@@ -109,7 +109,7 @@
             this.Controls.Add(this.ans1RB);
             this.Controls.Add(this.label1);
             this.Name = "questioPanel";
-            this.Size = new System.Drawing.Size(1153, 500);
+            this.Size = new System.Drawing.Size(1153, 381);
             this.Load += new System.EventHandler(this.questioPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
