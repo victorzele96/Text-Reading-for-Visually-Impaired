@@ -21,6 +21,11 @@ namespace Text_Reading_for_Visually_Impaired
             this.Admin_main = main;
         }
 
+        public Add()
+        {
+            InitializeComponent();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -42,7 +47,7 @@ namespace Text_Reading_for_Visually_Impaired
                 MessageBox.Show(str_file_path);  //prints the file path
 
                 string readText = File.ReadAllText(str_file_path);
-                MessageBox.Show(readText);
+                StoryRTB.Text = readText;
             }
         }
 
@@ -53,23 +58,58 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void ok_Click(object sender, EventArgs e)
         {
-            Admin_main.Show();
-            this.Hide();
+            if (StoryRTB.Text == "" || story_nameTB.Text == "")
+            {
+                MessageBox.Show("Please fill all fields", "Error!");
+            }
+            else
+            {
+                story new_story;
+
+                    new_story = new story(story_nameTB.Text, StoryRTB.Text, "Admin", null);
+
+                string fileName = "Database11.accdb";
+                string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+                string workingDirectory = Environment.CurrentDirectory;
+                String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+                string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+                string query = " INSERT INTO stories (Teacher_ID, story, story_Name) VALUES (@teacherID, @story , @story_name)  ";
+
+                using (OleDbConnection conn = new OleDbConnection(connStr))
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new OleDbCommand(query, conn);
+                    cmd.Parameters.AddWithValue(@"teacherID", new_story.teacherID);
+                    cmd.Parameters.AddWithValue(@"story", new_story.text);
+                    cmd.Parameters.AddWithValue(@"story_name", new_story.name);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("details error", "error");
+                    }
+                    
+
+                    MessageBox.Show("Data was saved!");
+                    StoryRTB.Text = "";
+                    story_nameTB.Text = "";
+                }
+            }
         }
 
         private void Add_questionBTN_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            add_questions add_Questions = new add_questions(this);
+            add_Questions.ShowDialog();
+        }
 
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string str_file_path = openFileDialog1.FileName;
-                MessageBox.Show(str_file_path);  //prints the file path
+        private void UpdatesRTB_TextChanged(object sender, EventArgs e)
+        {
 
-                string readText = File.ReadAllText(str_file_path);
-                //MessageBox.Show(readText);
-
-            }
         }
     }
 }
