@@ -63,7 +63,7 @@
             this.firstNameTB.Name = "firstNameTB";
             this.firstNameTB.Size = new System.Drawing.Size(326, 42);
             this.firstNameTB.TabIndex = 2;
-            this.firstNameTB.Text = "first ID";
+            this.firstNameTB.Text = "first Name";
             this.firstNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.firstNameTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstNameTB_MouseClick);
             this.firstNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.firstNameTB_KeyDown);
@@ -79,7 +79,7 @@
             this.lastNameTB.Name = "lastNameTB";
             this.lastNameTB.Size = new System.Drawing.Size(326, 42);
             this.lastNameTB.TabIndex = 3;
-            this.lastNameTB.Text = "last ID";
+            this.lastNameTB.Text = "last Name";
             this.lastNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.lastNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyDown_1);
             this.lastNameTB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lastNameTB_KeyUp);
@@ -95,7 +95,7 @@
             this.userNameTB.Name = "userNameTB";
             this.userNameTB.Size = new System.Drawing.Size(326, 42);
             this.userNameTB.TabIndex = 4;
-            this.userNameTB.Text = "user ID (id)";
+            this.userNameTB.Text = "user name (id)";
             this.userNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.userNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyDown_1);
             this.userNameTB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyUp);
