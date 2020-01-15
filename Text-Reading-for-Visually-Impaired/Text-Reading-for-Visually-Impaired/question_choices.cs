@@ -41,7 +41,7 @@ namespace Text_Reading_for_Visually_Impaired
             int locationKeeper = 0;
             foreach (question q in myStory.questions)
             {
-                questioPanel p = new questioPanel(new question(q.ID, q.questionString, q.answers));
+                questioPanel p = new questioPanel(new question(q.ID, q.questionString, q.answers),main.insertTxtLb.Font,main.BackColor,main.ForeColor);
                 this.panel1.Controls.Add(p);
                 //p.Size = new Size(panel1.Width-100, 200);
                 p.Location = new Point(23, locationKeeper);

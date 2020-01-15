@@ -361,17 +361,25 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button6_Click_2(object sender, EventArgs e)
         {
-            if(is_Teacher)
+            if(chosen_story==null)
             {
-                fileNamePopUp fnp = new fileNamePopUp(this);
-                fnp.Show();
+                MessageBox.Show("please choose a story first");
             }
             else
             {
-                this.chosen_story.questions = get_story_questions(chosen_story.ID);
-                question_choices nePage = new question_choices(this, chosen_story);
-                nePage.Show();
+                if (is_Teacher)
+                {
+                    fileNamePopUp fnp = new fileNamePopUp(this);
+                    fnp.Show();
+                }
+                else
+                {
+                    this.chosen_story.questions = get_story_questions(chosen_story.ID);
+                    question_choices nePage = new question_choices(this, chosen_story);
+                    nePage.Show();
+                }
             }
+           
         }
 
 

@@ -19,10 +19,13 @@ namespace Text_Reading_for_Visually_Impaired
         public String rightAns;
         public Boolean isAnswered;
         public Boolean correctlyAnswered;
+        public Color backColor;
+        public Color foreColor;
+        public Font font;
         SpeechSynthesizer synth = new SpeechSynthesizer();
 
 
-        public questioPanel(question q)
+        public questioPanel(question q,Font font , Color backColor,Color foreColor)
         {
             InitializeComponent();
             question = q;
@@ -35,6 +38,10 @@ namespace Text_Reading_for_Visually_Impaired
             isAnswered = false;
             RBDict = new List<RadioButton>() {this.ans1RB , this.ans2RB,this.ans3RB,this.ans4RB};
             initialRadioButtons();
+            panel1.BackColor = backColor;
+            this.backColor = backColor;
+            this.foreColor = foreColor;
+            this.font = font;
             this.label1.Text = question.questionString;
             synth = new SpeechSynthesizer();
 
@@ -67,7 +74,16 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void questioPanel_Load(object sender, EventArgs e)
         {
-
+            foreach (Control c in panel1.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    ((RadioButton)c).Font = font;
+                    ((RadioButton)c).BackColor = backColor;
+                    ((RadioButton)c).Checked = false;
+                    ((RadioButton)c).ForeColor = foreColor;
+                }
+            }
         }
 
         private void questioPanel_SizeChanged(object sender, EventArgs e)
