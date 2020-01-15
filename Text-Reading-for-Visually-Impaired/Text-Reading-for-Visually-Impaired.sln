@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text-Reading-for-Visually-Impaired", "Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired.csproj", "{10EE6C77-69F5-452E-A409-3DCE3F1EBC2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10EE6C77-69F5-452E-A409-3DCE3F1EBC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10EE6C77-69F5-452E-A409-3DCE3F1EBC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10EE6C77-69F5-452E-A409-3DCE3F1EBC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10EE6C77-69F5-452E-A409-3DCE3F1EBC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25EFD861-DEA9-4D41-AE89-DC8C2E7D48B6}
+	EndGlobalSection
+EndGlobal
