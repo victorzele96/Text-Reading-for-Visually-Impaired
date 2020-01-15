@@ -28,6 +28,8 @@ namespace Text_Reading_for_Visually_Impaired
             this.ans3RB.Hide();
             this.ans4RB.Hide();
             this.rightAns = q.answers[0];
+            correctlyAnswered = false;
+            isAnswered = false;
             RBDict = new Dictionary<int, RadioButton>() { { 1, this.ans1RB }, { 2, this.ans2RB }, { 3, this.ans3RB }, { 4, this.ans4RB } };
             initialRadioButtons();
             this.label1.Text = question.questionString;
@@ -62,13 +64,13 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void questioPanel_SizeChanged(object sender, EventArgs e)
         {
-            this.label1.Width = this.Width;
+            //this.label1.Width = panel1.Width;
         }
 
         private void ans1RB_CheckedChanged(object sender, EventArgs e)
         {
             isAnswered = true;
-            foreach (RadioButton rb in Controls)
+            foreach (RadioButton rb in panel1.Controls)
             {
                 if (rb.Checked)
                 {
@@ -81,6 +83,25 @@ namespace Text_Reading_for_Visually_Impaired
                         correctlyAnswered = false;
                     }
                 }
+            }
+        }
+
+        private void ans2RB_CheckedChanged(object sender, EventArgs e)
+        {
+            this.isAnswered = true;
+            foreach(Control rb in panel1.Controls)
+            {
+                if(rb is RadioButton)
+                {
+                    if (((RadioButton)rb).Checked)
+                    {
+                        if (rb.Text == question.answers[0])
+                        {
+                            correctlyAnswered = true;
+                        }
+                    }
+                }
+                
             }
         }
     }
