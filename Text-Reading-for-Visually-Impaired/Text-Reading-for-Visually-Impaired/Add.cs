@@ -21,11 +21,6 @@ namespace Text_Reading_for_Visually_Impaired
             this.Admin_main = main;
         }
 
-        public Add()
-        {
-            InitializeComponent();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -82,21 +77,18 @@ namespace Text_Reading_for_Visually_Impaired
                     OleDbCommand cmd = new OleDbCommand(query, conn);
                     cmd.Parameters.AddWithValue(@"teacherID", new_story.teacherID);
                     cmd.Parameters.AddWithValue(@"story", new_story.text);
-                    cmd.Parameters.AddWithValue(@"story_name", new_story.name);
-
+                    cmd.Parameters.AddWithValue(@"story_name", story_nameTB.Text);
                     try
                     {
                         cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data was saved!");
+                        StoryRTB.Text = "";
+                        story_nameTB.Text = "";
                     }
                     catch (Exception)
                     {
                         MessageBox.Show("details error", "error");
                     }
-                    
-
-                    MessageBox.Show("Data was saved!");
-                    StoryRTB.Text = "";
-                    story_nameTB.Text = "";
                 }
             }
         }
@@ -108,6 +100,11 @@ namespace Text_Reading_for_Visually_Impaired
         }
 
         private void UpdatesRTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void story_nameTB_TextChanged(object sender, EventArgs e)
         {
 
         }

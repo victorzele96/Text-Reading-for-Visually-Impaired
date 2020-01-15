@@ -60,7 +60,7 @@ namespace Text_Reading_for_Visually_Impaired
                     {
                         if (reader[1].ToString() == "Admin" || reader[1].ToString() == "admin")
                         {
-                            story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                            story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                             my_story.Add(s);
                         }
                     }
@@ -111,8 +111,7 @@ namespace Text_Reading_for_Visually_Impaired
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 cmd.Parameters.AddWithValue("@story_name", story_name);
-
-                
+   
                 try
                 {
                     cmd.ExecuteNonQuery();

@@ -43,10 +43,9 @@
             // 
             this.backBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.backBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backBTN.Location = new System.Drawing.Point(1367, 542);
-            this.backBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.backBTN.Location = new System.Drawing.Point(1215, 434);
             this.backBTN.Name = "backBTN";
-            this.backBTN.Size = new System.Drawing.Size(196, 85);
+            this.backBTN.Size = new System.Drawing.Size(174, 68);
             this.backBTN.TabIndex = 0;
             this.backBTN.Text = "Back";
             this.backBTN.UseVisualStyleBackColor = true;
@@ -58,9 +57,10 @@
             this.BrowseSTR.BackColor = System.Drawing.SystemColors.Control;
             this.BrowseSTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrowseSTR.ForeColor = System.Drawing.Color.Black;
-            this.BrowseSTR.Location = new System.Drawing.Point(857, 510);
+            this.BrowseSTR.Location = new System.Drawing.Point(762, 408);
+            this.BrowseSTR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BrowseSTR.Name = "BrowseSTR";
-            this.BrowseSTR.Size = new System.Drawing.Size(196, 85);
+            this.BrowseSTR.Size = new System.Drawing.Size(174, 68);
             this.BrowseSTR.TabIndex = 1;
             this.BrowseSTR.Text = "Browse";
             this.BrowseSTR.UseVisualStyleBackColor = false;
@@ -70,19 +70,21 @@
             // 
             this.story_nameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.story_nameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.story_nameTB.Location = new System.Drawing.Point(744, 62);
+            this.story_nameTB.Location = new System.Drawing.Point(661, 50);
+            this.story_nameTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.story_nameTB.Name = "story_nameTB";
-            this.story_nameTB.Size = new System.Drawing.Size(309, 35);
+            this.story_nameTB.Size = new System.Drawing.Size(275, 30);
             this.story_nameTB.TabIndex = 2;
+            this.story_nameTB.TextChanged += new System.EventHandler(this.story_nameTB_TextChanged);
             // 
             // story_nameLBL
             // 
             this.story_nameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.story_nameLBL.AutoSize = true;
             this.story_nameLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.story_nameLBL.Location = new System.Drawing.Point(405, 51);
+            this.story_nameLBL.Location = new System.Drawing.Point(360, 41);
             this.story_nameLBL.Name = "story_nameLBL";
-            this.story_nameLBL.Size = new System.Drawing.Size(290, 53);
+            this.story_nameLBL.Size = new System.Drawing.Size(249, 44);
             this.story_nameLBL.TabIndex = 3;
             this.story_nameLBL.Text = "Story Name:";
             // 
@@ -90,9 +92,10 @@
             // 
             this.Save_Story.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Save_Story.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save_Story.Location = new System.Drawing.Point(512, 510);
+            this.Save_Story.Location = new System.Drawing.Point(455, 408);
+            this.Save_Story.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Save_Story.Name = "Save_Story";
-            this.Save_Story.Size = new System.Drawing.Size(196, 85);
+            this.Save_Story.Size = new System.Drawing.Size(174, 68);
             this.Save_Story.TabIndex = 4;
             this.Save_Story.Text = "Save Story";
             this.Save_Story.UseVisualStyleBackColor = true;
@@ -112,8 +115,9 @@
             this.panel1.Controls.Add(this.backBTN);
             this.panel1.Controls.Add(this.BrowseSTR);
             this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1573, 639);
+            this.panel1.Size = new System.Drawing.Size(1398, 511);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -121,9 +125,10 @@
             // 
             this.Add_questionBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Add_questionBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_questionBTN.Location = new System.Drawing.Point(1367, 22);
+            this.Add_questionBTN.Location = new System.Drawing.Point(1215, 18);
+            this.Add_questionBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Add_questionBTN.Name = "Add_questionBTN";
-            this.Add_questionBTN.Size = new System.Drawing.Size(196, 85);
+            this.Add_questionBTN.Size = new System.Drawing.Size(174, 68);
             this.Add_questionBTN.TabIndex = 6;
             this.Add_questionBTN.Text = "Add Questions";
             this.Add_questionBTN.UseVisualStyleBackColor = true;
@@ -132,21 +137,21 @@
             // StoryRTB
             // 
             this.StoryRTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.StoryRTB.Location = new System.Drawing.Point(512, 185);
+            this.StoryRTB.Location = new System.Drawing.Point(455, 148);
+            this.StoryRTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StoryRTB.Name = "StoryRTB";
-            this.StoryRTB.Size = new System.Drawing.Size(541, 247);
+            this.StoryRTB.Size = new System.Drawing.Size(481, 198);
             this.StoryRTB.TabIndex = 5;
             this.StoryRTB.Text = "";
             this.StoryRTB.TextChanged += new System.EventHandler(this.UpdatesRTB_TextChanged);
             // 
             // Add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1578, 644);
+            this.ClientSize = new System.Drawing.Size(1403, 515);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Add";
             this.Text = "Add";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
