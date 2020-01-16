@@ -125,6 +125,12 @@
     <Compile Include="fileNamePopUp.Designer.cs">
       <DependentUpon>fileNamePopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="gradeMessegePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gradeMessegePopUp.Designer.cs">
+      <DependentUpon>gradeMessegePopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fileNamePopUp.resx">
       <DependentUpon>fileNamePopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gradeMessegePopUp.resx">
+      <DependentUpon>gradeMessegePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

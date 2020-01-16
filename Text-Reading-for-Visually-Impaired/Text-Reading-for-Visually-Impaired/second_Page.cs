@@ -20,11 +20,12 @@ namespace Text_Reading_for_Visually_Impaired
         Boolean paused = false;
         Boolean stopped = false;
         Boolean is_Teacher;
-        SpeechSynthesizer synth = new SpeechSynthesizer();
+       public  SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public String user_ID;
         public Teacher Teacher_main;
         public Student student_main;
+        public question_choices last_questions_page;
         List<story> stories_List = new List<story>();
        // String teacherID;
         public story chosen_story;
@@ -375,8 +376,9 @@ namespace Text_Reading_for_Visually_Impaired
                 else
                 {
                     this.chosen_story.questions = get_story_questions(chosen_story.ID);
-                    question_choices nePage = new question_choices(this, chosen_story);
-                    nePage.Show();
+                    question_choices newPage = new question_choices(this, chosen_story);
+                    this.last_questions_page = newPage;
+                    newPage.Show();
                 }
             }
            
@@ -566,5 +568,34 @@ namespace Text_Reading_for_Visually_Impaired
             }
         }
 
+        private void button4000_Click(object sender, EventArgs e)
+        {
+            story_choices s = new story_choices(this);
+            s.Show();
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            if(last_questions_page==null)
+            {
+                MessageBox.Show("questions are not availible, make sure you chose a story", "error");
+            }
+            last_questions_page.sum_questions();
+            if(!last_questions_page.check_if_all_questions_answered())
+            {
+                if (MessageBox.Show("not all questions were answered, are you sure you want to finish?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    
+                }
+            }
+        }
+
+        private void showGrade()
+        {
+            gradeMessegePopUp gmp = new gradeMessegePopUp()
+            {
+
+            }
+        }
     }
 }

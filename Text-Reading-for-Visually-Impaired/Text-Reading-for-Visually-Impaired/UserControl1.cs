@@ -22,18 +22,21 @@ namespace Text_Reading_for_Visually_Impaired
         public Color backColor;
         public Color foreColor;
         public Font font;
-        SpeechSynthesizer synth = new SpeechSynthesizer();
+        question_choices main;
+        SpeechSynthesizer synth;
 
 
-        public questioPanel(question q,Font font , Color backColor,Color foreColor)
+        public questioPanel(question_choices main, question q,Font font , Color backColor,Color foreColor)
         {
             InitializeComponent();
             question = q;
+            this.main = main;
             this.ans1RB.Hide();
             this.ans2RB.Hide();
             this.ans3RB.Hide();
             this.ans4RB.Hide();
             this.rightAns = q.answers[0];
+            this.synth = main.synth;
             correctlyAnswered = false;
             isAnswered = false;
             RBDict = new List<RadioButton>() {this.ans1RB , this.ans2RB,this.ans3RB,this.ans4RB};
@@ -43,9 +46,6 @@ namespace Text_Reading_for_Visually_Impaired
             this.foreColor = foreColor;
             this.font = font;
             this.label1.Text = question.questionString;
-            synth = new SpeechSynthesizer();
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -133,7 +133,16 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Text_To_Read = label1.Text.Replace('_', ' ') + ". " + ans1RB.Text+ ". "  +  ans3RB.Text + ". " + ans2RB.Text + ". " + ans4RB.Text;
+            synth.Dispose();
+            String Text_To_Read;
+            if(label1.Text.Contains("__"))
+            {
+                Text_To_Read ="complete the sentence. " + label1.Text.Replace('_', '.') + ". " + ans1RB.Text + ". " + ans2RB.Text + ". " + ans4RB.Text + ". " + ans3RB.Text;
+            }
+            else
+            {
+                Text_To_Read = label1.Text + "? " + ans1RB.Text + ". " + ans2RB.Text + ". " + ans4RB.Text + ". " + ans3RB.Text;
+            }
             synth.SpeakAsync(Text_To_Read);
         }
     }

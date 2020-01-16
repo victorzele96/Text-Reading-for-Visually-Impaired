@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Speech.Synthesis;
 using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
@@ -9,6 +10,8 @@ namespace Text_Reading_for_Visually_Impaired
     {
         second_Page main;
         List<story> myList;
+        List<String> voicesList;
+        Boolean isStoryList;
         public story_choices(second_Page sp, List <story> list)
         {
             main = sp;
@@ -16,7 +19,20 @@ namespace Text_Reading_for_Visually_Impaired
             this.BackColor = main.BackColor;
             this.ForeColor = main.insertTxtLb.ForeColor;
             InitializeComponent();
+            isStoryList = true;
             this.CenterToScreen();
+        }
+
+        public story_choices(second_Page sp)
+        {
+            InitializeComponent();
+            isStoryList = false;
+            main = sp;
+            voicesList = new List<string>();
+            foreach (InstalledVoice voice in main.synth.GetInstalledVoices())
+            {
+                voicesList.Add(voice.VoiceInfo.Name);
+            }
         }
 
         private void Story_choices_Load(object sender, EventArgs e)
@@ -27,19 +43,40 @@ namespace Text_Reading_for_Visually_Impaired
             panel1.HorizontalScroll.Maximum = 0;
             panel1.AutoScroll = true;
             int lastLocation = 3;
-            foreach (story s in myList)
-            {
-                RadioButton newButton = new RadioButton();
-                newButton.Text = s.name;
-                newButton.Width = panel1.Width;
-                newButton.Height = 102;
-                newButton.BackColor = this.BackColor;
-                newButton.ForeColor = this.ForeColor;
-                newButton.Font = main.richTextBox1.Font;
-                panel1.Controls.Add(newButton);
-                newButton.Location = new Point(2, lastLocation);
-                lastLocation += newButton.Size.Height + 10;
+            if (isStoryList)
+            { 
+                foreach (story s in myList)
+                {
+                    RadioButton newButton = new RadioButton();
+                    newButton.Text = s.name;
+                    newButton.Width = panel1.Width;
+                    newButton.Height = 102;
+                    newButton.BackColor = this.BackColor;
+                    newButton.ForeColor = this.ForeColor;
+                    newButton.Font = main.richTextBox1.Font;
+                    panel1.Controls.Add(newButton);
+                    newButton.Location = new Point(2, lastLocation);
+                    lastLocation += newButton.Size.Height + 10;
+                }
             }
+            else
+            {
+               
+                foreach (String s in voicesList)
+                {
+                    RadioButton newButton = new RadioButton();
+                    newButton.Text = s;
+                    newButton.Width = panel1.Width;
+                    newButton.Height = 102;
+                    newButton.BackColor = this.BackColor;
+                    newButton.ForeColor = this.ForeColor;
+                    newButton.Font = main.richTextBox1.Font;
+                    panel1.Controls.Add(newButton);
+                    newButton.Location = new Point(2, lastLocation);
+                    lastLocation += newButton.Size.Height + 10;
+                }
+            }
+           
         }
 
         private story get_story_by_name(String name)
@@ -56,21 +93,40 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            foreach(Control rb in panel1.Controls)
+            if(isStoryList)
             {
-                if (rb is RadioButton)
+                foreach (Control rb in panel1.Controls)
                 {
-                    if(((RadioButton)rb).Checked)
+                    if (rb is RadioButton)
                     {
-                       // main.fillRichTextBox(((RadioButton)rb).Text);
-                        main.chosen_story = get_story_by_name(((RadioButton)rb).Text);
-                        main.chosen_story.questions = main.get_story_questions(main.chosen_story.ID);
-                        main.richTextBox1.Text = main.chosen_story.text;
-                        break;
+                        if (((RadioButton)rb).Checked)
+                        {
+                            // main.fillRichTextBox(((RadioButton)rb).Text);
+                            main.chosen_story = get_story_by_name(((RadioButton)rb).Text);
+                            main.chosen_story.questions = main.get_story_questions(main.chosen_story.ID);
+                            main.richTextBox1.Text = main.chosen_story.text;
+                            break;
+                        }
                     }
                 }
+                this.Hide();
             }
-            this.Hide();
+            else
+            {
+                foreach (Control rb in panel1.Controls)
+                {
+                    if (rb is RadioButton)
+                    {
+                        if (((RadioButton)rb).Checked)
+                        {
+                            main.synth.SelectVoice(rb.Text);
+                            break;
+                        }
+                    }
+                }
+                this.Hide();
+            }
+           
         }
 
         private void Button2_Click(object sender, EventArgs e)
