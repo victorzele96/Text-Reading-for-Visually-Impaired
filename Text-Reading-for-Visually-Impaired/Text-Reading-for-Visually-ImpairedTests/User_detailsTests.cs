@@ -19,13 +19,13 @@ namespace Text_Reading_for_Visually_Impaired.Tests
         [TestMethod()]
         public void CheckStudent()
         {
-            Assert.AreEqual(true,rep.CheckStudentTable());
+            Assert.AreEqual(true, rep.CheckStudentTable());
         }
 
         [TestMethod()]
         public void CheckTeacher()
         {
             Assert.AreEqual(true, rep.CheckTeacherTable());
-        }   
+        }
     }
 }
