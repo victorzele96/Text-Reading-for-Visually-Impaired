@@ -17,11 +17,19 @@ namespace Text_Reading_for_Visually_Impaired
         public gradeMessegePopUp(second_Page main, int grade)
         {
             InitializeComponent();
-            picList[0] = pictureBox1;
-            picList[1] = pictureBox2;
-            picList[2] = pictureBox3;
+            picList = new List<PictureBox>(){ pictureBox1, pictureBox2, pictureBox3 };
+           // picList[0] = pictureBox1;
+            //picList[1] = pictureBox2;
+            //picList[2] = pictureBox3;
+            foreach(Control c in Controls)
+            {
+                if(c is PictureBox)
+                {
+                    ((PictureBox)c).Image = System.Drawing.Image.FromFile(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\resources\\" + "empty_star" + ".bmp");
+                }
+            }
             for(int i=0;i<grade;i++)
-                ((PictureBox)picList[i]).Image = System.Drawing.Image.FromFile(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\resources\\" + "full_star" + ".bmp");
+                ((PictureBox)picList[i]).Image = System.Drawing.Image.FromFile(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\resources\\" + "full_star" + ".png");
             if(grade==3)
             {
                 msgLB.Text = "Excellent work!!";

@@ -585,8 +585,12 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 if (MessageBox.Show("not all questions were answered, are you sure you want to finish?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    
+                    showGrade();
                 }
+            }
+            else
+            {
+                showGrade();
             }
         }
 
