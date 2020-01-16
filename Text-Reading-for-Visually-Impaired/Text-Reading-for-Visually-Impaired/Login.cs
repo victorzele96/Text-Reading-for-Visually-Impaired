@@ -80,6 +80,7 @@ namespace Text_Reading_for_Visually_Impaired
                 Database11DataSet.ProfileDataTable dt2 = student.GetDataByUsernamePasswordProfile(txtUsername.Text, txtPassword.Text);
                 //Check row > 0
                 this.userName = txtUsername.Text;
+                
                 this.password = txtPassword.Text;
                 
                 if (dt.Rows.Count > 0)
@@ -146,6 +147,33 @@ namespace Text_Reading_for_Visually_Impaired
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        public bool user_name_Admin(string user,string pass)
+        {
+            Database11DataSetTableAdapters.AdminTableAdapter admin = new Database11DataSetTableAdapters.AdminTableAdapter();
+            Database11DataSet.AdminDataTable dt = admin.GetDataByUsernamePassword(user, pass);
+            if (dt.Rows.Count > 0)
+                    return true;
+            else
+                return false;
+        }
+        public bool user_name_Teacher(string user, string pass)
+        {
+            Database11DataSetTableAdapters.TeacherTableAdapter teacher = new Database11DataSetTableAdapters.TeacherTableAdapter();
+            Database11DataSet.TeacherDataTable dt1 = teacher.GetDataByUsernamePasswordTeacher(user, pass);
+            if (dt1.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
+        public bool user_name_Student(string user, string pass)
+        {
+            Database11DataSetTableAdapters.ProfileTableAdapter student = new Database11DataSetTableAdapters.ProfileTableAdapter();
+            Database11DataSet.ProfileDataTable dt2 = student.GetDataByUsernamePasswordProfile(user, pass);
+            if (dt2.Rows.Count > 0)
+                return true;
+            else
+                return false;
         }
     }
 }
