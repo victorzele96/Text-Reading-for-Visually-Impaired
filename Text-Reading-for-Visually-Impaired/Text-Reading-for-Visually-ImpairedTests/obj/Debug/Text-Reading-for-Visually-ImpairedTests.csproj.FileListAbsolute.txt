@@ -1,0 +1,14 @@
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Database11.accdb
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Login.resx
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Login.cs
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Login.Designer.cs
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-ImpairedTests.dll
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-ImpairedTests.pdb
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.exe
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.pdb
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.exe.config
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.csproj.CopyComplete
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.dll
+C:\Users\Alex\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.pdb
