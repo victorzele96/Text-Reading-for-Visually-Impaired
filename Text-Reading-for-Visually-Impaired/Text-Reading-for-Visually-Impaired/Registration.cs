@@ -57,16 +57,16 @@ namespace Text_Reading_for_Visually_Impaired
                             c.ForeColor = original_text_Color;
                             if (c.Name == "firstNameTB" && c.Name != tempName)
                             {
-                                c.Text = "first ID";
+                                c.Text = "first name";
                             }
                             else if (c.Name == "lastNameTB" && c.Name != tempName)
                             {
-                                c.Text = "last ID";
+                                c.Text = "last name";
 
                             }
                             else if (c.Name == "userNameTB" && c.Name != tempName)
                             {
-                                c.Text = "user ID";
+                                c.Text = "user name";
                             }
                             else if (c.Name == "passwordTB" && c.Name != tempName)
                             {

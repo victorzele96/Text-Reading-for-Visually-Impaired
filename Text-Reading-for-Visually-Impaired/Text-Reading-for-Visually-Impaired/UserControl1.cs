@@ -60,7 +60,6 @@ namespace Text_Reading_for_Visually_Impaired
             int indexCounter = 0;
             for (int i = 0; i < 4; i++)
             {
-                //rInt = r.Next(0,3);
                 if (question.answers[rInt] != null && question.answers[rInt] != "" && question.answers[rInt] != " ")
                 {
                     this.RBDict[indexCounter].Text = question.answers[rInt];
@@ -71,7 +70,6 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
         }
-
         private void questioPanel_Load(object sender, EventArgs e)
         {
             foreach (Control c in panel1.Controls)
@@ -128,7 +126,6 @@ namespace Text_Reading_for_Visually_Impaired
                 
             }
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -136,7 +133,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Text_To_Read = label1.Text + "." + ans1RB.Text+ "."  + ans2RB.Text + "." + ans3RB.Text + "." + ans4RB.Text;
+            string Text_To_Read = label1.Text.Replace('_', ' ') + ". " + ans1RB.Text+ ". "  +  ans3RB.Text + ". " + ans2RB.Text + ". " + ans4RB.Text;
             synth.SpeakAsync(Text_To_Read);
         }
     }
