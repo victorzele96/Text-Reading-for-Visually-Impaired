@@ -54,9 +54,7 @@
   <ItemGroup>
     <Compile Include="LoginTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestsTests.cs" />
-    <Compile Include="TestFormTests.cs" />
-    <Compile Include="User_detailsTests.cs" />
+    <Compile Include="UtestTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired.csproj">

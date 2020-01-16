@@ -590,7 +590,7 @@ namespace Text_Reading_for_Visually_Impaired
             }
             else
             {
-                Show();
+                showGrade();
             }
         }
 

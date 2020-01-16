@@ -112,27 +112,5 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
-
-        public bool CheckStudentTable()
-        {
-            Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
-            Database11DataSet.ProfileDataTable dt2 = pr.GetData();//pr=profile
-            dataGridView2.DataSource = dt2;
-
-            if (dataGridView2.Rows.Count > 0)
-                return true;
-            else return false;
-        }
-
-        public bool CheckTeacherTable()
-        {
-            Database11DataSetTableAdapters.TeacherTableAdapter tr = new Database11DataSetTableAdapters.TeacherTableAdapter();
-            Database11DataSet.TeacherDataTable dt1 = tr.GetData();//tr=teacher
-            dataGridView1.DataSource = dt1;
-
-            if (dataGridView1.Rows.Count > 0)
-                return true;
-            else return false;
-        }
     }
 }

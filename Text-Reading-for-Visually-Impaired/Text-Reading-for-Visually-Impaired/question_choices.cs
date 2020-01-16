@@ -67,6 +67,7 @@ namespace Text_Reading_for_Visually_Impaired
             correct_Answeres = get_num_of_right_answeres();
             answered_questions = get_num_of_answered_questions();
             sum_questions();
+            this.Hide();
 
            /* if (check_if_all_questions_answered())
             {
