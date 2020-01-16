@@ -592,9 +592,22 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void showGrade()
         {
-            gradeMessegePopUp gmp = new gradeMessegePopUp()
+            double firstClass = last_questions_page.myStory.questions.Count*0.33;
+            double secondClass = last_questions_page.myStory.questions.Count * 0.66;
+            if (firstClass>Convert.ToDouble(last_questions_page.correct_Answeres))
             {
-
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 1);
+                gmp.Show();
+            }
+            else if(secondClass > Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 2);
+                gmp.Show();
+            }
+            else if(secondClass < Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 2);
+                gmp.Show();
             }
         }
     }

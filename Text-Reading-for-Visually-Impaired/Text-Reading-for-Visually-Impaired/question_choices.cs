@@ -23,7 +23,7 @@ namespace Text_Reading_for_Visually_Impaired
         public question_choices(second_Page sp, story myStory)
         {
             main = sp;
-            this.myStory = myStory; ;
+            this.myStory = myStory;
             this.BackColor = main.BackColor;
             this.ForeColor = main.insertTxtLb.ForeColor;
             InitializeComponent();
