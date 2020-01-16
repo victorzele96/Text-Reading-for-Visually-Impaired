@@ -350,6 +350,7 @@ namespace Text_Reading_for_Visually_Impaired
             }
             else
             {
+                student_main.Theme_color(button5.ForeColor, button5.BackColor, this.BackColor);
                 student_main.Show();
             }
 

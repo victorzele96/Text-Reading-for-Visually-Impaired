@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +15,13 @@ namespace Text_Reading_for_Visually_Impaired
     public partial class Teacher : Form
     {
         public Login login_main;
+        public teacherModel teachermodel;
         public Teacher(Login main)
         {
             InitializeComponent();
-            this.login_main = main;//-------------
+            this.login_main = main;
+            this.teachermodel = new teacherModel(main.userName);
+            int x = 5;
         }
         
 
@@ -84,5 +89,6 @@ namespace Text_Reading_for_Visually_Impaired
             login.ShowDialog();
             this.Close();
         }
+        
     }
 }
