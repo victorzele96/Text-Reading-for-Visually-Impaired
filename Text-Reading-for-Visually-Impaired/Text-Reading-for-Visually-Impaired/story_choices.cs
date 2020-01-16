@@ -12,6 +12,9 @@ namespace Text_Reading_for_Visually_Impaired
         List<story> myList;
         List<String> voicesList;
         Boolean isStoryList;
+        Boolean is_teacher_for_student;
+        teacherModel myTeacher;
+        Teacher teacher_main;
         public story_choices(second_Page sp, List <story> list)
         {
             main = sp;
@@ -35,6 +38,15 @@ namespace Text_Reading_for_Visually_Impaired
             }
         }
 
+        public story_choices(Teacher sp, teacherModel tm)
+        {
+            InitializeComponent();
+            is_teacher_for_student = true;
+            this.myTeacher = tm;
+            teacher_main = sp;
+            this.CenterToScreen();
+        }
+
         private void Story_choices_Load(object sender, EventArgs e)
         {
             panel1.AutoScroll = false;
@@ -54,6 +66,22 @@ namespace Text_Reading_for_Visually_Impaired
                     newButton.BackColor = this.BackColor;
                     newButton.ForeColor = this.ForeColor;
                     newButton.Font = main.richTextBox1.Font;
+                    panel1.Controls.Add(newButton);
+                    newButton.Location = new Point(2, lastLocation);
+                    lastLocation += newButton.Size.Height + 10;
+                }
+            }
+            else if(is_teacher_for_student)
+            {
+                foreach (studentModel sm in myTeacher.students)
+                {
+                    RadioButton newButton = new RadioButton();
+                    newButton.Text = sm.firstName + " " + sm.lastName;
+                    newButton.Width = panel1.Width;
+                    newButton.Height = 102;
+                    newButton.BackColor = this.BackColor;
+                    newButton.ForeColor = this.ForeColor;
+                    newButton.Font = teacher_main.login_main.label2.Font;
                     panel1.Controls.Add(newButton);
                     newButton.Location = new Point(2, lastLocation);
                     lastLocation += newButton.Size.Height + 10;
@@ -110,6 +138,21 @@ namespace Text_Reading_for_Visually_Impaired
                     }
                 }
                 this.Hide();
+            }
+            else if(is_teacher_for_student)
+            {
+                foreach (Control rb in panel1.Controls)
+                {
+                    if (rb is RadioButton)
+                    {
+                        if (((RadioButton)rb).Checked)
+                        {
+                            second_Page sp = new second_Page(teacher_main,myTeacher);
+                            sp.Show();
+                            this.Hide();
+                        }
+                    }
+                }
             }
             else
             {

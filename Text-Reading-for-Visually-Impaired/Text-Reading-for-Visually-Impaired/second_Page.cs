@@ -33,9 +33,13 @@ namespace Text_Reading_for_Visually_Impaired
         Color storyBtColor; //famous stories button forecolor
         Color questionBtColor; //questions button backcolor
         Color backQColor; //questions button forecolor
+        public Boolean is_teacher_for_Student;
+        public teacherModel myTeacher;
+        public studentModel myStudent;
         public second_Page(Teacher main)
         {
             InitializeComponent();
+            this.CenterToScreen();
             synth = new SpeechSynthesizer();
             this.WindowState = FormWindowState.Maximized;
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
@@ -52,6 +56,7 @@ namespace Text_Reading_for_Visually_Impaired
         public second_Page(Student main)
         {
             InitializeComponent();
+            this.CenterToScreen();
             synth = new SpeechSynthesizer();
             this.WindowState = FormWindowState.Maximized;
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
@@ -64,11 +69,30 @@ namespace Text_Reading_for_Visually_Impaired
             richTextBox1.Width = ClientSize.Width;
         }
 
+        public second_Page(Teacher main ,teacherModel tm)
+        {
+            InitializeComponent();
+            this.CenterToScreen();
+            is_teacher_for_Student = true;
+            this.Teacher_main = main;
+            this.myTeacher = tm;
+            //this.myStudent = sm;
+            this.WindowState = FormWindowState.Maximized;
+            richTextBox1.DragDrop += RichTextBox1_DragDrop;
+            richTextBox1.DragEnter += RichTextBox1_DragEnter;
+            synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+            this.button5000.Text = "my stories";
+            this.button6000.Text = "save story";
+            build_Stories_List();
+            richTextBox1.Width = ClientSize.Width;
+        }
+
 
         public second_Page()
         {
             InitializeComponent();
-            
+            this.CenterToScreen();
+
         }
 
         private void set_buttons_font(String color)
@@ -348,6 +372,12 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 Teacher_main.Show();
             }
+            else if(is_teacher_for_Student)
+            {
+                Login logi = new Login();
+                this.Hide();
+                logi.Show();
+            }
             else
             {
                 student_main.Theme_color(button5.ForeColor, button5.BackColor, this.BackColor);
@@ -400,13 +430,21 @@ namespace Text_Reading_for_Visually_Impaired
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
-                try
-                {
+               try
+               {
                     while(reader.Read())
                     {
                         if(is_Teacher)
                         {
                             if (reader[1].ToString() == this.Teacher_main.login_main.userName)
+                            {
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
+                                stories_List.Add(s);
+                            }
+                        }
+                        else if(is_teacher_for_Student)
+                        {
+                            if (reader[1].ToString() == myTeacher.userName || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
                             {
                                 story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
@@ -422,11 +460,11 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                        
                     }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("details error", "error");
-                }
+               }
+               catch (Exception)
+               {
+                   MessageBox.Show("details error", "error");
+               }
             }
         }
 
