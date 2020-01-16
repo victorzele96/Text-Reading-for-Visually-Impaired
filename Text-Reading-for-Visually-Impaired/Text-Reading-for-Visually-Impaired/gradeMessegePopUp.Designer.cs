@@ -123,6 +123,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "gradeMessegePopUp";
             this.Text = "gradeMessegePopUp";
+            this.Load += new System.EventHandler(this.gradeMessegePopUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
