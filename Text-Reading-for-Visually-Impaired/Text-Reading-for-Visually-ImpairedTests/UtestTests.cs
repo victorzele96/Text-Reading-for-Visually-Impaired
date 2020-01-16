@@ -12,9 +12,6 @@ namespace Text_Reading_for_Visually_Impaired.Tests
     [TestClass()]
     public class UtestTests
     {
-        
- 
-
             
     }
 }
