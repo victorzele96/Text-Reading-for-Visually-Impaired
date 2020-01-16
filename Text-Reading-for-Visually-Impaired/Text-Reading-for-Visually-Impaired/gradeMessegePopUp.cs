@@ -38,16 +38,21 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 msgLB.Text = "Good job!!";
             }
-            if (grade == 3)
+            if (grade == 1)
             {
                 msgLB.Text = "Better luck next time";
             }
-            gradeLb.Text = string.Format("{0}/{1}", main.last_questions_page.wrong_answeres, main.last_questions_page.correct_Answeres);
+            gradeLb.Text = string.Format("{0}/{1}", main.last_questions_page.correct_Answeres, main.last_questions_page.myStory.questions.Count);
         }
 
         private void backBt_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void gradeMessegePopUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
