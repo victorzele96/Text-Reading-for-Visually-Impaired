@@ -197,6 +197,12 @@
     <Compile Include="story_choices.Designer.cs">
       <DependentUpon>story_choices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student Progression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Progression.Designer.cs">
+      <DependentUpon>Student Progression.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="story_choices.resx">
       <DependentUpon>story_choices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Progression.resx">
+      <DependentUpon>Student Progression.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
