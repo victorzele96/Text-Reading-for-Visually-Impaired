@@ -48,7 +48,7 @@
             this.headlineLB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.headlineLB.Location = new System.Drawing.Point(561, 43);
             this.headlineLB.Name = "headlineLB";
-            this.headlineLB.Size = new System.Drawing.Size(188, 57);
+            this.headlineLB.Size = new System.Drawing.Size(294, 89);
             this.headlineLB.TabIndex = 0;
             this.headlineLB.Text = "sign up";
             this.headlineLB.Click += new System.EventHandler(this.headlineLB_Click);
@@ -61,7 +61,7 @@
             this.maleRB.ForeColor = System.Drawing.Color.Black;
             this.maleRB.Location = new System.Drawing.Point(932, 497);
             this.maleRB.Name = "maleRB";
-            this.maleRB.Size = new System.Drawing.Size(117, 46);
+            this.maleRB.Size = new System.Drawing.Size(187, 70);
             this.maleRB.TabIndex = 10;
             this.maleRB.TabStop = true;
             this.maleRB.Text = "male";
@@ -77,7 +77,7 @@
             this.firstNameTB.ForeColor = System.Drawing.Color.Black;
             this.firstNameTB.Location = new System.Drawing.Point(242, 254);
             this.firstNameTB.Name = "firstNameTB";
-            this.firstNameTB.Size = new System.Drawing.Size(367, 43);
+            this.firstNameTB.Size = new System.Drawing.Size(367, 68);
             this.firstNameTB.TabIndex = 0;
             this.firstNameTB.Text = "first name";
             this.firstNameTB.Click += new System.EventHandler(this.textBox_clicked);
@@ -107,7 +107,7 @@
             this.lastNameTB.ForeColor = System.Drawing.Color.Black;
             this.lastNameTB.Location = new System.Drawing.Point(862, 254);
             this.lastNameTB.Name = "lastNameTB";
-            this.lastNameTB.Size = new System.Drawing.Size(367, 43);
+            this.lastNameTB.Size = new System.Drawing.Size(367, 68);
             this.lastNameTB.TabIndex = 1;
             this.lastNameTB.Text = "last name";
             this.lastNameTB.Click += new System.EventHandler(this.textBox_clicked);
@@ -123,9 +123,9 @@
             this.userNameTB.ForeColor = System.Drawing.Color.Black;
             this.userNameTB.Location = new System.Drawing.Point(242, 399);
             this.userNameTB.Name = "userNameTB";
-            this.userNameTB.Size = new System.Drawing.Size(367, 43);
+            this.userNameTB.Size = new System.Drawing.Size(367, 68);
             this.userNameTB.TabIndex = 2;
-            this.userNameTB.Text = "user name (id)";
+            this.userNameTB.Text = "user name";
             this.userNameTB.Click += new System.EventHandler(this.textBox_clicked);
             this.userNameTB.TextChanged += new System.EventHandler(this.userNameTB_TextChanged);
             this.userNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTB_KeyDown);
@@ -139,7 +139,7 @@
             this.passwordTB.ForeColor = System.Drawing.Color.Black;
             this.passwordTB.Location = new System.Drawing.Point(862, 399);
             this.passwordTB.Name = "passwordTB";
-            this.passwordTB.Size = new System.Drawing.Size(367, 43);
+            this.passwordTB.Size = new System.Drawing.Size(367, 68);
             this.passwordTB.TabIndex = 3;
             this.passwordTB.Text = "password";
             this.passwordTB.Click += new System.EventHandler(this.textBox_clicked);
@@ -167,7 +167,7 @@
             this.femaleRB.ForeColor = System.Drawing.Color.Black;
             this.femaleRB.Location = new System.Drawing.Point(932, 565);
             this.femaleRB.Name = "femaleRB";
-            this.femaleRB.Size = new System.Drawing.Size(147, 46);
+            this.femaleRB.Size = new System.Drawing.Size(237, 70);
             this.femaleRB.TabIndex = 8;
             this.femaleRB.TabStop = true;
             this.femaleRB.Text = "female";
@@ -183,7 +183,7 @@
             this.EmailTB.ForeColor = System.Drawing.Color.Black;
             this.EmailTB.Location = new System.Drawing.Point(242, 532);
             this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(367, 43);
+            this.EmailTB.Size = new System.Drawing.Size(367, 68);
             this.EmailTB.TabIndex = 4;
             this.EmailTB.Text = "E - mail";
             this.EmailTB.Click += new System.EventHandler(this.textBox_clicked);

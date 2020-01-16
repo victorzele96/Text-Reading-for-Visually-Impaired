@@ -20,11 +20,12 @@ namespace Text_Reading_for_Visually_Impaired
         Boolean paused = false;
         Boolean stopped = false;
         Boolean is_Teacher;
-        SpeechSynthesizer synth = new SpeechSynthesizer();
+       public  SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public String user_ID;
         public Teacher Teacher_main;
         public Student student_main;
+        public question_choices last_questions_page;
         List<story> stories_List = new List<story>();
        // String teacherID;
         public story chosen_story;
@@ -361,17 +362,26 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button6_Click_2(object sender, EventArgs e)
         {
-            if(is_Teacher)
+            if(chosen_story==null)
             {
-                fileNamePopUp fnp = new fileNamePopUp(this);
-                fnp.Show();
+                MessageBox.Show("please choose a story first");
             }
             else
             {
-                this.chosen_story.questions = get_story_questions(chosen_story.ID);
-                question_choices nePage = new question_choices(this, chosen_story);
-                nePage.Show();
+                if (is_Teacher)
+                {
+                    fileNamePopUp fnp = new fileNamePopUp(this);
+                    fnp.Show();
+                }
+                else
+                {
+                    this.chosen_story.questions = get_story_questions(chosen_story.ID);
+                    question_choices newPage = new question_choices(this, chosen_story);
+                    this.last_questions_page = newPage;
+                    newPage.Show();
+                }
             }
+           
         }
 
 
@@ -558,5 +568,51 @@ namespace Text_Reading_for_Visually_Impaired
             }
         }
 
+        private void button4000_Click(object sender, EventArgs e)
+        {
+            story_choices s = new story_choices(this);
+            s.Show();
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            if(last_questions_page==null)
+            {
+                MessageBox.Show("questions are not availible, make sure you chose a story", "error");
+            }
+            last_questions_page.sum_questions();
+            if(!last_questions_page.check_if_all_questions_answered())
+            {
+                if (MessageBox.Show("not all questions were answered, are you sure you want to finish?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    showGrade();
+                }
+            }
+            else
+            {
+                Show();
+            }
+        }
+
+        private void showGrade()
+        {
+            double firstClass = last_questions_page.myStory.questions.Count*0.33;
+            double secondClass = last_questions_page.myStory.questions.Count * 0.66;
+            if (firstClass>Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 1);
+                gmp.Show();
+            }
+            else if(secondClass > Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 2);
+                gmp.Show();
+            }
+            else if(secondClass < Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 2);
+                gmp.Show();
+            }
+        }
     }
 }

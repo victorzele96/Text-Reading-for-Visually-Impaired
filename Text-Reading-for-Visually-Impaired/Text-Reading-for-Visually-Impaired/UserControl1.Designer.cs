@@ -41,9 +41,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1457, 134);
+            this.label1.Size = new System.Drawing.Size(728, 70);
             this.label1.TabIndex = 0;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -52,9 +53,10 @@
             this.ans1RB.AutoSize = true;
             this.ans1RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans1RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans1RB.Location = new System.Drawing.Point(377, 186);
+            this.ans1RB.Location = new System.Drawing.Point(188, 97);
+            this.ans1RB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ans1RB.Name = "ans1RB";
-            this.ans1RB.Size = new System.Drawing.Size(296, 49);
+            this.ans1RB.Size = new System.Drawing.Size(151, 29);
             this.ans1RB.TabIndex = 1;
             this.ans1RB.TabStop = true;
             this.ans1RB.Text = "radioButton1";
@@ -66,9 +68,11 @@
             this.ans2RB.AutoSize = true;
             this.ans2RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans2RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans2RB.Location = new System.Drawing.Point(1014, 186);
+            this.ans2RB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ans2RB.Location = new System.Drawing.Point(507, 97);
+            this.ans2RB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ans2RB.Name = "ans2RB";
-            this.ans2RB.Size = new System.Drawing.Size(296, 49);
+            this.ans2RB.Size = new System.Drawing.Size(151, 29);
             this.ans2RB.TabIndex = 2;
             this.ans2RB.TabStop = true;
             this.ans2RB.Text = "radioButton2";
@@ -80,9 +84,10 @@
             this.ans3RB.AutoSize = true;
             this.ans3RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans3RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans3RB.Location = new System.Drawing.Point(1014, 267);
+            this.ans3RB.Location = new System.Drawing.Point(507, 139);
+            this.ans3RB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ans3RB.Name = "ans3RB";
-            this.ans3RB.Size = new System.Drawing.Size(296, 49);
+            this.ans3RB.Size = new System.Drawing.Size(151, 29);
             this.ans3RB.TabIndex = 3;
             this.ans3RB.TabStop = true;
             this.ans3RB.Text = "radioButton3";
@@ -94,9 +99,10 @@
             this.ans4RB.AutoSize = true;
             this.ans4RB.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ans4RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ans4RB.Location = new System.Drawing.Point(377, 267);
+            this.ans4RB.Location = new System.Drawing.Point(188, 139);
+            this.ans4RB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ans4RB.Name = "ans4RB";
-            this.ans4RB.Size = new System.Drawing.Size(296, 49);
+            this.ans4RB.Size = new System.Drawing.Size(151, 29);
             this.ans4RB.TabIndex = 4;
             this.ans4RB.TabStop = true;
             this.ans4RB.Text = "radioButton4";
@@ -112,30 +118,34 @@
             this.panel1.Controls.Add(this.ans4RB);
             this.panel1.Controls.Add(this.ans1RB);
             this.panel1.Controls.Add(this.ans2RB);
-            this.panel1.Location = new System.Drawing.Point(19, 18);
+            this.panel1.Location = new System.Drawing.Point(10, 9);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1463, 338);
+            this.panel1.Size = new System.Drawing.Size(732, 176);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(14, 207);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(7, 108);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 109);
+            this.button1.Size = new System.Drawing.Size(102, 57);
             this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
+            this.button1.Text = "read me";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // questioPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "questioPanel";
-            this.Size = new System.Drawing.Size(1500, 381);
+            this.Size = new System.Drawing.Size(750, 198);
             this.Load += new System.EventHandler(this.questioPanel_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
