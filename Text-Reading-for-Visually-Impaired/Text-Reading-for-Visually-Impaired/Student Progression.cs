@@ -30,9 +30,8 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Student_Progression_Load(object sender, EventArgs e)
         {
-            Database11DataSetTableAdapters.ProfileTableAdapter pr = new Database11DataSetTableAdapters.ProfileTableAdapter();
-            Database11DataSet.ProfileDataTable dt2 = pr.GetData();//pr=profile
-            dataGridView1.DataSource = dt2;
+            // TODO: This line of code loads data into the 'database11DataSet6.Profile' table. You can move, or remove it, as needed.
+            this.profileTableAdapter.Fill(this.database11DataSet6.Profile);
         }
 
         private void button1_Click(object sender, EventArgs e)
