@@ -59,7 +59,7 @@ namespace Text_Reading_for_Visually_Impaired
                 label7.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
 
-                if (dataGridView2.Rows.Count > 0)
+                if (DataGridCheck())
                 {
                     foreach (DataGridViewRow r in dataGridView2.Rows)
                     {
@@ -79,6 +79,16 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 MessageBox.Show("Empty Table");
             }
+        }
+        public bool DataGridCheck()
+        {
+            Database11DataSetTableAdapters.TeacherTableAdapter pr = new Database11DataSetTableAdapters.TeacherTableAdapter();
+            Database11DataSet.TeacherDataTable dt1 = pr.GetData();//pr=profile
+            dataGridView2.DataSource = dt1;
+            if (dataGridView2.Rows.Count > 0)
+                return true;
+            else
+                return false;
         }
     }
 }

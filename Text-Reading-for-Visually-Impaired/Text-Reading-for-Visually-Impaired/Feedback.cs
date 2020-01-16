@@ -102,5 +102,12 @@ namespace Text_Reading_for_Visually_Impaired
                 MessageBox.Show("Empty"); 
             }
         }
+
+        public bool CheckFeedbackTable()
+        {
+            if (dataGridView1.Rows.Count <= 0)
+                return false;
+            else return true;
+        }
     }
 }
