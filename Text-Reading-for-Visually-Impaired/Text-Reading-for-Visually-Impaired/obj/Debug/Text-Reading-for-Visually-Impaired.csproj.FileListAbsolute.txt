@@ -145,3 +145,4 @@ C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text
 C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text-Reading-for-Visually-Impaired.pdb
 C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.gradeMessegePopUp.resources
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.gradeMessegePopUp.resources
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\obj\Debug\Text_Reading_for_Visually_Impaired.myCheckBox.resources
