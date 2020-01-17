@@ -34,8 +34,8 @@ namespace Text_Reading_for_Visually_Impaired
             dataGridView2.Hide();
 
             label7.Text = ""; //ID
-            label6.Text = ""; //first name
-            label3.Text = ""; //last name
+            label6.Text = ""; //first ID
+            label3.Text = ""; //last ID
             label8.Text = ""; //email
 
             UpdateFont();
@@ -79,6 +79,16 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 MessageBox.Show("Empty Table");
             }
+        }
+        public bool DataGridCheck()
+        {
+            Database11DataSetTableAdapters.TeacherTableAdapter pr = new Database11DataSetTableAdapters.TeacherTableAdapter();
+            Database11DataSet.TeacherDataTable dt1 = pr.GetData();//pr=profile
+            dataGridView2.DataSource = dt1;
+            if (dataGridView2.Rows.Count > 0)
+                return true;
+            else
+                return false;
         }
     }
 }

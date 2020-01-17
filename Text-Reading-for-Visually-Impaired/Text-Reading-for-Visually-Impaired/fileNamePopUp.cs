@@ -68,11 +68,11 @@ namespace Text_Reading_for_Visually_Impaired
             Boolean b = check_Story_Name_Existence(textBox1.Text);
             if(textBox1.TextLength==0)
             {
-                MessageBox.Show("please fill the name field", "error");
+                MessageBox.Show("please fill the ID field", "error");
             }
             if(check_Story_Name_Existence(textBox1.Text))
             {
-                MessageBox.Show("file name already exist, pleae choose a different one", "error");
+                MessageBox.Show("file ID already exist, pleae choose a different one", "error");
             }
             else
             {
@@ -81,7 +81,7 @@ namespace Text_Reading_for_Visually_Impaired
                 string workingDirectory = Environment.CurrentDirectory;
                 String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
                 string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
-                string query = " INSERT INTO stories (teacher_ID,story,strory_Name) VALUES(@ID,@story,@story_name)";
+                string query = " INSERT INTO stories (teacher_ID,story,story_Name) VALUES(@ID,@story,@story_name)";
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
                     conn.Open();
@@ -89,15 +89,18 @@ namespace Text_Reading_for_Visually_Impaired
                     cmd.Parameters.AddWithValue("@ID", this.myMain.Teacher_main.login_main.userName); ;
                     cmd.Parameters.AddWithValue("@story",this.myMain.richTextBox1.Text);
                     cmd.Parameters.AddWithValue("@story_name",this.textBox1.Text);
-                    OleDbDataReader reader = cmd.ExecuteReader();
+                    //OleDbDataReader reader = cmd.ExecuteReader();
                     try
                     {
                         cmd.ExecuteNonQuery();
+                        MessageBox.Show("Saved");
+                        this.Hide();
                     }
                     catch (Exception)
                     {
                         
                     }
+                    
                 }
             }
         }

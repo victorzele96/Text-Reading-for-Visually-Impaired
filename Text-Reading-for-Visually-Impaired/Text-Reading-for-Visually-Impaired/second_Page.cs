@@ -20,20 +20,31 @@ namespace Text_Reading_for_Visually_Impaired
         Boolean paused = false;
         Boolean stopped = false;
         Boolean is_Teacher;
-        SpeechSynthesizer synth = new SpeechSynthesizer();
+       public  SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public String user_ID;
         public Teacher Teacher_main;
         public Student student_main;
+        public question_choices last_questions_page;
         List<story> stories_List = new List<story>();
-        String teacherID;
+       // String teacherID;
+        public story chosen_story;
         Color backSColor; //famous stories button backcolor
         Color storyBtColor; //famous stories button forecolor
         Color questionBtColor; //questions button backcolor
         Color backQColor; //questions button forecolor
+        public Boolean is_teacher_for_Student;
+        public teacherModel myTeacher;
+        public studentModel myStudent;
+        public question_choices question_choices_page;
+        public String studentID;
+        public String student_first_name;
+        public String student_last_name;
+
         public second_Page(Teacher main)
         {
             InitializeComponent();
+            this.CenterToScreen();
             synth = new SpeechSynthesizer();
             this.WindowState = FormWindowState.Maximized;
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
@@ -41,8 +52,8 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.Teacher_main = main;
             this.is_Teacher = true;
-            this.button5.Text = "my stories";
-            this.button6.Text = "save story";
+            this.button5000.Text = "my stories";
+            this.button6000.Text = "save story";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
@@ -50,6 +61,7 @@ namespace Text_Reading_for_Visually_Impaired
         public second_Page(Student main)
         {
             InitializeComponent();
+            this.CenterToScreen();
             synth = new SpeechSynthesizer();
             this.WindowState = FormWindowState.Maximized;
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
@@ -57,7 +69,29 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.student_main = main;
             this.is_Teacher = false;
-            this.button6.Text = "questions";
+            this.button6000.Text = "questions";
+            this.studentID = this.student_main.login_main.userName;
+            build_Stories_List();
+            richTextBox1.Width = ClientSize.Width;
+            //this.question_choices_page = new question_choices(this,)
+        }
+
+        public second_Page(Teacher main ,teacherModel tm)
+        {
+            InitializeComponent();
+            this.CenterToScreen();
+            is_teacher_for_Student = true;
+            this.is_Teacher = false;
+            this.Teacher_main = main;
+            synth = new SpeechSynthesizer();
+            this.myTeacher = tm;
+            //this.myStudent = sm;
+            this.WindowState = FormWindowState.Maximized;
+            richTextBox1.DragDrop += RichTextBox1_DragDrop;
+            richTextBox1.DragEnter += RichTextBox1_DragEnter;
+            synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+            this.button5000.Text = "my stories";
+            this.button6000.Text = "questions";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
@@ -66,7 +100,7 @@ namespace Text_Reading_for_Visually_Impaired
         public second_Page()
         {
             InitializeComponent();
-            
+            this.CenterToScreen();
         }
 
         private void set_buttons_font(String color)
@@ -182,10 +216,10 @@ namespace Text_Reading_for_Visually_Impaired
         private void second_Page_Load(object sender, EventArgs e)
         {
             get_text_files_to_list();
-            this.backSColor = button5.BackColor;
-            this.storyBtColor = button5.ForeColor;
-            this.questionBtColor = button6.ForeColor;
-            this.backQColor = button6.BackColor;
+            this.backSColor = button5000.BackColor;
+            this.storyBtColor = button5000.ForeColor;
+            this.questionBtColor = button6000.ForeColor;
+            this.backQColor = button6000.BackColor;
             // this.backBt.Location = new Point(this.Width-this.backBt.Width, this.Height-backBt.Height);
         }
 
@@ -244,9 +278,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         public void fillRichTextBox(string name)
         {
-            richTextBox1.Text = "";
-            String path = Application.StartupPath + "\\text_files\\" + name + ".txt";
-            richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
+            //richTextBox1.Text = "";
+            //String path = Application.StartupPath + "\\text_files\\" + name + ".txt";
+            //richTextBox1.LoadFile(path, RichTextBoxStreamType.PlainText);
         }
 
         private void Second_Page_BackColorChanged(object sender, EventArgs e)
@@ -280,7 +314,6 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakAsyncCancelAll();
             //speak();
             synth.SpeakAsync(Text_To_Read);
-
             paused = false;
         }
 
@@ -328,10 +361,10 @@ namespace Text_Reading_for_Visually_Impaired
             if (this.insertTxtLb.ForeColor == Color.Black)
             {
                 set_buttons_font("gray");
-                button5.BackColor = this.backSColor;
-                button5.ForeColor = this.storyBtColor;
-                button6.ForeColor = this.questionBtColor;
-                button6.BackColor = this.backQColor;
+                button5000.BackColor = this.backSColor;
+                button5000.ForeColor = this.storyBtColor;
+                button6000.ForeColor = this.questionBtColor;
+                button6000.BackColor = this.backQColor;
             }
             if (this.insertTxtLb.ForeColor == Color.Blue)
             {
@@ -347,8 +380,15 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 Teacher_main.Show();
             }
+            else if(is_teacher_for_Student)
+            {
+                Login logi = new Login();
+                this.Hide();
+                logi.Show();
+            }
             else
             {
+                student_main.Theme_color(button5.ForeColor, button5.BackColor, this.BackColor);
                 student_main.Show();
             }
 
@@ -361,17 +401,35 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button6_Click_2(object sender, EventArgs e)
         {
-            if(is_Teacher)
+            if(chosen_story==null)
             {
-                fileNamePopUp fnp = new fileNamePopUp(this);
-                fnp.Show();
+                MessageBox.Show("please choose a story first");
             }
             else
             {
-                question_choices nePage = new question_choices(this, stories_List);
-                nePage.Show();
+                if (is_Teacher)
+                {
+                    fileNamePopUp fnp = new fileNamePopUp(this);
+                    fnp.Show();
+                }
+                else
+                {
+                    if(question_choices_page==null)
+                    {
+                        this.chosen_story.questions = get_story_questions(chosen_story.ID);
+                        question_choices newPage = new question_choices(this, chosen_story);
+                        this.question_choices_page = newPage;
+                        this.last_questions_page = newPage;
+                        newPage.Show();
+                    }
+                    else
+                    {
+                        question_choices_page.Show();
+                    }
+                   
+                }
             }
-            
+           
         }
 
 
@@ -389,15 +447,23 @@ namespace Text_Reading_for_Visually_Impaired
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
-                try
-                {
+               try
+               {
                     while(reader.Read())
                     {
                         if(is_Teacher)
                         {
                             if (reader[1].ToString() == this.Teacher_main.login_main.userName)
                             {
-                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
+                                stories_List.Add(s);
+                            }
+                        }
+                        else if(is_teacher_for_Student)
+                        {
+                            if (reader[1].ToString() == myTeacher.userName || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
+                            {
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
                             }
                         }
@@ -405,19 +471,21 @@ namespace Text_Reading_for_Visually_Impaired
                         {
                             if (reader[1].ToString() == get_student_teacher( this.student_main.login_main.userName) || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
                             {
-                                story s = new story(reader[3].ToString(), reader[0].ToString(), reader[2].ToString(), reader[1].ToString(), new List<question>());
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
                             }
                         }
                        
                     }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("details error", "error");
-                }
+               }
+               catch (Exception)
+               {
+                   MessageBox.Show("details error", "error");
+               }
             }
         }
+
+        
 
         /*public void set_user_ID()
         {
@@ -497,6 +565,180 @@ namespace Text_Reading_for_Visually_Impaired
                 return null;
             }
         }
-       
+
+
+        public List<question> get_story_questions(String story_id)
+        {
+
+            List<question> q = new List<question>();
+            String query = " SELECT * FROM questions";
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                //cmd.Parameters.AddWithValue("@user_Name", user_Name);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        String s = reader[2].ToString();
+                        if (s == story_id)
+                        {
+                            List<String> list = new List<String>();
+                            if(reader[4] != null && reader[4].ToString() != null && reader[4].ToString()!="")
+                            {
+                                list.Add(reader[4].ToString());
+                            }
+                            if (reader[5] != null && reader[5].ToString() != null && reader[5].ToString() != "")
+                            {
+                                list.Add(reader[5].ToString());
+                            }
+                            if (reader[6] != null && reader[6].ToString() != null && reader[6].ToString() != "")
+                            {
+                                list.Add(reader[6].ToString());
+                            }
+                            if (reader[7] != null && reader[7].ToString() != null && reader[7].ToString() != "")
+                            {
+                                list.Add(reader[7].ToString());
+                            }
+                            String s1 = reader[4].ToString();
+                            String s2 = reader[5].ToString();
+                            String s3 = reader[6].ToString();
+                            String s4 = reader[7].ToString();
+                            q.Add(new question(reader[0].ToString(), reader[3].ToString(), list));
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+                return q;
+            }
+        }
+
+        private void button4000_Click(object sender, EventArgs e)
+        {
+            story_choices s = new story_choices(this);
+            s.Show();
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            if(last_questions_page==null)
+            {
+                MessageBox.Show("questions are not availible, make sure you chose a story", "error");
+            }
+            last_questions_page.sum_questions();
+            if(!last_questions_page.check_if_all_questions_answered())
+            {
+                if (MessageBox.Show("not all questions were answered, are you sure you want to finish?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    showGrade();
+                }
+            }
+            else
+            {
+                showGrade();
+            }
+
+        }
+
+        private void showGrade()
+        {
+            
+            double firstClass = question_choices_page.answered_questions*0.33;
+            double secondClass = question_choices_page.answered_questions * 0.66;
+            if (firstClass>Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 1);
+                gmp.Show();
+            }
+            else if(secondClass > Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 2);
+                gmp.Show();
+            }
+            else if(secondClass < Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 3);
+                gmp.Show();
+            }
+        }
+
+
+        public void update_answeres_in_database()
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+            string query = " UPDATE [Profile] SET [Q_answered] = [Q_answered] + ?, [right_answered]= [right_answered] + ? WHERE [ID]=?";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                //cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
+               cmd.Parameters.AddWithValue(@"answered", Convert.ToString(question_choices_page.myStory.questions.Count));
+               cmd.Parameters.AddWithValue(@"right_answered", Convert.ToString(question_choices_page.correct_Answeres));
+               cmd.Parameters.AddWithValue(@"ID",studentID);
+
+                try
+                {
+                   cmd.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+                //cmd.ExecuteNonQuery();
+                //main.Show();
+                //this.Close();
+            }
+        }
+
+        /*public void get_student_info()
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            string query = " SELECT * FROM Profile";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        if (reader[8].ToString() == Teacher_main.login_main.userName && reader[3].ToString() == student_first_name && reader[4].ToString() == student_last_name)
+                        {
+                            studentModel new_student = new studentModel(reader[0].ToString(), reader[0].ToString(), reader[3].ToString(), reader[4].ToString());
+
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+            }
+        }*/
     }
+    
 }

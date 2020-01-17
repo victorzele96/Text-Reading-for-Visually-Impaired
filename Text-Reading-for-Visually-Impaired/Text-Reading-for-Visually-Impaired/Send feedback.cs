@@ -41,7 +41,7 @@ namespace Text_Reading_for_Visually_Impaired
                 String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
                 string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source={0}", path2);
-                string query = " INSERT INTO [Reports] ([Report Title], [Reports], [SenderID],[Asks]) VALUES (@report_title,@reports,@senderid,@asks)  ";
+                string query = " INSERT INTO [Reports] ([Report Title], [Reports], [SenderID]) VALUES (@report_title, @reports, @senderid)  ";
 
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
@@ -78,7 +78,7 @@ namespace Text_Reading_for_Visually_Impaired
                 String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
                 string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source={0}", path2);
-                string query = " INSERT INTO [Requests] ([Requests Title], [Request], [SenderID]) VALUES (@requset_title,@request,@senderid)  ";
+                string query = " INSERT INTO [Requests] ([Requests Title], [Request], [SenderID]) VALUES (@requset_title, @request, @senderid)";
 
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
@@ -101,7 +101,6 @@ namespace Text_Reading_for_Visually_Impaired
                     }
 
                 }
-
                 MessageBox.Show("Feedback was sent successfully !");
                 richTextBox1.Text = "";
                 textBox1.Text = "";
