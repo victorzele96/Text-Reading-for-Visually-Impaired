@@ -10,29 +10,37 @@ using System.Windows.Forms;
 
 namespace Text_Reading_for_Visually_Impaired
 {
-    public partial class Student_progress : Form
+    public partial class T_student_Progress : Form
     {
-        public Teacher_Reports teacher_rep;
-        public Student_progress(Teacher_Reports main)
+        Teacher_Reports teacher_rep;
+        public T_student_Progress(Teacher_Reports main)
         {
             InitializeComponent();
             teacher_rep = main;
         }
 
-        private void Student_progress_Load(object sender, EventArgs e)
+        private void T_student_Progress_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'database11DataSet6.Profile' table. You can move, or remove it, as needed.
             this.profileTableAdapter.Fill(this.database11DataSet6.Profile);
             dataGridView1.Hide();
 
-            Upload_data();
         }
-        public void Clear_data()
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            foreach (var series in chart1.Series)
-            {
-                series.Points.Clear();
-            }
+            this.Hide();
+            this.teacher_rep.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clear_data();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Upload_data();
         }
 
         public void Upload_data()
@@ -60,21 +68,12 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        public void Clear_data()
         {
-            Upload_data();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Clear_data();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           this.teacher_rep.Show();
-           this.Hide();
+            foreach (var series in chart1.Series)
+            {
+                series.Points.Clear();
+            }
         }
     }
 }

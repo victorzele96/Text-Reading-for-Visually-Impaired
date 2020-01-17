@@ -92,6 +92,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void button1_Click_1(object sender, EventArgs e)
         {
             story_choices sc = new story_choices(this, this.teachermodel);
+            
             sc.Show();
             
         }

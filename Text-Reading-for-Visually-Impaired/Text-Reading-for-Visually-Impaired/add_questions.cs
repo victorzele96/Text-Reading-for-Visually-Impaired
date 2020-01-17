@@ -196,7 +196,7 @@ namespace Text_Reading_for_Visually_Impaired
         {
             foreach (story s in stories_List)
             {
-                if (s.name == (String)story_selectionCB.SelectedItem)
+                if (s.name == (String)story_selectionCB.SelectedItem.ToString())
                 {
                     chosenStory = s;
                 }
@@ -206,6 +206,11 @@ namespace Text_Reading_for_Visually_Impaired
         private void story_selectionCB_SelectionChangeCommitted(object sender, EventArgs e)
         {
            
+        }
+
+        private void story_selectionCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

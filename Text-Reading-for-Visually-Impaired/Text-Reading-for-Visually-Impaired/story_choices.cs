@@ -15,7 +15,7 @@ namespace Text_Reading_for_Visually_Impaired
         Boolean is_teacher_for_student;
         teacherModel myTeacher;
         Teacher teacher_main;
-        Student studentmain;
+        Student student_main;
         public story_choices(second_Page sp, List <story> list)
         {
             main = sp;
@@ -159,10 +159,13 @@ namespace Text_Reading_for_Visually_Impaired
                             {
                                 if(s_m.firstName+" " + s_m.lastName == ((RadioButton)rb).Text)
                                 {
-                                    main.studentID = s_m.userName;
+                                    //main.student_first_name = s_m.firstName;
+                                    //main.student_last_name = s_m.lastName;
+                                    //main.get_student_info();
                                     //main.myStudent.ID = s_m.userName;
                                 }
                             }
+                            sp.Theme_color(this.button2.ForeColor, this.button2.BackColor, this.BackColor);
                             sp.Show();
                             this.Hide();
                         }

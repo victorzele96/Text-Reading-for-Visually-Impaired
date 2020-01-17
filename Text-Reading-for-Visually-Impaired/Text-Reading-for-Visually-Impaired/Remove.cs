@@ -161,5 +161,10 @@ namespace Text_Reading_for_Visually_Impaired
                 }
             }
         }
+
+        private void stories_List_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

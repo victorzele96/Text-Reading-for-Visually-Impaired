@@ -188,6 +188,7 @@
             this.story_selectionCB.Size = new System.Drawing.Size(275, 34);
             this.story_selectionCB.TabIndex = 14;
             this.story_selectionCB.Text = "Choose a Story";
+            this.story_selectionCB.SelectedIndexChanged += new System.EventHandler(this.story_selectionCB_SelectedIndexChanged);
             this.story_selectionCB.SelectionChangeCommitted += new System.EventHandler(this.story_selectionCB_SelectionChangeCommitted);
             this.story_selectionCB.SelectedValueChanged += new System.EventHandler(this.story_selectionCB_SelectedValueChanged);
             // 

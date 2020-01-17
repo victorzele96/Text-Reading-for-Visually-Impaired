@@ -38,6 +38,9 @@ namespace Text_Reading_for_Visually_Impaired
         public studentModel myStudent;
         public question_choices question_choices_page;
         public String studentID;
+        public String student_first_name;
+        public String student_last_name;
+
         public second_Page(Teacher main)
         {
             InitializeComponent();
@@ -704,5 +707,38 @@ namespace Text_Reading_for_Visually_Impaired
                 //this.Close();
             }
         }
+
+        /*public void get_student_info()
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path2);
+            string query = " SELECT * FROM Profile";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        if (reader[8].ToString() == Teacher_main.login_main.userName && reader[3].ToString() == student_first_name && reader[4].ToString() == student_last_name)
+                        {
+                            studentModel new_student = new studentModel(reader[0].ToString(), reader[0].ToString(), reader[3].ToString(), reader[4].ToString());
+
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+            }
+        }*/
     }
+    
 }

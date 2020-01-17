@@ -53,6 +53,7 @@
             this.stories_List.Name = "stories_List";
             this.stories_List.Size = new System.Drawing.Size(865, 75);
             this.stories_List.TabIndex = 2;
+            this.stories_List.SelectedIndexChanged += new System.EventHandler(this.stories_List_SelectedIndexChanged);
             this.stories_List.SelectedValueChanged += new System.EventHandler(this.stories_List_SelectedValueChanged);
             // 
             // button2
