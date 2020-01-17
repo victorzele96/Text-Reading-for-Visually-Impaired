@@ -36,6 +36,7 @@ namespace Text_Reading_for_Visually_Impaired
             sum_questions();
             synth.Dispose();
             this.Hide();
+            main.Show();
         }
 
         private void question_choices_Load(object sender, EventArgs e)
@@ -51,7 +52,6 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 questioPanel p = new questioPanel(this,new question(q.ID, q.questionString, q.answers),main.insertTxtLb.Font,main.BackColor,main.ForeColor);
                 this.panel1.Controls.Add(p);
-                //p.Size = new Size(panel1.Width-100, 200);
                 p.Location = new Point(23, locationKeeper);
                 questionsCounter++;
                 locationKeeper += p.Height + 10;
@@ -90,6 +90,8 @@ namespace Text_Reading_for_Visually_Impaired
 
         public void sum_questions()
         {
+            wrong_answeres = 0;
+            correct_Answeres = 0;
             foreach (Control c in panel1.Controls)
             {
                 if (c is questioPanel)
