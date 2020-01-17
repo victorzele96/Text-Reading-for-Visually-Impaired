@@ -235,6 +235,12 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="T_student_Progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_student_Progress.Designer.cs">
+      <DependentUpon>T_student_Progress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </Compile>
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_questions.resx">
+      <DependentUpon>add_questions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -343,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_student_Progress.resx">
+      <DependentUpon>T_student_Progress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update details.resx">
       <DependentUpon>Update details.cs</DependentUpon>
