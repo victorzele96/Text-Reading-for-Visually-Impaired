@@ -17,6 +17,7 @@ namespace Text_Reading_for_Visually_Impaired
         public gradeMessegePopUp(second_Page main, int grade)
         {
             InitializeComponent();
+            this.CenterToScreen();
             picList = new List<PictureBox>(){ pictureBox1, pictureBox2, pictureBox3 };
            // picList[0] = pictureBox1;
             //picList[1] = pictureBox2;

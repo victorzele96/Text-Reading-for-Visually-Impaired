@@ -27,3 +27,17 @@ C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.pdb
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.exe.config
 C:\Users\npuli\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.csproj.CopyComplete
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Database11.accdb
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Login.resx
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Login.cs
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Login.Designer.cs
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-ImpairedTests.dll
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-ImpairedTests.pdb
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.exe
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.pdb
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\bin\Debug\Text-Reading-for-Visually-Impaired.exe.config
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.csprojAssemblyReference.cache
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.csproj.CopyComplete
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.dll
+C:\Users\yahel\OneDrive\Documents\GitHub\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-Impaired\Text-Reading-for-Visually-ImpairedTests\obj\Debug\Text-Reading-for-Visually-ImpairedTests.pdb

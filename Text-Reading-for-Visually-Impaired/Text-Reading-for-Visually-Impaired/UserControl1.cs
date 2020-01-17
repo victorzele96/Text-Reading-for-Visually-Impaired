@@ -15,7 +15,7 @@ namespace Text_Reading_for_Visually_Impaired
     {
         public question question;
         public int correctAnsIndex;
-        public List<RadioButton> RBDict;
+        public List<Label> RBDict;
         public String rightAns;
         public Boolean isAnswered;
         public Boolean correctlyAnswered;
@@ -31,21 +31,22 @@ namespace Text_Reading_for_Visually_Impaired
             InitializeComponent();
             question = q;
             this.main = main;
-            this.ans1RB.Hide();
-            this.ans2RB.Hide();
-            this.ans3RB.Hide();
-            this.ans4RB.Hide();
             this.rightAns = q.answers[0];
             this.synth = main.synth;
             correctlyAnswered = false;
             isAnswered = false;
-            RBDict = new List<RadioButton>() {this.ans1RB , this.ans2RB,this.ans3RB,this.ans4RB};
-            initialRadioButtons();
+            RBDict = new List<Label>() {this.LB1 , this.LB2,this.LB3,this.LB4};
+            //initialRadioButtons();
             panel1.BackColor = backColor;
             this.backColor = backColor;
             this.foreColor = foreColor;
             this.font = font;
+            initialRadioButtons();
             this.label1.Text = question.questionString;
+            this.LB1.Font = label1.Font;
+            this.LB2.Font = label1.Font;
+            this.LB3.Font = label1.Font;
+            this.LB4.Font = label1.Font;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -66,7 +67,6 @@ namespace Text_Reading_for_Visually_Impaired
                     this.RBDict[indexCounter].Show();
                     indexCounter++;
                     rInt = (rInt + 1) % 4;
-                    
                 }
             }
         }
@@ -74,12 +74,11 @@ namespace Text_Reading_for_Visually_Impaired
         {
             foreach (Control c in panel1.Controls)
             {
-                if (c is RadioButton)
+                if (c is Label)
                 {
-                    ((RadioButton)c).Font = font;
-                    ((RadioButton)c).BackColor = backColor;
-                    ((RadioButton)c).Checked = false;
-                    ((RadioButton)c).ForeColor = foreColor;
+                    ((Label)c).Font = font;
+                    ((Label)c).BackColor = backColor;
+                    ((Label)c).ForeColor = foreColor;
                 }
             }
         }
@@ -92,11 +91,11 @@ namespace Text_Reading_for_Visually_Impaired
         private void ans1RB_CheckedChanged(object sender, EventArgs e)
         {
             isAnswered = true;
-            foreach (RadioButton rb in panel1.Controls)
+            foreach (myCheckBox rb in panel1.Controls)
             {
                 if (rb.Checked)
                 {
-                    if (rb.Text == rightAns)
+                    if (rb.label1.Text == rightAns)
                     {
                         correctlyAnswered = true;
                     }
@@ -110,21 +109,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void ans2RB_CheckedChanged(object sender, EventArgs e)
         {
-            this.isAnswered = true;
-            foreach(Control rb in panel1.Controls)
-            {
-                if(rb is RadioButton)
-                {
-                    if (((RadioButton)rb).Checked)
-                    {
-                        if (rb.Text == question.answers[0])
-                        {
-                            correctlyAnswered = true;
-                        }
-                    }
-                }
-                
-            }
+           
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -138,15 +123,124 @@ namespace Text_Reading_for_Visually_Impaired
             String Text_To_Read;
             if(label1.Text.Contains("__"))
             {
-                Text_To_Read ="complete the sentence. " + label1.Text.Replace('_', '.') + ". " + ans1RB.Text + ". " + ans2RB.Text + ". " + ans4RB.Text + ". " + ans3RB.Text;
+                Text_To_Read ="complete the sentence. " + label1.Text.Replace('_', '.') + ". " + LB1.Text + ". " +LB2.Text + ". " +LB3.Text + ". " + LB4.Text;
             }
             else
             {
-                Text_To_Read = label1.Text + "? " + ans1RB.Text + ". " + ans2RB.Text + ". " + ans4RB.Text + ". " + ans3RB.Text;
+                Text_To_Read = label1.Text + "? " +LB1.Text + ". " +LB2.Text + ". " + LB3.Text + ". " + LB4.Text;
             }
 
             synth.SpeakAsync(Text_To_Read);
         }
+
+        private void myCheckBox1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void myCheckBox2_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void myCheckBox3_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void myCheckBox4_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void myCB4_Click(object sender, EventArgs e)
+        {
+            this.isAnswered = true;
+            if (RBDict[3].Text == question.answers[0])
+            {
+                correctlyAnswered = true;
+            }
+        }
+
+        private void myCB1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void myCB2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void myCB3_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        public void rbClicked(String name)
+        {
+        }
+
+        private void myCB2_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            RB3.Checked = true;
+        }
+
+        private void RB2_CheckedChanged(object sender, EventArgs e)
+        {
+            this.isAnswered = true;
+            if (RBDict[1].Text == question.answers[0])
+            {
+                correctlyAnswered = true;
+            }
+        }
+
+        private void LB1_Click(object sender, EventArgs e)
+        {
+            RB1.Checked = true;
+        }
+
+        private void LB4_Click(object sender, EventArgs e)
+        {
+            RB4.Checked = true;
+        }
+
+        private void LB2_Click(object sender, EventArgs e)
+        {
+            RB2.Checked = true;
+        }
+
+        private void RB4_CheckedChanged(object sender, EventArgs e)
+        {
+            this.isAnswered = true;
+            if (RBDict[3].Text == question.answers[0])
+            {
+                correctlyAnswered = true;
+            }
+        }
+
+        private void RB3_CheckedChanged(object sender, EventArgs e)
+        {
+            this.isAnswered = true;
+            if (RBDict[2].Text == question.answers[0])
+            {
+                correctlyAnswered = true;
+            }
+        }
+
+        private void RB1_CheckedChanged(object sender, EventArgs e)
+        {
+            this.isAnswered = true;
+            if (RBDict[0].Text == question.answers[0])
+            {
+                correctlyAnswered = true;
+            }
+        }
     }
+    
 
 }
