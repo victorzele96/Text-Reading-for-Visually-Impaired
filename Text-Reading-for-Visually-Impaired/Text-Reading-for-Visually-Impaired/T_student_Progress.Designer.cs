@@ -34,21 +34,21 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.database11DataSet6 = new Text_Reading_for_Visually_Impaired.Database11DataSet6();
-            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.profileTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet6TableAdapters.ProfileTableAdapter();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rightansweredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qansweredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database11DataSet6 = new Text_Reading_for_Visually_Impaired.Database11DataSet6();
+            this.profileTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet6TableAdapters.ProfileTableAdapter();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,22 +67,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(77, 29);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(624, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(300, 223);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // database11DataSet6
-            // 
-            this.database11DataSet6.DataSetName = "Database11DataSet6";
-            this.database11DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // profileBindingSource
-            // 
-            this.profileBindingSource.DataMember = "Profile";
-            this.profileBindingSource.DataSource = this.database11DataSet6;
-            // 
-            // profileTableAdapter
-            // 
-            this.profileTableAdapter.ClearBeforeFill = true;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -114,6 +100,20 @@
             this.qansweredDataGridViewTextBoxColumn.HeaderText = "Q_answered";
             this.qansweredDataGridViewTextBoxColumn.Name = "qansweredDataGridViewTextBoxColumn";
             // 
+            // profileBindingSource
+            // 
+            this.profileBindingSource.DataMember = "Profile";
+            this.profileBindingSource.DataSource = this.database11DataSet6;
+            // 
+            // database11DataSet6
+            // 
+            this.database11DataSet6.DataSetName = "Database11DataSet6";
+            this.database11DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // profileTableAdapter
+            // 
+            this.profileTableAdapter.ClearBeforeFill = true;
+            // 
             // chart1
             // 
             this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -121,7 +121,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(715, 29);
+            this.chart1.Location = new System.Drawing.Point(569, 29);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -149,7 +149,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(1165, 483);
+            this.button2.Location = new System.Drawing.Point(1019, 483);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 68);
             this.button2.TabIndex = 3;
@@ -160,7 +160,7 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(527, 483);
+            this.button3.Location = new System.Drawing.Point(569, 483);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(174, 68);
             this.button3.TabIndex = 4;
@@ -183,8 +183,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.T_student_Progress_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
