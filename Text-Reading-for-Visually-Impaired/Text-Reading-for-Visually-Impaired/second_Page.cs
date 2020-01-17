@@ -37,6 +37,7 @@ namespace Text_Reading_for_Visually_Impaired
         public teacherModel myTeacher;
         public studentModel myStudent;
         public question_choices question_choices_page;
+        public String studentID;
         public second_Page(Teacher main)
         {
             InitializeComponent();
@@ -66,6 +67,7 @@ namespace Text_Reading_for_Visually_Impaired
             this.student_main = main;
             this.is_Teacher = false;
             this.button6000.Text = "questions";
+            this.studentID = this.student_main.login_main.userName;
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
             //this.question_choices_page = new question_choices(this,)
@@ -643,12 +645,14 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 showGrade();
             }
+
         }
 
         private void showGrade()
         {
-            double firstClass = last_questions_page.myStory.questions.Count*0.33;
-            double secondClass = last_questions_page.myStory.questions.Count * 0.66;
+            
+            double firstClass = question_choices_page.answered_questions*0.33;
+            double secondClass = question_choices_page.answered_questions * 0.66;
             if (firstClass>Convert.ToDouble(last_questions_page.correct_Answeres))
             {
                 gradeMessegePopUp gmp = new gradeMessegePopUp(this, 1);
@@ -661,8 +665,43 @@ namespace Text_Reading_for_Visually_Impaired
             }
             else if(secondClass < Convert.ToDouble(last_questions_page.correct_Answeres))
             {
-                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 2);
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 3);
                 gmp.Show();
+            }
+        }
+
+
+        public void update_answeres_in_database()
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+            string query = " UPDATE Profile SET [Q_answered] = [Q_answered] + ?, [right_answered]= [right_answered] + ? WHERE [ID]=?";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                //cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
+               cmd.Parameters.AddWithValue(@"answered", Convert.ToString(question_choices_page.answered_questions));
+               cmd.Parameters.AddWithValue(@"right_answered", Convert.ToString(question_choices_page.correct_Answeres));
+               cmd.Parameters.AddWithValue(@"ID",studentID);
+                cmd.ExecuteNonQuery();
+                try
+                {
+                   // cmd.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+                //cmd.ExecuteNonQuery();
+                //main.Show();
+                //this.Close();
             }
         }
     }
