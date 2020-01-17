@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,5 +92,18 @@ namespace Text_Reading_for_Visually_Impaired
             chart1.Series["Right_Answered"].Points.AddXY(x, a);
             chart1.Series["Q_answered"].Points.AddXY(x, b);
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            report_main.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

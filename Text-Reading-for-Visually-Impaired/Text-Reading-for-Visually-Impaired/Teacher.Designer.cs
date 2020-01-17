@@ -47,10 +47,10 @@
             this.AddStory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddStory.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStory.ForeColor = System.Drawing.Color.White;
-            this.AddStory.Location = new System.Drawing.Point(95, 26);
-            this.AddStory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.AddStory.Location = new System.Drawing.Point(127, 32);
+            this.AddStory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddStory.Name = "AddStory";
-            this.AddStory.Size = new System.Drawing.Size(267, 166);
+            this.AddStory.Size = new System.Drawing.Size(356, 204);
             this.AddStory.TabIndex = 1;
             this.AddStory.Text = "Add Story";
             this.AddStory.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -65,10 +65,10 @@
             this.sendFeedback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sendFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendFeedback.ForeColor = System.Drawing.Color.White;
-            this.sendFeedback.Location = new System.Drawing.Point(95, 222);
-            this.sendFeedback.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.sendFeedback.Location = new System.Drawing.Point(127, 273);
+            this.sendFeedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sendFeedback.Name = "sendFeedback";
-            this.sendFeedback.Size = new System.Drawing.Size(267, 166);
+            this.sendFeedback.Size = new System.Drawing.Size(356, 204);
             this.sendFeedback.TabIndex = 3;
             this.sendFeedback.Text = "Send Feedback";
             this.sendFeedback.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -80,10 +80,10 @@
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.BackColor = System.Drawing.Color.DarkGray;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button4.Location = new System.Drawing.Point(1403, 899);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button4.Location = new System.Drawing.Point(1871, 1106);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 67);
+            this.button4.Size = new System.Drawing.Size(221, 82);
             this.button4.TabIndex = 4;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
@@ -97,10 +97,10 @@
             this.createNewStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.createNewStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createNewStudent.ForeColor = System.Drawing.Color.White;
-            this.createNewStudent.Location = new System.Drawing.Point(389, 26);
-            this.createNewStudent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.createNewStudent.Location = new System.Drawing.Point(519, 32);
+            this.createNewStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createNewStudent.Name = "createNewStudent";
-            this.createNewStudent.Size = new System.Drawing.Size(267, 166);
+            this.createNewStudent.Size = new System.Drawing.Size(356, 204);
             this.createNewStudent.TabIndex = 5;
             this.createNewStudent.Text = "Create New Student";
             this.createNewStudent.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -115,10 +115,10 @@
             this.updateDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.updateDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateDetails.ForeColor = System.Drawing.Color.White;
-            this.updateDetails.Location = new System.Drawing.Point(389, 222);
-            this.updateDetails.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.updateDetails.Location = new System.Drawing.Point(519, 273);
+            this.updateDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.updateDetails.Name = "updateDetails";
-            this.updateDetails.Size = new System.Drawing.Size(267, 166);
+            this.updateDetails.Size = new System.Drawing.Size(356, 204);
             this.updateDetails.TabIndex = 7;
             this.updateDetails.Text = "Update Details";
             this.updateDetails.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -133,10 +133,10 @@
             this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout.ForeColor = System.Drawing.Color.White;
-            this.logout.Location = new System.Drawing.Point(684, 222);
-            this.logout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.logout.Location = new System.Drawing.Point(912, 273);
+            this.logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(267, 166);
+            this.logout.Size = new System.Drawing.Size(356, 204);
             this.logout.TabIndex = 9;
             this.logout.Text = "Logout";
             this.logout.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -151,10 +151,10 @@
             this.reports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reports.ForeColor = System.Drawing.Color.White;
-            this.reports.Location = new System.Drawing.Point(684, 26);
-            this.reports.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.reports.Location = new System.Drawing.Point(912, 32);
+            this.reports.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reports.Name = "reports";
-            this.reports.Size = new System.Drawing.Size(267, 166);
+            this.reports.Size = new System.Drawing.Size(356, 204);
             this.reports.TabIndex = 8;
             this.reports.Text = "Reports";
             this.reports.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -163,10 +163,12 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(956, 109);
+            this.button1.Location = new System.Drawing.Point(1275, 134);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 155);
+            this.button1.Size = new System.Drawing.Size(124, 191);
             this.button1.TabIndex = 10;
             this.button1.Text = "play for student";
             this.button1.UseVisualStyleBackColor = false;
@@ -174,10 +176,10 @@
             // 
             // Teacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1052, 419);
+            this.ClientSize = new System.Drawing.Size(1403, 516);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.reports);
@@ -186,7 +188,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.sendFeedback);
             this.Controls.Add(this.AddStory);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Teacher";
             this.Text = "Teacher";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -15,12 +15,14 @@ namespace Text_Reading_for_Visually_Impaired
         Boolean is_teacher_for_student;
         teacherModel myTeacher;
         Teacher teacher_main;
+        Student studentmain;
         public story_choices(second_Page sp, List <story> list)
         {
             main = sp;
             myList = list;
             this.BackColor = main.BackColor;
             this.ForeColor = main.insertTxtLb.ForeColor;
+
             InitializeComponent();
             isStoryList = true;
             this.CenterToScreen();
@@ -49,6 +51,10 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Story_choices_Load(object sender, EventArgs e)
         {
+            button1.BackColor = this.BackColor;
+            button1.ForeColor = this.ForeColor;
+            button2.BackColor = this.BackColor;
+            button2.ForeColor = this.ForeColor;
             panel1.AutoScroll = false;
             panel1.HorizontalScroll.Enabled = false;
             panel1.HorizontalScroll.Visible = false;
@@ -154,6 +160,7 @@ namespace Text_Reading_for_Visually_Impaired
                                 if(s_m.firstName+" " + s_m.lastName == ((RadioButton)rb).Text)
                                 {
                                     main.studentID = s_m.userName;
+                                    //main.myStudent.ID = s_m.userName;
                                 }
                             }
                             sp.Show();

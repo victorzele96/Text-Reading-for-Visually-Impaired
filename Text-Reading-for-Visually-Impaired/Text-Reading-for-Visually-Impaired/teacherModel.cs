@@ -67,8 +67,9 @@ namespace Text_Reading_for_Visually_Impaired
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
+
                 try
-                {
+                {     
                     while (reader.Read())
                     {
                         String y = reader[0].ToString();
