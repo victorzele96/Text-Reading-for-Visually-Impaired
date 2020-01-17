@@ -32,5 +32,17 @@ namespace Text_Reading_for_Visually_Impaired
             T_student_Progress f = new T_student_Progress(this);
             f.ShowDialog();
         }
+
+        private void Updates_Click(object sender, EventArgs e)
+        {
+            Updates upd = new Updates(this);
+            this.Hide();
+            upd.ShowDialog();
+        }
+
+        private void Teacher_Reports_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
