@@ -74,7 +74,9 @@ namespace Text_Reading_for_Visually_Impaired
             InitializeComponent();
             this.CenterToScreen();
             is_teacher_for_Student = true;
+            this.is_Teacher = false;
             this.Teacher_main = main;
+            synth = new SpeechSynthesizer();
             this.myTeacher = tm;
             //this.myStudent = sm;
             this.WindowState = FormWindowState.Maximized;
@@ -82,7 +84,7 @@ namespace Text_Reading_for_Visually_Impaired
             richTextBox1.DragEnter += RichTextBox1_DragEnter;
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.button5000.Text = "my stories";
-            this.button6000.Text = "save story";
+            this.button6000.Text = "questions";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
         }
@@ -92,7 +94,6 @@ namespace Text_Reading_for_Visually_Impaired
         {
             InitializeComponent();
             this.CenterToScreen();
-
         }
 
         private void set_buttons_font(String color)

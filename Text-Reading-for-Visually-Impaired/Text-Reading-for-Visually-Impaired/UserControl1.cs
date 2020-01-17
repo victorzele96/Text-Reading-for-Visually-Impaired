@@ -134,6 +134,7 @@ namespace Text_Reading_for_Visually_Impaired
         private void button1_Click(object sender, EventArgs e)
         {
             synth.Dispose();
+            synth = new SpeechSynthesizer();
             String Text_To_Read;
             if(label1.Text.Contains("__"))
             {
@@ -143,6 +144,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 Text_To_Read = label1.Text + "? " + ans1RB.Text + ". " + ans2RB.Text + ". " + ans4RB.Text + ". " + ans3RB.Text;
             }
+
             synth.SpeakAsync(Text_To_Read);
         }
     }
