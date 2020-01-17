@@ -148,6 +148,13 @@ namespace Text_Reading_for_Visually_Impaired
                         if (((RadioButton)rb).Checked)
                         {
                             second_Page sp = new second_Page(teacher_main,myTeacher);
+                            foreach(studentModel s_m in myTeacher.students)
+                            {
+                                if(s_m.firstName+" " + s_m.lastName == ((RadioButton)rb).Text)
+                                {
+                                    main.studentID = s_m.userName;
+                                }
+                            }
                             sp.Show();
                             this.Hide();
                         }
