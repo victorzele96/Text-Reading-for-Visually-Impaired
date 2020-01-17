@@ -690,10 +690,10 @@ namespace Text_Reading_for_Visually_Impaired
                cmd.Parameters.AddWithValue(@"answered", Convert.ToString(question_choices_page.myStory.questions.Count));
                cmd.Parameters.AddWithValue(@"right_answered", Convert.ToString(question_choices_page.correct_Answeres));
                cmd.Parameters.AddWithValue(@"ID",studentID);
-                cmd.ExecuteNonQuery();
+
                 try
                 {
-                   // cmd.ExecuteNonQuery();
+                   cmd.ExecuteNonQuery();
                 }
                 catch (Exception)
                 {
