@@ -28,6 +28,13 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Student_progress f = new Student_progress(this);
+            f.ShowDialog();
+        }
+
+        private void Updates_Click(object sender, EventArgs e)
+        {
 
         }
     }

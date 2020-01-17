@@ -222,6 +222,12 @@
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
     <Compile Include="studentModel.cs" />
+    <Compile Include="Student_progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_progress.Designer.cs">
+      <DependentUpon>Student_progress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher Reports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_progress.resx">
+      <DependentUpon>Student_progress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher Reports.resx">
       <DependentUpon>Teacher Reports.cs</DependentUpon>

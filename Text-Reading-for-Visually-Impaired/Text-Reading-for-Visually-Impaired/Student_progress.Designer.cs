@@ -1,0 +1,218 @@
+﻿namespace Text_Reading_for_Visually_Impaired
+{
+    partial class Student_progress
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rightansweredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qansweredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database11DataSet6 = new Text_Reading_for_Visually_Impaired.Database11DataSet6();
+            this.profileTableAdapter = new Text_Reading_for_Visually_Impaired.Database11DataSet6TableAdapters.ProfileTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet6)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // chart1
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
+            this.chart1.Location = new System.Drawing.Point(817, 45);
+            this.chart1.Name = "chart1";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Right_Answered";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Q_answered";
+            this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(511, 391);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.teacherIDDataGridViewTextBoxColumn,
+            this.rightansweredDataGridViewTextBoxColumn,
+            this.qansweredDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.profileBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(47, 159);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(688, 236);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "First Name";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // teacherIDDataGridViewTextBoxColumn
+            // 
+            this.teacherIDDataGridViewTextBoxColumn.DataPropertyName = "TeacherID";
+            this.teacherIDDataGridViewTextBoxColumn.HeaderText = "TeacherID";
+            this.teacherIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.teacherIDDataGridViewTextBoxColumn.Name = "teacherIDDataGridViewTextBoxColumn";
+            this.teacherIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // rightansweredDataGridViewTextBoxColumn
+            // 
+            this.rightansweredDataGridViewTextBoxColumn.DataPropertyName = "Right_answered";
+            this.rightansweredDataGridViewTextBoxColumn.HeaderText = "Right_answered";
+            this.rightansweredDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.rightansweredDataGridViewTextBoxColumn.Name = "rightansweredDataGridViewTextBoxColumn";
+            this.rightansweredDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // qansweredDataGridViewTextBoxColumn
+            // 
+            this.qansweredDataGridViewTextBoxColumn.DataPropertyName = "Q_answered";
+            this.qansweredDataGridViewTextBoxColumn.HeaderText = "Q_answered";
+            this.qansweredDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.qansweredDataGridViewTextBoxColumn.Name = "qansweredDataGridViewTextBoxColumn";
+            this.qansweredDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // profileBindingSource
+            // 
+            this.profileBindingSource.DataMember = "Profile";
+            this.profileBindingSource.DataSource = this.database11DataSet6;
+            // 
+            // database11DataSet6
+            // 
+            this.database11DataSet6.DataSetName = "Database11DataSet6";
+            this.database11DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // profileTableAdapter
+            // 
+            this.profileTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(883, 491);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 49);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(487, 491);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(296, 49);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Show Students";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(211, 491);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(184, 49);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Student_progress
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1582, 653);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.chart1);
+            this.Name = "Student_progress";
+            this.Text = "Student_progress";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Student_progress_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet6)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Database11DataSet6 database11DataSet6;
+        private System.Windows.Forms.BindingSource profileBindingSource;
+        private Database11DataSet6TableAdapters.ProfileTableAdapter profileTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacherIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rightansweredDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qansweredDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+    }
+}
