@@ -91,16 +91,10 @@
   <xs:element name="Database11DataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database11DataSet6" msprop:Generator_UserDSName="Database11DataSet6">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Profile" msprop:Generator_TableClassName="ProfileDataTable" msprop:Generator_TableVarName="tableProfile" msprop:Generator_TablePropName="Profile" msprop:Generator_RowDeletingName="ProfileRowDeleting" msprop:Generator_RowChangingName="ProfileRowChanging" msprop:Generator_RowEvHandlerName="ProfileRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfileRowDeleted" msprop:Generator_UserTableName="Profile" msprop:Generator_RowChangedName="ProfileRowChanged" msprop:Generator_RowEvArgName="ProfileRowChangeEvent" msprop:Generator_RowClassName="ProfileRow">
+        <xs:element name="Profile" msprop:Generator_TableClassName="ProfileDataTable" msprop:Generator_TableVarName="tableProfile" msprop:Generator_RowChangedName="ProfileRowChanged" msprop:Generator_TablePropName="Profile" msprop:Generator_RowDeletingName="ProfileRowDeleting" msprop:Generator_RowChangingName="ProfileRowChanging" msprop:Generator_RowEvHandlerName="ProfileRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfileRowDeleted" msprop:Generator_RowClassName="ProfileRow" msprop:Generator_UserTableName="Profile" msprop:Generator_RowEvArgName="ProfileRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
               <xs:element name="First_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnFirst_Name" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_UserColumnName="First Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

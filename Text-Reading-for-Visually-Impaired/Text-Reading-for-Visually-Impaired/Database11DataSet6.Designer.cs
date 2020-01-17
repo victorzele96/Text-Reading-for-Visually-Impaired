@@ -409,10 +409,10 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfileRow AddProfileRow(string ID, string First_Name, string Last_Name, string TeacherID, int Right_answered, int Q_answered) {
+            public ProfileRow AddProfileRow(string First_Name, string Last_Name, string TeacherID, int Right_answered, int Q_answered) {
                 ProfileRow rowProfileRow = ((ProfileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
+                        null,
                         First_Name,
                         Last_Name,
                         TeacherID,
@@ -425,7 +425,7 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfileRow FindByID(string ID) {
+            public ProfileRow FindByID(int ID) {
                 return ((ProfileRow)(this.Rows.Find(new object[] {
                             ID})));
             }
@@ -458,7 +458,7 @@ namespace Text_Reading_for_Visually_Impaired {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
                 this.columnFirst_Name = new global::System.Data.DataColumn("First Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirst_Name);
@@ -472,9 +472,10 @@ namespace Text_Reading_for_Visually_Impaired {
                 base.Columns.Add(this.columnQ_answered);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = 1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.columnID.MaxLength = 255;
                 this.columnFirst_Name.MaxLength = 255;
                 this.columnLast_Name.MaxLength = 255;
                 this.columnTeacherID.MaxLength = 255;
@@ -620,9 +621,9 @@ namespace Text_Reading_for_Visually_Impaired {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ID {
+            public int ID {
                 get {
-                    return ((string)(this[this.tableProfile.IDColumn]));
+                    return ((int)(this[this.tableProfile.IDColumn]));
                 }
                 set {
                     this[this.tableProfile.IDColumn] = value;
