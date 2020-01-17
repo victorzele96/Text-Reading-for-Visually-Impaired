@@ -36,6 +36,7 @@ namespace Text_Reading_for_Visually_Impaired
         public Boolean is_teacher_for_Student;
         public teacherModel myTeacher;
         public studentModel myStudent;
+        public question_choices question_choices_page;
         public second_Page(Teacher main)
         {
             InitializeComponent();
@@ -67,6 +68,7 @@ namespace Text_Reading_for_Visually_Impaired
             this.button6000.Text = "questions";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
+            //this.question_choices_page = new question_choices(this,)
         }
 
         public second_Page(Teacher main ,teacherModel tm)
@@ -407,10 +409,19 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 else
                 {
-                    this.chosen_story.questions = get_story_questions(chosen_story.ID);
-                    question_choices newPage = new question_choices(this, chosen_story);
-                    this.last_questions_page = newPage;
-                    newPage.Show();
+                    if(question_choices_page==null)
+                    {
+                        this.chosen_story.questions = get_story_questions(chosen_story.ID);
+                        question_choices newPage = new question_choices(this, chosen_story);
+                        this.question_choices_page = newPage;
+                        this.last_questions_page = newPage;
+                        newPage.Show();
+                    }
+                    else
+                    {
+                        question_choices_page.Show();
+                    }
+                   
                 }
             }
            
