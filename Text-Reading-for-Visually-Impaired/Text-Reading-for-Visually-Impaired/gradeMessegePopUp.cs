@@ -14,14 +14,16 @@ namespace Text_Reading_for_Visually_Impaired
     public partial class gradeMessegePopUp : Form
     {
         List<PictureBox> picList;
+        public second_Page my_main;
         public gradeMessegePopUp(second_Page main, int grade)
         {
             InitializeComponent();
             this.CenterToScreen();
             picList = new List<PictureBox>(){ pictureBox1, pictureBox2, pictureBox3 };
-           // picList[0] = pictureBox1;
+            // picList[0] = pictureBox1;
             //picList[1] = pictureBox2;
             //picList[2] = pictureBox3;
+            my_main = main;
             foreach(Control c in Controls)
             {
                 if(c is PictureBox)
@@ -48,6 +50,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void backBt_Click(object sender, EventArgs e)
         {
+            this.my_main.update_answeres_in_database();
             this.Hide();
         }
 

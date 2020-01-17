@@ -679,7 +679,7 @@ namespace Text_Reading_for_Visually_Impaired
             String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
             string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
                     Data Source={0}", path2);
-            string query = " UPDATE Profile SET [Q_answered] = [Q_answered] + ?, [right_answered]= [right_answered] + ? WHERE [ID]=?";
+            string query = " UPDATE [Profile] SET [Q_answered] = [Q_answered] + ?, [right_answered]= [right_answered] + ? WHERE [ID]=?";
             //[User Login]=?, [Password]=?,
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
@@ -687,7 +687,7 @@ namespace Text_Reading_for_Visually_Impaired
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
                 //cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
-               cmd.Parameters.AddWithValue(@"answered", Convert.ToString(question_choices_page.answered_questions));
+               cmd.Parameters.AddWithValue(@"answered", Convert.ToString(question_choices_page.myStory.questions.Count));
                cmd.Parameters.AddWithValue(@"right_answered", Convert.ToString(question_choices_page.correct_Answeres));
                cmd.Parameters.AddWithValue(@"ID",studentID);
                 cmd.ExecuteNonQuery();
