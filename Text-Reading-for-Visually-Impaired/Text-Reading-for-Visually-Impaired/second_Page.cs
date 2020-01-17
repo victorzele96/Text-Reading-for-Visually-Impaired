@@ -20,11 +20,12 @@ namespace Text_Reading_for_Visually_Impaired
         Boolean paused = false;
         Boolean stopped = false;
         Boolean is_Teacher;
-        SpeechSynthesizer synth = new SpeechSynthesizer();
+       public  SpeechSynthesizer synth = new SpeechSynthesizer();
         string Text_To_Read = "";
         public String user_ID;
         public Teacher Teacher_main;
         public Student student_main;
+        public question_choices last_questions_page;
         List<story> stories_List = new List<story>();
        // String teacherID;
         public story chosen_story;
@@ -32,9 +33,15 @@ namespace Text_Reading_for_Visually_Impaired
         Color storyBtColor; //famous stories button forecolor
         Color questionBtColor; //questions button backcolor
         Color backQColor; //questions button forecolor
+        public Boolean is_teacher_for_Student;
+        public teacherModel myTeacher;
+        public studentModel myStudent;
+        public question_choices question_choices_page;
+        public String studentID;
         public second_Page(Teacher main)
         {
             InitializeComponent();
+            this.CenterToScreen();
             synth = new SpeechSynthesizer();
             this.WindowState = FormWindowState.Maximized;
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
@@ -51,6 +58,7 @@ namespace Text_Reading_for_Visually_Impaired
         public second_Page(Student main)
         {
             InitializeComponent();
+            this.CenterToScreen();
             synth = new SpeechSynthesizer();
             this.WindowState = FormWindowState.Maximized;
             richTextBox1.DragDrop += RichTextBox1_DragDrop;
@@ -58,6 +66,28 @@ namespace Text_Reading_for_Visually_Impaired
             synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
             this.student_main = main;
             this.is_Teacher = false;
+            this.button6000.Text = "questions";
+            this.studentID = this.student_main.login_main.userName;
+            build_Stories_List();
+            richTextBox1.Width = ClientSize.Width;
+            //this.question_choices_page = new question_choices(this,)
+        }
+
+        public second_Page(Teacher main ,teacherModel tm)
+        {
+            InitializeComponent();
+            this.CenterToScreen();
+            is_teacher_for_Student = true;
+            this.is_Teacher = false;
+            this.Teacher_main = main;
+            synth = new SpeechSynthesizer();
+            this.myTeacher = tm;
+            //this.myStudent = sm;
+            this.WindowState = FormWindowState.Maximized;
+            richTextBox1.DragDrop += RichTextBox1_DragDrop;
+            richTextBox1.DragEnter += RichTextBox1_DragEnter;
+            synth.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(speak_in_progress);
+            this.button5000.Text = "my stories";
             this.button6000.Text = "questions";
             build_Stories_List();
             richTextBox1.Width = ClientSize.Width;
@@ -67,7 +97,7 @@ namespace Text_Reading_for_Visually_Impaired
         public second_Page()
         {
             InitializeComponent();
-            
+            this.CenterToScreen();
         }
 
         private void set_buttons_font(String color)
@@ -347,8 +377,15 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 Teacher_main.Show();
             }
+            else if(is_teacher_for_Student)
+            {
+                Login logi = new Login();
+                this.Hide();
+                logi.Show();
+            }
             else
             {
+                student_main.Theme_color(button5.ForeColor, button5.BackColor, this.BackColor);
                 student_main.Show();
             }
 
@@ -374,9 +411,19 @@ namespace Text_Reading_for_Visually_Impaired
                 }
                 else
                 {
-                    this.chosen_story.questions = get_story_questions(chosen_story.ID);
-                    question_choices nePage = new question_choices(this, chosen_story);
-                    nePage.Show();
+                    if(question_choices_page==null)
+                    {
+                        this.chosen_story.questions = get_story_questions(chosen_story.ID);
+                        question_choices newPage = new question_choices(this, chosen_story);
+                        this.question_choices_page = newPage;
+                        this.last_questions_page = newPage;
+                        newPage.Show();
+                    }
+                    else
+                    {
+                        question_choices_page.Show();
+                    }
+                   
                 }
             }
            
@@ -397,13 +444,21 @@ namespace Text_Reading_for_Visually_Impaired
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
-                try
-                {
+               try
+               {
                     while(reader.Read())
                     {
                         if(is_Teacher)
                         {
                             if (reader[1].ToString() == this.Teacher_main.login_main.userName)
+                            {
+                                story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
+                                stories_List.Add(s);
+                            }
+                        }
+                        else if(is_teacher_for_Student)
+                        {
+                            if (reader[1].ToString() == myTeacher.userName || reader[1].ToString() == "admin" || reader[1].ToString() == "Admin")
                             {
                                 story s = new story(reader[2].ToString(), reader[0].ToString(), reader[3].ToString(), reader[1].ToString(), new List<question>());
                                 stories_List.Add(s);
@@ -419,11 +474,11 @@ namespace Text_Reading_for_Visually_Impaired
                         }
                        
                     }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("details error", "error");
-                }
+               }
+               catch (Exception)
+               {
+                   MessageBox.Show("details error", "error");
+               }
             }
         }
 
@@ -566,5 +621,88 @@ namespace Text_Reading_for_Visually_Impaired
             }
         }
 
+        private void button4000_Click(object sender, EventArgs e)
+        {
+            story_choices s = new story_choices(this);
+            s.Show();
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            if(last_questions_page==null)
+            {
+                MessageBox.Show("questions are not availible, make sure you chose a story", "error");
+            }
+            last_questions_page.sum_questions();
+            if(!last_questions_page.check_if_all_questions_answered())
+            {
+                if (MessageBox.Show("not all questions were answered, are you sure you want to finish?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    showGrade();
+                }
+            }
+            else
+            {
+                showGrade();
+            }
+
+        }
+
+        private void showGrade()
+        {
+            
+            double firstClass = question_choices_page.answered_questions*0.33;
+            double secondClass = question_choices_page.answered_questions * 0.66;
+            if (firstClass>Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 1);
+                gmp.Show();
+            }
+            else if(secondClass > Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 2);
+                gmp.Show();
+            }
+            else if(secondClass < Convert.ToDouble(last_questions_page.correct_Answeres))
+            {
+                gradeMessegePopUp gmp = new gradeMessegePopUp(this, 3);
+                gmp.Show();
+            }
+        }
+
+
+        public void update_answeres_in_database()
+        {
+            string fileName = "Database11.accdb";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            string workingDirectory = Environment.CurrentDirectory;
+            String path2 = Directory.GetParent(workingDirectory).Parent.FullName + "\\Database11.accdb";
+            string connStr = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
+                    Data Source={0}", path2);
+            string query = " UPDATE [Profile] SET [Q_answered] = [Q_answered] + ?, [right_answered]= [right_answered] + ? WHERE [ID]=?";
+            //[User Login]=?, [Password]=?,
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                //cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
+               cmd.Parameters.AddWithValue(@"answered", Convert.ToString(question_choices_page.myStory.questions.Count));
+               cmd.Parameters.AddWithValue(@"right_answered", Convert.ToString(question_choices_page.correct_Answeres));
+               cmd.Parameters.AddWithValue(@"ID",studentID);
+
+                try
+                {
+                   cmd.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("details error", "error");
+                }
+                //cmd.ExecuteNonQuery();
+                //main.Show();
+                //this.Close();
+            }
+        }
     }
 }

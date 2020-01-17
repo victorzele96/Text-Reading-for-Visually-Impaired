@@ -80,5 +80,15 @@ namespace Text_Reading_for_Visually_Impaired
                 MessageBox.Show("Empty Table");
             }
         }
+        public bool DataGridCheck()
+        {
+            Database11DataSetTableAdapters.TeacherTableAdapter pr = new Database11DataSetTableAdapters.TeacherTableAdapter();
+            Database11DataSet.TeacherDataTable dt1 = pr.GetData();//pr=profile
+            dataGridView2.DataSource = dt1;
+            if (dataGridView2.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
     }
 }

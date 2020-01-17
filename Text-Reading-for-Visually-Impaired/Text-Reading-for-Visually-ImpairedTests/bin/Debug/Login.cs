@@ -160,8 +160,8 @@ namespace Text_Reading_for_Visually_Impaired
         public bool user_name_Teacher(string user, string pass)
         {
             Database11DataSetTableAdapters.TeacherTableAdapter teacher = new Database11DataSetTableAdapters.TeacherTableAdapter();
-            Database11DataSet.TeacherDataTable dt = teacher.GetDataByUsernamePasswordTeacher(user, pass);
-            if (dt.Rows.Count > 0)
+            Database11DataSet.TeacherDataTable dt1 = teacher.GetDataByUsernamePasswordTeacher(user, pass);
+            if (dt1.Rows.Count > 0)
                 return true;
             else
                 return false;
@@ -169,8 +169,8 @@ namespace Text_Reading_for_Visually_Impaired
         public bool user_name_Student(string user, string pass)
         {
             Database11DataSetTableAdapters.ProfileTableAdapter student = new Database11DataSetTableAdapters.ProfileTableAdapter();
-            Database11DataSet.ProfileDataTable dt = student.GetDataByUsernamePasswordProfile(user, pass);
-            if (dt.Rows.Count > 0)
+            Database11DataSet.ProfileDataTable dt2 = student.GetDataByUsernamePasswordProfile(user, pass);
+            if (dt2.Rows.Count > 0)
                 return true;
             else
                 return false;
