@@ -16,6 +16,9 @@ namespace Text_Reading_for_Visually_Impaired
 
         public String userName;
         public String password;
+
+        public String first_name;
+        public String last_name;
         public Login()
         {
             InitializeComponent();
@@ -148,6 +151,7 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
+
         public bool user_name_Admin(string user,string pass)
         {
             Database11DataSetTableAdapters.AdminTableAdapter admin = new Database11DataSetTableAdapters.AdminTableAdapter();
