@@ -41,6 +41,7 @@ namespace Text_Reading_for_Visually_Impaired
             this.backColor = backColor;
             this.foreColor = foreColor;
             this.font = font;
+            initialRadioButtons();
             this.label1.Text = question.questionString;
             this.LB1.Font = label1.Font;
             this.LB2.Font = label1.Font;
@@ -73,12 +74,11 @@ namespace Text_Reading_for_Visually_Impaired
         {
             foreach (Control c in panel1.Controls)
             {
-                if (c is myCheckBox)
+                if (c is Label)
                 {
-                    ((myCheckBox)c).Font = font;
-                    ((myCheckBox)c).BackColor = backColor;
-                    ((myCheckBox)c).RB1.Checked = false;
-                    ((myCheckBox)c).ForeColor = foreColor;
+                    ((Label)c).Font = font;
+                    ((Label)c).BackColor = backColor;
+                    ((Label)c).ForeColor = foreColor;
                 }
             }
         }
@@ -109,21 +109,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void ans2RB_CheckedChanged(object sender, EventArgs e)
         {
-            this.isAnswered = true;
-            foreach(Control rb in panel1.Controls)
-            {
-                if(rb is myCheckBox)
-                {
-                    if (((myCheckBox)rb).Checked)
-                    {
-                        if (((myCheckBox)rb).label1.Text == question.answers[0])
-                        {
-                            correctlyAnswered = true;
-                        }
-                    }
-                }
-                
-            }
+           
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -137,11 +123,11 @@ namespace Text_Reading_for_Visually_Impaired
             String Text_To_Read;
             if(label1.Text.Contains("__"))
             {
-                Text_To_Read ="complete the sentence. " + label1.Text.Replace('_', '.') + ". " + LB1.Text + ". " +LB2.Text + ". " +LB4.Text + ". " + LB3.Text;
+                Text_To_Read ="complete the sentence. " + label1.Text.Replace('_', '.') + ". " + LB1.Text + ". " +LB2.Text + ". " +LB3.Text + ". " + LB4.Text;
             }
             else
             {
-                Text_To_Read = label1.Text + "? " +LB1.Text + ". " +LB2.Text + ". " + LB4.Text + ". " + LB3.Text;
+                Text_To_Read = label1.Text + "? " +LB1.Text + ". " +LB2.Text + ". " + LB3.Text + ". " + LB4.Text;
             }
 
             synth.SpeakAsync(Text_To_Read);
@@ -174,19 +160,6 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 correctlyAnswered = true;
             }
-
-            /*
-                        foreach (Control rb in panel1.Controls)
-                        {
-                            if (rb is RadioButton)
-                            {
-                                if (RBDict[3].Text == question.answers[0])
-                                {
-                                    correctlyAnswered = true;
-                                }
-                            }
-
-                        }*/
         }
 
         private void myCB1_Click(object sender, EventArgs e)
