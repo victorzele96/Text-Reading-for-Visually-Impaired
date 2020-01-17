@@ -12,7 +12,6 @@ namespace Text_Reading_for_Visually_Impaired
     public class teacherModel
     {
         public List<studentModel> students;
-        public String ID;
         public String userName;
         public String last_logged_in;
         public teacherModel(String username)
@@ -40,9 +39,10 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     while (reader.Read())
                     {
-                        if (reader[1].ToString() == this.userName)
+                        String x = reader[8].ToString();
+                        if ( x== this.userName)
                         {
-                            studentModel sm = new studentModel(reader[0].ToString(),reader[1].ToString());
+                            studentModel sm = new studentModel(reader[0].ToString(),reader[1].ToString(),reader[3].ToString(),reader[4].ToString());
                             students.Add(sm);
                         }
                     }
@@ -56,7 +56,6 @@ namespace Text_Reading_for_Visually_Impaired
 
         public void get_teacher_details()
         {
-            students = new List<studentModel>();
             string fileName = "Database11.accdb";
             string path = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
             string workingDirectory = Environment.CurrentDirectory;
@@ -72,9 +71,9 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     while (reader.Read())
                     {
-                        if (reader[1].ToString() ==this.userName)
+                        String y = reader[0].ToString();
+                        if (y ==this.userName)
                         {
-                            this.ID = reader[0].ToString();
                             this.last_logged_in = reader[7].ToString();
                         }
                     }

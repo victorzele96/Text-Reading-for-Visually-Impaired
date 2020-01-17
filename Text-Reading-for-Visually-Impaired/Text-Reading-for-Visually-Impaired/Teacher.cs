@@ -21,7 +21,6 @@ namespace Text_Reading_for_Visually_Impaired
             InitializeComponent();
             this.login_main = main;
             this.teachermodel = new teacherModel(main.userName);
-            int x = 5;
         }
         
 
@@ -89,6 +88,13 @@ namespace Text_Reading_for_Visually_Impaired
             login.ShowDialog();
             this.Close();
         }
-        
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            story_choices sc = new story_choices(this, this.teachermodel);
+            
+            sc.Show();
+            
+        }
     }
 }
