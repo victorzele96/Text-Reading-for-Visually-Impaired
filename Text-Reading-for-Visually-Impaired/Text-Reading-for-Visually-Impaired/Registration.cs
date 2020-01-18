@@ -157,7 +157,7 @@ namespace Text_Reading_for_Visually_Impaired
             {
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
-                cmd.Parameters.AddWithValue(@"id", lastNameTB.Text);
+                cmd.Parameters.AddWithValue(@"id", userNameTB.Text);
                 cmd.Parameters.AddWithValue(@"user_login", userNameTB.Text);
                 cmd.Parameters.AddWithValue(@"password", passwordTB.Text);
                 cmd.Parameters.AddWithValue(@"firstName", firstNameTB.Text);
@@ -168,13 +168,14 @@ namespace Text_Reading_for_Visually_Impaired
                 try
                 {
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Saved Please restart the program.");
+                    login_main.Show();
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("details error", "error");
                 }
-                MessageBox.Show("Saved");
-                login_main.Show();
+                
                 //main.Show();
                 //this.Close();
             }

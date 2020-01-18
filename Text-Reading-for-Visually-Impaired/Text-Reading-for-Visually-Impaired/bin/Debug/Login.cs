@@ -143,7 +143,7 @@ namespace Text_Reading_for_Visually_Impaired
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("The data will be saved after restarting the program!", "Notice");
             //panel1.Location = new Point((ClientSize.Width - panel1.Width) / 2,(ClientSize.Height-panel1.Height)/2);
             ExitBT.Location = new Point((ClientSize.Width - ExitBT.Width), ClientSize.Height - ExitBT.Height);
         }
