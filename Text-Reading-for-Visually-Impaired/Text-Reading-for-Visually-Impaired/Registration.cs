@@ -164,7 +164,7 @@ namespace Text_Reading_for_Visually_Impaired
                 cmd.Parameters.AddWithValue(@"lastName", lastNameTB.Text);
                 cmd.Parameters.AddWithValue(@"email", EmailTB.Text);
                 cmd.Parameters.AddWithValue(@"gender", gender);
-
+                
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -173,10 +173,10 @@ namespace Text_Reading_for_Visually_Impaired
                 {
                     MessageBox.Show("details error", "error");
                 }
-
-
+                MessageBox.Show("Saved");
+                login_main.Show();
                 //main.Show();
-                this.Close();
+                //this.Close();
             }
         }
 
