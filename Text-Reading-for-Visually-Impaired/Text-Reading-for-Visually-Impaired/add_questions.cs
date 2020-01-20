@@ -212,10 +212,5 @@ namespace Text_Reading_for_Visually_Impaired
         {
 
         }
-
-        private void QuestionRTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -176,7 +176,6 @@
             this.QuestionRTB.Size = new System.Drawing.Size(673, 84);
             this.QuestionRTB.TabIndex = 13;
             this.QuestionRTB.Text = "";
-            this.QuestionRTB.TextChanged += new System.EventHandler(this.QuestionRTB_TextChanged);
             // 
             // story_selectionCB
             // 
