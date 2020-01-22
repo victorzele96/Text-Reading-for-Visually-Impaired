@@ -65,7 +65,7 @@ namespace Text_Reading_for_Visually_Impaired
 
                 }
 
-                MessageBox.Show("Feedback was sent successfully !");
+                MessageBox.Show("Was sent successfully !");
                 richTextBox1.Text = "";
                 textBox1.Text = "";
             }
@@ -101,7 +101,7 @@ namespace Text_Reading_for_Visually_Impaired
                     }
 
                 }
-                MessageBox.Show("Feedback was sent successfully !");
+                MessageBox.Show("Was sent successfully !");
                 richTextBox1.Text = "";
                 textBox1.Text = "";
             }
